@@ -1,0 +1,22 @@
+{
+  "name": "govdata-mcp",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "govdata-mcp": "src/mcp.ts"
+  },
+  "scripts": {
+    "build": "bun build src/mcp.ts --compile --outfile dist/govdata-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "govdata-core": "workspace:*",
+    "doge-api": "workspace:*",
+    "zod": "^3.24"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7"
+  }
+}

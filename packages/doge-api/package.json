@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",
+    "govdata-core": "workspace:*",
     "zod": "^3.24"
   },
   "devDependencies": {

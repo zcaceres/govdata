@@ -1,3 +1,5 @@
+import { createResult } from "govdata-core";
+import type { GovResult } from "govdata-core";
 import type {
   Meta,
   Grant,
@@ -23,43 +25,16 @@ export interface KindDataMap {
   };
 }
 
-export interface DogeResult<K extends EndpointKind = EndpointKind> {
+export interface DogeResult<K extends EndpointKind = EndpointKind> extends GovResult<K> {
   readonly data: KindDataMap[K];
   readonly meta: Meta | null;
-  readonly kind: K;
-  toMarkdown(): string;
-  toCSV(): string;
-  summary(): string;
 }
 
-function escapeCSV(value: unknown): string {
-  const str = value == null ? "" : String(value);
-  if (str.includes(",") || str.includes('"') || str.includes("\n")) {
-    return `"${str.replace(/"/g, '""')}"`;
-  }
-  return str;
-}
-
-function arrayToMarkdownTable(items: Record<string, unknown>[]): string {
-  if (items.length === 0) return "(no data)";
-  const keys = Object.keys(items[0]);
-  const header = `| ${keys.join(" | ")} |`;
-  const separator = `| ${keys.map(() => "---").join(" | ")} |`;
-  const rows = items.map(
-    (item) => `| ${keys.map((k) => item[k] == null ? "" : String(item[k])).join(" | ")} |`,
-  );
-  return [header, separator, ...rows].join("\n");
-}
-
-function arrayToCSV(items: Record<string, unknown>[]): string {
-  if (items.length === 0) return "";
-  const keys = Object.keys(items[0]);
-  const header = keys.map(escapeCSV).join(",");
-  const rows = items.map(
-    (item) => keys.map((k) => escapeCSV(item[k])).join(","),
-  );
-  return [header, ...rows].join("\n");
-}
+const statisticsLabels: Record<string, string> = {
+  agency: "agencies",
+  request_date: "dates",
+  org_names: "organizations",
+};
 
 export function wrapResponse<K extends EndpointKind>(
   raw: { result: Record<string, unknown>; meta?: Meta },
@@ -70,44 +45,18 @@ export function wrapResponse<K extends EndpointKind>(
     : raw.result[kind]) as KindDataMap[K];
   const meta: Meta | null = raw.meta ?? null;
 
-  return {
-    data,
-    meta,
-    kind,
-    toMarkdown(): string {
-      if (kind === "statistics") {
-        const sections: string[] = [];
-        for (const [key, arr] of Object.entries(data as Record<string, unknown[]>)) {
-          sections.push(`### ${key}\n\n${arrayToMarkdownTable(arr as Record<string, unknown>[])}`);
-        }
-        return sections.join("\n\n");
-      }
-      return arrayToMarkdownTable(data as Record<string, unknown>[]);
-    },
-    toCSV(): string {
-      if (kind === "statistics") {
-        const sections: string[] = [];
-        for (const [key, arr] of Object.entries(data as Record<string, unknown[]>)) {
-          sections.push(`# ${key}\n${arrayToCSV(arr as Record<string, unknown>[])}`);
-        }
-        return sections.join("\n\n");
-      }
-      return arrayToCSV(data as Record<string, unknown>[]);
-    },
-    summary(): string {
-      if (kind === "statistics") {
-        const stats = data as Record<string, unknown[]>;
-        const labels: Record<string, string> = {
-          agency: "agencies",
-          request_date: "dates",
-          org_names: "organizations",
-        };
-        const parts = Object.entries(stats).map(([k, v]) => `${v.length} ${labels[k] ?? k}`);
-        return `statistics: ${parts.join(", ")}`;
-      }
-      const items = data as unknown[];
-      if (!meta) return `${kind}: ${items.length} results`;
-      return `${kind}: ${items.length} of ${meta.total_results} results (${meta.pages} pages)`;
-    },
-  };
+  const result = createResult(data, meta, kind) as DogeResult<K>;
+
+  if (kind === "statistics") {
+    const originalSummary = result.summary;
+    (result as any).summary = () => {
+      const stats = data as Record<string, unknown[]>;
+      const parts = Object.entries(stats).map(
+        ([k, v]) => `${(v as unknown[]).length} ${statisticsLabels[k] ?? k}`,
+      );
+      return `statistics: ${parts.join(", ")}`;
+    };
+  }
+
+  return result;
 }

@@ -1,19 +1,7 @@
+import type { ParamDescription, EndpointDescription } from "govdata-core";
 import { SavingsSortBy, PaymentsSortBy, SortOrder } from "./schemas";
 
-export interface ParamDescription {
-  name: string;
-  type: string;
-  required: boolean;
-  values?: string[];
-}
-
-export interface EndpointDescription {
-  name: string;
-  path: string;
-  description: string;
-  params: ParamDescription[];
-  responseFields: string[] | Record<string, string[]>;
-}
+export type { ParamDescription, EndpointDescription };
 
 const paginationParams: ParamDescription[] = [
   { name: "page", type: "number", required: false },

@@ -37,11 +37,7 @@ export type PaymentsResponse = z.infer<typeof PaymentsResponseSchema>;
 export type StatisticsResponse = z.infer<typeof StatisticsResponseSchema>;
 export type ErrorResponse = z.infer<typeof ErrorResponseSchema>;
 
-export interface ClientOptions {
-  baseUrl?: string;
-  maxRetries?: number;
-  initialRetryMs?: number;
-}
+export type { ClientOptions } from "govdata-core";
 
 export type { DogeResult, EndpointKind, KindDataMap } from "./response";
 export type { EndpointDescription, ParamDescription } from "./describe";

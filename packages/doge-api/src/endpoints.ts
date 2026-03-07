@@ -21,9 +21,11 @@ import type {
 import { dogeGet } from "./client";
 import { DogeValidationError } from "./errors";
 import { wrapResponse } from "./response";
+import type { DogeResult } from "./response";
 import { withPagination } from "./paginate";
 import { describe } from "./describe";
 import type { PaginatedEndpoint } from "./paginate";
+import type { GovDataPlugin } from "govdata-core";
 
 function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>): T {
   try {
@@ -84,10 +86,10 @@ async function _statistics(
   return wrapResponse(raw, "statistics");
 }
 
-export const grants = withPagination(_grants, "grants");
-export const contracts = withPagination(_contracts, "contracts");
-export const leases = withPagination(_leases, "leases");
-export const payments = withPagination(_payments, "payments");
+export const grants = withPagination(_grants);
+export const contracts = withPagination(_contracts);
+export const leases = withPagination(_leases);
+export const payments = withPagination(_payments);
 
 export async function statistics(
   options?: ClientOptions,
@@ -101,22 +103,18 @@ export function createDoge(defaultOptions?: ClientOptions) {
   const boundGrants = withPagination(
     (params?: SavingsParams, options?: ClientOptions) =>
       _grants(params, { ...defaultOptions, ...options }),
-    "grants",
   );
   const boundContracts = withPagination(
     (params?: SavingsParams, options?: ClientOptions) =>
       _contracts(params, { ...defaultOptions, ...options }),
-    "contracts",
   );
   const boundLeases = withPagination(
     (params?: SavingsParams, options?: ClientOptions) =>
       _leases(params, { ...defaultOptions, ...options }),
-    "leases",
   );
   const boundPayments = withPagination(
     (params?: PaymentsParams, options?: ClientOptions) =>
       _payments(params, { ...defaultOptions, ...options }),
-    "payments",
   );
 
   return {
@@ -131,3 +129,15 @@ export function createDoge(defaultOptions?: ClientOptions) {
 }
 
 export const doge = createDoge();
+
+export const dogePlugin: GovDataPlugin = {
+  prefix: "doge",
+  describe,
+  endpoints: {
+    grants: (params?: any) => grants(params),
+    contracts: (params?: any) => contracts(params),
+    leases: (params?: any) => leases(params),
+    payments: (params?: any) => payments(params),
+    statistics: () => statistics(),
+  } as Record<string, (params?: any) => Promise<DogeResult>>,
+};

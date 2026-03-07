@@ -7,6 +7,7 @@ export {
   createDoge,
   doge,
   describe,
+  dogePlugin,
 } from "./endpoints";
 
 export type {

@@ -1,0 +1,20 @@
+{
+  "name": "govdata-cli",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "govdata": "src/cli.ts"
+  },
+  "scripts": {
+    "build": "bun build src/cli.ts --compile --outfile dist/govdata"
+  },
+  "dependencies": {
+    "govdata-core": "workspace:*",
+    "doge-api": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7"
+  }
+}
