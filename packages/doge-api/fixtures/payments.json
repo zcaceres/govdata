@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "result": {
+    "payments": [
+      {
+        "payment_date": "05/13/2025",
+        "payment_amt": 148183.89,
+        "agency_name": "HHS-HEALTH RESOURCES & SERVICES ADMINISTRATION",
+        "award_description": "Not available",
+        "fain": null,
+        "recipient_justification": "Payroll check date 03/06/2025 Personnel $6538.47 fringes $3,517.93 total $10,056.40. Check date 03/20/2025 Personnel $6,538.47 fringes $3,517.93 total $10,056.40. Printer $1,075.06. 16 Stipends for CHW training 8/4/24 -10/5/2024 $119,392.03. February and March Rental $7,000.00 Woker&#39;s Compensation FY2025 for 4 employees $604.00.  Total $148,183.89",
+        "agency_lead_justification": "•\tThis payment request has been reviewed and approved in accordance with applicable federal regulations and the terms of the award.",
+        "org_name": "VI DEPARTMENT OF HEALTH, OFFICE OF FEDERAL GRANTS MGT",
+        "generated_unique_award_id": null
+      },
+      {
+        "payment_date": "05/13/2025",
+        "payment_amt": 3415.18,
+        "agency_name": "HHS-HEALTH RESOURCES & SERVICES ADMINISTRATION",
+        "award_description": "Not available",
+        "fain": null,
+        "recipient_justification": "April Salary: $2,408.38\nFringe/Benefits on Salary: $753.82\n8% Indirect costs: $252.98\nTotal: $3,415.18",
+        "agency_lead_justification": "•\tThis payment request has been reviewed and approved in accordance with applicable federal regulations and the terms of the award.",
+        "org_name": "IONA COLLEGE",
+        "generated_unique_award_id": null
+      },
+      {
+        "payment_date": "05/13/2025",
+        "payment_amt": 20089.95,
+        "agency_name": "HHS-HEALTH RESOURCES & SERVICES ADMINISTRATION",
+        "award_description": "Not available",
+        "fain": null,
+        "recipient_justification": "We are drawing down funds to cover immediate cash needs related to the rural opioid response staff payroll and mileage expenses.",
+        "agency_lead_justification": "This payment request has been reviewed and approved in accordance with applicable federal regulations and the terms of the award",
+        "org_name": "COMPASS HEALTH INC",
+        "generated_unique_award_id": null
+      }
+    ]
+  },
+  "meta": {
+    "total_results": 107497,
+    "pages": 35833
+  }
+}

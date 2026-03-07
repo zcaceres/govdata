@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "result": {
+    "payments": [
+      {
+        "payment_date": "04/23/2025",
+        "payment_amt": 1136394011.39,
+        "agency_name": "HHS-CENTERS FOR MEDICARE & MEDICAID SERVICES",
+        "award_description": "Not available",
+        "fain": null,
+        "recipient_justification": "Reimbursement of Spent Funds. Provides coverage and cost-sharing protections against excessive out-of-pocket spending that are at least as affordable as without the waiver; provides coverage to at least a comparable number of residents as without the waiver",
+        "agency_lead_justification": "The requested payment is for a non-discretionary program, which is not subject to the requirements of EO 14222.",
+        "org_name": "NY ST DEPT OF HEALTH",
+        "generated_unique_award_id": null
+      },
+      {
+        "payment_date": "05/08/2025",
+        "payment_amt": 158403914.18,
+        "agency_name": "HHS-ADMINISTRATION FOR CHILDREN & FAMILIES",
+        "award_description": "2025 TANF",
+        "fain": "2501CATANF",
+        "recipient_justification": "Please be advised TANF25 drew funding for invoices received and processed by the California Department of Social Services for the Temporary Assistance for Needy Families Program. The draw encompasses multiple disbursements of payment. This source of funding is used to assist needy families with children so that children can be cared for in their own homes or in the homes of relatives; end the dependence of needy parents on government benefits by promoting job preparation, work, and marriage; prevent and reduce the incidence of out-of-wedlock pregnancies; and encourage the formation and maintenance of two-parent families. Particular transactions will report under #6a.\n",
+        "agency_lead_justification": "The expenses described are consistent with those that are reasonable for accomplishing the statutory purposes of TANF.",
+        "org_name": "SOCIAL SERVICES, CALIFORNIA DEPARTMENT OF",
+        "generated_unique_award_id": "ASST_NON_2501CATANF_7590"
+      }
+    ]
+  },
+  "meta": {
+    "total_results": 107497,
+    "pages": 53749
+  }
+}

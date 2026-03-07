@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "types": ["bun-types"]
+  },
+  "references": [
+    { "path": "packages/govdata-core" },
+    { "path": "packages/doge-api" },
+    { "path": "packages/govdata-cli" },
+    { "path": "packages/govdata-mcp" }
+  ],
+  "files": []
+}

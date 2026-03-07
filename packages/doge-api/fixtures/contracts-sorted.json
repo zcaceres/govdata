@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "result": {
+    "contracts": [
+      {
+        "piid": "Unavailable",
+        "agency": "USAID",
+        "vendor": "Unavailable",
+        "value": 8.39,
+        "description": "Unavailable for legal reasons",
+        "fpds_status": "Unavailable",
+        "fpds_link": "https://fpds.gov",
+        "deleted_date": "3/1/2025",
+        "savings": 0.39
+      },
+      {
+        "piid": "Unavailable",
+        "agency": "USAID",
+        "vendor": "Unavailable",
+        "value": 14.39,
+        "description": "Unavailable for legal reasons",
+        "fpds_status": "Unavailable",
+        "fpds_link": "https://fpds.gov",
+        "deleted_date": "3/1/2025",
+        "savings": 0.39
+      }
+    ]
+  },
+  "meta": {
+    "total_results": 13440,
+    "pages": 6720
+  }
+}

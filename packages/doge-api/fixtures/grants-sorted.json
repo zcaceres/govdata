@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "result": {
+    "grants": [
+      {
+        "date": "3/1/2025",
+        "agency": "USAID",
+        "recipient": "GAVI FOUNDATION",
+        "value": 2630000000,
+        "savings": 1750000000,
+        "link": "https://usaspending.gov/award/ASST_NON_7200GH22IO00006_7200",
+        "description": "New GAVI Alliance PIO Agreement"
+      },
+      {
+        "date": "3/23/2025",
+        "agency": "Department of Health and Human Services",
+        "recipient": "TX DEPT OF STATE HEALTH SERVICES",
+        "value": 1535405092,
+        "savings": 877628206,
+        "link": null,
+        "description": "CK19-1904 Epidemiology and Laboratory Capacity for Prevention and Control of Emerging Infectious Diseases (ELC)"
+      }
+    ]
+  },
+  "meta": {
+    "total_results": 15887,
+    "pages": 7944
+  }
+}

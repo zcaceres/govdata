@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "result": {
+    "leases": [
+      {
+        "date": "8/28/2025",
+        "location": "HAINES CITY, FL",
+        "sq_ft": 5139,
+        "description": "Termination via Mass Mod",
+        "value": 102913,
+        "savings": 54417,
+        "agency": "USDA APHIS"
+      },
+      {
+        "date": "8/8/2025",
+        "location": "RUTLAND, VT",
+        "sq_ft": 2040,
+        "description": "True Termination- Agency Closed Office",
+        "value": 63709,
+        "savings": 61091,
+        "agency": "INTERNAL REVENUE SERVICE NATIONAL OFFICE"
+      },
+      {
+        "date": "7/8/2025",
+        "location": "LOS ANGELES, CA",
+        "sq_ft": 1902,
+        "description": "Agency Identified Terminations",
+        "value": 86718,
+        "savings": 256827,
+        "agency": "JD COMNTY RLTNS SRVC"
+      }
+    ]
+  },
+  "meta": {
+    "total_results": 264,
+    "pages": 88
+  }
+}

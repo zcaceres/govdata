@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "result": {
+    "payments": [
+      {
+        "payment_date": "05/12/2025",
+        "payment_amt": -151.88,
+        "agency_name": "NASA",
+        "award_description": "21-EEJ21-0005  TOWARD ENVIRONMENTALLY AND SOCIALLY EQUITABLE STORMWATER MANAGEMENT FEES: THE CASE OF CORPUS CHRISTI IN TEXAS",
+        "fain": "80NSSC22K1670",
+        "recipient_justification": "This refund request is due to effort adjustments during the closeout review.",
+        "agency_lead_justification": "Refund to government",
+        "org_name": "TEXAS A&M UNIVERSITY CORPUS CHRISTI",
+        "generated_unique_award_id": "ASST_NON_80NSSC22K1670_8000"
+      },
+      {
+        "payment_date": "05/12/2025",
+        "payment_amt": 4265.06,
+        "agency_name": "NASA",
+        "award_description": "21-PMMST21-0002 - UPGRADE PRECIPITATION FEATURE DATABASES AND ASSESS UNCERTAINTIES IN PMM PRODUCTS",
+        "fain": "80NSSC22K0591",
+        "recipient_justification": "This reimbursement request is for expenses incurred under Grant 80NSSC22K0591 during the period 5/6/25 to 5/12/25, covering salaries associated with the execution of the approved statement of work and budget. All costs were incurred in accordance with applicable federal regulations and institutional policies",
+        "agency_lead_justification": "The payment request aligns with the proposal budget and is approved.\n",
+        "org_name": "TEXAS A&M UNIVERSITY CORPUS CHRISTI",
+        "generated_unique_award_id": "ASST_NON_80NSSC22K0591_8000"
+      },
+      {
+        "payment_date": "05/12/2025",
+        "payment_amt": 1779.45,
+        "agency_name": "NASA",
+        "award_description": "CURRENTLY  NASA'S LIFE SUPPORT SYSTEMS  FOR CO2 REMOVAL  EMPLOY PACKED BED CANISTERS FILLED WITH 2-MM-IN-DIAMETER ZEOLITE BEADS (I.E.  TWO BEDS FOR H2O AND TWO BEDS FOR CO2 REMOVAL  MAKING A FOUR-BED CO2 (4BCO2) SCRUBBER ASSEMBLY)",
+        "fain": "80NSSC24K1389",
+        "recipient_justification": "This draw is reimbursement salaries, fringe benefits, supplies, in support of the goals and aims of the project titles, Novel, Nature-Inspired, 3D-printed Zeolite Topologies for Selective Carbon Capture.  These costs support the project listed here by furthering the achievements of the research goals and objectives specified in the project proposal.",
+        "agency_lead_justification": "The payment request aligns with the proposal budget and is approved.\n",
+        "org_name": "NORTH CAROLINA STATE UNIVERSITY",
+        "generated_unique_award_id": "ASST_NON_80NSSC24K1389_8000"
+      }
+    ]
+  },
+  "meta": {
+    "total_results": 3265,
+    "pages": 1089
+  }
+}

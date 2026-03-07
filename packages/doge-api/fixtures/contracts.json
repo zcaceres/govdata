@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "result": {
+    "contracts": [
+      {
+        "piid": "N0016423F3004",
+        "agency": "Navy",
+        "vendor": "Booz Allen Hamilton",
+        "value": 220306334,
+        "description": "Professional support services in support of the Program Executive Office for Unmanned and Small Combatants (PEO USC).",
+        "fpds_status": "FUNDING ONLY ACTION",
+        "fpds_link": "https://www.fpds.gov/ezsearch/jsp/viewLinkController.jsp?agencyID=9700&PIID=N0016423F3004&modNumber=P00031&idvAgencyID=&idvPIID=N0017819D7264&contractType=AWARD",
+        "deleted_date": "10/3/2025",
+        "savings": 6529798
+      },
+      {
+        "piid": "N0001925F0223",
+        "agency": "Navy",
+        "vendor": "ATKINSON AERONAUTICS & TECHNOLOGY, INC.",
+        "value": 17017089.76,
+        "description": "Labor-Administration/Operational Support",
+        "fpds_status": "OTHER ADMINISTRATIVE ACTION",
+        "fpds_link": "https://www.fpds.gov/ezsearch/jsp/viewLinkController.jsp?agencyID=9700&PIID=N0001925F0223&modNumber=P00001&idvAgencyID=&idvPIID=N0001925D0015&contractType=AWARD",
+        "deleted_date": "10/3/2025",
+        "savings": 10689630
+      },
+      {
+        "piid": "HC102821F0253",
+        "agency": "Department of Defense",
+        "vendor": "LEIDOS, INC.",
+        "value": 256586832.78,
+        "description": "Defense Information Systems Agency (DISA) COMPUTER FACILITIES MANAGEMENT SERVICES",
+        "fpds_status": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+        "fpds_link": "https://www.fpds.gov/ezsearch/jsp/viewLinkController.jsp?agencyID=9700&PIID=HC102821F0253&modNumber=P00054&idvAgencyID=&idvPIID=HC102820D0001&contractType=AWARD",
+        "deleted_date": "10/3/2025",
+        "savings": 29816696
+      }
+    ]
+  },
+  "meta": {
+    "total_results": 13440,
+    "pages": 4480
+  }
+}
