@@ -2,8 +2,9 @@
 import { dispatch } from "govdata-core";
 import type { GovDataPlugin } from "govdata-core";
 import { dogePlugin } from "doge-api";
+import { naicsPlugin } from "naics-api";
 
-const plugins: GovDataPlugin[] = [dogePlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin];
 
 async function main() {
   const args = process.argv.slice(2);

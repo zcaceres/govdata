@@ -2,13 +2,14 @@ import { describe, it, expect, afterEach } from "bun:test";
 import { dispatch, parseFlags } from "govdata-core";
 import type { GovDataPlugin } from "govdata-core";
 import { dogePlugin } from "doge-api";
+import { naicsPlugin } from "naics-api";
 
 /**
  * CLI integration tests — verify dispatch routing, flag parsing, and error
  * handling using mocked fetch so tests don't hit the network.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -88,6 +89,54 @@ describe("CLI dispatch", () => {
     } catch (err: any) {
       expect(err.message).toContain("grants");
       expect(err.message).toContain("statistics");
+    }
+  });
+});
+
+describe("CLI dispatch — naics", () => {
+  it("routes to naics sectors", async () => {
+    const result = await dispatch(plugins, ["naics", "sectors"]);
+    expect(result.kind).toBe("sectors");
+    expect(result.data).toBeInstanceOf(Array);
+    expect((result.data as unknown[]).length).toBe(20);
+  });
+
+  it("routes to naics search with flags", async () => {
+    const result = await dispatch(plugins, ["naics", "search", "--q", "restaurant", "--limit", "3"]);
+    expect(result.kind).toBe("search");
+    expect(result.data).toBeInstanceOf(Array);
+    expect((result.data as unknown[]).length).toBeLessThanOrEqual(3);
+    expect(result.meta).toBeDefined();
+    expect(result.meta!.total_results).toBeGreaterThan(0);
+  });
+
+  it("routes to naics get with code flag", async () => {
+    const result = await dispatch(plugins, ["naics", "get", "--code", "722511"]);
+    expect(result.kind).toBe("get");
+    expect(result.data).toBeInstanceOf(Array);
+    expect((result.data as any[])[0].code).toBe("722511");
+  });
+
+  it("routes to naics children", async () => {
+    const result = await dispatch(plugins, ["naics", "children", "--code", "72"]);
+    expect(result.kind).toBe("children");
+    expect(result.data).toBeInstanceOf(Array);
+    expect((result.data as unknown[]).length).toBeGreaterThan(0);
+  });
+
+  it("routes to naics with year flag", async () => {
+    const result = await dispatch(plugins, ["naics", "sectors", "--year", "2022"]);
+    expect(result.kind).toBe("sectors");
+    expect((result.data as unknown[]).length).toBe(20);
+  });
+
+  it("throws with only naics prefix and lists endpoints", async () => {
+    try {
+      await dispatch(plugins, ["naics"]);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toContain("sectors");
+      expect(err.message).toContain("search");
     }
   });
 });

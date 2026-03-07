@@ -147,7 +147,7 @@ describe("endpoint functions", () => {
       expect(err).toBeInstanceOf(DogeValidationError);
       expect((err as InstanceType<typeof DogeValidationError>).field).toBe("sort_by");
       expect((err as InstanceType<typeof DogeValidationError>).received).toBe("invalid");
-      expect((err as InstanceType<typeof DogeValidationError>).expected).toContain("'savings'");
+      expect((err as InstanceType<typeof DogeValidationError>).expected).toContain("savings");
     }
   });
 

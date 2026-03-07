@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "govdata-core": "workspace:*",
-    "doge-api": "workspace:*"
+    "doge-api": "workspace:*",
+    "naics-api": "workspace:*"
   },
   "devDependencies": {
     "@types/bun": "latest",

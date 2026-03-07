@@ -6,13 +6,15 @@
     "test:integration": "bun test tests/",
     "test:core": "bun test --cwd packages/govdata-core",
     "test:doge": "bun test --cwd packages/doge-api",
-    "typecheck": "tsc -b packages/govdata-core packages/doge-api packages/govdata-cli packages/govdata-mcp"
+    "test:naics": "bun test --cwd packages/naics-api",
+    "typecheck": "tsc -b packages/govdata-core packages/doge-api packages/naics-api packages/govdata-cli packages/govdata-mcp"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "govdata-core": "workspace:*",
     "doge-api": "workspace:*",
+    "naics-api": "workspace:*",
     "typescript": "^5.7",
-    "zod": "^3.24"
+    "zod": "^4.3"
   }
 }
