@@ -2,7 +2,15 @@
   "lockfileVersion": 1,
   "configVersion": 1,
   "workspaces": {
-    "": {},
+    "": {
+      "devDependencies": {
+        "@types/bun": "latest",
+        "doge-api": "workspace:*",
+        "govdata-core": "workspace:*",
+        "typescript": "^5.7",
+        "zod": "^3.24",
+      },
+    },
     "packages/doge-api": {
       "name": "doge-api",
       "version": "0.1.0",

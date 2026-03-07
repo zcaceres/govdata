@@ -1,4 +1,18 @@
 {
   "private": true,
-  "workspaces": ["packages/*"]
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "test": "bun test",
+    "test:integration": "bun test tests/",
+    "test:core": "bun test --cwd packages/govdata-core",
+    "test:doge": "bun test --cwd packages/doge-api",
+    "typecheck": "tsc -b packages/govdata-core packages/doge-api packages/govdata-cli packages/govdata-mcp"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "govdata-core": "workspace:*",
+    "doge-api": "workspace:*",
+    "typescript": "^5.7",
+    "zod": "^3.24"
+  }
 }

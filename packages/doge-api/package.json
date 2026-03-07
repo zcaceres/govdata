@@ -9,7 +9,6 @@
     "doge-mcp": "src/mcp.ts"
   },
   "scripts": {
-    "typecheck": "tsc --noEmit",
     "test": "bun test",
     "fixtures": "bun fixtures/fetch-fixtures.ts",
     "build": "bun build src/cli.ts --compile --outfile dist/doge-api",
