@@ -2,7 +2,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { AGENCIES, type Agency, type EndpointFor } from "./datasets.js";
+import { AGENCIES, type Agency, type EndpointFor, toKey } from "./datasets.js";
 import { createClient, listDatasets } from "./client.js";
 import { createDescribe } from "./describe.js";
 import { wrapResponse, type DOLResult } from "./response.js";
@@ -49,7 +49,7 @@ const queryParams = {
 // Register a tool for each agency/endpoint combination
 for (const [agency, endpoints] of Object.entries(AGENCIES)) {
   for (const endpoint of endpoints) {
-    const toolName = `dol_${agency.toLowerCase()}_${endpoint.toLowerCase()}`;
+    const toolName = `dol_${agency.toLowerCase()}_${toKey(endpoint)}`;
     const description = `Fetch data from the DOL ${agency} ${endpoint} dataset`;
 
     const schemaShape: Record<string, z.ZodTypeAny> = { ...queryParams, ...formatParam };
@@ -77,7 +77,7 @@ for (const [agency, endpoints] of Object.entries(AGENCIES)) {
 // Register describe tool for each agency/endpoint
 for (const [agency, endpoints] of Object.entries(AGENCIES)) {
   for (const endpoint of endpoints) {
-    const toolName = `dol_describe_${agency.toLowerCase()}_${endpoint.toLowerCase()}`;
+    const toolName = `dol_describe_${agency.toLowerCase()}_${toKey(endpoint)}`;
     const description = `Describe the DOL ${agency} ${endpoint} dataset — columns, types, and metadata`;
 
     server.tool(toolName, description, {}, async () => {
@@ -119,7 +119,7 @@ server.tool(
     for (const [agency, endpoints] of Object.entries(AGENCIES)) {
       for (const endpoint of endpoints) {
         entries.push(
-          `Tool: dol_${agency.toLowerCase()}_${endpoint.toLowerCase()} — ${agency}/${endpoint}`,
+          `Tool: dol_${agency.toLowerCase()}_${toKey(endpoint)} — ${agency}/${endpoint}`,
         );
       }
     }

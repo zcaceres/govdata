@@ -1,5 +1,5 @@
 import type { ParamDescription, EndpointDescription } from "govdata-core";
-import { AGENCIES } from "./datasets.js";
+import { AGENCIES, toKey } from "./datasets.js";
 
 const sharedParams: ParamDescription[] = [
   { name: "limit", type: "number", required: false },
@@ -14,7 +14,7 @@ const endpoints: EndpointDescription[] = [];
 for (const [agency, epList] of Object.entries(AGENCIES)) {
   for (const ep of epList) {
     endpoints.push({
-      name: `${agency.toLowerCase()}_${ep}`,
+      name: `${agency.toLowerCase()}_${toKey(ep)}`,
       path: `/get/${agency}/${ep}`,
       description: `Query ${agency} ${ep} dataset`,
       params: [...sharedParams],

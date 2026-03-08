@@ -120,13 +120,13 @@ const datasets = await listDatasets();
 
 | Endpoint | Columns |
 | --- | --- |
-| `Child_Labor_Report__2016_to_2022` | 73 |
-| `ImportWatch_Goods_HS` | 3 |
-| `ImportWatch_Core_Data` | 10 |
-| `ImportWatch_Country_Codes` | 8 |
-| `LaborShield_ReportingData` | 62 |
-| `LaborShield_Goods` | 8 |
-| `LaborShield_SuggestedActions` | 6 |
+| `child_labor_report__2016_to_2022` | 73 |
+| `importwatch_goods_hs` | 3 |
+| `importwatch_core_data` | 10 |
+| `importwatch_country_codes` | 8 |
+| `laborshield_reportingdata` | 62 |
+| `laborshield_goods` | 8 |
+| `laborshield_suggestedactions` | 6 |
 
 ### MSHA — Mine Safety and Health Administration
 
