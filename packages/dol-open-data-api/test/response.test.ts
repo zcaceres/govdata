@@ -26,6 +26,13 @@ describe("arrayToMarkdownTable", () => {
     expect(md).toContain("| 2 | x |");
   });
 
+  test("escapes pipe characters in values", () => {
+    const data = [{ a: "hello | world", b: "ok" }];
+    const md = arrayToMarkdownTable(data);
+    expect(md).toContain("hello \\| world");
+    expect(md).not.toContain("hello | world");
+  });
+
   test("collects keys from all rows", () => {
     const data = [{ a: 1 }, { a: 2, b: 3 }];
     const md = arrayToMarkdownTable(data);

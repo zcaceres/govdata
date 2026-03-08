@@ -18,7 +18,7 @@ const codeParam: ParamDescription = {
 
 const paginationParams: ParamDescription[] = [
   { name: "limit", type: "number", required: false },
-  { name: "offset", type: "number", required: false },
+  { name: "offset", type: "number", required: false, min: 0 },
 ];
 
 const endpoints: EndpointDescription[] = [

@@ -46,7 +46,7 @@ export function createClient(config: ClientConfig) {
   async function* getAll<A extends Agency>(
     agency: A,
     endpoint: EndpointFor<A>,
-    params?: Omit<QueryParams, "offset">,
+    params?: Omit<QueryParams, "offset" | "limit">,
     pageSize = 1000,
   ): AsyncGenerator<Record<string, unknown>[]> {
     let offset = 0;

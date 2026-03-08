@@ -25,7 +25,8 @@ export function findClosestAgency(input: string): string | null {
 
 export function findClosestEndpoint(agency: Agency, input: string): string | null {
   const endpoints = AGENCIES[agency] as readonly string[];
-  return findClosest(input, [...endpoints], 5);
+  const maxDist = Math.min(5, Math.max(2, Math.floor(input.length * 0.5)));
+  return findClosest(input, [...endpoints], maxDist);
 }
 
 function findClosest(input: string, candidates: string[], maxDist: number): string | null {

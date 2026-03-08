@@ -6,7 +6,7 @@ import { wrapResponse, type DOLResult } from "./response.js";
 export interface PaginatedEndpoint<TParams = QueryParams> {
   (params?: TParams): Promise<DOLResult>;
   pages(params?: TParams, pageSize?: number): AsyncGenerator<DOLResult>;
-  all(params?: Omit<TParams, "offset">, pageSize?: number): Promise<DOLResult>;
+  all(params?: Omit<TParams, "offset" | "limit">, pageSize?: number): Promise<DOLResult>;
   describe(): Promise<DatasetDescription>;
 }
 
@@ -31,14 +31,15 @@ export function withPagination<A extends Agency>(
     let offset = params?.offset ?? 0;
     while (true) {
       const result = await fn({ ...params, limit: pageSize, offset });
+      if (result.data.length === 0) break;
       yield result;
-      if (result.data.length === 0 || result.data.length < pageSize) break;
+      if (result.data.length < pageSize) break;
       offset += pageSize;
     }
   };
 
   fn.all = async (
-    params?: Omit<QueryParams, "offset">,
+    params?: Omit<QueryParams, "offset" | "limit">,
     pageSize = 1000,
   ): Promise<DOLResult> => {
     const allData: Record<string, unknown>[] = [];

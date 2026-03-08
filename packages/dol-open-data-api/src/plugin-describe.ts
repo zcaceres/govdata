@@ -3,7 +3,7 @@ import { AGENCIES, toKey } from "./datasets.js";
 
 const sharedParams: ParamDescription[] = [
   { name: "limit", type: "number", required: false },
-  { name: "offset", type: "number", required: false },
+  { name: "offset", type: "number", required: false, min: 0 },
   { name: "fields", type: "string", required: false },
   { name: "sort", type: "string", required: false, values: ["asc", "desc"] },
   { name: "sort_by", type: "string", required: false },

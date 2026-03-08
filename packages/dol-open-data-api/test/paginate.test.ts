@@ -43,8 +43,7 @@ describe("withPagination", () => {
     for await (const page of fn.pages({}, 10)) {
       pages.push(page);
     }
-    expect(pages).toHaveLength(1);
-    expect(pages[0].data).toHaveLength(0);
+    expect(pages).toHaveLength(0);
   });
 
   test(".all() concatenates all pages", async () => {

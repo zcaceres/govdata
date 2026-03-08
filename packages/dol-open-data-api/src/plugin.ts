@@ -26,9 +26,15 @@ function makeEndpoint(agency: Agency, endpoint: string) {
     if (params?.sort_by) queryParams.sort_by = String(params.sort_by);
     if (params?.fields) queryParams.fields = String(params.fields).split(",");
     if (params?.filter) {
-      queryParams.filter = typeof params.filter === "string"
-        ? JSON.parse(params.filter)
-        : params.filter;
+      if (typeof params.filter === "string") {
+        try {
+          queryParams.filter = JSON.parse(params.filter);
+        } catch {
+          throw new Error(`Invalid filter: could not parse JSON string. Example: '{"column":"value"}'`);
+        }
+      } else {
+        queryParams.filter = params.filter;
+      }
     }
 
     const result = await client.getData(agency, endpoint as any, queryParams as any);

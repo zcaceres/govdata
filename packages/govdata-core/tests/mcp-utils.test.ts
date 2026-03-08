@@ -25,4 +25,20 @@ describe("buildSchemaFromParams", () => {
     ]);
     expect(shape.filter).toBeDefined();
   });
+
+  it("number param with min: 0 accepts zero", () => {
+    const shape = buildSchemaFromParams([
+      { name: "offset", type: "number", required: false, min: 0 },
+    ]);
+    const result = (shape.offset as z.ZodOptional<z.ZodNumber>).safeParse(0);
+    expect(result.success).toBe(true);
+  });
+
+  it("number param without min rejects zero (positive only)", () => {
+    const shape = buildSchemaFromParams([
+      { name: "page", type: "number", required: false },
+    ]);
+    const result = (shape.page as z.ZodOptional<z.ZodNumber>).safeParse(0);
+    expect(result.success).toBe(false);
+  });
 });

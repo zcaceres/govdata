@@ -44,6 +44,8 @@ const queryParams = {
   offset: z.number().int().min(0).optional().describe("Row offset for pagination"),
   sort: z.enum(["asc", "desc"]).optional().describe("Sort direction"),
   sort_by: z.string().optional().describe("Column name to sort by"),
+  fields: z.string().optional().describe("Comma-separated list of columns to return"),
+  filter: z.string().optional().describe("Filter expression as JSON string"),
 };
 
 // Register a tool for each agency/endpoint combination
@@ -58,12 +60,21 @@ for (const [agency, endpoints] of Object.entries(AGENCIES)) {
       description,
       schemaShape,
       async (args) => {
-        const { format, ...params } = args;
-        const hasParams = Object.keys(params).length > 0;
+        const { format, fields, filter, ...params } = args;
+        const queryArgs: Record<string, unknown> = { ...params };
+        if (fields) queryArgs.fields = (fields as string).split(",");
+        if (filter) {
+          try {
+            queryArgs.filter = JSON.parse(filter as string);
+          } catch {
+            return { content: [{ type: "text" as const, text: `Invalid filter JSON: ${filter}` }] };
+          }
+        }
+        const hasParams = Object.keys(queryArgs).length > 0;
         const result = await client.getData(
           agency as Agency,
           endpoint as EndpointFor<Agency>,
-          hasParams ? (params as any) : undefined,
+          hasParams ? (queryArgs as any) : undefined,
         );
         const wrapped = wrapResponse(result, agency, endpoint);
         return {

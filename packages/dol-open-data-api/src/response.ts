@@ -29,13 +29,17 @@ function collectKeys(items: Record<string, unknown>[]): string[] {
   return [...seen];
 }
 
+function escapeMd(val: unknown): string {
+  return val == null ? "" : String(val).replace(/\|/g, "\\|").replace(/\n/g, " ");
+}
+
 export function arrayToMarkdownTable(items: Record<string, unknown>[]): string {
   if (items.length === 0) return "(no data)";
   const keys = collectKeys(items);
-  const header = `| ${keys.join(" | ")} |`;
+  const header = `| ${keys.map(escapeMd).join(" | ")} |`;
   const separator = `| ${keys.map(() => "---").join(" | ")} |`;
   const rows = items.map(
-    (item) => `| ${keys.map((k) => item[k] == null ? "" : String(item[k])).join(" | ")} |`,
+    (item) => `| ${keys.map((k) => escapeMd(item[k])).join(" | ")} |`,
   );
   return [header, separator, ...rows].join("\n");
 }

@@ -1,5 +1,9 @@
 import { buildSuggestions } from "./suggest.js";
 
+function redactUrl(url: string): string {
+  return url.replace(/X-API-KEY=[^&]+/, "X-API-KEY=***");
+}
+
 export class DOLApiError extends Error {
   public readonly suggestions: string[];
 
@@ -12,7 +16,7 @@ export class DOLApiError extends Error {
   ) {
     const suggestions = buildSuggestions({ status, body, url, agency, endpoint });
     const hint = suggestions.length > 0 ? `\n  ${suggestions.join("\n  ")}` : "";
-    super(`DOL API error ${status} from ${url}: ${body}${hint}`);
+    super(`DOL API error ${status} from ${redactUrl(url)}: ${body}${hint}`);
     this.name = "DOLApiError";
     this.suggestions = suggestions;
   }

@@ -184,7 +184,16 @@ async function main() {
     if (values.fields) params.fields = values.fields.split(",");
     if (values.sort) params.sort = values.sort;
     if (values["sort-by"]) params.sort_by = values["sort-by"];
-    if (values.filter) params.filter = FilterExpression.parse(JSON.parse(values.filter));
+    if (values.filter) {
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(values.filter);
+      } catch {
+        console.error(`Error: --filter must be valid JSON. Example: --filter '{"column":"value"}'`);
+        process.exit(1);
+      }
+      params.filter = FilterExpression.parse(parsed);
+    }
 
     const result = await client.getData(agency, endpoint as any, params as any);
     const wrapped = wrapResponse(result, agency, endpoint);

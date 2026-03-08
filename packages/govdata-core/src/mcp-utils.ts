@@ -10,7 +10,7 @@ export function buildSchemaFromParams(
     if (param.values) {
       schema = z.enum(param.values as [string, ...string[]]);
     } else if (param.type === "number") {
-      schema = z.number().int().positive();
+      schema = param.min !== undefined ? z.number().int().min(param.min) : z.number().int().positive();
     } else {
       schema = z.string();
     }

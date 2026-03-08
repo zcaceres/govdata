@@ -96,6 +96,18 @@ describe("createClient", () => {
     await expect(client.getData("MSHA", "accident")).rejects.toThrow("DOL API error 404");
   });
 
+  test("error message redacts API key", async () => {
+    mockFetchError(401, "Unauthorized");
+    try {
+      await client.getData("MSHA", "accident");
+      expect.unreachable("should have thrown");
+    } catch (err: any) {
+      expect(err.message).toContain("X-API-KEY=***");
+      expect(err.message).not.toContain("test-key");
+      expect(err.url).toContain("test-key"); // raw url preserved
+    }
+  });
+
   test("getAll paginates through multiple pages", async () => {
     let callCount = 0;
     mockFetch(() => {

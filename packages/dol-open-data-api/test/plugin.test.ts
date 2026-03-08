@@ -112,6 +112,15 @@ describe("dolPlugin key normalization", () => {
     expect(ilabKeys).toHaveLength(7);
   });
 
+  test("filter param rejects malformed JSON string", async () => {
+    process.env.DOL_API_KEY = "test-key";
+    mockFetch(accidentFixture);
+
+    await expect(
+      dolPlugin.endpoints["msha_accident"]({ filter: "not valid json" }),
+    ).rejects.toThrow("Invalid filter");
+  });
+
   test("filter param accepts object without crashing", async () => {
     process.env.DOL_API_KEY = "test-key";
     mockFetch(accidentFixture);

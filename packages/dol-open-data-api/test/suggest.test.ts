@@ -50,6 +50,10 @@ describe("findClosestEndpoint", () => {
   test("returns null for distant input", () => {
     expect(findClosestEndpoint("MSHA", "zzzzzzzzzzzzz")).toBeNull();
   });
+
+  test("short gibberish does not incorrectly match short endpoints", () => {
+    expect(findClosestEndpoint("MSHA", "zzzz")).toBeNull();
+  });
 });
 
 describe("buildSuggestions", () => {
