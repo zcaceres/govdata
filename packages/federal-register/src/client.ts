@@ -48,8 +48,15 @@ export async function frGet<T>(
       if (contentType.includes("application/json")) {
         try {
           const body = await response.json();
-          if (body && typeof body === "object" && "message" in body) {
-            message = String(body.message);
+          if (body && typeof body === "object") {
+            if ("message" in body) {
+              message = String(body.message);
+            } else if ("errors" in body && body.errors && typeof body.errors === "object") {
+              const errs = Object.entries(body.errors as Record<string, unknown>)
+                .map(([k, v]) => `${k}: ${v}`)
+                .join("; ");
+              message = errs || message;
+            }
           }
         } catch {}
       } else if (response.status === 404) {

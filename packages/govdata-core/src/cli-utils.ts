@@ -55,7 +55,7 @@ export async function dispatch(
     throw new GovHelpText(lines.join("\n"));
   }
 
-  const endpoint = plugin.endpoints[endpointName];
+  const endpoint = plugin.endpoints[kebabToSnake(endpointName)];
   if (!endpoint) {
     const endpoints = plugin.describe().endpoints.map((e) => e.name).join(", ");
     throw new Error(`Unknown endpoint '${endpointName}'. Available: ${endpoints}`);

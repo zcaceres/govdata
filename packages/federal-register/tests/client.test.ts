@@ -108,6 +108,19 @@ describe("frGet", () => {
     await expect(frGet("/bad.json", TestSchema)).rejects.toThrow("Document not found");
   });
 
+  it("extracts errors object from API validation errors", async () => {
+    globalThis.fetch = mock(() =>
+      Promise.resolve(
+        new Response(JSON.stringify({ errors: { agencies: "invalid value" } }), {
+          status: 400,
+          headers: { "content-type": "application/json" },
+        }),
+      ),
+    ) as any;
+
+    await expect(frGet("/test.json", TestSchema)).rejects.toThrow("agencies: invalid value");
+  });
+
   it("wraps schema parse errors in GovApiError", async () => {
     globalThis.fetch = mock(() =>
       Promise.resolve(new Response(JSON.stringify({ unexpected: "shape" }), { status: 200 })),

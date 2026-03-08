@@ -37,16 +37,25 @@ describe("dispatch", () => {
   const mockPlugin: GovDataPlugin = {
     prefix: "test",
     describe: () => ({
-      endpoints: [{ name: "items", path: "/items", description: "List items", params: [], responseFields: [] }],
+      endpoints: [
+        { name: "items", path: "/items", description: "List items", params: [], responseFields: [] },
+        { name: "nested_thing", path: "/nested-thing", description: "Nested thing", params: [], responseFields: [] },
+      ],
     }),
     endpoints: {
       items: async (params?: any) => createResult([{ id: 1 }], null, "items"),
+      nested_thing: async (params?: any) => createResult([{ id: 2 }], null, "nested_thing"),
     },
   };
 
   it("dispatches to correct plugin and endpoint", async () => {
     const result = await dispatch([mockPlugin], ["test", "items"]);
     expect(result.kind).toBe("items");
+  });
+
+  it("converts kebab-case endpoint names to snake_case", async () => {
+    const result = await dispatch([mockPlugin], ["test", "nested-thing"]);
+    expect(result.kind).toBe("nested_thing");
   });
 
   it("throws for unknown plugin", async () => {
@@ -59,5 +68,26 @@ describe("dispatch", () => {
 
   it("throws with no args", async () => {
     expect(dispatch([mockPlugin], [])).rejects.toThrow("Usage");
+  });
+
+  it("shows help with --help as second arg", async () => {
+    try {
+      await dispatch([mockPlugin], ["test", "--help"]);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toContain("Usage:");
+      expect(err.message).toContain("items");
+      expect(err.message).toContain("List items");
+    }
+  });
+
+  it("shows help with --help as third arg (after endpoint)", async () => {
+    try {
+      await dispatch([mockPlugin], ["test", "items", "--help"]);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toContain("Endpoints:");
+      expect(err.message).toContain("items");
+    }
   });
 });
