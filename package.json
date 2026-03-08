@@ -7,13 +7,17 @@
     "test:core": "bun test --cwd packages/govdata-core",
     "test:doge": "bun test --cwd packages/doge-api",
     "test:naics": "bun test --cwd packages/naics-api",
-    "typecheck": "tsc -b packages/govdata-core packages/doge-api packages/naics-api packages/govdata-cli packages/govdata-mcp"
+    "test:dol": "bun test --cwd packages/dol-open-data-api",
+    "test:fr": "bun test --cwd packages/federal-register",
+    "typecheck": "tsc -b packages/govdata-core packages/doge-api packages/naics-api packages/dol-open-data-api packages/federal-register packages/govdata-cli packages/govdata-mcp"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "govdata-core": "workspace:*",
     "doge-api": "workspace:*",
     "naics-api": "workspace:*",
+    "dol-open-data-api": "workspace:*",
+    "federal-register": "workspace:*",
     "typescript": "^5.7",
     "zod": "^4.3"
   }

@@ -1,12 +1,6 @@
 #!/usr/bin/env bun
 import { dispatch } from "govdata-core";
-import type { GovDataPlugin } from "govdata-core";
-import { dogePlugin } from "doge-api";
-import { naicsPlugin } from "naics-api";
-import { dolPlugin } from "dol-open-data-api";
-import { federalRegisterPlugin } from "federal-register";
-
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, federalRegisterPlugin];
+import { federalRegisterPlugin } from "./plugin";
 
 async function main() {
   const args = process.argv.slice(2);
@@ -14,7 +8,8 @@ async function main() {
   const jsonFlag = args.includes("--json");
   const filteredArgs = args.filter((a) => a !== "--json");
 
-  const result = await dispatch(plugins, filteredArgs);
+  // Prepend the plugin prefix so dispatch can find it
+  const result = await dispatch([federalRegisterPlugin], ["federal-register", ...filteredArgs]);
 
   const indent = jsonFlag ? 2 : undefined;
   console.log(JSON.stringify(

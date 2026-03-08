@@ -1,0 +1,122 @@
+import type { GovDataPlugin, GovResult } from "govdata-core";
+import {
+  _searchDocuments,
+  _findDocument,
+  _findManyDocuments,
+  _listAgencies,
+  _findAgency,
+  _searchPI,
+  _currentPI,
+  _getFacets,
+  _listSuggestedSearches,
+} from "./endpoints";
+import { describe } from "./describe";
+import type { FacetTypeValue } from "./types";
+
+/**
+ * Splits a comma-separated string into an array, or passes through arrays.
+ * CLI's parseFlags sends "epa,doe" as a single string.
+ */
+function splitComma(val: unknown): string[] | undefined {
+  if (val == null) return undefined;
+  if (Array.isArray(val)) return val.map(String);
+  return String(val).split(",").map((s) => s.trim());
+}
+
+function toNumber(val: unknown): number | undefined {
+  if (val == null) return undefined;
+  const n = Number(val);
+  return Number.isFinite(n) ? n : undefined;
+}
+
+async function documents(params?: Record<string, unknown>): Promise<GovResult> {
+  return _searchDocuments({
+    term: params?.term != null ? String(params.term) : undefined,
+    agencies: splitComma(params?.agencies),
+    type: splitComma(params?.type) as any,
+    significant: params?.significant != null ? (Number(params.significant) as 0 | 1) : undefined,
+    publication_date_gte: params?.publication_date_gte != null ? String(params.publication_date_gte) : undefined,
+    publication_date_lte: params?.publication_date_lte != null ? String(params.publication_date_lte) : undefined,
+    effective_date_gte: params?.effective_date_gte != null ? String(params.effective_date_gte) : undefined,
+    effective_date_lte: params?.effective_date_lte != null ? String(params.effective_date_lte) : undefined,
+    comment_date_gte: params?.comment_date_gte != null ? String(params.comment_date_gte) : undefined,
+    comment_date_lte: params?.comment_date_lte != null ? String(params.comment_date_lte) : undefined,
+    presidential_document_type: splitComma(params?.presidential_document_type),
+    president: splitComma(params?.president),
+    docket_id: splitComma(params?.docket_id),
+    regulation_id_number: splitComma(params?.regulation_id_number),
+    sections: splitComma(params?.sections),
+    topics: splitComma(params?.topics),
+    fields: splitComma(params?.fields),
+    order: params?.order != null ? String(params.order) as any : undefined,
+    per_page: toNumber(params?.per_page),
+    page: toNumber(params?.page),
+  });
+}
+
+async function document(params?: Record<string, unknown>): Promise<GovResult> {
+  const docNum = String(params?.document_number);
+  return _findDocument(docNum, {
+    fields: splitComma(params?.fields),
+  });
+}
+
+async function documents_multi(params?: Record<string, unknown>): Promise<GovResult> {
+  const nums = String(params?.document_numbers).split(",").map((s) => s.trim());
+  return _findManyDocuments(nums, {
+    fields: splitComma(params?.fields),
+  });
+}
+
+async function agencies(): Promise<GovResult> {
+  return _listAgencies();
+}
+
+async function agency(params?: Record<string, unknown>): Promise<GovResult> {
+  const id = params?.id != null ? Number(params.id) : 0;
+  return _findAgency(id);
+}
+
+async function public_inspection(params?: Record<string, unknown>): Promise<GovResult> {
+  return _searchPI({
+    term: params?.term != null ? String(params.term) : undefined,
+    agencies: splitComma(params?.agencies),
+    type: splitComma(params?.type) as any,
+    per_page: toNumber(params?.per_page),
+    page: toNumber(params?.page),
+  });
+}
+
+async function public_inspection_current(): Promise<GovResult> {
+  return _currentPI();
+}
+
+async function facets(params?: Record<string, unknown>): Promise<GovResult> {
+  const facetType = String(params?.facet_type) as FacetTypeValue;
+  const conditions: Record<string, unknown> = {};
+  if (params?.term != null) conditions.term = String(params.term);
+  if (params?.agencies != null) conditions.agencies = splitComma(params.agencies);
+  if (params?.publication_date_gte != null) conditions.publication_date_gte = String(params.publication_date_gte);
+  if (params?.publication_date_lte != null) conditions.publication_date_lte = String(params.publication_date_lte);
+  return _getFacets(facetType, Object.keys(conditions).length > 0 ? conditions as any : undefined);
+}
+
+async function suggested_searches(): Promise<GovResult> {
+  return _listSuggestedSearches();
+}
+
+export const federalRegisterPlugin: GovDataPlugin = {
+  prefix: "federal-register",
+  describe,
+  endpoints: {
+    documents,
+    document,
+    documents_multi,
+    agencies,
+    agency,
+    public_inspection,
+    public_inspection_current,
+    facets,
+    suggested_searches,
+  },
+};

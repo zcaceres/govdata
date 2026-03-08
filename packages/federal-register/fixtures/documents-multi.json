@@ -1,0 +1,82 @@
+{
+  "count": 1,
+  "results": [
+    {
+      "abstract": null,
+      "action": null,
+      "agencies": [
+        {
+          "raw_name": "SURFACE TRANSPORTATION BOARD",
+          "name": "Surface Transportation Board",
+          "id": 481,
+          "url": "https://www.federalregister.gov/agencies/surface-transportation-board",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/481",
+          "parent_id": null,
+          "slug": "surface-transportation-board"
+        }
+      ],
+      "body_html_url": "https://www.federalregister.gov/documents/full_text/html/2024/01/12/2024-00574.html",
+      "cfr_references": [],
+      "citation": "89 FR 2470",
+      "comment_url": null,
+      "comments_close_on": null,
+      "correction_of": null,
+      "corrections": [],
+      "dates": null,
+      "disposition_notes": null,
+      "docket_ids": [
+        "Docket No. FD 36751",
+        "Docket No. FD 36752"
+      ],
+      "dockets": [],
+      "document_number": "2024-00574",
+      "effective_on": null,
+      "end_page": 2470,
+      "executive_order_notes": null,
+      "executive_order_number": null,
+      "explanation": null,
+      "full_text_xml_url": "https://www.federalregister.gov/documents/full_text/xml/2024/01/12/2024-00574.xml",
+      "html_url": "https://www.federalregister.gov/documents/2024/01/12/2024-00574/james-k-perry-and-w-stinson-dean-continuance-in-control-exemption-pioneer-rail-and-transload-of",
+      "images": {},
+      "images_metadata": {},
+      "json_url": "https://www.federalregister.gov/api/v1/documents/2024-00574?publication_date=2024-01-12",
+      "mods_url": "https://www.govinfo.gov/metadata/granule/FR-2024-01-12/2024-00574/mods.xml",
+      "not_received_for_publication": null,
+      "page_length": 1,
+      "page_views": {
+        "count": 67,
+        "last_updated": "2026-03-07 22:15:03 -0500"
+      },
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2024-01-12/pdf/2024-00574.pdf",
+      "presidential_document_number": null,
+      "proclamation_number": null,
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2024-00574.pdf?1704980730",
+      "publication_date": "2024-01-12",
+      "raw_text_url": "https://www.federalregister.gov/documents/full_text/text/2024/01/12/2024-00574.txt",
+      "regulation_id_number_info": {},
+      "regulation_id_numbers": [],
+      "regulations_dot_gov_info": {
+        "comments_count": 0,
+        "agency_id": "STB",
+        "document_id": "STB-2024-0007-0001",
+        "checked_regulationsdotgov_at": "2024-01-13T13:00:06Z"
+      },
+      "regulations_dot_gov_url": null,
+      "significant": null,
+      "signing_date": null,
+      "start_page": 2470,
+      "subtype": null,
+      "title": "James K. Perry and W. Stinson Dean-Continuance in Control Exemption-Pioneer Rail and Transload of Hawthorne, Fla. and Pioneer Rail and Transload of El Reno, Okla.",
+      "toc_doc": "Continuance in Control; James K. Perry and W. Stinson Dean, Pioneer Rail and Transload of Hawthorne, FL and Pioneer Rail and Transload of El Reno, OK",
+      "toc_subject": "Exemption:\n",
+      "topics": [],
+      "type": "Notice",
+      "volume": 89
+    }
+  ],
+  "errors": {
+    "not_found": [
+      "2024-02585"
+    ]
+  }
+}

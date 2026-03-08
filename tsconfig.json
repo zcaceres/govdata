@@ -13,6 +13,8 @@
     { "path": "packages/govdata-core" },
     { "path": "packages/doge-api" },
     { "path": "packages/naics-api" },
+    { "path": "packages/dol-open-data-api" },
+    { "path": "packages/federal-register" },
     { "path": "packages/govdata-cli" },
     { "path": "packages/govdata-mcp" }
   ],

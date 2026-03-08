@@ -1,0 +1,134 @@
+{
+  "description": "All Public Inspection Documents",
+  "count": 6,
+  "total_pages": 2,
+  "next_page_url": "https://www.federalregister.gov/api/v1/public_inspection_documents?action=index&controller=api%2Fv1%2Fpublic_inspection_documents&format=json&page=2&per_page=3",
+  "results": [
+    {
+      "agencies": [
+        {
+          "raw_name": "Federal Aviation Administration",
+          "name": "Federal Aviation Administration",
+          "id": 159,
+          "url": "https://www.federalregister.gov/agencies/federal-aviation-administration",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/159",
+          "parent_id": 492,
+          "slug": "federal-aviation-administration"
+        }
+      ],
+      "agency_letters": [],
+      "agency_names": null,
+      "docket_numbers": [],
+      "document_number": "2026-04677",
+      "editorial_note": null,
+      "excerpts": null,
+      "filed_at": "2026-03-06T21:15:00Z",
+      "filing_type": "special",
+      "html_url": "https://www.federalregister.gov/public-inspection/2026-04677/airworthiness-directives-airbus-sas-airplanes",
+      "json_url": "https://www.federalregister.gov/api/v1/public_inspection_documents/2026-04677",
+      "last_public_inspection_issue": "2026-03-06",
+      "num_pages": 10,
+      "page_views": {
+        "count": 23,
+        "last_updated": "2026-03-07 22:15:06 -0500"
+      },
+      "pdf_file_name": "2026-04677_PI.pdf",
+      "pdf_file_size": 116102,
+      "pdf_updated_at": "2026-03-06T21:15:07Z",
+      "pdf_url": "https://public-inspection.federalregister.gov/2026-04677.pdf",
+      "publication_date": "2026-03-10",
+      "raw_text_url": "https://www.federalregister.gov/public-inspection/raw_text/202/604/677.txt",
+      "subject_1": "Airworthiness Directives:",
+      "subject_2": "Airbus SAS Airplanes",
+      "subject_3": null,
+      "title": "Airworthiness Directives: Airbus SAS Airplanes ",
+      "toc_doc": "Airbus SAS Airplanes",
+      "toc_subject": "Airworthiness Directives:",
+      "type": "Rule"
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "FEDERAL MINE SAFETY AND HEALTH REVIEW COMMISSION",
+          "name": "Federal Mine Safety and Health Review Commission",
+          "id": 180,
+          "url": "https://www.federalregister.gov/agencies/federal-mine-safety-and-health-review-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/180",
+          "parent_id": null,
+          "slug": "federal-mine-safety-and-health-review-commission"
+        }
+      ],
+      "agency_letters": [],
+      "agency_names": null,
+      "docket_numbers": [],
+      "document_number": "2026-04705",
+      "editorial_note": null,
+      "excerpts": null,
+      "filed_at": "2026-03-06T21:15:00Z",
+      "filing_type": "special",
+      "html_url": "https://www.federalregister.gov/public-inspection/2026-04705/meetings-sunshine-act",
+      "json_url": "https://www.federalregister.gov/api/v1/public_inspection_documents/2026-04705",
+      "last_public_inspection_issue": "2026-03-06",
+      "num_pages": 1,
+      "page_views": {
+        "count": 7,
+        "last_updated": "2026-03-07 22:15:06 -0500"
+      },
+      "pdf_file_name": "2026-04705_PI.pdf",
+      "pdf_file_size": 93650,
+      "pdf_updated_at": "2026-03-06T21:15:07Z",
+      "pdf_url": "https://public-inspection.federalregister.gov/2026-04705.pdf",
+      "publication_date": "2026-03-10",
+      "raw_text_url": "https://www.federalregister.gov/public-inspection/raw_text/202/604/705.txt",
+      "subject_1": "Meetings; Sunshine Act",
+      "subject_2": null,
+      "subject_3": null,
+      "title": "Meetings; Sunshine Act  ",
+      "toc_doc": "Meetings; Sunshine Act",
+      "toc_subject": "",
+      "type": "Notice"
+    },
+    {
+      "agencies": [
+        {
+          "raw_name": "National Park Service",
+          "name": "National Park Service",
+          "id": 362,
+          "url": "https://www.federalregister.gov/agencies/national-park-service",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/362",
+          "parent_id": 253,
+          "slug": "national-park-service"
+        }
+      ],
+      "agency_letters": [],
+      "agency_names": null,
+      "docket_numbers": [],
+      "document_number": "2026-04606",
+      "editorial_note": null,
+      "excerpts": null,
+      "filed_at": "2026-03-06T16:15:00Z",
+      "filing_type": "special",
+      "html_url": "https://www.federalregister.gov/public-inspection/2026-04606/alaska-hunting-and-trapping-in-national-preserves",
+      "json_url": "https://www.federalregister.gov/api/v1/public_inspection_documents/2026-04606",
+      "last_public_inspection_issue": "2026-03-06",
+      "num_pages": 45,
+      "page_views": {
+        "count": 81,
+        "last_updated": "2026-03-07 22:15:06 -0500"
+      },
+      "pdf_file_name": "2026-04606_PI.pdf",
+      "pdf_file_size": 215555,
+      "pdf_updated_at": "2026-03-06T16:15:08Z",
+      "pdf_url": "https://public-inspection.federalregister.gov/2026-04606.pdf",
+      "publication_date": "2026-03-10",
+      "raw_text_url": "https://www.federalregister.gov/public-inspection/raw_text/202/604/606.txt",
+      "subject_1": "Alaska; Hunting and Trapping in National Preserves",
+      "subject_2": null,
+      "subject_3": null,
+      "title": "Alaska; Hunting and Trapping in National Preserves  ",
+      "toc_doc": "Alaska; Hunting and Trapping in National Preserves",
+      "toc_subject": "",
+      "type": "Proposed Rule"
+    }
+  ]
+}

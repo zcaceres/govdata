@@ -4,14 +4,11 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import { buildSchemaFromParams } from "govdata-core";
 import type { GovDataPlugin, GovResult } from "govdata-core";
-import { dogePlugin } from "doge-api";
-import { naicsPlugin } from "naics-api";
-import { dolPlugin } from "dol-open-data-api";
-import { federalRegisterPlugin } from "federal-register";
+import { federalRegisterPlugin } from "./plugin";
 
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, federalRegisterPlugin];
+const plugins: GovDataPlugin[] = [federalRegisterPlugin];
 
-const server = new McpServer({ name: "govdata", version: "0.1.0" });
+const server = new McpServer({ name: "federal-register", version: "0.1.0" });
 
 function formatResult(result: GovResult, format: string): string {
   switch (format) {
@@ -27,8 +24,8 @@ function formatResult(result: GovResult, format: string): string {
 const formatParam = {
   format: z
     .enum(["markdown", "csv", "json"])
-    .default("markdown")
-    .describe("Output format"),
+    .optional()
+    .describe("Output format (default: markdown)"),
 };
 
 for (const plugin of plugins) {
@@ -50,7 +47,7 @@ for (const plugin of plugins) {
         const hasParams = Object.keys(params).length > 0;
         const result = await fn(hasParams ? params : undefined);
         return {
-          content: [{ type: "text" as const, text: formatResult(result, format as string) }],
+          content: [{ type: "text" as const, text: formatResult(result, (format as string) ?? "markdown") }],
         };
       },
     );
@@ -58,7 +55,7 @@ for (const plugin of plugins) {
 
   server.tool(
     `${plugin.prefix}_describe`,
-    `Describe all available ${plugin.prefix.toUpperCase()} API endpoints, parameters, and response fields`,
+    `Describe all available ${plugin.prefix.toUpperCase()} endpoints, parameters, and response fields`,
     {},
     async () => {
       return {
