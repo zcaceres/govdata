@@ -90,6 +90,38 @@ describe("dolPlugin", () => {
   });
 });
 
+describe("dolPlugin key normalization", () => {
+  test("all endpoint names are fully lowercase", () => {
+    const desc = dolPlugin.describe();
+    for (const endpoint of desc.endpoints) {
+      expect(endpoint.name).toBe(endpoint.name.toLowerCase());
+    }
+    for (const name of Object.keys(dolPlugin.endpoints)) {
+      expect(name).toBe(name.toLowerCase());
+    }
+  });
+
+  test("ILAB endpoints are lowercase in plugin keys", () => {
+    const ilabEndpoints = AGENCIES.ILAB;
+    for (const ep of ilabEndpoints) {
+      const key = `ilab_${ep.toLowerCase()}`;
+      expect(dolPlugin.endpoints[key]).toBeDefined();
+    }
+    // Verify 7 ILAB endpoints exist
+    const ilabKeys = Object.keys(dolPlugin.endpoints).filter((k) => k.startsWith("ilab_"));
+    expect(ilabKeys).toHaveLength(7);
+  });
+
+  test("filter param accepts object without crashing", async () => {
+    process.env.DOL_API_KEY = "test-key";
+    mockFetch(accidentFixture);
+
+    const filterObj = { field: "mine_id", operator: "eq", value: "123" };
+    const result = await dolPlugin.endpoints["msha_accident"]({ filter: filterObj });
+    expect(result.data).toBeInstanceOf(Array);
+  });
+});
+
 describe("dolPlugin endpoint dispatch", () => {
   test("throws without DOL_API_KEY", async () => {
     delete process.env.DOL_API_KEY;

@@ -1,11 +1,11 @@
-import { AGENCIES, type Agency, type EndpointFor } from "./datasets.js";
+import { AGENCIES, type Agency, type EndpointFor, toKey } from "./datasets.js";
 import { createClient, listDatasets } from "./client.js";
 import { createDescribe } from "./describe.js";
 import { withPagination, type PaginatedEndpoint } from "./paginate.js";
 import type { ClientConfig, QueryParams } from "./schemas.js";
 
 type AgencyNamespace<A extends Agency> = {
-  [E in EndpointFor<A>]: PaginatedEndpoint<QueryParams>;
+  [E in EndpointFor<A> as Lowercase<E>]: PaginatedEndpoint<QueryParams>;
 };
 
 export type DolClient = {
@@ -26,7 +26,7 @@ export function createDol(config: ClientConfig): DolClient {
   for (const [agency, endpoints] of Object.entries(AGENCIES)) {
     const ns: Record<string, PaginatedEndpoint> = {};
     for (const endpoint of endpoints) {
-      ns[endpoint] = withPagination(
+      ns[toKey(endpoint)] = withPagination(
         client.getData as any,
         agency as Agency,
         endpoint as EndpointFor<Agency>,

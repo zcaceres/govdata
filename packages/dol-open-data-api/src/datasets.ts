@@ -13,3 +13,7 @@ export const AGENCIES = {
 export type Agency = keyof typeof AGENCIES;
 
 export type EndpointFor<A extends Agency> = (typeof AGENCIES)[A][number];
+
+export function toKey(endpoint: string): string {
+  return endpoint.toLowerCase();
+}

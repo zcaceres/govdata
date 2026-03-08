@@ -57,7 +57,7 @@ describe("createDol", () => {
     expect(typeof dol.osha.inspection).toBe("function");
     expect(typeof dol.osha.accident_lookup2).toBe("function");
     expect(typeof dol.whd.enforcement).toBe("function");
-    expect(typeof dol.ilab.Child_Labor_Report__2016_to_2022).toBe("function");
+    expect(typeof dol.ilab.child_labor_report__2016_to_2022).toBe("function");
     expect(typeof dol.wb.ndcp).toBe("function");
     expect(typeof dol.ebsa.ocats).toBe("function");
     expect(typeof dol.eta.ui_national_weekly_claims).toBe("function");

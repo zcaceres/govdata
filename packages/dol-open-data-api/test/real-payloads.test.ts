@@ -239,7 +239,7 @@ describe("plugin wrapper dispatches real payloads as GovResult", () => {
   }
 
   for (const { name, agency, endpoint, fixture } of allFixtures) {
-    const pluginEndpointName = `${agency.toLowerCase()}_${endpoint}`;
+    const pluginEndpointName = `${agency.toLowerCase()}_${endpoint.toLowerCase()}`;
 
     test(`${pluginEndpointName} returns valid GovResult`, async () => {
       process.env.DOL_API_KEY = "test-key";
@@ -273,7 +273,7 @@ describe("createResult with real payloads", () => {
   for (const { name, agency, endpoint, fixture } of allFixtures) {
     test(`${name} round-trips through createResult`, () => {
       const parsed = DataResponse.parse(fixture);
-      const kind = `${agency.toLowerCase()}_${endpoint}`;
+      const kind = `${agency.toLowerCase()}_${endpoint.toLowerCase()}`;
       const result = createResult(parsed.data, null, kind);
 
       expect(result.data).toBeInstanceOf(Array);
