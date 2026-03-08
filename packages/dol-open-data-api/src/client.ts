@@ -11,7 +11,11 @@ async function fetchJson(url: string, agency?: string, endpoint?: string): Promi
   if (!res.ok) {
     throw new DOLApiError(res.status, body, url, agency, endpoint);
   }
-  return JSON.parse(body);
+  try {
+    return JSON.parse(body);
+  } catch {
+    throw new DOLApiError(res.status, `Invalid JSON response: ${body.slice(0, 200)}`, url, agency, endpoint);
+  }
 }
 
 export async function listDatasets(baseUrl = DEFAULT_BASE_URL): Promise<DatasetsResponse> {

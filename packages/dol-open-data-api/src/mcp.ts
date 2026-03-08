@@ -60,26 +60,30 @@ for (const [agency, endpoints] of Object.entries(AGENCIES)) {
       description,
       schemaShape,
       async (args) => {
-        const { format, fields, filter, ...params } = args;
-        const queryArgs: Record<string, unknown> = { ...params };
-        if (fields) queryArgs.fields = (fields as string).split(",");
-        if (filter) {
-          try {
-            queryArgs.filter = JSON.parse(filter as string);
-          } catch {
-            return { content: [{ type: "text" as const, text: `Invalid filter JSON: ${filter}` }] };
+        try {
+          const { format, fields, filter, ...params } = args;
+          const queryArgs: Record<string, unknown> = { ...params };
+          if (fields) queryArgs.fields = (fields as string).split(",");
+          if (filter) {
+            try {
+              queryArgs.filter = JSON.parse(filter as string);
+            } catch {
+              return { content: [{ type: "text" as const, text: `Invalid filter JSON: ${filter}` }], isError: true };
+            }
           }
+          const hasParams = Object.keys(queryArgs).length > 0;
+          const result = await client.getData(
+            agency as Agency,
+            endpoint as EndpointFor<Agency>,
+            hasParams ? (queryArgs as any) : undefined,
+          );
+          const wrapped = wrapResponse(result, agency, endpoint);
+          return {
+            content: [{ type: "text" as const, text: formatResult(wrapped, format as string) }],
+          };
+        } catch (err: unknown) {
+          return { content: [{ type: "text" as const, text: String((err as Error).message ?? err) }], isError: true };
         }
-        const hasParams = Object.keys(queryArgs).length > 0;
-        const result = await client.getData(
-          agency as Agency,
-          endpoint as EndpointFor<Agency>,
-          hasParams ? (queryArgs as any) : undefined,
-        );
-        const wrapped = wrapResponse(result, agency, endpoint);
-        return {
-          content: [{ type: "text" as const, text: formatResult(wrapped, format as string) }],
-        };
       },
     );
   }
@@ -92,13 +96,17 @@ for (const [agency, endpoints] of Object.entries(AGENCIES)) {
     const description = `Describe the DOL ${agency} ${endpoint} dataset — columns, types, and metadata`;
 
     server.tool(toolName, description, {}, async () => {
-      const desc = await describeFn(
-        agency as Agency,
-        endpoint as EndpointFor<Agency>,
-      );
-      return {
-        content: [{ type: "text" as const, text: desc.textSummary }],
-      };
+      try {
+        const desc = await describeFn(
+          agency as Agency,
+          endpoint as EndpointFor<Agency>,
+        );
+        return {
+          content: [{ type: "text" as const, text: desc.textSummary }],
+        };
+      } catch (err: unknown) {
+        return { content: [{ type: "text" as const, text: String((err as Error).message ?? err) }], isError: true };
+      }
     });
   }
 }
@@ -109,14 +117,18 @@ server.tool(
   "List all available DOL datasets with agency, endpoint name, and description",
   {},
   async () => {
-    const result = await listDatasets();
-    const lines: string[] = [];
-    for (const ds of result.datasets) {
-      lines.push(`${ds.agency.abbr}/${ds.api_url} — ${ds.name}`);
+    try {
+      const result = await listDatasets();
+      const lines: string[] = [];
+      for (const ds of result.datasets) {
+        lines.push(`${ds.agency.abbr}/${ds.api_url} — ${ds.name}`);
+      }
+      return {
+        content: [{ type: "text" as const, text: lines.join("\n") }],
+      };
+    } catch (err: unknown) {
+      return { content: [{ type: "text" as const, text: String((err as Error).message ?? err) }], isError: true };
     }
-    return {
-      content: [{ type: "text" as const, text: lines.join("\n") }],
-    };
   },
 );
 

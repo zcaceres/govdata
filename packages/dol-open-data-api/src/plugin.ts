@@ -20,8 +20,14 @@ function makeEndpoint(agency: Agency, endpoint: string) {
   return async (params?: Record<string, unknown>): Promise<GovResult> => {
     const client = getClient();
     const queryParams: Record<string, unknown> = {};
-    if (params?.limit != null) queryParams.limit = Number(params.limit);
-    if (params?.offset != null) queryParams.offset = Number(params.offset);
+    if (params?.limit != null) {
+      if (typeof params.limit === "boolean") throw new Error("limit requires a numeric value");
+      queryParams.limit = Number(params.limit);
+    }
+    if (params?.offset != null) {
+      if (typeof params.offset === "boolean") throw new Error("offset requires a numeric value");
+      queryParams.offset = Number(params.offset);
+    }
     if (params?.sort) queryParams.sort = String(params.sort);
     if (params?.sort_by) queryParams.sort_by = String(params.sort_by);
     if (params?.fields) queryParams.fields = String(params.fields).split(",");

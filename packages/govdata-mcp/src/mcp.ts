@@ -47,12 +47,16 @@ for (const plugin of plugins) {
       endpoint.description,
       schemaShape,
       async (args) => {
-        const { format, ...params } = args;
-        const hasParams = Object.keys(params).length > 0;
-        const result = await fn(hasParams ? params : undefined);
-        return {
-          content: [{ type: "text" as const, text: formatResult(result, format as string) }],
-        };
+        try {
+          const { format, ...params } = args;
+          const hasParams = Object.keys(params).length > 0;
+          const result = await fn(hasParams ? params : undefined);
+          return {
+            content: [{ type: "text" as const, text: formatResult(result, format as string) }],
+          };
+        } catch (err: unknown) {
+          return { content: [{ type: "text" as const, text: String((err as Error).message ?? err) }], isError: true };
+        }
       },
     );
   }

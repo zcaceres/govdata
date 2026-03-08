@@ -32,5 +32,5 @@ function expressionToApi(expr: FilterExpression): unknown {
 }
 
 export function serializeFilter(expr: FilterExpression): string {
-  return encodeURIComponent(JSON.stringify(expressionToApi(expr)));
+  return JSON.stringify(expressionToApi(expr));
 }

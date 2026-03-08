@@ -63,32 +63,32 @@ describe("filter builders", () => {
 
 describe("serializeFilter", () => {
   test("serializes eq condition", () => {
-    const raw = decodeURIComponent(serializeFilter(eq("state", "CA")));
+    const raw = serializeFilter(eq("state", "CA"));
     expect(JSON.parse(raw)).toEqual({ column: "state", comparator: "eq", value: "CA" });
   });
 
   test("serializes numeric value", () => {
-    const raw = decodeURIComponent(serializeFilter(gt("days_lost", 100)));
+    const raw = serializeFilter(gt("days_lost", 100));
     expect(JSON.parse(raw)).toEqual({ column: "days_lost", comparator: "gt", value: 100 });
   });
 
   test("serializes like condition", () => {
-    const raw = decodeURIComponent(serializeFilter(like("operator_name", "%COAL%")));
+    const raw = serializeFilter(like("operator_name", "%COAL%"));
     expect(JSON.parse(raw)).toEqual({ column: "operator_name", comparator: "like", value: "%COAL%" });
   });
 
   test("serializes isIn with array value", () => {
-    const raw = decodeURIComponent(serializeFilter(isIn("fips_state_code", ["54", "21", "32"])));
+    const raw = serializeFilter(isIn("fips_state_code", ["54", "21", "32"]));
     expect(JSON.parse(raw)).toEqual({ column: "fips_state_code", comparator: "in", value: ["54", "21", "32"] });
   });
 
   test("serializes notIn with numeric array", () => {
-    const raw = decodeURIComponent(serializeFilter(notIn("fiscal_year", [2020, 2021])));
+    const raw = serializeFilter(notIn("fiscal_year", [2020, 2021]));
     expect(JSON.parse(raw)).toEqual({ column: "fiscal_year", comparator: "not_in", value: [2020, 2021] });
   });
 
   test("serializes and expression", () => {
-    const raw = decodeURIComponent(serializeFilter(and(eq("state", "CA"), gt("year", 2020))));
+    const raw = serializeFilter(and(eq("state", "CA"), gt("year", 2020)));
     expect(JSON.parse(raw)).toEqual({
       and: [
         { column: "state", comparator: "eq", value: "CA" },
@@ -98,7 +98,7 @@ describe("serializeFilter", () => {
   });
 
   test("serializes or expression", () => {
-    const raw = decodeURIComponent(serializeFilter(or(eq("coal_metal_ind", "C"), eq("coal_metal_ind", "M"))));
+    const raw = serializeFilter(or(eq("coal_metal_ind", "C"), eq("coal_metal_ind", "M")));
     expect(JSON.parse(raw)).toEqual({
       or: [
         { column: "coal_metal_ind", comparator: "eq", value: "C" },
@@ -113,7 +113,7 @@ describe("serializeFilter", () => {
       gt("days_lost", 30),
       neq("degree_injury", "NO DAYS LOST"),
     );
-    const raw = decodeURIComponent(serializeFilter(filter));
+    const raw = serializeFilter(filter);
     const parsed = JSON.parse(raw);
     expect(parsed.and).toHaveLength(3);
     expect(parsed.and[0].or).toHaveLength(2);
@@ -121,10 +121,8 @@ describe("serializeFilter", () => {
     expect(parsed.and[2]).toEqual({ column: "degree_injury", comparator: "neq", value: "NO DAYS LOST" });
   });
 
-  test("output is URL-encoded", () => {
+  test("output is raw JSON (URL encoding handled by URLSearchParams)", () => {
     const result = serializeFilter(eq("state", "CA"));
-    expect(result).not.toContain("{");
-    expect(result).not.toContain('"');
-    expect(result).toContain("%7B");
+    expect(JSON.parse(result)).toEqual({ column: "state", comparator: "eq", value: "CA" });
   });
 });

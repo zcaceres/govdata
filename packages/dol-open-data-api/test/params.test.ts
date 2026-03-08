@@ -27,7 +27,7 @@ describe("buildSearchParams", () => {
 
   test("serializes filter to filter_object", () => {
     const sp = buildSearchParams("key", { filter: eq("state", "CA") });
-    const raw = decodeURIComponent(sp.get("filter_object")!);
+    const raw = sp.get("filter_object")!;
     expect(JSON.parse(raw)).toEqual({ column: "state", comparator: "eq", value: "CA" });
   });
 
