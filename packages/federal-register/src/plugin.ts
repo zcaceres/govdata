@@ -62,8 +62,8 @@ async function documents(params?: Record<string, unknown>): Promise<GovResult> {
     effective_date_is: params?.effective_date_is != null ? String(params.effective_date_is) : undefined,
     presidential_document_type: splitComma(params?.presidential_document_type),
     president: splitComma(params?.president),
-    docket_id: splitComma(params?.docket_id),
-    regulation_id_number: splitComma(params?.regulation_id_number),
+    docket_id: params?.docket_id != null ? String(params.docket_id) : undefined,
+    regulation_id_number: params?.regulation_id_number != null ? String(params.regulation_id_number) : undefined,
     sections: splitComma(params?.sections),
     topics: splitComma(params?.topics),
     fields: splitComma(params?.fields),
@@ -147,8 +147,8 @@ async function facets(params?: Record<string, unknown>): Promise<GovResult> {
   }
   if (params?.presidential_document_type != null) conditions.presidential_document_type = splitComma(params.presidential_document_type);
   if (params?.president != null) conditions.president = splitComma(params.president);
-  if (params?.docket_id != null) conditions.docket_id = splitComma(params.docket_id);
-  if (params?.regulation_id_number != null) conditions.regulation_id_number = splitComma(params.regulation_id_number);
+  if (params?.docket_id != null) conditions.docket_id = String(params.docket_id);
+  if (params?.regulation_id_number != null) conditions.regulation_id_number = String(params.regulation_id_number);
   if (params?.sections != null) conditions.sections = splitComma(params.sections);
   if (params?.topics != null) conditions.topics = splitComma(params.topics);
   if (params?.agency_ids != null) conditions.agency_ids = splitCommaNumbers(params.agency_ids);

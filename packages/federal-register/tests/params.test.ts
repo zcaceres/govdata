@@ -103,4 +103,16 @@ describe("serializeParams", () => {
     const result = serializeParams({ agency_ids: [145, 136] });
     expect(result).toBe("conditions[agency_ids][]=145&conditions[agency_ids][]=136");
   });
+
+  it("serializes docket_id as scalar condition (not array)", () => {
+    const result = serializeParams({ docket_id: "EPA-HQ-OAR-2021-0668" });
+    expect(result).toBe("conditions[docket_id]=EPA-HQ-OAR-2021-0668");
+    expect(result).not.toContain("[]");
+  });
+
+  it("serializes regulation_id_number as scalar condition (not array)", () => {
+    const result = serializeParams({ regulation_id_number: "2060-AU87" });
+    expect(result).toBe("conditions[regulation_id_number]=2060-AU87");
+    expect(result).not.toContain("[]");
+  });
 });

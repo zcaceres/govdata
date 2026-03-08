@@ -98,8 +98,8 @@ await fr.documents.search({
   president: ["joe-biden"],
 
   // Regulatory identifiers
-  docket_id: ["EPA-HQ-OAR-2021-0317"],
-  regulation_id_number: ["2060-AV67"],
+  docket_id: "EPA-HQ-OAR-2021-0317",
+  regulation_id_number: "2060-AV67",
 
   // Select specific fields (reduces response size)
   fields: ["document_number", "title", "type", "abstract"],

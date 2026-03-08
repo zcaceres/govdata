@@ -27,8 +27,6 @@ const ARRAY_CONDITIONS = new Set([
   "type",
   "presidential_document_type",
   "president",
-  "docket_id",
-  "regulation_id_number",
   "sections",
   "topics",
   "agency_ids",
