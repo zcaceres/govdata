@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "naics": "54",
+      "naics_description": "Professional, Scientific, and Technical Services",
+      "year_retired": null,
+      "count": 52,
+      "children": [
+        {
+          "naics": "5411",
+          "naics_description": "Legal Services",
+          "year_retired": null,
+          "count": 4
+        },
+        {
+          "naics": "5412",
+          "naics_description": "Accounting, Tax Preparation, Bookkeeping, and Payroll Services",
+          "year_retired": null,
+          "count": 4
+        },
+        {
+          "naics": "5413",
+          "naics_description": "Architectural, Engineering, and Related Services",
+          "year_retired": null,
+          "count": 8
+        },
+        {
+          "naics": "5414",
+          "naics_description": "Specialized Design Services",
+          "year_retired": null,
+          "count": 4
+        },
+        {
+          "naics": "5415",
+          "naics_description": "Computer Systems Design and Related Services",
+          "year_retired": null,
+          "count": 4
+        },
+        {
+          "naics": "5416",
+          "naics_description": "Management, Scientific, and Technical Consulting Services",
+          "year_retired": null,
+          "count": 7
+        },
+        {
+          "naics": "5417",
+          "naics_description": "Scientific Research and Development Services",
+          "year_retired": null,
+          "count": 7
+        },
+        {
+          "naics": "5418",
+          "naics_description": "Advertising, Public Relations, and Related Services",
+          "year_retired": null,
+          "count": 8
+        },
+        {
+          "naics": "5419",
+          "naics_description": "Other Professional, Scientific, and Technical Services",
+          "year_retired": null,
+          "count": 6
+        }
+      ]
+    }
+  ]
+}

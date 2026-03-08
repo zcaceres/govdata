@@ -1,0 +1,88 @@
+{
+  "category": "country",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": null,
+      "code": "USA",
+      "name": "UNITED STATES",
+      "amount": 3154579596.26,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "NGA",
+      "name": "NIGERIA",
+      "amount": 27491558,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "ESP",
+      "name": "SPAIN",
+      "amount": 19709452,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "GIN",
+      "name": "GUINEA",
+      "amount": 831493,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "ITA",
+      "name": "ITALY",
+      "amount": 507992.09,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "GBR",
+      "name": "UNITED KINGDOM",
+      "amount": 486437,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "MEX",
+      "name": "MEXICO",
+      "amount": 150000,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "CAN",
+      "name": "CANADA",
+      "amount": 147991,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "TUN",
+      "name": "TUNISIA",
+      "amount": 98670.69,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "NZL",
+      "name": "NEW ZEALAND",
+      "amount": 86598,
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

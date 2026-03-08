@@ -1,0 +1,49 @@
+{
+  "totals": {
+    "obligation": 852065389700.03,
+    "outlay": 852031780637.64,
+    "award_count": 16009800,
+    "face_value_of_loan": 1190529584535.87
+  },
+  "results": [
+    {
+      "id": 803,
+      "code": "073",
+      "description": "Small Business Administration",
+      "children": [],
+      "award_count": 16009741,
+      "obligation": 852044534341.52,
+      "outlay": 852031174094.01,
+      "face_value_of_loan": 1190348687375.55
+    },
+    {
+      "id": 95,
+      "code": "012",
+      "description": "Department of Agriculture",
+      "children": [],
+      "award_count": 58,
+      "obligation": 20756314.88,
+      "outlay": 507500,
+      "face_value_of_loan": 156410326.32
+    },
+    {
+      "id": 1522,
+      "code": "077",
+      "description": "U.S. International Development Finance Corporation",
+      "children": [],
+      "award_count": 1,
+      "obligation": 99043.63,
+      "outlay": 99043.63,
+      "face_value_of_loan": 24486834
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 3,
+    "limit": 10,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": 10237638,
+      "subaward_number": "1769221-60",
+      "description": "ELECTRA/HYDRA/MECHANICAL (EHM)",
+      "action_date": "2026-01-27",
+      "amount": 1148071,
+      "recipient_name": "VACCO INDUSTRIES"
+    },
+    {
+      "id": 10238157,
+      "subaward_number": "694540-112",
+      "description": "PURCHASED OUTSIDE PRODUCTION",
+      "action_date": "2026-01-20",
+      "amount": 904540,
+      "recipient_name": "GENERAL DYNAMICS-OTS, INC."
+    },
+    {
+      "id": 10238059,
+      "subaward_number": "1379119-45",
+      "description": "PROPULSION",
+      "action_date": "2026-01-27",
+      "amount": 780000.6,
+      "recipient_name": "ENSIGN-BICKFORD AEROSPACE & DEFENSE COMPANY"
+    },
+    {
+      "id": 10237740,
+      "subaward_number": "1980978-53",
+      "description": "ELECTRA/HYDRA/MECHANICAL (EHM)",
+      "action_date": "2026-01-14",
+      "amount": 555000,
+      "recipient_name": "HAMILTON SUNDSTRAND SPACE SYSTEMS INTERNATIONAL INCORPORATED"
+    },
+    {
+      "id": 10237831,
+      "subaward_number": "2168777-18",
+      "description": "NON PRODUCTION",
+      "action_date": "2026-01-15",
+      "amount": 480276,
+      "recipient_name": "MODELS & TOOLS INC"
+    },
+    {
+      "id": 10237930,
+      "subaward_number": "1364509-91",
+      "description": "AEROSPACE SUPPORT",
+      "action_date": "2026-01-29",
+      "amount": 358085,
+      "recipient_name": "DYNETICS, INC."
+    },
+    {
+      "id": 10237820,
+      "subaward_number": "2743855-04",
+      "description": "SYSTEMS",
+      "action_date": "2026-01-06",
+      "amount": 350000,
+      "recipient_name": "L3HARRIS CINCINNATI ELECTRONICS CORPORATION"
+    },
+    {
+      "id": 10237905,
+      "subaward_number": "2670001-28",
+      "description": "AEROSPACE SUPPORT",
+      "action_date": "2026-01-29",
+      "amount": 335000,
+      "recipient_name": "SEV1TECH, LLC"
+    },
+    {
+      "id": 10237892,
+      "subaward_number": "2785650-01",
+      "description": "NON PRODUCTION",
+      "action_date": "2026-01-14",
+      "amount": 243320,
+      "recipient_name": "FUTURAMIC TOOL & ENGINEERING CO"
+    },
+    {
+      "id": 10237893,
+      "subaward_number": "2765017-02",
+      "description": "NON PRODUCTION",
+      "action_date": "2026-01-26",
+      "amount": 231546.38,
+      "recipient_name": "FUTURAMIC TOOL & ENGINEERING CO"
+    }
+  ]
+}

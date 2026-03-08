@@ -1,0 +1,50 @@
+{
+  "count": 10,
+  "results": {
+    "cities": [
+      {
+        "city_name": "NASAN",
+        "country_name": "IRAN"
+      },
+      {
+        "city_name": "NASAR",
+        "country_name": "CHAD"
+      },
+      {
+        "city_name": "NASA",
+        "country_name": "GHANA"
+      },
+      {
+        "city_name": "NASA",
+        "country_name": "CHINA"
+      },
+      {
+        "city_name": "NASAR",
+        "country_name": "IRAN"
+      },
+      {
+        "city_name": "NASAU",
+        "country_name": "FIJI"
+      },
+      {
+        "city_name": "NASAO",
+        "country_name": "FIJI"
+      },
+      {
+        "city_name": "NASA",
+        "country_name": "JAPAN"
+      },
+      {
+        "city_name": "NASABĪ",
+        "country_name": "IRAN"
+      },
+      {
+        "city_name": "NASAMA",
+        "country_name": "FIJI"
+      }
+    ]
+  },
+  "messages": [
+    ""
+  ]
+}

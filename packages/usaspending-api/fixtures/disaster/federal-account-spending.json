@@ -1,0 +1,290 @@
+{
+  "results": [
+    {
+      "id": 5380,
+      "code": "073-1154",
+      "description": "Business Loans Program Account, Small Business Administration",
+      "award_count": null,
+      "obligation": 822334940158.08,
+      "outlay": 822322353037.89,
+      "total_budgetary_resources": 824261828864.8,
+      "children": [
+        {
+          "id": 78466,
+          "code": "073-2020/2021-1154-000",
+          "description": "Business Loans Program Account, Small Business Administration",
+          "award_count": null,
+          "obligation": 538932554662.04,
+          "outlay": 538932674655.22,
+          "total_budgetary_resources": 540835000000
+        },
+        {
+          "id": 16340,
+          "code": "073-X-1154-000",
+          "description": "Business Loans Program Account, Small Business Administration",
+          "award_count": null,
+          "obligation": 283402385496.04,
+          "outlay": 283389678382.67,
+          "total_budgetary_resources": 283426828864.8
+        }
+      ]
+    },
+    {
+      "id": 6326,
+      "code": "020-0905",
+      "description": "U.S. Coronavirus Payments, Internal Revenue Service, Treasury",
+      "award_count": null,
+      "obligation": 443202195453.85,
+      "outlay": 443202195453.85,
+      "total_budgetary_resources": 443258337208.55,
+      "children": [
+        {
+          "id": 36634,
+          "code": "020-X-0905-000",
+          "description": "U.S. Coronavirus Payments, Internal Revenue Service, Treasury",
+          "award_count": null,
+          "obligation": 443202195453.85,
+          "outlay": 443202195453.85,
+          "total_budgetary_resources": 443258337208.55
+        }
+      ]
+    },
+    {
+      "id": 4126,
+      "code": "016-1801",
+      "description": "Federal Unemployment Compensation Program, Employment and Training Administration, Labor",
+      "award_count": null,
+      "obligation": 440545026770.12,
+      "outlay": 438582110326.06,
+      "total_budgetary_resources": 440849369445.04,
+      "children": [
+        {
+          "id": 44252,
+          "code": "016-X-1801-000",
+          "description": "Federal Unemployment Compensation Program, Employment and Training Administration, Labor",
+          "award_count": null,
+          "obligation": 440545026770.12,
+          "outlay": 438582110326.06,
+          "total_budgetary_resources": 440849369445.04
+        }
+      ]
+    },
+    {
+      "id": 4141,
+      "code": "016-8042",
+      "description": "Unemployment Trust Fund - Treasury Managed, Labor",
+      "award_count": null,
+      "obligation": 232559329647.46,
+      "outlay": 230103213717.29,
+      "total_budgetary_resources": 249482023834.38,
+      "children": [
+        {
+          "id": 9824,
+          "code": "016-X-8042-000",
+          "description": "Unemployment Trust Fund - Treasury Managed, Labor",
+          "award_count": null,
+          "obligation": 232559329647.46,
+          "outlay": 230103213717.29,
+          "total_budgetary_resources": 249482023834.38
+        }
+      ]
+    },
+    {
+      "id": 5413,
+      "code": "075-0140",
+      "description": "Public Health and Social Services Emergency Fund, Office of the Secretary, Health and Human Services",
+      "award_count": null,
+      "obligation": 220733124984.45,
+      "outlay": 216219413342.26,
+      "total_budgetary_resources": 222381735590.58,
+      "children": [
+        {
+          "id": 16540,
+          "code": "075-X-0140-000",
+          "description": "Public Health and Social Services Emergency Fund, Office of the Secretary, Health and Human Services",
+          "award_count": null,
+          "obligation": 187391392481.25,
+          "outlay": 185431338991.2,
+          "total_budgetary_resources": 188380728843.54
+        },
+        {
+          "id": 78161,
+          "code": "075-2020/2024-0140-000",
+          "description": "Public Health and Social Services Emergency Fund, Office of the Secretary, Health and Human Services",
+          "award_count": null,
+          "obligation": 33340382503.2,
+          "outlay": 30786754314.11,
+          "total_budgetary_resources": 33997649893.11
+        },
+        {
+          "id": 77560,
+          "code": "075-2020/2022-0140-000",
+          "description": "Public Health and Social Services Emergency Fund, Office of the Secretary, Health and Human Services",
+          "award_count": null,
+          "obligation": 1350000,
+          "outlay": 1320036.95,
+          "total_budgetary_resources": 3356853.93
+        }
+      ]
+    },
+    {
+      "id": 6328,
+      "code": "020-1892",
+      "description": "Coronavirus Relief Fund, Departmental Offices, Treasury",
+      "award_count": null,
+      "obligation": 149837581560.25,
+      "outlay": 149837581560.25,
+      "total_budgetary_resources": 149839209710.81,
+      "children": [
+        {
+          "id": 78461,
+          "code": "020-2020/2020-1892-000",
+          "description": "Coronavirus Relief Fund, Departmental Offices, Treasury",
+          "award_count": null,
+          "obligation": 149839209710.81,
+          "outlay": 149762275891.81,
+          "total_budgetary_resources": 149839209710.81
+        },
+        {
+          "id": 80666,
+          "code": "020-X-1892-000",
+          "description": "Coronavirus Relief Fund, Departmental Offices, Treasury",
+          "award_count": null,
+          "obligation": -1628150.56,
+          "outlay": 75305668.44,
+          "total_budgetary_resources": 0
+        }
+      ]
+    },
+    {
+      "id": 4346,
+      "code": "020-0936",
+      "description": "U.S. Coronavirus Refundable Credits, Internal Revenue Service, Treasury",
+      "award_count": null,
+      "obligation": 94403409910.33,
+      "outlay": 94403409910.33,
+      "total_budgetary_resources": 109656282355.45,
+      "children": [
+        {
+          "id": 40854,
+          "code": "020-X-0936-000",
+          "description": "U.S. Coronavirus Refundable Credits, Internal Revenue Service, Treasury",
+          "award_count": null,
+          "obligation": 94403409910.33,
+          "outlay": 94403409910.33,
+          "total_budgetary_resources": 109656282355.45
+        }
+      ]
+    },
+    {
+      "id": 3551,
+      "code": "012-3505",
+      "description": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
+      "award_count": null,
+      "obligation": 70361923899.29,
+      "outlay": 70716460813.35,
+      "total_budgetary_resources": 117025592616.49,
+      "children": [
+        {
+          "id": 79541,
+          "code": "012-2021/2021-3505-000",
+          "description": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
+          "award_count": null,
+          "obligation": 47313734744.46,
+          "outlay": 47313734744.46,
+          "total_budgetary_resources": 60866047650
+        },
+        {
+          "id": 77262,
+          "code": "012-2020/2021-3505-000",
+          "description": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
+          "award_count": null,
+          "obligation": 15890105598.68,
+          "outlay": 15890085777.03,
+          "total_budgetary_resources": 15910000000
+        },
+        {
+          "id": 77242,
+          "code": "012-2020/2020-3505-000",
+          "description": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
+          "award_count": null,
+          "obligation": 10944544966.49,
+          "outlay": 10944544966.49,
+          "total_budgetary_resources": 10944544966.49
+        },
+        {
+          "id": 2679,
+          "code": "012-X-3505-000",
+          "description": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
+          "award_count": null,
+          "obligation": 2222457.8,
+          "outlay": 2097800.19,
+          "total_budgetary_resources": 5000000
+        },
+        {
+          "id": 81644,
+          "code": "012-2022/2022-3505-000",
+          "description": "Supplemental Nutrition Assistance Program, Food and Nutrition Service, Agriculture",
+          "award_count": null,
+          "obligation": -3788683868.14,
+          "outlay": -3434002474.82,
+          "total_budgetary_resources": 29300000000
+        }
+      ]
+    },
+    {
+      "id": 5379,
+      "code": "073-1152",
+      "description": "Disaster Loans Program Account, Small Business Administration",
+      "award_count": null,
+      "obligation": 45779588708.32,
+      "outlay": 45778873710.06,
+      "total_budgetary_resources": 45803433568.05,
+      "children": [
+        {
+          "id": 16339,
+          "code": "073-X-1152-000",
+          "description": "Disaster Loans Program Account, Small Business Administration",
+          "award_count": null,
+          "obligation": 45779588708.32,
+          "outlay": 45778873710.06,
+          "total_budgetary_resources": 45803433568.05
+        }
+      ]
+    },
+    {
+      "id": 5237,
+      "code": "070-0702",
+      "description": "Disaster Relief Fund, Federal Emergency Management Agency, Homeland Security",
+      "award_count": null,
+      "obligation": 40049778847.67,
+      "outlay": 40049778848.42,
+      "total_budgetary_resources": 42343814019.22,
+      "children": [
+        {
+          "id": 23478,
+          "code": "070-X-0702-000",
+          "description": "Disaster Relief Fund, Federal Emergency Management Agency, Homeland Security",
+          "award_count": null,
+          "obligation": 40049778847.67,
+          "outlay": 40049778848.42,
+          "total_budgetary_resources": 42343814019.22
+        }
+      ]
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 255,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "totals": {
+    "obligation": 2917437912020.09,
+    "outlay": 2901260742930.48,
+    "total_budgetary_resources": 3038792054053.44
+  }
+}

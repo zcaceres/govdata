@@ -1,0 +1,128 @@
+{
+  "count": 20,
+  "results": [
+    {
+      "recipient_name": "NASAW/DOUGLASS & ASSOCIATES LTD",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "ANASAR, INC.",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "ANASAZI NM HOLDINGS, INC.",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "ASSOCIACAO HAMUTUK NASAUN SAUDAVEL",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "B&R 1100 NASA PARKWAY OWNER, LP",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "DYNASAFE US LLC",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "FIRELAKE-ARROWHEAD NASA SERVICES 2",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "NASA AMES RESEARCH CENTER",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "NASA MACHINE TOOLS, INC.",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "NASA SERVICES INC",
+      "recipient_level": null,
+      "uei": null,
+      "duns": null
+    },
+    {
+      "recipient_name": "CAVALRY PROPERTY MANAGEMENT LLC",
+      "recipient_level": null,
+      "uei": "D1LWKWNASAK9",
+      "duns": null
+    },
+    {
+      "recipient_name": "FEDERAL HOCKING LOCAL SCHOOL DISTRICT",
+      "recipient_level": null,
+      "uei": "DGNASAHZAQJ7",
+      "duns": null
+    },
+    {
+      "recipient_name": "BECKART ENVIRONMENTAL, INC",
+      "recipient_level": null,
+      "uei": "DMYEHNASAAT7",
+      "duns": null
+    },
+    {
+      "recipient_name": "NAUGHTON JR JAMES J",
+      "recipient_level": null,
+      "uei": "EWD3NASAR423",
+      "duns": null
+    },
+    {
+      "recipient_name": "AVOCET ENVIRONMENTAL, INC.",
+      "recipient_level": null,
+      "uei": "LVNASAG65J83",
+      "duns": null
+    },
+    {
+      "recipient_name": "CURRIE MEDICAL SPECIALTIES INC.",
+      "recipient_level": null,
+      "uei": "LWDMB88NASA5",
+      "duns": null
+    },
+    {
+      "recipient_name": "COLE CAMINO, LTD.",
+      "recipient_level": null,
+      "uei": "NASAWNTBMJL5",
+      "duns": null
+    },
+    {
+      "recipient_name": "GENESEE TOWNSHIP VOLUNTEER FIRE DEPARTMENT INC.",
+      "recipient_level": null,
+      "uei": "J5NASA156J93",
+      "duns": null
+    },
+    {
+      "recipient_name": "OCEAN CHARTER SCHOOL",
+      "recipient_level": null,
+      "uei": "JMNASAGM9B33",
+      "duns": null
+    },
+    {
+      "recipient_name": "WHISENNAND BROTHERS",
+      "recipient_level": null,
+      "uei": "U3KXKNASAU41",
+      "duns": null
+    }
+  ],
+  "messages": [
+    "The response value of 'recipient_level' is deprecated to avoid to confusion when returning only a single Recipient in the response. The request value of 'recipient_levels' will continue to limit the response."
+  ]
+}

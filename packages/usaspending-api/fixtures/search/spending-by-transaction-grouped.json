@@ -1,0 +1,77 @@
+{
+  "limit": 10,
+  "results": [
+    {
+      "award_id": "NNM07AB03C",
+      "transaction_count": 509,
+      "transaction_obligation": 10406528680,
+      "award_generated_internal_id": "CONT_AWD_NNM07AB03C_8000_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "NNK17MA01T",
+      "transaction_count": 71,
+      "transaction_obligation": 3029850123.69,
+      "award_generated_internal_id": "CONT_AWD_NNK17MA01T_8000_NNK14MA74C_8000"
+    },
+    {
+      "award_id": "80NM0018F0615",
+      "transaction_count": 73,
+      "transaction_obligation": 2924898288.98,
+      "award_generated_internal_id": "CONT_AWD_80NM0018F0615_8000_80NM0018D0004_8000"
+    },
+    {
+      "award_id": "NNH15CN76C",
+      "transaction_count": 152,
+      "transaction_obligation": 1551196233.03,
+      "award_generated_internal_id": "CONT_AWD_NNH15CN76C_8000_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "80KSC019C0013",
+      "transaction_count": 180,
+      "transaction_obligation": 1550689354.01,
+      "award_generated_internal_id": "CONT_AWD_80KSC019C0013_8000_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "80GSFC19C0063",
+      "transaction_count": 245,
+      "transaction_obligation": 1507182952.4,
+      "award_generated_internal_id": "CONT_AWD_80GSFC19C0063_8000_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "80NM0018F0850",
+      "transaction_count": 117,
+      "transaction_obligation": 1441181507.34,
+      "award_generated_internal_id": "CONT_AWD_80NM0018F0850_8000_80NM0018D0004_8000"
+    },
+    {
+      "award_id": "NNN13D496T",
+      "transaction_count": 125,
+      "transaction_obligation": 1403381590.45,
+      "award_generated_internal_id": "CONT_AWD_NNN13D496T_8000_NNN12AA01C_8000"
+    },
+    {
+      "award_id": "NNJ09HD46C",
+      "transaction_count": 215,
+      "transaction_obligation": 1306805321.14,
+      "award_generated_internal_id": "CONT_AWD_NNJ09HD46C_8000_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "80NM0018F0616",
+      "transaction_count": 128,
+      "transaction_obligation": 1265720994.01,
+      "award_generated_internal_id": "CONT_AWD_80NM0018F0616_8000_80NM0018D0004_8000"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "messages": [
+    "This endpoint is under active development and subject to change",
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "The following filters from the request were not used: {'keyword_search'}. See https://api.usaspending.gov/docs/endpoints for a list of appropriate filters"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "total_transaction_obligated_amount": 6493770141,
+      "federal_account": "080-0124",
+      "account_title": "Exploration, National Aeronautics and Space Administration",
+      "funding_agency_abbreviation": "NASA",
+      "funding_agency_name": "National Aeronautics and Space Administration",
+      "funding_agency_id": 862,
+      "funding_toptier_agency_id": 72,
+      "funding_agency_slug": "national-aeronautics-and-space-administration"
+    },
+    {
+      "total_transaction_obligated_amount": 55000,
+      "federal_account": "080-0122",
+      "account_title": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+      "funding_agency_abbreviation": "NASA",
+      "funding_agency_name": "National Aeronautics and Space Administration",
+      "funding_agency_id": 862,
+      "funding_toptier_agency_id": 72,
+      "funding_agency_slug": "national-aeronautics-and-space-administration"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  }
+}

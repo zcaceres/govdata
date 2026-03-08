@@ -1,0 +1,88 @@
+{
+  "category": "psc",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": null,
+      "code": "AR15",
+      "name": "SPACE R&D SVCS; SPACE FLIGHT, RESEARCH & SUPPORTING ACTIVITIES; R&D FACILITIES & MAJ EQUIP",
+      "amount": 297899713.41,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "D318",
+      "name": "IT AND TELECOM- INTEGRATED HARDWARE/SOFTWARE/SERVICES SOLUTIONS, PREDOMINANTLY SERVICES",
+      "amount": 208291527.45,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "R425",
+      "name": "SUPPORT- PROFESSIONAL: ENGINEERING/TECHNICAL",
+      "amount": 173460781.07,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "1440",
+      "name": "LAUNCHERS, GUIDED MISSILE",
+      "amount": 166515851.82,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "AR12",
+      "name": "SPACE R&D SERVICES; SPACE FLIGHT, RESEARCH AND SUPPORTING ACTIVITIES; APPLIED RESEARCH",
+      "amount": 165273458.54,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "1820",
+      "name": "SPACE VEHICLE COMPONENTS",
+      "amount": 130040842.85,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "DA10",
+      "name": "IT AND TELECOM - BUSINESS APPLICATION/APPLICATION DEVELOPMENT SOFTWARE AS A SERVICE",
+      "amount": 101380793.3,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "AR22",
+      "name": "R&D- SPACE: SCIENCE/APPLICATIONS (APPLIED RESEARCH/EXPLORATORY DEVELOPMENT)",
+      "amount": 94866529.25,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "R499",
+      "name": "SUPPORT- PROFESSIONAL: OTHER",
+      "amount": 71716972.6,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "Y1LB",
+      "name": "CONSTRUCTION OF HIGHWAYS, ROADS, STREETS, BRIDGES, AND RAILWAYS",
+      "amount": 63785250,
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

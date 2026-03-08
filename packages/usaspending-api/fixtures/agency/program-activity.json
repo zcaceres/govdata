@@ -1,0 +1,66 @@
+{
+  "toptier_code": "080",
+  "fiscal_year": 2024,
+  "page_metadata": {
+    "page": 1,
+    "total": 15,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "name": "DEEP SPACE EXPLORATION SYSTEMS (DIRECT)",
+      "obligated_amount": 7827350990.75,
+      "gross_outlay_amount": 7208336254.1
+    },
+    {
+      "name": "SCIENCE (DIRECT)",
+      "obligated_amount": 7263006780.04,
+      "gross_outlay_amount": 7706823156.33
+    },
+    {
+      "name": "SPACE OPERATIONS (DIRECT)",
+      "obligated_amount": 4338387131.67,
+      "gross_outlay_amount": 4342169698.09
+    },
+    {
+      "name": "SAFETY, SECURITY AND MISSION SERVICES (DIRECT)",
+      "obligated_amount": 3177041915.96,
+      "gross_outlay_amount": 3104651312.29
+    },
+    {
+      "name": "CROSS AGENCY SUPPORT (REIMBURSABLE)",
+      "obligated_amount": 1655694255.56,
+      "gross_outlay_amount": 1739279270.74
+    },
+    {
+      "name": "SPACE TECHNOLOGY (DIRECT)",
+      "obligated_amount": 1089790178.41,
+      "gross_outlay_amount": 1155115598.96
+    },
+    {
+      "name": "AERONAUTICS (DIRECT)",
+      "obligated_amount": 974177042.63,
+      "gross_outlay_amount": 946997471.71
+    },
+    {
+      "name": "CONSTRUCTION AND ENVIRONMENTAL COMPLIANCE AND RESTORATION (DIRECT)",
+      "obligated_amount": 334803738.57,
+      "gross_outlay_amount": 390645452.3
+    },
+    {
+      "name": "WORKING CAPITAL FUND (REIMBURSABLE)",
+      "obligated_amount": 317953102.16,
+      "gross_outlay_amount": 318357484.46
+    },
+    {
+      "name": "SCIENCE, TECHNOLOGY, ENGINEERING, AND MATHEMATICS ENGAGEMENT (DIRECT)",
+      "obligated_amount": 141514894.63,
+      "gross_outlay_amount": 145375744.58
+    }
+  ],
+  "messages": []
+}

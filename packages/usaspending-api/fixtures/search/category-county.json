@@ -1,0 +1,88 @@
+{
+  "category": "county",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": null,
+      "code": "059",
+      "name": "FAIRFAX COUNTY",
+      "amount": 668360028.93,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "033",
+      "name": "PRINCE GEORGE'S COUNTY",
+      "amount": 409422849.36,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "037",
+      "name": "LOS ANGELES COUNTY",
+      "amount": 316917353.16,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "017",
+      "name": "MIDDLESEX COUNTY",
+      "amount": 185861991.28,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "085",
+      "name": "SANTA CLARA COUNTY",
+      "amount": 183052570.22,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "089",
+      "name": "MADISON COUNTY",
+      "amount": 170633552.86,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "001",
+      "name": "DISTRICT OF COLUMBIA",
+      "amount": 108791678.85,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "001",
+      "name": "ACCOMACK COUNTY",
+      "amount": 88749825.32,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "009",
+      "name": "BREVARD COUNTY",
+      "amount": 75439100.87,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "001",
+      "name": "ANDERSON COUNTY",
+      "amount": 68537833.63,
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

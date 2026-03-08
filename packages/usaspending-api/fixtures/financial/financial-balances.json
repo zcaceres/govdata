@@ -1,0 +1,18 @@
+{
+  "page_metadata": {
+    "count": 1,
+    "page": 1,
+    "has_next_page": false,
+    "has_previous_page": false,
+    "next": null,
+    "current": "https://api.usaspending.gov/api/v2/financial_balances/agencies/?fiscal_year=2024&funding_agency_id=1125&limit=100&page=1",
+    "previous": null
+  },
+  "results": [
+    {
+      "budget_authority_amount": "73530589.68",
+      "obligated_amount": "56187993.41",
+      "outlay_amount": "56745346.59"
+    }
+  ]
+}

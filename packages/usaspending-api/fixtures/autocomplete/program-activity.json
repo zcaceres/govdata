@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "program_activity_code": "0000",
+      "program_activity_name": "DATA ACT RESEARCH/UNDISTRIBUTED"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "ADVANCED RESEARCH PROJECTS AGENCY FOR HEALTH (0837)"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "BASIC RESEARCH"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "BEHAVIORAL RESEARCH PROGRAMS"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "BIOMASS RESEARCH AND DEVELOPMENT"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "BIO-MEDICAL LABORATORY SCIENCE RESEARCH"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "BIO-MEDICAL LABORATORY SCIENCE RESEARCH (821)"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "CAS - RESEARCH AND DEVELOPMENT"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "CAS - RESEARCH, DEVELOPMENT AND INNOVATION"
+    },
+    {
+      "program_activity_code": "0001",
+      "program_activity_name": "CONSTRUCTION OF RESEARCH FACILITIES (DIRECT)"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "id": 862,
+      "toptier_flag": true,
+      "toptier_agency": {
+        "toptier_code": "080",
+        "abbreviation": "NASA",
+        "name": "National Aeronautics and Space Administration"
+      },
+      "subtier_agency": {
+        "abbreviation": "NASA",
+        "name": "National Aeronautics and Space Administration"
+      }
+    },
+    {
+      "id": 868,
+      "toptier_flag": false,
+      "toptier_agency": {
+        "toptier_code": "080",
+        "abbreviation": "NASA",
+        "name": "National Aeronautics and Space Administration"
+      },
+      "subtier_agency": {
+        "abbreviation": "JPL",
+        "name": "NASA Resident Office, Jet Propulsion Laboratory"
+      }
+    }
+  ],
+  "messages": [
+    "This endpoint is DEPRECATED. Please refer to the api contracts."
+  ]
+}

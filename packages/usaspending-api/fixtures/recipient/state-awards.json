@@ -1,0 +1,32 @@
+[
+  {
+    "type": "contracts",
+    "amount": 13527084372.83,
+    "count": 73411,
+    "total_outlays": 5419873308.68
+  },
+  {
+    "type": "direct_payments",
+    "amount": 93222496113.82,
+    "count": 16088,
+    "total_outlays": 85197172976.25
+  },
+  {
+    "type": "grants",
+    "amount": 74898527288.96,
+    "count": 9893,
+    "total_outlays": 53866038200.71
+  },
+  {
+    "type": "loans",
+    "amount": -462765321.65,
+    "count": 67507,
+    "total_outlays": 38995959.56
+  },
+  {
+    "type": "other_financial_assistance",
+    "amount": 128346551.18,
+    "count": 1849,
+    "total_outlays": 256097019.98
+  }
+]

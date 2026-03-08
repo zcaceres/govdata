@@ -1,0 +1,92 @@
+{
+  "page_metadata": {
+    "page": 1,
+    "count": 149,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "term": "Account Balance (File A)",
+      "slug": "account-balance-file-a",
+      "data_act_term": "Account Balance (File A)",
+      "plain": "After the end of every month (or in some select cases every quarter), agencies report the balances that are in their financial systems to USAspending in what is labeled “File A.”  Because this data is based on Treasury Accounts (TAS), it is often referred to as “Account Data” or “Account Spending.” ",
+      "official": "Account Balance data is reported in File A, one of the three files that each agency publishes to USAspending.gov in its financial data submission each month (or quarter for some agencies). The file stems from the agency’s audited financial system and is validated against the Governmentwide Treasury Account Symbol Adjusted Trial Balance System (GTAS). File A includes data on total budgetary resources and total spending, including obligations and outlays, by Treasury Account Symbol (TAS). It also provides the relevant budget function associated with spending. \nWhen you see a reference to Account Balance (File A) on the site, the reference is to the dataset comprising all agency Files A submissions and not one specific agency file.",
+      "resources": "See also:\n\n- [Account Breakdown by Program Activity & Object Class (File B)](?glossary=account-breakdown-by-program-activity-object-class-file-b)\n- [Account Breakdown by Award (File C)](?glossary=account-breakdown-by-award-file-c)\n- [Awards Data (File D)](?glossary=awards-data-file-d)\n\nFor more information on data elements within each Account File, see our [Data Dictionary](https://www.usaspending.gov/data-dictionary)"
+    },
+    {
+      "term": "Account Breakdown by Award (File C)",
+      "slug": "account-breakdown-by-award-file-c",
+      "data_act_term": null,
+      "plain": "Account Breakdown by Award (File C) is one of the three files that each agency publishes to USAspending.gov in its financial data submission each month (or quarter for some agencies). The file stems from the agency’s audited financial system and includes data on award spending only (i.e., excludes non-award spending). Account Breakdown by Award (File C) provides details such as the timing, type, and recipient for each award. \nWhen you see a reference to Account Breakdown by Award (File C) on the site, the reference is to the dataset comprising all agency Files C and not one specific agency file.",
+      "official": null,
+      "resources": "See also:\n\n- [Account Balance (File A)](?glossary=account-balance-file-a)\n- [Account Breakdown by Program Activity & Object Class (File B)](?glossary=account-breakdown-by-program-activity-object-class-file-b)\n- [Awards Data (File D)](?glossary=awards-data-file-d)\n\nFor more information on data elements within each Account File, see our [Data Dictionary](https://www.usaspending.gov/data-dictionary)"
+    },
+    {
+      "term": "Account Breakdown by Program Activity & Object Class (File B)",
+      "slug": "account-breakdown-by-program-activity-object-class-file-b",
+      "data_act_term": null,
+      "plain": "Account Breakdown by Program Activity & Object Class (File B) is one of the three files that each agency publishes to USAspending.gov in its financial data submission each month (or quarter for some agencies). The file stems from the agency’s audited financial system and includes data on total budgetary spending, including obligations and outlays, by Treasury Account Symbol. Like Account Balances (File A), this file provides the relevant budget function associated with spending. In contrast with Account Balances (File A) this file also includes the relevant object class and program activity. \nWhen you see a reference to Account Breakdown by Program Activity & Object Class (File B) on the site, the reference is to the dataset comprising all agency Files B and not one specific agency file.",
+      "official": null,
+      "resources": "See also:\n\n- [Account Balance (File A)](?glossary=account-balance-file-a)\n- [Account Breakdown by Award (File C)](?glossary=account-breakdown-by-award-file-c)\n- [Awards Data (File D)](?glossary=awards-data-file-d)\n\nFor more information on data elements within each Account File, see our [Data Dictionary](https://www.usaspending.gov/data-dictionary)"
+    },
+    {
+      "term": "Acquisition of Assets",
+      "slug": "acquisition-of-assets",
+      "data_act_term": "Acquisition of Assets",
+      "plain": "This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.",
+      "official": "This major object class covers object classes 31.0 through 33.0. Include\ncapitalized (depreciated) assets and non-capitalized assets. This includes:\n31.0 Equipment\n32.0 Land and structures\n33.0 Investments and loans\n\nEach specific object class is defined in OMB Circular A-11 Section 83.6.",
+      "resources": "Learn More: [Circular No. A-11](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/assets/a11_current_year/a11_2017.pdf)"
+    },
+    {
+      "term": "Action Date",
+      "slug": "action-date",
+      "data_act_term": "Action Date",
+      "plain": "The date the action being reported (for prime award transactions or sub-awards) was issued or signed by the Government, or a binding agreement was reached. Because award obligations are tied to action dates, any search for spending data on USAspending will search by this data element rather than by Period of Performance dates.",
+      "official": "The date the action being reported (for prime award transactions or sub-awards) was issued or signed by the Government, or a binding agreement was reached. Because award obligations are tied to action dates, any search for spending data on USAspending will search by this data element rather than by Period of Performance dates.",
+      "resources": "See also: [Base Transaction Action Date](?glossary=base-transaction-action-date), [Period of Performance Start Date](?glossary=period-of-performance-start-date), [Period of Performance Current End Date](?glossary=period-of-performance-current-end-date), [Period of Performance Potential End Date](?glossary=period-of-performance-potential-end-date)"
+    },
+    {
+      "term": "Action Type",
+      "slug": "action-type",
+      "data_act_term": "Action Type",
+      "plain": "Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.",
+      "official": "Description (and corresponding code) that provides information on any changes made to the Federal prime award. There are typically multiple actions for each award.\n\n(Note: This definition encompasses current data elements ‘Type of Action’ for financial assistance and ‘Reason for Modification’ for procurement)",
+      "resources": null
+    },
+    {
+      "term": "Agency",
+      "slug": "agency",
+      "data_act_term": "Agency",
+      "plain": "On this website, we use the term agency to mean any federal department, commission, or other U.S. government entity. Agencies can have multiple sub-agencies. For example, the National Park Service is a sub-agency of the U.S. Department of the Interior. ",
+      "official": "On this website, we use the term agency to mean any federal department, commission, or other U.S. government entity. Agencies can have multiple sub-agencies. For example, the National Park Service is a sub-agency of the U.S. Department of the Interior. ",
+      "resources": null
+    },
+    {
+      "term": "Agency Identifier",
+      "slug": "agency-identifier",
+      "data_act_term": "Agency Identifier",
+      "plain": "Identifies the agency responsible for a Treasury account. This is a 3-digit number that is a part of a Treasury Account Symbol (TAS).",
+      "official": "The agency code identifies the department or agency that is responsible for the account.",
+      "resources": null
+    },
+    {
+      "term": "Allocation Transfer Agency (ATA) Identifier",
+      "slug": "allocation-transfer-agency-ata-identifier",
+      "data_act_term": "Allocation Transfer Agency (ATA) Identifier",
+      "plain": "Identifies an agency that receives funds through an allocation (non-expenditure) transfer. This is a 3-digit number that is a part of a Treasury Account Symbol (TAS).",
+      "official": "The allocation agency identifies the department or agency that is receiving funds through an allocation (non-expenditure) transfer.",
+      "resources": null
+    },
+    {
+      "term": "Appropriation",
+      "slug": "appropriation",
+      "data_act_term": null,
+      "plain": "The process by which Congress designates and approves spending for a specific purpose (e.g., a project or program). Most government spending is determined through appropriation bills each year. These bills must be passed by Congress and signed by the President. \n\nWhen an appropriation is not passed by Congress before the beginning of the fiscal year, a “continuing resolution” (often referred to as a “CR”) may be enacted to avoid a government shutdown. A CR is a law that provides stopgap funding for agencies until their regular appropriations are passed.",
+      "official": null,
+      "resources": null
+    }
+  ]
+}

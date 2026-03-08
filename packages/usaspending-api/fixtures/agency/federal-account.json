@@ -1,0 +1,648 @@
+{
+  "toptier_code": "080",
+  "fiscal_year": 2024,
+  "page_metadata": {
+    "page": 1,
+    "total": 13,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "code": "080-0124",
+      "name": "Exploration, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-2024/2025-0124-000",
+          "obligated_amount": 7521580670.19,
+          "gross_outlay_amount": 3997256655.61
+        },
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-2023/2024-0124-000",
+          "obligated_amount": 299707317.15,
+          "gross_outlay_amount": 3098383930.28
+        },
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-2022/2023-0124-000",
+          "obligated_amount": 3306724.95,
+          "gross_outlay_amount": 90310119.4
+        },
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-2020/2021-0124-000",
+          "obligated_amount": 1235610.4,
+          "gross_outlay_amount": 4033652.58
+        },
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-2021/2022-0124-000",
+          "obligated_amount": 867814.7,
+          "gross_outlay_amount": 17110486.03
+        },
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-2019/2020-0124-000",
+          "obligated_amount": 422011.14,
+          "gross_outlay_amount": 631149.69
+        },
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-2018/2019-0124-000",
+          "obligated_amount": 230842.22,
+          "gross_outlay_amount": 519181.2
+        },
+        {
+          "name": "Exploration, National Aeronautics and Space Administration",
+          "code": "080-X-0124-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 91079.31
+        }
+      ],
+      "obligated_amount": 7827350990.75,
+      "gross_outlay_amount": 7208336254.1
+    },
+    {
+      "code": "080-0120",
+      "name": "Science, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Science, National Aeronautics and Space Administration",
+          "code": "080-2024/2025-0120-000",
+          "obligated_amount": 6462793697.57,
+          "gross_outlay_amount": 2765461791.21
+        },
+        {
+          "name": "Science, National Aeronautics and Space Administration",
+          "code": "080-2023/2024-0120-000",
+          "obligated_amount": 787734485.3,
+          "gross_outlay_amount": 3957415068.06
+        },
+        {
+          "name": "Science, National Aeronautics and Space Administration",
+          "code": "080-2022/2023-0120-000",
+          "obligated_amount": 5574216.05,
+          "gross_outlay_amount": 763276685.09
+        },
+        {
+          "name": "Science, National Aeronautics and Space Administration",
+          "code": "080-2021/2022-0120-000",
+          "obligated_amount": 4174590.85,
+          "gross_outlay_amount": 135393316.55
+        },
+        {
+          "name": "Science, National Aeronautics and Space Administration",
+          "code": "080-2020/2021-0120-000",
+          "obligated_amount": 1426831.24,
+          "gross_outlay_amount": 51424799.95
+        },
+        {
+          "name": "Science, National Aeronautics and Space Administration",
+          "code": "080-2019/2020-0120-000",
+          "obligated_amount": 740910.42,
+          "gross_outlay_amount": 28415155.13
+        },
+        {
+          "name": "Science, National Aeronautics and Space Administration",
+          "code": "080-2018/2019-0120-000",
+          "obligated_amount": 562048.61,
+          "gross_outlay_amount": 5436340.34
+        }
+      ],
+      "obligated_amount": 7263006780.04,
+      "gross_outlay_amount": 7706823156.33
+    },
+    {
+      "code": "080-0122",
+      "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Safety, Security and Missions Services, National Aeronautics and Space Administration",
+          "code": "080-2024/2025-0122-000",
+          "obligated_amount": 3461753363.01,
+          "gross_outlay_amount": 2543870100.86
+        },
+        {
+          "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+          "code": "080-X-0122-000",
+          "obligated_amount": 407428666.72,
+          "gross_outlay_amount": 392814499.78
+        },
+        {
+          "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+          "code": "080-2024/2026-0122-000",
+          "obligated_amount": 318125736.37,
+          "gross_outlay_amount": 90145985.84
+        },
+        {
+          "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+          "code": "080-2023/2025-0122-000",
+          "obligated_amount": 299232083.09,
+          "gross_outlay_amount": 277081583.15
+        },
+        {
+          "name": "Safety, Security and Missions Services, National Aeronautics and Space Administration",
+          "code": "080-2023/2024-0122-000",
+          "obligated_amount": 221269734.88,
+          "gross_outlay_amount": 936804449.37
+        },
+        {
+          "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+          "code": "080-2022/2024-0122-000",
+          "obligated_amount": 111941546.35,
+          "gross_outlay_amount": 277406067.39
+        },
+        {
+          "name": "Safety, Security and Missions Services, National Aeronautics and Space Administration",
+          "code": "080-2020/2021-0122-000",
+          "obligated_amount": 5816302.31,
+          "gross_outlay_amount": 8431747.28
+        },
+        {
+          "name": "Safety, Security and Missions Services, National Aeronautics and Space Administration",
+          "code": "080-2018/2019-0122-000",
+          "obligated_amount": 3453694.67,
+          "gross_outlay_amount": 4648608.02
+        },
+        {
+          "name": "Safety, Security and Missions Services, National Aeronautics and Space Administration",
+          "code": "080-2021/2022-0122-000",
+          "obligated_amount": 1662480.47,
+          "gross_outlay_amount": 14675800.77
+        },
+        {
+          "name": "Safety, Security and Missions Services, National Aeronautics and Space Administration",
+          "code": "080-2022/2023-0122-000",
+          "obligated_amount": 827420.67,
+          "gross_outlay_amount": 133662778.36
+        },
+        {
+          "name": "Safety, Security and Missions Services, National Aeronautics and Space Administration",
+          "code": "080-2019/2020-0122-000",
+          "obligated_amount": 774496.11,
+          "gross_outlay_amount": 2025673.95
+        },
+        {
+          "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+          "code": "080-2019/2021-0122-000",
+          "obligated_amount": 315274.02,
+          "gross_outlay_amount": 4189872.21
+        },
+        {
+          "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+          "code": "080-2020/2022-0122-000",
+          "obligated_amount": 131070.43,
+          "gross_outlay_amount": 97840045.16
+        },
+        {
+          "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+          "code": "080-2021/2023-0122-000",
+          "obligated_amount": 4302.42,
+          "gross_outlay_amount": 60333370.89
+        }
+      ],
+      "obligated_amount": 4832736171.52,
+      "gross_outlay_amount": 4843930583.03
+    },
+    {
+      "code": "080-0115",
+      "name": "Space Operations, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-2024/2025-0115-000",
+          "obligated_amount": 3991072209.97,
+          "gross_outlay_amount": 2014777404.21
+        },
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-2023/2024-0115-000",
+          "obligated_amount": 345382387.62,
+          "gross_outlay_amount": 2048295546.4
+        },
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-2022/2023-0115-000",
+          "obligated_amount": 584979.39,
+          "gross_outlay_amount": 41971703.12
+        },
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-2019/2020-0115-000",
+          "obligated_amount": 483724.7,
+          "gross_outlay_amount": 703028.11
+        },
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-2020/2021-0115-000",
+          "obligated_amount": 403481.79,
+          "gross_outlay_amount": 706702.38
+        },
+        {
+          "name": "Space Flight Capabilities, National Aeronautics and Space Administration",
+          "code": "080-2018/2019-0115-000",
+          "obligated_amount": 259310.45,
+          "gross_outlay_amount": 228301202.32
+        },
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-2021/2022-0115-000",
+          "obligated_amount": 96369.35,
+          "gross_outlay_amount": 7293680.38
+        },
+        {
+          "name": "Space Flight Capabilities, National Aeronautics and Space Administration",
+          "code": "080-2005/2006-0115-000",
+          "obligated_amount": 91994.66,
+          "gross_outlay_amount": 91994.66
+        },
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-2017/2018-0115-000",
+          "obligated_amount": 11348.24,
+          "gross_outlay_amount": 11348.24
+        },
+        {
+          "name": "Space Flight Capabilities, National Aeronautics and Space Administration",
+          "code": "080-2010/2011-0115-000",
+          "obligated_amount": 1325.5,
+          "gross_outlay_amount": 0
+        },
+        {
+          "name": "Space Operations, National Aeronautics and Space Administration",
+          "code": "080-X-0115-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 17088.27
+        }
+      ],
+      "obligated_amount": 4338387131.67,
+      "gross_outlay_amount": 4342169698.09
+    },
+    {
+      "code": "080-0131",
+      "name": "Space Technology, National Aeronautics Space Administration",
+      "children": [
+        {
+          "name": "Space Technology, National Aeronautics Space Administration",
+          "code": "080-2024/2025-0131-000",
+          "obligated_amount": 1030824083.05,
+          "gross_outlay_amount": 461648231.97
+        },
+        {
+          "name": "Space Technology, National Aeronautics Space Administration",
+          "code": "080-2023/2024-0131-000",
+          "obligated_amount": 57519430.37,
+          "gross_outlay_amount": 537981515.4
+        },
+        {
+          "name": "Space Technology, National Aeronautics Space Administration",
+          "code": "080-2021/2022-0131-000",
+          "obligated_amount": 653488.92,
+          "gross_outlay_amount": 25373560.28
+        },
+        {
+          "name": "Space Technology, National Aeronautics Space Administration",
+          "code": "080-2019/2020-0131-000",
+          "obligated_amount": 540618.49,
+          "gross_outlay_amount": 7590178.29
+        },
+        {
+          "name": "Space Technology, National Aeronautics Space Administration",
+          "code": "080-2018/2019-0131-000",
+          "obligated_amount": 133813.22,
+          "gross_outlay_amount": 718984.18
+        },
+        {
+          "name": "Space Technology, National Aeronautics Space Administration",
+          "code": "080-2020/2021-0131-000",
+          "obligated_amount": 117651.39,
+          "gross_outlay_amount": 6773347.75
+        },
+        {
+          "name": "Space Technology, National Aeronautics Space Administration",
+          "code": "080-2022/2023-0131-000",
+          "obligated_amount": 1092.97,
+          "gross_outlay_amount": 111229781.09
+        },
+        {
+          "name": "Space Technology, National Aeronautics and Space Administration",
+          "code": "080-X-0131-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 3800000
+        }
+      ],
+      "obligated_amount": 1089790178.41,
+      "gross_outlay_amount": 1155115598.96
+    },
+    {
+      "code": "080-0126",
+      "name": "Aeronautics, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Aeronautics, National Aeronautics and Space Administration",
+          "code": "080-2024/2025-0126-000",
+          "obligated_amount": 909526494.04,
+          "gross_outlay_amount": 545995456.01
+        },
+        {
+          "name": "Aeronautics, National Aeronautics and Space Administration",
+          "code": "080-2023/2024-0126-000",
+          "obligated_amount": 63370941.51,
+          "gross_outlay_amount": 327086710.36
+        },
+        {
+          "name": "Aeronautics, National Aeronautics and Space Administration",
+          "code": "080-2020/2021-0126-000",
+          "obligated_amount": 567923.86,
+          "gross_outlay_amount": 1164807.03
+        },
+        {
+          "name": "Aeronautics, National Aeronautics and Space Administration",
+          "code": "080-2022/2023-0126-000",
+          "obligated_amount": 348892,
+          "gross_outlay_amount": 61709353.35
+        },
+        {
+          "name": "Aeronautics, National Aeronautics and Space Administration",
+          "code": "080-2021/2022-0126-000",
+          "obligated_amount": 175309.93,
+          "gross_outlay_amount": 8902979.3
+        },
+        {
+          "name": "Aeronautics, National Aeronautics and Space Administration",
+          "code": "080-2018/2019-0126-000",
+          "obligated_amount": 122407.94,
+          "gross_outlay_amount": 225181.42
+        },
+        {
+          "name": "Aeronautics, National Aeronautics and Space Administration",
+          "code": "080-2019/2020-0126-000",
+          "obligated_amount": 65073.35,
+          "gross_outlay_amount": 1912984.24
+        }
+      ],
+      "obligated_amount": 974177042.63,
+      "gross_outlay_amount": 946997471.71
+    },
+    {
+      "code": "080-0130",
+      "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2024/2029-0130-000",
+          "obligated_amount": 126321463.85,
+          "gross_outlay_amount": 14963922.91
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2023/2028-0130-000",
+          "obligated_amount": 60992752.68,
+          "gross_outlay_amount": 65437450.9
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2022/2027-0130-000",
+          "obligated_amount": 39756363.09,
+          "gross_outlay_amount": 95088627.58
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-X-0130-000",
+          "obligated_amount": 34418872.99,
+          "gross_outlay_amount": 27466599.7
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2021/2026-0130-000",
+          "obligated_amount": 25788723.96,
+          "gross_outlay_amount": 76243337.74
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2019/2024-0130-000",
+          "obligated_amount": 16108171.9,
+          "gross_outlay_amount": 16773617.52
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2020/2025-0130-000",
+          "obligated_amount": 9798445.83,
+          "gross_outlay_amount": 45970843.08
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2023/2027-0130-000",
+          "obligated_amount": 7977301.47,
+          "gross_outlay_amount": 7379884.21
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2024/2028-0130-000",
+          "obligated_amount": 5655759.27,
+          "gross_outlay_amount": 1713663.77
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2022/2026-0130-000",
+          "obligated_amount": 3282554.82,
+          "gross_outlay_amount": 6302233.82
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2021/2025-0130-000",
+          "obligated_amount": 2197595.89,
+          "gross_outlay_amount": 3289780.72
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2020/2024-0130-000",
+          "obligated_amount": 1636022.93,
+          "gross_outlay_amount": 3690460.45
+        },
+        {
+          "name": "Construction and Environmental Compliance and Remediation, National Aeronautics and Space Administration",
+          "code": "080-2014/2019-0130-000",
+          "obligated_amount": 650003.7,
+          "gross_outlay_amount": 428048.81
+        },
+        {
+          "name": "Construction and Environmental Compliance and Remediation, National Aeronautics and Space Administration",
+          "code": "080-2015/2020-0130-000",
+          "obligated_amount": 84992.65,
+          "gross_outlay_amount": 181567.85
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2016/2021-0130-000",
+          "obligated_amount": 69036.5,
+          "gross_outlay_amount": 3113492.84
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2017/2022-0130-000",
+          "obligated_amount": 30504.07,
+          "gross_outlay_amount": 2996985.69
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2017/2021-0130-000",
+          "obligated_amount": 24212.98,
+          "gross_outlay_amount": 24212.98
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2018/2023-0130-000",
+          "obligated_amount": 7882.43,
+          "gross_outlay_amount": 16568778.18
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2019/2023-0130-000",
+          "obligated_amount": 3077.56,
+          "gross_outlay_amount": 2516553.02
+        },
+        {
+          "name": "Construction and Environmental Compliance and Remediation, National Aeronautics and Space Administration",
+          "code": "080-2016/2020-0130-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 500
+        },
+        {
+          "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+          "code": "080-2018/2022-0130-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 494890.53
+        }
+      ],
+      "obligated_amount": 334803738.57,
+      "gross_outlay_amount": 390645452.3
+    },
+    {
+      "code": "080-4546",
+      "name": "Working Capital Fund, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Working Capital Fund, National Aeronautics and Space Administration",
+          "code": "080-X-4546-000",
+          "obligated_amount": 319346237.11,
+          "gross_outlay_amount": 319530436.88
+        }
+      ],
+      "obligated_amount": 319346237.11,
+      "gross_outlay_amount": 319530436.88
+    },
+    {
+      "code": "080-0128",
+      "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+          "code": "080-2024/2025-0128-000",
+          "obligated_amount": 136644565.51,
+          "gross_outlay_amount": 33354658.39
+        },
+        {
+          "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+          "code": "080-2023/2024-0128-000",
+          "obligated_amount": 4700438.04,
+          "gross_outlay_amount": 64800069.21
+        },
+        {
+          "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+          "code": "080-2021/2022-0128-000",
+          "obligated_amount": 87607.43,
+          "gross_outlay_amount": 8668093.63
+        },
+        {
+          "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+          "code": "080-2022/2023-0128-000",
+          "obligated_amount": 82283.65,
+          "gross_outlay_amount": 34279667.87
+        },
+        {
+          "name": "Education, National Aeronautics and Space Administration",
+          "code": "080-2018/2019-0128-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 294990.07
+        },
+        {
+          "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+          "code": "080-2019/2020-0128-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 1285353.7
+        },
+        {
+          "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+          "code": "080-2020/2021-0128-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 2692911.71
+        }
+      ],
+      "obligated_amount": 141514894.63,
+      "gross_outlay_amount": 145375744.58
+    },
+    {
+      "code": "080-0109",
+      "name": "Office of Inspector General, National Aeronautics and Space Administration",
+      "children": [
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2024/2024-0109-000",
+          "obligated_amount": 47532735.82,
+          "gross_outlay_amount": 41849502.17
+        },
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2024/2025-0109-000",
+          "obligated_amount": 380824.83,
+          "gross_outlay_amount": 2700
+        },
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2022/2022-0109-000",
+          "obligated_amount": 157302.91,
+          "gross_outlay_amount": 172141.21
+        },
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2023/2024-0109-000",
+          "obligated_amount": 146573.29,
+          "gross_outlay_amount": 341237.6
+        },
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2023/2023-0109-000",
+          "obligated_amount": 48300.59,
+          "gross_outlay_amount": 4870353.51
+        },
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2021/2021-0109-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 20406
+        },
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2021/2022-0109-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 12676.53
+        },
+        {
+          "name": "Office of Inspector General, National Aeronautics and Space Administration",
+          "code": "080-2022/2023-0109-000",
+          "obligated_amount": 0,
+          "gross_outlay_amount": 52809.23
+        }
+      ],
+      "obligated_amount": 48265737.44,
+      "gross_outlay_amount": 47321826.25
+    }
+  ],
+  "messages": []
+}

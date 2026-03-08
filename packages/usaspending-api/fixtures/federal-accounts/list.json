@@ -1,0 +1,103 @@
+{
+  "count": 18,
+  "limit": 10,
+  "page": 1,
+  "fy": "2026",
+  "keyword": null,
+  "next": 2,
+  "previous": null,
+  "hasNext": true,
+  "hasPrevious": false,
+  "results": [
+    {
+      "agency_identifier": "080",
+      "account_id": 5636,
+      "account_name": "Aeronautics, National Aeronautics and Space Administration",
+      "account_number": "080-0126",
+      "budgetary_resources": 381433366.13,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5638,
+      "account_name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+      "account_number": "080-0130",
+      "budgetary_resources": 2178691669.16,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5646,
+      "account_name": "Endeavor Teacher Fellowship Trust Fund, National Aeronautics and Space Administration",
+      "account_number": "080-8550",
+      "budgetary_resources": 42850,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5634,
+      "account_name": "Exploration, National Aeronautics and Space Administration",
+      "account_number": "080-0124",
+      "budgetary_resources": 10768303322.72,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5649,
+      "account_name": "Gifts and Donations, National Aeronautics and Space Administration",
+      "account_number": "080-8980",
+      "budgetary_resources": 101694.72,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5624,
+      "account_name": "Human Space Flight, National Aeronautics and Space Administration",
+      "account_number": "080-0111",
+      "budgetary_resources": 10153191.26,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5625,
+      "account_name": "Mission Support, National Aeronautics and Space Administration",
+      "account_number": "080-0112",
+      "budgetary_resources": null,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5647,
+      "account_name": "National Space Grant Program, National Aeronautics and Space Administration",
+      "account_number": "080-8977",
+      "budgetary_resources": null,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5622,
+      "account_name": "Office of Inspector General, National Aeronautics and Space Administration",
+      "account_number": "080-0109",
+      "budgetary_resources": 21984395.94,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    },
+    {
+      "agency_identifier": "080",
+      "account_id": 5632,
+      "account_name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+      "account_number": "080-0122",
+      "budgetary_resources": 6282240876.87,
+      "managing_agency": "National Aeronautics and Space Administration",
+      "managing_agency_acronym": "NASA"
+    }
+  ]
+}

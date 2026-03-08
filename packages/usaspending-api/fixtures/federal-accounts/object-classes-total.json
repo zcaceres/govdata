@@ -1,0 +1,43 @@
+{
+  "results": [
+    {
+      "code": "25.5",
+      "obligations": 2936.94,
+      "name": "Research and development contracts"
+    },
+    {
+      "code": "25.4",
+      "obligations": 769.83,
+      "name": "Operation and maintenance of facilities"
+    },
+    {
+      "code": "25.2",
+      "obligations": 0,
+      "name": "Other services from non-Federal sources"
+    },
+    {
+      "code": "32.0",
+      "obligations": 0,
+      "name": "Land and structures"
+    },
+    {
+      "code": "41.0",
+      "obligations": 0,
+      "name": "Grants, subsidies, and contributions"
+    },
+    {
+      "code": "25.7",
+      "obligations": 0,
+      "name": "Operation and maintenance of equipment"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 6,
+    "limit": 10,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  }
+}

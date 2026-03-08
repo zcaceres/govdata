@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "id": "Research and Development",
+      "ancestors": [],
+      "description": "",
+      "count": 890,
+      "children": null
+    },
+    {
+      "id": "Service",
+      "ancestors": [],
+      "description": "",
+      "count": 2145,
+      "children": null
+    },
+    {
+      "id": "Product",
+      "ancestors": [],
+      "description": "",
+      "count": 773,
+      "children": null
+    }
+  ]
+}

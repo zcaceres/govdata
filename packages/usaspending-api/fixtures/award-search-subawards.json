@@ -1,0 +1,80 @@
+{
+  "spending_level": "subawards",
+  "limit": 5,
+  "results": [
+    {
+      "internal_id": "22003-20-001",
+      "prime_award_internal_id": 291807137,
+      "Sub-Award ID": "22003-20-001",
+      "Sub-Awardee Name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+      "Sub-Award Date": "2020-04-01",
+      "Sub-Award Amount": 261701216,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Awarding Sub Agency": "National Aeronautics and Space Administration",
+      "Prime Award ID": "80GSFC20C0044",
+      "Prime Recipient Name": "SCIENCE SYSTEMS AND APPLICATIONS, INC.",
+      "prime_award_generated_internal_id": "CONT_AWD_80GSFC20C0044_8000_-NONE-_-NONE-"
+    },
+    {
+      "internal_id": "ART840",
+      "prime_award_internal_id": 311323883,
+      "Sub-Award ID": "ART840",
+      "Sub-Awardee Name": "NTT DATA SERVICES FEDERAL GOVERNMENT, LLC",
+      "Sub-Award Date": "2013-11-01",
+      "Sub-Award Amount": 157326000,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Awarding Sub Agency": "National Aeronautics and Space Administration",
+      "Prime Award ID": "NNA13AB88C",
+      "Prime Recipient Name": "ASRC RESEARCH AND TECHNOLOGY SOLUTIONS, LLC",
+      "prime_award_generated_internal_id": "CONT_AWD_NNA13AB88C_8000_-NONE-_-NONE-"
+    },
+    {
+      "internal_id": "P010227217",
+      "prime_award_internal_id": 311379205,
+      "Sub-Award ID": "P010227217",
+      "Sub-Awardee Name": "KBR WYLE SERVICES, LLC",
+      "Sub-Award Date": "2017-07-01",
+      "Sub-Award Amount": 134000000,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Awarding Sub Agency": "National Aeronautics and Space Administration",
+      "Prime Award ID": "NNG17CR69C",
+      "Prime Recipient Name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+      "prime_award_generated_internal_id": "CONT_AWD_NNG17CR69C_8000_-NONE-_-NONE-"
+    },
+    {
+      "internal_id": "3002486808",
+      "prime_award_internal_id": 311420427,
+      "Sub-Award ID": "3002486808",
+      "Sub-Awardee Name": "SOUTHWEST RESEARCH INSTITUTE",
+      "Sub-Award Date": "2014-12-21",
+      "Sub-Award Amount": 94292768,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Awarding Sub Agency": "National Aeronautics and Space Administration",
+      "Prime Award ID": "NNL13AQ00C",
+      "Prime Recipient Name": "REGENTS OF THE UNIVERSITY OF MICHIGAN",
+      "prime_award_generated_internal_id": "CONT_AWD_NNL13AQ00C_8000_-NONE-_-NONE-"
+    },
+    {
+      "internal_id": "P010219398",
+      "prime_award_internal_id": 291841116,
+      "Sub-Award ID": "P010219398",
+      "Sub-Awardee Name": "AETOS SYSTEMS INC",
+      "Sub-Award Date": "2016-06-30",
+      "Sub-Award Amount": 62769963,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Awarding Sub Agency": "National Aeronautics and Space Administration",
+      "Prime Award ID": "80NSSC23F0660",
+      "Prime Recipient Name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+      "prime_award_generated_internal_id": "CONT_AWD_80NSSC23F0660_8000_NNX16MB01C_8000"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "hasNext": true,
+    "last_record_unique_id": "291841116",
+    "last_record_sort_value": "6276996300"
+  },
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. "
+  ]
+}

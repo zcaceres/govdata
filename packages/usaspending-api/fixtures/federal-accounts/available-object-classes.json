@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "id": "20",
+      "name": "Contractual services and supplies",
+      "minor_object_class": [
+        {
+          "id": "25.7",
+          "name": "Operation and maintenance of equipment"
+        },
+        {
+          "id": "25.2",
+          "name": "Other services from non-Federal sources"
+        },
+        {
+          "id": "25.4",
+          "name": "Operation and maintenance of facilities"
+        },
+        {
+          "id": "25.5",
+          "name": "Research and development contracts"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Grants and fixed charges",
+      "minor_object_class": [
+        {
+          "id": "41.0",
+          "name": "Grants, subsidies, and contributions"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Acquisition of assets",
+      "minor_object_class": [
+        {
+          "id": "32.0",
+          "name": "Land and structures"
+        }
+      ]
+    }
+  ]
+}

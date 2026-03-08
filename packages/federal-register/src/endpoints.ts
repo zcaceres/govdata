@@ -101,6 +101,12 @@ export async function _findManyDocuments(
   params?: { fields?: string[] },
   options?: ClientOptions,
 ): Promise<FRResult<"documents_multi">> {
+  // FR API returns a single document object (not {count, results}) for one doc number
+  if (documentNumbers.length === 1) {
+    const single = await _findDocument(documentNumbers[0], params, options);
+    return wrapResponse(single.data, null, "documents_multi");
+  }
+
   // Batch document numbers into chunks that fit in URL
   const batches: string[][] = [];
   let currentBatch: string[] = [];

@@ -1,0 +1,146 @@
+{
+  "total": 9682897699572.27,
+  "end_date": "2024-09-30T00:00:00Z",
+  "results": [
+    {
+      "amount": 1582650103296.23,
+      "id": "570",
+      "type": "budget_function",
+      "name": "Medicare",
+      "code": "570"
+    },
+    {
+      "amount": 1541027236655.33,
+      "id": "650",
+      "type": "budget_function",
+      "name": "Social Security",
+      "code": "650"
+    },
+    {
+      "amount": 1358253371219.34,
+      "id": "050",
+      "type": "budget_function",
+      "name": "National Defense",
+      "code": "050"
+    },
+    {
+      "amount": 1149557674230.58,
+      "id": "900",
+      "type": "budget_function",
+      "name": "Net Interest",
+      "code": "900"
+    },
+    {
+      "amount": 1098419579300.53,
+      "id": "550",
+      "type": "budget_function",
+      "name": "Health",
+      "code": "550"
+    },
+    {
+      "amount": 717980743457.16,
+      "id": "600",
+      "type": "budget_function",
+      "name": "Income Security",
+      "code": "600"
+    },
+    {
+      "amount": 477399454877.25,
+      "id": "800",
+      "type": "budget_function",
+      "name": "General Government",
+      "code": "800"
+    },
+    {
+      "amount": 368773705655.88,
+      "id": "700",
+      "type": "budget_function",
+      "name": "Veterans Benefits and Services",
+      "code": "700"
+    },
+    {
+      "amount": 270345605293.95,
+      "id": "500",
+      "type": "budget_function",
+      "name": "Education, Training, Employment, and Social Services",
+      "code": "500"
+    },
+    {
+      "amount": 176918553557.92,
+      "id": "400",
+      "type": "budget_function",
+      "name": "Transportation",
+      "code": "400"
+    },
+    {
+      "id": null,
+      "code": null,
+      "type": "budget_function",
+      "name": "Unreported Data",
+      "amount": 164377460505.97
+    },
+    {
+      "amount": 159755847737.59,
+      "id": "370",
+      "type": "budget_function",
+      "name": "Commerce and Housing Credit",
+      "code": "370"
+    },
+    {
+      "amount": 154960128833.11,
+      "id": "300",
+      "type": "budget_function",
+      "name": "Natural Resources and Environment",
+      "code": "300"
+    },
+    {
+      "amount": 112628141509.99,
+      "id": "450",
+      "type": "budget_function",
+      "name": "Community and Regional Development",
+      "code": "450"
+    },
+    {
+      "amount": 107828179619.05,
+      "id": "750",
+      "type": "budget_function",
+      "name": "Administration of Justice",
+      "code": "750"
+    },
+    {
+      "amount": 102276127362.67,
+      "id": "150",
+      "type": "budget_function",
+      "name": "International Affairs",
+      "code": "150"
+    },
+    {
+      "amount": 53692922074,
+      "id": "350",
+      "type": "budget_function",
+      "name": "Agriculture",
+      "code": "350"
+    },
+    {
+      "amount": 45223171601.14,
+      "id": "250",
+      "type": "budget_function",
+      "name": "General Science, Space, and Technology",
+      "code": "250"
+    },
+    {
+      "amount": 40829692784.58,
+      "id": "270",
+      "type": "budget_function",
+      "name": "Energy",
+      "code": "270"
+    },
+    {
+      "amount": 0,
+      "id": "000",
+      "type": "budget_function",
+      "name": "Governmental Receipts",
+      "code": "000"
+    }
+  ]
+}

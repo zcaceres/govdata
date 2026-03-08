@@ -1,0 +1,128 @@
+{
+  "totals": {
+    "obligation": 852065389700.03,
+    "outlay": 852031780637.64,
+    "award_count": 16022854,
+    "face_value_of_loan": 1191337683687.04
+  },
+  "results": [
+    {
+      "id": 5380,
+      "code": "073-1154",
+      "description": "Business Loans Program Account, Small Business Administration",
+      "award_count": 12016669,
+      "obligation": 807449396849.33,
+      "outlay": 807436751600.08,
+      "face_value_of_loan": 820663700817.28,
+      "children": [
+        {
+          "id": 78466,
+          "code": "073-2020/2021-1154-000",
+          "description": "Business Loans Program Account, Small Business Administration",
+          "award_count": 5375953,
+          "obligation": 530385783887.06,
+          "outlay": 530385559433.54,
+          "face_value_of_loan": 521741992804.15
+        },
+        {
+          "id": 16340,
+          "code": "073-X-1154-000",
+          "description": "Business Loans Program Account, Small Business Administration",
+          "award_count": 6640716,
+          "obligation": 277063612962.27,
+          "outlay": 277051192166.54,
+          "face_value_of_loan": 298921708013.13
+        }
+      ]
+    },
+    {
+      "id": 5379,
+      "code": "073-1152",
+      "description": "Disaster Loans Program Account, Small Business Administration",
+      "award_count": 4006126,
+      "obligation": 44595137492.19,
+      "outlay": 44594422493.93,
+      "face_value_of_loan": 370493085709.44,
+      "children": [
+        {
+          "id": 16339,
+          "code": "073-X-1152-000",
+          "description": "Disaster Loans Program Account, Small Business Administration",
+          "award_count": 4006126,
+          "obligation": 44595137492.19,
+          "outlay": 44594422493.93,
+          "face_value_of_loan": 370493085709.44
+        }
+      ]
+    },
+    {
+      "id": 3419,
+      "code": "012-0115",
+      "description": "Processing, Research and Marketing, Office of the Secretary, Agriculture",
+      "award_count": 1,
+      "obligation": 18264720.55,
+      "outlay": 0,
+      "face_value_of_loan": 17871203.32,
+      "children": [
+        {
+          "id": 2575,
+          "code": "012-X-0115-000",
+          "description": "Processing, Research and Marketing, Office of the Secretary, Agriculture",
+          "award_count": 1,
+          "obligation": 18264720.55,
+          "outlay": 0,
+          "face_value_of_loan": 17871203.32
+        }
+      ]
+    },
+    {
+      "id": 3501,
+      "code": "012-1902",
+      "description": "Rural Business Program Account, Rural Business-Cooperative Service, Agriculture",
+      "award_count": 57,
+      "obligation": 2491594.33,
+      "outlay": 507500,
+      "face_value_of_loan": 138539123,
+      "children": [
+        {
+          "id": 78426,
+          "code": "012-2020/2021-1902-000",
+          "description": "Rural Business Program Account, Rural Business-Cooperative Service, Agriculture",
+          "award_count": 57,
+          "obligation": 2491594.33,
+          "outlay": 507500,
+          "face_value_of_loan": 138539123
+        }
+      ]
+    },
+    {
+      "id": 6310,
+      "code": "077-0110",
+      "description": "Program Account, United States International Development Finance Corporation",
+      "award_count": 1,
+      "obligation": 99043.63,
+      "outlay": 99043.63,
+      "face_value_of_loan": 24486834,
+      "children": [
+        {
+          "id": 80383,
+          "code": "077-2020/2023-0110-000",
+          "description": "Program Account, United States International Development Finance Corporation",
+          "award_count": 1,
+          "obligation": 99043.63,
+          "outlay": 99043.63,
+          "face_value_of_loan": 24486834
+        }
+      ]
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 5,
+    "limit": 10,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  }
+}

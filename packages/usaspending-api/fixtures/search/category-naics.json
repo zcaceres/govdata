@@ -1,0 +1,98 @@
+{
+  "category": "naics",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": null,
+      "code": "541715",
+      "name": "Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)",
+      "amount": 462860988.65,
+      "total_outlays": null,
+      "year_retired": null
+    },
+    {
+      "id": null,
+      "code": "236210",
+      "name": "Industrial Building Construction",
+      "amount": 265308198,
+      "total_outlays": null,
+      "year_retired": null
+    },
+    {
+      "id": null,
+      "code": "517919",
+      "name": "All Other Telecommunications",
+      "amount": 240633027.3,
+      "total_outlays": null,
+      "year_retired": 2022
+    },
+    {
+      "id": null,
+      "code": "541519",
+      "name": "Other Computer Related Services",
+      "amount": 212456791.34,
+      "total_outlays": null,
+      "year_retired": null
+    },
+    {
+      "id": null,
+      "code": "561990",
+      "name": "All Other Support Services",
+      "amount": 197900582.55,
+      "total_outlays": null,
+      "year_retired": null
+    },
+    {
+      "id": null,
+      "code": "336414",
+      "name": "Guided Missile and Space Vehicle Manufacturing",
+      "amount": 166738418.32,
+      "total_outlays": null,
+      "year_retired": null
+    },
+    {
+      "id": null,
+      "code": "541330",
+      "name": "Engineering Services",
+      "amount": 157866340.38,
+      "total_outlays": null,
+      "year_retired": null
+    },
+    {
+      "id": null,
+      "code": "541712",
+      "name": "Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)",
+      "amount": 144670961.78,
+      "total_outlays": null,
+      "year_retired": 2017
+    },
+    {
+      "id": null,
+      "code": "336415",
+      "name": "Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing",
+      "amount": 121635349,
+      "total_outlays": null,
+      "year_retired": null
+    },
+    {
+      "id": null,
+      "code": "561210",
+      "name": "Facilities Support Services",
+      "amount": 103588926.72,
+      "total_outlays": null,
+      "year_retired": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

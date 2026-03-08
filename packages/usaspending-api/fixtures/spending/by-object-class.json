@@ -1,0 +1,55 @@
+{
+  "total": 9682897699572.27,
+  "end_date": "2024-09-30T00:00:00Z",
+  "results": [
+    {
+      "amount": 6941299004181.08,
+      "id": "40",
+      "type": "object_class",
+      "name": "Grants and fixed charges",
+      "code": "40"
+    },
+    {
+      "amount": 1145794605141.53,
+      "id": "20",
+      "type": "object_class",
+      "name": "Contractual services and supplies",
+      "code": "20"
+    },
+    {
+      "amount": 835261606711.89,
+      "id": "10",
+      "type": "object_class",
+      "name": "Personnel compensation and benefits",
+      "code": "10"
+    },
+    {
+      "amount": 307389001066.19,
+      "id": "30",
+      "type": "object_class",
+      "name": "Acquisition of assets",
+      "code": "30"
+    },
+    {
+      "amount": 293630713376.06,
+      "id": "90",
+      "type": "object_class",
+      "name": "Other",
+      "code": "90"
+    },
+    {
+      "id": null,
+      "code": null,
+      "type": "object_class",
+      "name": "Unreported Data",
+      "amount": 164377460505.97
+    },
+    {
+      "amount": -4854691410.45,
+      "id": "00",
+      "type": "object_class",
+      "name": "Unknown",
+      "code": "00"
+    }
+  ]
+}

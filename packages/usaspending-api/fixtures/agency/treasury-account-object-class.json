@@ -1,0 +1,15 @@
+{
+  "treasury_account_symbol": "080-0110",
+  "fiscal_year": 2026,
+  "page_metadata": {
+    "page": 1,
+    "total": 0,
+    "limit": 10,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  },
+  "results": [],
+  "messages": []
+}

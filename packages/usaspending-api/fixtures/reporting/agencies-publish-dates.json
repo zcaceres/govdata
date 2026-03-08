@@ -1,0 +1,1084 @@
+{
+  "page_metadata": {
+    "page": 1,
+    "total": 111,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "agency_name": "Department of Health and Human Services",
+      "abbreviation": "HHS",
+      "toptier_code": "075",
+      "current_total_budget_authority_amount": 2864471437234.22,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-08 21:36:37.841471+00",
+            "certification_date": "2024-02-13 18:43:52.85441+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-31 21:37:36.562334+00",
+            "certification_date": "2024-02-13 18:45:57.610854+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-01 15:28:48.190545+00",
+            "certification_date": "2024-05-13 18:22:23.314893+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-29 14:11:17.728649+00",
+            "certification_date": "2024-05-13 18:23:08.185851+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-04-29 20:16:53.890882+00",
+            "certification_date": "2024-05-13 18:23:37.47271+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-05-30 20:47:13.719972+00",
+            "certification_date": "2024-08-13 20:28:16.372616+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-02 14:18:07.732262+00",
+            "certification_date": "2024-08-13 20:28:40.85938+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-29 14:23:09.354351+00",
+            "certification_date": "2024-08-13 20:29:07.881915+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-08-29 17:21:16.556304+00",
+            "certification_date": "2024-11-15 20:24:46.388037+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-10-01 16:12:09.367751+00",
+            "certification_date": "2024-11-15 20:25:38.498548+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-08 13:44:46.479517+00",
+            "certification_date": "2024-11-15 20:25:56.802096+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Department of the Treasury",
+      "abbreviation": "TREAS",
+      "toptier_code": "020",
+      "current_total_budget_authority_amount": 2203032212292.41,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-08 15:59:21.576536+00",
+            "certification_date": "2024-01-08 15:59:36.023956+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-31 20:13:09.191167+00",
+            "certification_date": "2024-01-31 20:13:22.135102+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-01 20:00:29.313035+00",
+            "certification_date": "2024-03-01 20:00:44.232549+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-29 17:49:22.945421+00",
+            "certification_date": "2024-03-29 17:49:49.015415+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-04-26 18:27:24.180723+00",
+            "certification_date": "2024-04-26 18:27:43.568793+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-05-30 19:17:33.330513+00",
+            "certification_date": "2024-05-30 19:17:47.894295+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-02 19:14:13.270313+00",
+            "certification_date": "2024-07-02 19:14:25.922126+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-30 19:29:36.046927+00",
+            "certification_date": "2024-07-30 19:29:51.070724+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-08-29 19:32:42.705855+00",
+            "certification_date": "2024-08-29 19:32:59.082067+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-10-01 19:43:49.071543+00",
+            "certification_date": "2024-10-01 19:44:03.069468+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-14 21:30:30.651352+00",
+            "certification_date": "2024-11-14 21:30:52.345414+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Department of Defense",
+      "abbreviation": "DOD",
+      "toptier_code": "097",
+      "current_total_budget_authority_amount": 1991791156124.69,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2023-12-29 15:55:14.710189+00",
+            "certification_date": "2024-01-03 15:01:37.425683+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-10-29 23:38:31.503296+00",
+            "certification_date": "2024-10-29 23:38:31.541965+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-02-29 23:42:07.606633+00",
+            "certification_date": "2024-03-01 12:32:59.139725+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-25 20:15:45.708293+00",
+            "certification_date": "2024-03-27 09:08:36.707459+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-10-29 23:33:03.457584+00",
+            "certification_date": "2024-10-29 23:33:03.528574+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-05-24 18:56:44.581799+00",
+            "certification_date": "2024-05-24 19:05:25.94364+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-06-28 15:36:28.392112+00",
+            "certification_date": "2024-07-01 19:34:38.769222+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-10-29 23:39:22.700873+00",
+            "certification_date": "2024-10-29 23:39:22.737003+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-08-26 18:28:52.797259+00",
+            "certification_date": "2024-08-29 03:59:22.151466+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-09-27 22:48:38.536461+00",
+            "certification_date": "2024-09-30 12:46:31.630049+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2025-01-09 00:35:09.186839+00",
+            "certification_date": "2025-01-09 00:35:09.222088+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Social Security Administration",
+      "abbreviation": "SSA",
+      "toptier_code": "028",
+      "current_total_budget_authority_amount": 1610536647326.06,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-08 18:39:16.223161+00",
+            "certification_date": "2024-01-10 16:11:14.26205+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-31 14:25:12.887393+00",
+            "certification_date": "2024-02-02 03:44:32.899852+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-04 18:28:01.874412+00",
+            "certification_date": "2024-03-04 18:59:05.408366+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-30 01:32:07.305154+00",
+            "certification_date": "2024-04-04 21:58:52.897859+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-04-29 18:41:57.879131+00",
+            "certification_date": "2024-05-20 15:43:12.129016+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-05-31 11:07:07.224352+00",
+            "certification_date": "2024-06-03 14:58:49.052045+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-02 11:56:36.63029+00",
+            "certification_date": "2024-07-03 14:30:03.369867+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-31 03:11:33.135917+00",
+            "certification_date": "2024-08-03 15:11:19.135231+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-08-29 21:27:31.632158+00",
+            "certification_date": "2024-09-03 19:51:55.819393+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-10-02 02:42:31.43662+00",
+            "certification_date": "2024-10-25 14:54:19.872814+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 03:28:34.061125+00",
+            "certification_date": "2024-11-15 14:03:36.221815+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Department of Agriculture",
+      "abbreviation": "USDA",
+      "toptier_code": "012",
+      "current_total_budget_authority_amount": 437203384922.49,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2025-05-30 13:47:04.224198+00",
+            "certification_date": "2025-05-30 13:47:04.329157+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2025-05-22 17:48:34.67568+00",
+            "certification_date": "2025-05-22 17:48:35.03305+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2025-05-22 16:59:24.690999+00",
+            "certification_date": "2025-05-22 16:59:24.721702+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2025-05-22 16:58:40.421508+00",
+            "certification_date": "2025-05-22 16:58:40.45614+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2025-05-22 16:51:14.491695+00",
+            "certification_date": "2025-05-22 16:51:14.523762+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2025-05-22 16:44:39.348259+00",
+            "certification_date": "2025-05-22 16:44:39.386082+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2025-05-22 15:05:24.536583+00",
+            "certification_date": "2025-05-22 15:05:24.61136+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2025-05-21 20:43:45.438922+00",
+            "certification_date": "2025-05-21 20:43:46.157682+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2025-05-21 20:01:34.985767+00",
+            "certification_date": "2025-05-21 20:01:35.486348+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2025-05-21 19:42:47.462999+00",
+            "certification_date": "2025-05-21 19:42:48.489884+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2025-06-13 14:40:56.847229+00",
+            "certification_date": "2025-06-13 14:40:56.890685+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Department of Veterans Affairs",
+      "abbreviation": "VA",
+      "toptier_code": "036",
+      "current_total_budget_authority_amount": 405829025008.46,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-08 20:03:46.907953+00",
+            "certification_date": "2024-02-13 17:41:20.083557+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-31 20:14:00.926923+00",
+            "certification_date": "2024-02-13 17:41:04.810774+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-01 20:07:56.997524+00",
+            "certification_date": "2024-05-14 17:33:22.189024+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-29 18:02:00.825896+00",
+            "certification_date": "2024-05-14 17:33:51.496027+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-06-24 16:36:34.895239+00",
+            "certification_date": "2024-06-24 16:36:34.919469+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-05-30 14:16:42.725781+00",
+            "certification_date": "2024-07-30 17:02:15.32901+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-12 17:06:04.09197+00",
+            "certification_date": "2024-07-30 17:02:27.371038+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-30 17:01:38.451305+00",
+            "certification_date": "2024-07-30 17:03:10.696795+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-08-29 19:37:15.212476+00",
+            "certification_date": "2024-11-15 17:03:21.430444+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-10-01 18:08:21.959892+00",
+            "certification_date": "2024-11-15 17:03:35.497287+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2025-04-01 19:47:14.277448+00",
+            "certification_date": "2025-04-01 19:47:14.304423+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Office of Personnel Management",
+      "abbreviation": "OPM",
+      "toptier_code": "024",
+      "current_total_budget_authority_amount": 330064718483.9,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-08 19:04:11.74439+00",
+            "certification_date": "2024-02-13 17:12:47.824995+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-31 21:05:57.57464+00",
+            "certification_date": "2024-02-13 17:13:41.115537+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-01 18:34:51.571527+00",
+            "certification_date": "2024-05-16 01:57:01.877555+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-28 15:24:06.923618+00",
+            "certification_date": "2024-05-16 01:57:52.832841+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-04-29 19:05:33.405543+00",
+            "certification_date": "2024-05-16 01:57:35.209683+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-05-30 22:58:31.538822+00",
+            "certification_date": "2024-08-14 18:12:35.518891+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-01 22:32:32.542553+00",
+            "certification_date": "2024-08-14 18:12:07.795183+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-30 21:25:27.008482+00",
+            "certification_date": "2024-08-14 18:11:51.271161+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-08-29 23:20:30.196417+00",
+            "certification_date": "2024-11-15 19:06:54.378105+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-10-01 22:19:21.894759+00",
+            "certification_date": "2024-11-15 19:06:27.608113+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 18:15:43.127549+00",
+            "certification_date": "2024-11-15 19:06:07.116075+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Department of Transportation",
+      "abbreviation": "DOT",
+      "toptier_code": "069",
+      "current_total_budget_authority_amount": 293214676488.35,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-02-14 18:33:51.921461+00",
+            "certification_date": "2024-02-14 18:34:19.54845+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-02-14 18:35:12.593819+00",
+            "certification_date": "2024-02-14 18:35:31.165072+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-05-15 17:04:58.181895+00",
+            "certification_date": "2024-05-15 17:06:00.562918+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-05-15 17:07:43.309133+00",
+            "certification_date": "2024-05-15 17:08:30.688149+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-05-15 17:09:20.311959+00",
+            "certification_date": "2024-05-15 17:09:37.315612+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-08-14 14:55:38.51212+00",
+            "certification_date": "2024-08-14 14:56:04.085554+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-08-14 14:56:57.513617+00",
+            "certification_date": "2024-08-14 14:57:14.524185+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-08-14 14:54:11.577454+00",
+            "certification_date": "2024-08-14 14:54:42.730002+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 19:08:18.190267+00",
+            "certification_date": "2024-11-15 19:09:34.701015+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 19:09:58.653556+00",
+            "certification_date": "2024-11-15 19:10:32.331642+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 19:10:59.634555+00",
+            "certification_date": "2024-11-15 19:11:17.189767+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Department of Housing and Urban Development",
+      "abbreviation": "HUD",
+      "toptier_code": "086",
+      "current_total_budget_authority_amount": 283457102340.09,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-02-14 20:05:20.959173+00",
+            "certification_date": "2024-02-14 20:05:51.232766+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-02-14 20:07:20.339071+00",
+            "certification_date": "2024-02-14 20:07:42.06359+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-05-15 20:07:28.675027+00",
+            "certification_date": "2024-05-15 20:08:11.065904+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-05-15 20:05:44.409171+00",
+            "certification_date": "2024-05-15 20:08:24.980804+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-05-15 20:03:59.749837+00",
+            "certification_date": "2024-05-15 20:08:38.309735+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-08-14 20:12:16.548414+00",
+            "certification_date": "2024-08-14 20:12:42.074112+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-08-14 20:07:23.901322+00",
+            "certification_date": "2024-08-14 20:07:42.341621+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-08-14 20:10:07.367772+00",
+            "certification_date": "2024-08-14 20:10:07.3934+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 19:53:37.600546+00",
+            "certification_date": "2024-11-15 19:54:15.818639+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 19:55:34.909065+00",
+            "certification_date": "2024-11-15 20:05:08.431028+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-15 20:06:19.229678+00",
+            "certification_date": "2024-11-15 20:06:51.208822+00"
+          },
+          "quarterly": false
+        }
+      ]
+    },
+    {
+      "agency_name": "Department of Education",
+      "abbreviation": "ED",
+      "toptier_code": "091",
+      "current_total_budget_authority_amount": 241658075055.27,
+      "periods": [
+        {
+          "period": 2,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2023-12-30 01:19:36.267748+00",
+            "certification_date": "2023-12-30 01:20:06.791958+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 3,
+          "quarter": 1,
+          "submission_dates": {
+            "publication_date": "2024-01-26 20:58:04.700953+00",
+            "certification_date": "2024-01-26 20:58:24.644063+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 4,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-01 15:32:40.546083+00",
+            "certification_date": "2024-03-01 15:33:17.184045+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 5,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-03-28 21:16:18.371234+00",
+            "certification_date": "2024-03-28 21:16:34.262314+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 6,
+          "quarter": 2,
+          "submission_dates": {
+            "publication_date": "2024-04-29 14:46:01.383285+00",
+            "certification_date": "2024-04-29 14:46:22.139503+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 7,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-05-29 19:19:40.175832+00",
+            "certification_date": "2024-05-29 19:20:04.173879+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 8,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-06-28 17:49:09.393263+00",
+            "certification_date": "2024-06-28 17:49:29.558489+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 9,
+          "quarter": 3,
+          "submission_dates": {
+            "publication_date": "2024-07-30 16:55:01.601831+00",
+            "certification_date": "2024-07-30 16:55:36.238115+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 10,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-08-28 20:11:32.126235+00",
+            "certification_date": "2024-08-28 20:12:01.419551+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 11,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-10-01 15:35:25.635849+00",
+            "certification_date": "2024-10-01 15:36:36.54532+00"
+          },
+          "quarterly": false
+        },
+        {
+          "period": 12,
+          "quarter": 4,
+          "submission_dates": {
+            "publication_date": "2024-11-13 16:03:17.908069+00",
+            "certification_date": "2024-11-13 16:03:41.648197+00"
+          },
+          "quarterly": false
+        }
+      ]
+    }
+  ],
+  "messages": []
+}

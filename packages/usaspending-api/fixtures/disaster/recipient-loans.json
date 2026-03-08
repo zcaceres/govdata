@@ -1,0 +1,131 @@
+{
+  "totals": {
+    "obligation": 852065411304.19,
+    "outlay": 852031802241.8,
+    "face_value_of_loan": 1190531122435.87,
+    "award_count": 14967107
+  },
+  "results": [
+    {
+      "id": null,
+      "code": "DUNS Number not provided",
+      "description": "REDACTED DUE TO PII",
+      "award_count": 218001,
+      "obligation": 1669481593,
+      "outlay": 1669284392.81,
+      "face_value_of_loan": 10351886663.5
+    },
+    {
+      "id": [
+        "e7a20183-572f-b957-3198-78ae6bc98221-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "NEW APPLICATION",
+      "award_count": 241,
+      "obligation": 43185623.89,
+      "outlay": 43185623.89,
+      "face_value_of_loan": 42455364.46
+    },
+    {
+      "id": [
+        "54fc11df-6b27-1351-5d15-0e3d6b931c2b-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "FIRST UNITED METHODIST CHURCH",
+      "award_count": 649,
+      "obligation": 33383661.58,
+      "outlay": 33383661.58,
+      "face_value_of_loan": 32688372.87
+    },
+    {
+      "id": [
+        "c5ebd8ea-f6a8-32d5-36cb-e3f4e7ad47d2-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "(REDACTED)",
+      "award_count": 361,
+      "obligation": 22686950.7,
+      "outlay": 22686950.7,
+      "face_value_of_loan": 25317541.82
+    },
+    {
+      "id": [
+        "33f204eb-d649-8440-b1b1-2d23b208f308-C",
+        "33f204eb-d649-8440-b1b1-2d23b208f308-R"
+      ],
+      "code": "829152433",
+      "description": "GILDAN YARNS LLC",
+      "award_count": 1,
+      "obligation": 18264720.55,
+      "outlay": 0,
+      "face_value_of_loan": 17871203.32
+    },
+    {
+      "id": [
+        "4903db52-9616-5ab7-b147-47b6caff32e4-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "YOUNG MEN'S CHRISTIAN ASSOCIATION",
+      "award_count": 20,
+      "obligation": 18099737.98,
+      "outlay": 18099737.98,
+      "face_value_of_loan": 17664288.08
+    },
+    {
+      "id": [
+        "fae35f5a-b9fe-7532-64b1-469de069aa86-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "FIRST BAPTIST CHURCH",
+      "award_count": 329,
+      "obligation": 17533635.4,
+      "outlay": 17533635.4,
+      "face_value_of_loan": 17530887.5
+    },
+    {
+      "id": [
+        "61d2761d-2fa7-2930-7b99-7e9c1da0ecd8-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "THE CATHOLIC BISHOP OF CHICAGO",
+      "award_count": 56,
+      "obligation": 14874684.99,
+      "outlay": 14874684.99,
+      "face_value_of_loan": 14544779.78
+    },
+    {
+      "id": [
+        "f3afd923-d636-d500-cc63-810a3cfe2da7-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "TRINITY LUTHERAN CHURCH",
+      "award_count": 262,
+      "obligation": 14731871.4,
+      "outlay": 14731871.4,
+      "face_value_of_loan": 14501336.5
+    },
+    {
+      "id": [
+        "050ca75d-9603-a047-1e08-cdbc5d3ed5ac-R"
+      ],
+      "code": "DUNS Number not provided",
+      "description": "FIRST PRESBYTERIAN CHURCH",
+      "award_count": 313,
+      "obligation": 14264792.61,
+      "outlay": 14264792.61,
+      "face_value_of_loan": 14148099.54
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 10000,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "messages": [
+    "Notice! API Request is capped at 10,000 results. Either download to view all results or filter using the 'query' attribute."
+  ]
+}

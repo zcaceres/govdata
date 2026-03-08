@@ -1,0 +1,16 @@
+{
+  "fiscal_year": 2026,
+  "id": 5623,
+  "agency_identifier": "080",
+  "main_account_code": "0110",
+  "account_title": "Science, Aeronautics and Technology, National Aeronautics and Space Administration",
+  "federal_account_code": "080-0110",
+  "parent_agency_toptier_code": "080",
+  "parent_agency_name": "National Aeronautics and Space Administration",
+  "bureau_name": "National Aeronautics and Space Administration",
+  "bureau_slug": "national-aeronautics-and-space-administration",
+  "total_obligated_amount": null,
+  "total_gross_outlay_amount": null,
+  "total_budgetary_resources": null,
+  "children": []
+}

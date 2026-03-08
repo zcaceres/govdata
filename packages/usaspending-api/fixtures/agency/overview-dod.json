@@ -1,0 +1,121 @@
+{
+  "fiscal_year": 2026,
+  "toptier_code": "097",
+  "name": "Department of Defense",
+  "abbreviation": "DOD",
+  "agency_id": 1173,
+  "icon_filename": "DOD.jpg",
+  "mission": "The mission of the Department of Defense is to provide the military forces needed to deter war and to protect the security of our country.",
+  "website": "https://www.defense.gov/",
+  "congressional_justification_url": "https://www.defense.gov/cj",
+  "about_agency_data": "For reasons of national security, Department of Defense (including Army, Navy, Air Force, and DOD itself) contract and IDV data is subject to a 90-day publication delay (i.e., DOD procurement awards cannot be published until 90 days have elapsed after the award Action Date). Other DOD data (including financial assistance and account data) are not subject to this delay. Read more about this delay on our About the Data page.",
+  "subtier_agency_count": 36,
+  "def_codes": [
+    {
+      "code": "2",
+      "public_law": "Emergency P.L. 117-70",
+      "title": "Further Extending Government Funding Act",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ70/pdf/PLAW-117publ70.pdf",
+      "disaster": null
+    },
+    {
+      "code": "3",
+      "public_law": "Emergency P.L. 117-103",
+      "title": "Consolidated Appropriations Act, 2022",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ103/pdf/PLAW-117publ103.pdf",
+      "disaster": null
+    },
+    {
+      "code": "6",
+      "public_law": "Emergency P.L. 117-128",
+      "title": "Additional Ukraine Supplemental Appropriations Act, 2022",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ128/pdf/PLAW-117publ128.pdf",
+      "disaster": null
+    },
+    {
+      "code": "AAA",
+      "public_law": "Emergency P.L. 117-180",
+      "title": "Continuing Appropriations and Ukraine Supplemental Appropriations Act, 2023",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ180/pdf/PLAW-117publ180.pdf",
+      "disaster": null
+    },
+    {
+      "code": "AAB",
+      "public_law": "Emergency P.L. 117-328",
+      "title": "Consolidated Appropriations Act, 2023",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ328/pdf/PLAW-117publ328.pdf",
+      "disaster": null
+    },
+    {
+      "code": "AAJ",
+      "public_law": "Emergency P.L. 118-50",
+      "title": "An act making emergency supplemental appropriations for the fiscal year ending September 30, 2024, and for other purposes.",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-118publ50/pdf/PLAW-118publ50.pdf",
+      "disaster": null
+    },
+    {
+      "code": "AAK",
+      "public_law": "Emergency P.L. 118-158",
+      "title": "American Relief Act, 2025",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-118publ158/pdf/PLAW-118publ158.pdf",
+      "disaster": null
+    },
+    {
+      "code": "C",
+      "public_law": "Emergency P.L. 115-123",
+      "title": "Bipartisan Budget Act of 2018",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-115publ123/pdf/PLAW-115publ123.pdf",
+      "disaster": null
+    },
+    {
+      "code": "E",
+      "public_law": "Emergency P.L. 116-20",
+      "title": "Additional Supplemental Appropriations for Disaster Relief Act, 2019",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-116publ20/pdf/PLAW-116publ20.pdf",
+      "disaster": null
+    },
+    {
+      "code": "G",
+      "public_law": "Emergency P.L. 116-93",
+      "title": "Consolidated Appropriations Act, 2020",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-116publ93/pdf/PLAW-116publ93.pdf",
+      "disaster": null
+    },
+    {
+      "code": "N",
+      "public_law": "Emergency P.L. 116-136",
+      "title": "Coronavirus Aid, Relief, and Economic Security Act or the CARES Act",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-116publ136/pdf/PLAW-116publ136.pdf",
+      "disaster": "covid_19"
+    },
+    {
+      "code": "Q",
+      "public_law": "Not Designated Nonemergency/Emergency/Disaster/Wildfire Suppression",
+      "title": "Not Designated Nonemergency/Emergency/Disaster/Wildfire Suppression",
+      "urls": null,
+      "disaster": null
+    },
+    {
+      "code": "V",
+      "public_law": "Non-emergency P.L. 117-2",
+      "title": "American Rescue Plan Act of 2021",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ2/pdf/PLAW-117publ2.pdf",
+      "disaster": "covid_19"
+    },
+    {
+      "code": "W",
+      "public_law": "Emergency P.L. 117-31",
+      "title": "Emergency Security Supplemental Appropriations Act, 2021",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ31/pdf/PLAW-117publ31.pdf",
+      "disaster": null
+    },
+    {
+      "code": "X",
+      "public_law": "Emergency P.L. 117-43",
+      "title": "Extending Government Funding and Delivering Emergency Assistance Act",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ43/pdf/PLAW-117publ43.pdf",
+      "disaster": null
+    }
+  ],
+  "messages": []
+}

@@ -136,6 +136,14 @@ describe("endpoints", () => {
   });
 
   describe("documents.findMany batching", () => {
+    it("handles single document number by delegating to findDocument", async () => {
+      mockFetch(loadFixture("document-single"));
+      const result = await _findManyDocuments(["2025-07743"]);
+      expect(result.kind).toBe("documents_multi");
+      expect(result.data.length).toBe(1);
+      expect(result.data[0].document_number).toBe("2025-07743");
+    });
+
     it("sends a single request when document numbers fit in URL", async () => {
       const fetchFn = mockFetch(loadFixture("documents-multi"));
       const docNumbers = ["2024-02585", "2024-00574"];

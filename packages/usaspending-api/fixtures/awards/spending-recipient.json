@@ -1,0 +1,531 @@
+{
+  "page_metadata": {
+    "count": 74,
+    "page": 1,
+    "has_next_page": false,
+    "has_previous_page": false,
+    "next": null,
+    "current": "https://api.usaspending.gov/api/v2/award_spending/recipient/?awarding_agency_id=1125&fiscal_year=2024&limit=100&page=1",
+    "previous": null
+  },
+  "results": [
+    {
+      "award_category": "contract",
+      "obligated_amount": "1681937.79",
+      "recipient": {
+        "recipient_name": "REGAN TECHNOLOGIES CORP"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "818163.78",
+      "recipient": {
+        "recipient_name": "METAS SOLUTIONS LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "802280.00",
+      "recipient": {
+        "recipient_name": "AGELIX CONSULTING LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "566617.14",
+      "recipient": {
+        "recipient_name": "CARAHSOFT TECHNOLOGY CORP"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "360570.00",
+      "recipient": {
+        "recipient_name": "PLANET TECHNOLOGIES, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "354969.01",
+      "recipient": {
+        "recipient_name": "GUIDEHOUSE INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "318552.00",
+      "recipient": {
+        "recipient_name": "ADVANCED CYBERSECURITY EXPERTS LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "307113.60",
+      "recipient": {
+        "recipient_name": "PARKER TIDE LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "263805.60",
+      "recipient": {
+        "recipient_name": "REGENCY CONSULTING INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "232437.84",
+      "recipient": {
+        "recipient_name": "STRATEGY CONSULTING TEAM, LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "218478.76",
+      "recipient": {
+        "recipient_name": "CHARLES F. DAY & ASSOCIATES, LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "200000.00",
+      "recipient": {
+        "recipient_name": "EVENTEMPS CORPORATION"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "194692.23",
+      "recipient": {
+        "recipient_name": "LABOR AND EMPLOYMENT RELATIONS ASSOCIATION"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "179547.62",
+      "recipient": {
+        "recipient_name": "DISTRICT OF COLUMBIA, GOVERNMENT OF"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "167004.00",
+      "recipient": {
+        "recipient_name": "SWISH DATA CORPORATION"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "109101.00",
+      "recipient": {
+        "recipient_name": "EMY CONSULTING LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "99633.00",
+      "recipient": {
+        "recipient_name": "ROCK CREEK PRODUCTIONS, INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "99480.00",
+      "recipient": {
+        "recipient_name": "I3SOLUTIONS INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "94270.79",
+      "recipient": {
+        "recipient_name": "T-MOBILE USA, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "86985.25",
+      "recipient": {
+        "recipient_name": "RMA ASSOCIATES LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "75000.00",
+      "recipient": {
+        "recipient_name": "CORICHIA BRISCO ENTERPRISES LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "68553.62",
+      "recipient": {
+        "recipient_name": "CELLCO PARTNERSHIP"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "65515.77",
+      "recipient": {
+        "recipient_name": "CGI FEDERAL INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "64451.02",
+      "recipient": {
+        "recipient_name": "COLOSSAL CONTRACTING LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "64138.66",
+      "recipient": {
+        "recipient_name": "COMPUTER TECHNOLOGIES CONSULTANTS INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "60810.00",
+      "recipient": {
+        "recipient_name": "QUESTIVITY, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "57404.15",
+      "recipient": {
+        "recipient_name": "SOFTWARE INFORMATION RESOURCE CORP."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "49740.00",
+      "recipient": {
+        "recipient_name": "OPM CHARLOTTESVILLE REGION CONTNG"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "47000.00",
+      "recipient": {
+        "recipient_name": "CORTICO CORPORATION"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "46943.23",
+      "recipient": {
+        "recipient_name": "LOTUSUSA, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "44200.00",
+      "recipient": {
+        "recipient_name": "PRESIDENT AND FELLOWS OF HARVARD COLLEGE"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "37000.00",
+      "recipient": {
+        "recipient_name": "QUORUM ANALYTICS INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "36677.52",
+      "recipient": {
+        "recipient_name": "DISTRIBUTED SOLUTIONS, INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "32500.00",
+      "recipient": {
+        "recipient_name": "MCCALL, SZERDY & ASSOCIATES, INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "31553.44",
+      "recipient": {
+        "recipient_name": "VESEQU LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "30000.00",
+      "recipient": {
+        "recipient_name": "CONNSCI LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "25800.00",
+      "recipient": {
+        "recipient_name": "PARTNERSHIP FOR PUBLIC SERVICE INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "23525.82",
+      "recipient": {
+        "recipient_name": "AVI-SPL LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "21600.00",
+      "recipient": {
+        "recipient_name": "POLL EVERYWHERE INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "20720.87",
+      "recipient": {
+        "recipient_name": "IT HARDWARE HUB INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "16626.99",
+      "recipient": {
+        "recipient_name": "LANGUAGE LINE, LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "14740.46",
+      "recipient": {
+        "recipient_name": "ALVAREZ LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "13871.54",
+      "recipient": {
+        "recipient_name": "KATHRYN A. VAN DAGENS PLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "13125.36",
+      "recipient": {
+        "recipient_name": "LAW OFFICE OF JEANNE CHARLES, P.C."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "12933.60",
+      "recipient": {
+        "recipient_name": "WEST PUBLISHING CORPORATION"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "12460.00",
+      "recipient": {
+        "recipient_name": "SOCIETY FOR HUMAN RESOURCE MANAGEMENT"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "10254.80",
+      "recipient": {
+        "recipient_name": "MAYBERRY, SHEILA"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "9614.80",
+      "recipient": {
+        "recipient_name": "MARTIN H. MALIN"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "8749.00",
+      "recipient": {
+        "recipient_name": "MANAGEMENT CONCEPTS, INC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "8498.52",
+      "recipient": {
+        "recipient_name": "KONICA MINOLTA BUSINESS SOLUTIONS U.S.A, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "7426.00",
+      "recipient": {
+        "recipient_name": "LRP PUBLICATIONS, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "3662.47",
+      "recipient": {
+        "recipient_name": "SYMONETTE ADR SERVICES, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "1860.14",
+      "recipient": {
+        "recipient_name": "HEALTHEQUITY, INC."
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "WORKPLACE CONFLICT RESOLUTIONS LLC"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "SHALLER ESQ ELLIOT H"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "STRONGIN, ANDREW M"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "SYMONETTE ADR SERVICES, INC."
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "VAUGHN, MICHAEL D"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "WINROCK PRODUCTIONS, LLC"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "ARBITRATION SERVICES, INC."
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "CLARKE JACK"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "CLAUSS ADR, INC."
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "COMPASS LAW GROUP, PS, INC"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "ELIZABETH NEUMEIER"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "KATHRYN A. VAN DAGENS PLC"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "KNAPP ANDRIA S"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "LAW OFFICE OF JEANNE CHARLES, P.C."
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "MARTIN H. MALIN"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "MAYBERRY, SHEILA"
+      }
+    },
+    {
+      "award_category": "idv",
+      "obligated_amount": "0.00",
+      "recipient": {
+        "recipient_name": "MOSCOVITCH RUTH"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "-5241.60",
+      "recipient": {
+        "recipient_name": "PROSCI, INC."
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "-5535.00",
+      "recipient": {
+        "recipient_name": "WASHINGTON METROPOLITAN AREA TRANSIT AUTHORITY"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "-18182.27",
+      "recipient": {
+        "recipient_name": "VERIZON BUSINESS NETWORK SERVICES LLC"
+      }
+    },
+    {
+      "award_category": "contract",
+      "obligated_amount": "-50092.78",
+      "recipient": {
+        "recipient_name": "SAVAN GROUP, LLC"
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "category": "funding_subagency",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "name": "National Aeronautics and Space Administration",
+      "id": 862,
+      "code": "NASA",
+      "agency_id": 72,
+      "agency_abbreviation": "NASA",
+      "agency_name": "National Aeronautics and Space Administration",
+      "agency_slug": "national-aeronautics-and-space-administration",
+      "subagency_slug": "national-aeronautics-and-space-administration",
+      "amount": 2410433975.87,
+      "total_outlays": null
+    },
+    {
+      "name": "Department of the Army",
+      "id": 1188,
+      "code": "USA",
+      "agency_id": 126,
+      "agency_abbreviation": "DOD",
+      "agency_name": "Department of Defense",
+      "agency_slug": "department-of-defense",
+      "subagency_slug": "department-of-the-army",
+      "amount": 189002920.42,
+      "total_outlays": null
+    },
+    {
+      "name": "National Institutes of Health",
+      "id": 830,
+      "code": "NIH",
+      "agency_id": 68,
+      "agency_abbreviation": "HHS",
+      "agency_name": "Department of Health and Human Services",
+      "agency_slug": "department-of-health-and-human-services",
+      "subagency_slug": "national-institutes-of-health",
+      "amount": 135533166.65,
+      "total_outlays": null
+    },
+    {
+      "name": "National Science Foundation",
+      "id": 655,
+      "code": "NSF",
+      "agency_id": 46,
+      "agency_abbreviation": "NSF",
+      "agency_name": "National Science Foundation",
+      "agency_slug": "national-science-foundation",
+      "subagency_slug": "national-science-foundation",
+      "amount": 87067275,
+      "total_outlays": null
+    },
+    {
+      "name": "Federal Highway Administration",
+      "id": 753,
+      "code": "FHWA",
+      "agency_id": 62,
+      "agency_abbreviation": "DOT",
+      "agency_name": "Department of Transportation",
+      "agency_slug": "department-of-transportation",
+      "subagency_slug": "federal-highway-administration",
+      "amount": 70176411.82,
+      "total_outlays": null
+    },
+    {
+      "name": "Department of Veterans Affairs",
+      "id": 561,
+      "code": "VA",
+      "agency_id": 37,
+      "agency_abbreviation": "VA",
+      "agency_name": "Department of Veterans Affairs",
+      "agency_slug": "department-of-veterans-affairs",
+      "subagency_slug": "department-of-veterans-affairs",
+      "amount": 59830839.61,
+      "total_outlays": null
+    },
+    {
+      "name": "Department of Energy",
+      "id": 930,
+      "code": "DOE",
+      "agency_id": 78,
+      "agency_abbreviation": "DOE",
+      "agency_name": "Department of Energy",
+      "agency_slug": "department-of-energy",
+      "subagency_slug": "department-of-energy",
+      "amount": 55458497.5,
+      "total_outlays": null
+    },
+    {
+      "name": "National Oceanic and Atmospheric Administration",
+      "id": 195,
+      "code": "NOAA",
+      "agency_id": 15,
+      "agency_abbreviation": "DOC",
+      "agency_name": "Department of Commerce",
+      "agency_slug": "department-of-commerce",
+      "subagency_slug": "national-oceanic-and-atmospheric-administration",
+      "amount": 48614248.22,
+      "total_outlays": null
+    },
+    {
+      "name": "Centers for Disease Control and Prevention",
+      "id": 824,
+      "code": "CDC",
+      "agency_id": 68,
+      "agency_abbreviation": "HHS",
+      "agency_name": "Department of Health and Human Services",
+      "agency_slug": "department-of-health-and-human-services",
+      "subagency_slug": "centers-for-disease-control-and-prevention",
+      "amount": 27508705.5,
+      "total_outlays": null
+    },
+    {
+      "name": "Department of the Air Force",
+      "id": 1196,
+      "code": "USAF",
+      "agency_id": 126,
+      "agency_abbreviation": "DOD",
+      "agency_name": "Department of Defense",
+      "agency_slug": "department-of-defense",
+      "subagency_slug": "department-of-the-air-force",
+      "amount": 21983701.47,
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

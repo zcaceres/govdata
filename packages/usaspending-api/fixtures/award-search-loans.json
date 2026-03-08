@@ -1,0 +1,145 @@
+{
+  "spending_level": "awards",
+  "limit": 10,
+  "results": [
+    {
+      "internal_id": 269893905,
+      "Award ID": "P268K155150",
+      "Recipient Name": "PURDUE UNIVERSITY GLOBAL, INC.",
+      "Issued Date": "2025-09-19",
+      "Loan Value": 46402867113,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Education",
+      "Awarding Sub Agency": "Department of Education",
+      "awarding_agency_id": 1068,
+      "agency_slug": "department-of-education",
+      "generated_internal_id": "ASST_NON_P268K155150_091"
+    },
+    {
+      "internal_id": 260369933,
+      "Award ID": "DELP0000146",
+      "Recipient Name": "BLUEOVAL SK, LLC",
+      "Issued Date": "2024-12-13",
+      "Loan Value": 27600000001,
+      "Subsidy Cost": 167256001,
+      "Awarding Agency": "Department of Energy",
+      "Awarding Sub Agency": "Department of Energy",
+      "awarding_agency_id": 930,
+      "agency_slug": "department-of-energy",
+      "generated_internal_id": "ASST_NON_DELP0000146_089"
+    },
+    {
+      "internal_id": 269886765,
+      "Award ID": "P268K143619",
+      "Recipient Name": "SOUTH UNIVERSITY SAVANNAH, LLC",
+      "Issued Date": "2025-07-29",
+      "Loan Value": 21489612906,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Education",
+      "Awarding Sub Agency": "Department of Education",
+      "awarding_agency_id": 1068,
+      "agency_slug": "department-of-education",
+      "generated_internal_id": "ASST_NON_P268K143619_091"
+    },
+    {
+      "internal_id": 269892991,
+      "Award ID": "P268K153619",
+      "Recipient Name": "SOUTH UNIVERSITY SAVANNAH, LLC",
+      "Issued Date": "2024-09-24",
+      "Loan Value": 19425849589,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Education",
+      "Awarding Sub Agency": "Department of Education",
+      "awarding_agency_id": 1068,
+      "agency_slug": "department-of-education",
+      "generated_internal_id": "ASST_NON_P268K153619_091"
+    },
+    {
+      "internal_id": 260369963,
+      "Award ID": "DELP0000183",
+      "Recipient Name": "PACIFIC GAS AND ELECTRIC COMPANY",
+      "Issued Date": "2024-12-17",
+      "Loan Value": 15000000000,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Energy",
+      "Awarding Sub Agency": "Department of Energy",
+      "awarding_agency_id": 930,
+      "agency_slug": "department-of-energy",
+      "generated_internal_id": "ASST_NON_DELP0000183_089"
+    },
+    {
+      "internal_id": 269872937,
+      "Award ID": "P268K121445",
+      "Recipient Name": "THE UNIVERSITY OF ARIZONA GLOBAL CAMPUS",
+      "Issued Date": "2025-06-16",
+      "Loan Value": 12122976356,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Education",
+      "Awarding Sub Agency": "Department of Education",
+      "awarding_agency_id": 1068,
+      "agency_slug": "department-of-education",
+      "generated_internal_id": "ASST_NON_P268K121445_091"
+    },
+    {
+      "internal_id": 269886835,
+      "Award ID": "P268K143726",
+      "Recipient Name": "THE UNIVERSITY OF PHOENIX, INC.",
+      "Issued Date": "2025-07-16",
+      "Loan Value": 10854986046,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Education",
+      "Awarding Sub Agency": "Department of Education",
+      "awarding_agency_id": 1068,
+      "agency_slug": "department-of-education",
+      "generated_internal_id": "ASST_NON_P268K143726_091"
+    },
+    {
+      "internal_id": 269899361,
+      "Award ID": "P268K164053",
+      "Recipient Name": "NATIONAL UNIVERSITY COLLEGE",
+      "Issued Date": "2024-12-16",
+      "Loan Value": 10257741464,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Education",
+      "Awarding Sub Agency": "Department of Education",
+      "awarding_agency_id": 1068,
+      "agency_slug": "department-of-education",
+      "generated_internal_id": "ASST_NON_P268K164053_091"
+    },
+    {
+      "internal_id": 260369961,
+      "Award ID": "DELP0000181",
+      "Recipient Name": "BLUEOVAL SK, LLC",
+      "Issued Date": "2024-12-13",
+      "Loan Value": 9633040000,
+      "Subsidy Cost": 65023020,
+      "Awarding Agency": "Department of Energy",
+      "Awarding Sub Agency": "Department of Energy",
+      "awarding_agency_id": 930,
+      "agency_slug": "department-of-energy",
+      "generated_internal_id": "ASST_NON_DELP0000181_089"
+    },
+    {
+      "internal_id": 269884407,
+      "Award ID": "P268K140778",
+      "Recipient Name": "IEC US HOLDINGS, INC",
+      "Issued Date": "2024-04-25",
+      "Loan Value": 8271055057,
+      "Subsidy Cost": 0,
+      "Awarding Agency": "Department of Education",
+      "Awarding Sub Agency": "Department of Education",
+      "awarding_agency_id": 1068,
+      "agency_slug": "department-of-education",
+      "generated_internal_id": "ASST_NON_P268K140778_091"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "hasNext": true,
+    "last_record_unique_id": 269884407,
+    "last_record_sort_value": "827105505700"
+  },
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. "
+  ]
+}

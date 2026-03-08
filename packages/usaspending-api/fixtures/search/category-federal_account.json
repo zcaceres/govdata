@@ -1,0 +1,88 @@
+{
+  "category": "federal_account",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "amount": 1532813683.23,
+      "id": 5630,
+      "code": "080-0120",
+      "name": "Science, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 1464250102.3,
+      "id": 5634,
+      "code": "080-0124",
+      "name": "Exploration, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 1309570133.63,
+      "id": 5632,
+      "code": "080-0122",
+      "name": "Safety, Security and Mission Services, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 999629336.98,
+      "id": 5639,
+      "code": "080-0131",
+      "name": "Space Technology, National Aeronautics Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 992794962.82,
+      "id": 5627,
+      "code": "080-0115",
+      "name": "Space Operations, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 640635104.49,
+      "id": 5638,
+      "code": "080-0130",
+      "name": "Construction and Environmental Compliance and Restoration, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 453748551.41,
+      "id": 5636,
+      "code": "080-0126",
+      "name": "Aeronautics, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 269522994.63,
+      "id": 5637,
+      "code": "080-0128",
+      "name": "Science, Technology, Engineering, and Mathematics Engagement, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 209615298.73,
+      "id": 5640,
+      "code": "080-4546",
+      "name": "Working Capital Fund, National Aeronautics and Space Administration",
+      "total_outlays": null
+    },
+    {
+      "amount": 168614734.01,
+      "id": 5622,
+      "code": "080-0109",
+      "name": "Office of Inspector General, National Aeronautics and Space Administration",
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

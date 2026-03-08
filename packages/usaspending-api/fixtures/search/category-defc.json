@@ -1,0 +1,88 @@
+{
+  "category": "defc",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": null,
+      "code": "Q",
+      "name": "Not Designated Nonemergency/Emergency/Disaster/Wildfire Suppression",
+      "amount": 2959674703.5,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "AAF",
+      "name": "Consolidated Appropriations Act, 2024",
+      "amount": 214057603.84,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "AAK",
+      "name": "American Relief Act, 2025",
+      "amount": 208291527.45,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "AAB",
+      "name": "Consolidated Appropriations Act, 2023",
+      "amount": 195461146.13,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "N",
+      "name": "Coronavirus Aid, Relief, and Economic Security Act or the CARES Act",
+      "amount": 177891622.29,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "Z",
+      "name": "Infrastructure Investment and Jobs Act",
+      "amount": 51935114.95,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "AAL",
+      "name": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "amount": 50492833.32,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "C",
+      "name": "Bipartisan Budget Act of 2018",
+      "amount": 49438097.87,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "AAA",
+      "name": "Continuing Appropriations and Ukraine Supplemental Appropriations Act, 2023",
+      "amount": 49438095.8,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "R",
+      "name": "Consolidated Appropriations Act, 2021",
+      "amount": 49438095.8,
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}
