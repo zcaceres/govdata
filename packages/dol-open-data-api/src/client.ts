@@ -19,8 +19,15 @@ async function fetchJson(url: string, agency?: string, endpoint?: string): Promi
 }
 
 export async function listDatasets(baseUrl = DEFAULT_BASE_URL): Promise<DatasetsResponse> {
-  const raw = await fetchJson(`${baseUrl}/datasets`);
-  return DatasetsResponse.parse(raw);
+  const firstPage = DatasetsResponse.parse(await fetchJson(`${baseUrl}/datasets`));
+  if (firstPage.meta.total_pages <= 1) return firstPage;
+
+  const allDatasets = [...firstPage.datasets];
+  for (let page = 2; page <= firstPage.meta.total_pages; page++) {
+    const raw = DatasetsResponse.parse(await fetchJson(`${baseUrl}/datasets?page=${page}`));
+    allDatasets.push(...raw.datasets);
+  }
+  return { datasets: allDatasets, meta: { ...firstPage.meta, current_page: 1, next_page: null, total_count: allDatasets.length } };
 }
 
 export function createClient(config: ClientConfig) {

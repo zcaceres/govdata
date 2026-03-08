@@ -36,7 +36,7 @@ function makeEndpoint(agency: Agency, endpoint: string) {
         try {
           queryParams.filter = JSON.parse(params.filter);
         } catch {
-          throw new Error(`Invalid filter: could not parse JSON string. Example: '{"column":"value"}'`);
+          throw new Error(`Invalid filter: could not parse JSON string. Example: '{"field":"state","operator":"eq","value":"CA"}'`);
         }
       } else {
         queryParams.filter = params.filter;

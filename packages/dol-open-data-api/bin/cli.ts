@@ -179,8 +179,22 @@ async function main() {
 
   if (command === "get") {
     const params: Record<string, unknown> = {};
-    if (values.limit) params.limit = parseInt(values.limit, 10);
-    if (values.offset) params.offset = parseInt(values.offset, 10);
+    if (values.limit != null) {
+      const n = parseInt(values.limit, 10);
+      if (!Number.isFinite(n)) {
+        console.error("Error: --limit must be a number");
+        process.exit(1);
+      }
+      params.limit = n;
+    }
+    if (values.offset != null) {
+      const n = parseInt(values.offset, 10);
+      if (!Number.isFinite(n)) {
+        console.error("Error: --offset must be a number");
+        process.exit(1);
+      }
+      params.offset = n;
+    }
     if (values.fields) params.fields = values.fields.split(",");
     if (values.sort) params.sort = values.sort;
     if (values["sort-by"]) params.sort_by = values["sort-by"];
@@ -189,7 +203,7 @@ async function main() {
       try {
         parsed = JSON.parse(values.filter);
       } catch {
-        console.error(`Error: --filter must be valid JSON. Example: --filter '{"column":"value"}'`);
+        console.error(`Error: --filter must be valid JSON. Example: --filter '{"field":"state","operator":"eq","value":"CA"}'`);
         process.exit(1);
       }
       params.filter = FilterExpression.parse(parsed);
