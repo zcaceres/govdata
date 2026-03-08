@@ -6,6 +6,7 @@ import { naicsPlugin } from "naics-api";
 import { dolPlugin } from "dol-open-data-api";
 import { usaspendingPlugin } from "usaspending-api";
 import { federalRegisterPlugin } from "federal-register";
+import { blsPlugin } from "bls-api";
 import { z } from "zod";
 
 /**
@@ -13,7 +14,7 @@ import { z } from "zod";
  * from describe() metadata, and tool dispatch for all plugins.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin, blsPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -240,6 +241,45 @@ describe("MCP tool dispatch", () => {
     suggested_searches: {},
   };
 
+  // BLS fixtures
+  const blsFixtures: Record<string, unknown> = {
+    timeseries: {
+      status: "REQUEST_SUCCEEDED",
+      responseTime: 50,
+      message: [],
+      Results: {
+        series: [
+          {
+            seriesID: "CUUR0000SA0",
+            data: [{ year: "2025", period: "M01", periodName: "January", value: "317.671", footnotes: [{}] }],
+          },
+        ],
+      },
+    },
+    surveys: {
+      status: "REQUEST_SUCCEEDED",
+      responseTime: 10,
+      message: [],
+      Results: {
+        survey: [{ survey_abbreviation: "CU", survey_name: "Consumer Price Index" }],
+      },
+    },
+    popular: {
+      status: "REQUEST_SUCCEEDED",
+      responseTime: 10,
+      message: [],
+      Results: {
+        series: [{ seriesID: "CUUR0000SA0" }],
+      },
+    },
+  };
+
+  const blsTestParams: Record<string, Record<string, unknown>> = {
+    timeseries: { series_id: "CUUR0000SA0" },
+    surveys: {},
+    popular: {},
+  };
+
   // Naics endpoints need params to call — provide test params per endpoint
   const naicsTestParams: Record<string, Record<string, unknown>> = {
     sectors: {},
@@ -274,6 +314,11 @@ describe("MCP tool dispatch", () => {
           if (!fixture) return;
           mockFetch(fixture);
           params = frTestParams[endpoint.name];
+        } else if (plugin.prefix === "bls") {
+          const fixture = blsFixtures[endpoint.name];
+          if (!fixture) return;
+          mockFetch(fixture);
+          params = blsTestParams[endpoint.name];
         } else {
           const fixture = fixtures[endpoint.name];
           if (!fixture) return; // skip endpoints without fixtures

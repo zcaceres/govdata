@@ -4,6 +4,7 @@ import { naicsPlugin } from "naics-api";
 import { dolPlugin } from "dol-open-data-api";
 import { usaspendingPlugin } from "usaspending-api";
 import { federalRegisterPlugin } from "federal-register";
+import { blsPlugin } from "bls-api";
 import type { GovDataPlugin, GovResult, EndpointDescription } from "govdata-core";
 
 /**
@@ -11,7 +12,7 @@ import type { GovDataPlugin, GovResult, EndpointDescription } from "govdata-core
  * GovDataPlugin interface and its describe() metadata is internally consistent.
  * Add each new plugin to the `plugins` array below.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin, blsPlugin];
 
 for (const plugin of plugins) {
   describe(`plugin contract: ${plugin.prefix}`, () => {

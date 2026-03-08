@@ -1,0 +1,25 @@
+{
+  "name": "bls-api",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "bls-api": "src/cli.ts",
+    "bls-mcp": "src/mcp.ts"
+  },
+  "scripts": {
+    "test": "bun test",
+    "build": "bun build src/cli.ts --compile --outfile dist/bls-api",
+    "build:mcp": "bun build src/mcp.ts --compile --outfile dist/bls-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "govdata-core": "workspace:*",
+    "zod": "^4.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7"
+  }
+}

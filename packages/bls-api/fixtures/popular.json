@@ -1,0 +1,14 @@
+{
+  "status": "REQUEST_SUCCEEDED",
+  "responseTime": 10,
+  "message": [],
+  "Results": {
+    "series": [
+      { "seriesID": "CUUR0000SA0" },
+      { "seriesID": "WPUFD4" },
+      { "seriesID": "LNS14000000" },
+      { "seriesID": "CUUR0000SA0L1E" },
+      { "seriesID": "ISU00000000031004" }
+    ]
+  }
+}

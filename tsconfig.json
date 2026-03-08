@@ -15,6 +15,7 @@
     { "path": "packages/naics-api" },
     { "path": "packages/dol-open-data-api" },
     { "path": "packages/federal-register" },
+    { "path": "packages/bls-api" },
     { "path": "packages/govdata-cli" },
     { "path": "packages/govdata-mcp" }
   ],

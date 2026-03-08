@@ -5,6 +5,7 @@
     "": {
       "devDependencies": {
         "@types/bun": "latest",
+        "bls-api": "workspace:*",
         "doge-api": "workspace:*",
         "dol-open-data-api": "workspace:*",
         "federal-register": "workspace:*",
@@ -13,6 +14,23 @@
         "typescript": "^5.7",
         "usaspending-api": "workspace:*",
         "zod": "^4.3",
+      },
+    },
+    "packages/bls-api": {
+      "name": "bls-api",
+      "version": "0.1.0",
+      "bin": {
+        "bls-api": "src/cli.ts",
+        "bls-mcp": "src/mcp.ts",
+      },
+      "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.27.1",
+        "govdata-core": "workspace:*",
+        "zod": "^4.3",
+      },
+      "devDependencies": {
+        "@types/bun": "latest",
+        "typescript": "^5.7",
       },
     },
     "packages/doge-api": {
@@ -73,6 +91,7 @@
         "govdata": "src/cli.ts",
       },
       "dependencies": {
+        "bls-api": "workspace:*",
         "doge-api": "workspace:*",
         "dol-open-data-api": "workspace:*",
         "federal-register": "workspace:*",
@@ -104,6 +123,7 @@
       },
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.27.1",
+        "bls-api": "workspace:*",
         "doge-api": "workspace:*",
         "dol-open-data-api": "workspace:*",
         "federal-register": "workspace:*",
@@ -127,7 +147,6 @@
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.27.1",
         "govdata-core": "workspace:*",
-        "hono": "^4.11.9",
         "zod": "^4.3",
       },
       "devDependencies": {
@@ -172,6 +191,8 @@
     "ajv": ["ajv@8.18.0", "", { "dependencies": { "fast-deep-equal": "^3.1.3", "fast-uri": "^3.0.1", "json-schema-traverse": "^1.0.0", "require-from-string": "^2.0.2" } }, "sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A=="],
 
     "ajv-formats": ["ajv-formats@3.0.1", "", { "dependencies": { "ajv": "^8.0.0" } }, "sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ=="],
+
+    "bls-api": ["bls-api@workspace:packages/bls-api"],
 
     "body-parser": ["body-parser@2.2.2", "", { "dependencies": { "bytes": "^3.1.2", "content-type": "^1.0.5", "debug": "^4.4.3", "http-errors": "^2.0.0", "iconv-lite": "^0.7.0", "on-finished": "^2.4.1", "qs": "^6.14.1", "raw-body": "^3.0.1", "type-is": "^2.0.1" } }, "sha512-oP5VkATKlNwcgvxi0vM0p/D3n2C3EReYVX+DNYs5TjZFn/oQt2j+4sVJtSMr18pdRr8wjTcBl6LoV+FUwzPmNA=="],
 

@@ -11,8 +11,9 @@ A monorepo of typed TypeScript clients for U.S. government data APIs. Each data 
 | [dol-open-data-api](packages/dol-open-data-api) | Stable | 42 | Dept. of Labor — MSHA, OSHA, WHD, and 6 other agencies |
 | [naics-api](packages/naics-api) | Stable | 3 | NAICS code lookup (local SQLite, no HTTP) |
 | [usaspending-api](packages/usaspending-api) | In Progress | 6 | USAspending.gov — awards, agency spending, state spending |
+| [bls-api](packages/bls-api) | Stable | 3 | Bureau of Labor Statistics — time series, surveys, popular series |
 
-**Not yet started:** SEC EDGAR, Census Bureau, BLS, EPA, USDA, HHS, FEC, USPTO, data.gov
+**Not yet started:** SEC EDGAR, Census Bureau, EPA, USDA, HHS, FEC, USPTO, data.gov
 
 ## Packages
 
@@ -24,6 +25,7 @@ A monorepo of typed TypeScript clients for U.S. government data APIs. Each data 
 | [dol-open-data-api](packages/dol-open-data-api) | Dept. of Labor open data API plugin |
 | [naics-api](packages/naics-api) | NAICS code lookup plugin |
 | [usaspending-api](packages/usaspending-api) | USAspending.gov API plugin |
+| [bls-api](packages/bls-api) | Bureau of Labor Statistics API plugin |
 | [govdata-cli](packages/govdata-cli) | Unified CLI binary for all plugins |
 | [govdata-mcp](packages/govdata-mcp) | Unified MCP server for all plugins |
 
@@ -93,6 +95,7 @@ bun run test:naics        # naics-api unit tests
 bun run test:dol          # dol-open-data-api unit tests
 bun run test:fr           # federal-register unit tests
 bun run test:usaspending  # usaspending-api unit tests
+bun run test:bls          # bls-api unit tests
 bun run typecheck         # type-check all packages
 ```
 

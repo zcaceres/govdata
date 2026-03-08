@@ -6,8 +6,9 @@ import { naicsPlugin } from "naics-api";
 import { dolPlugin } from "dol-open-data-api";
 import { federalRegisterPlugin } from "federal-register";
 import { usaspendingPlugin } from "usaspending-api";
+import { blsPlugin } from "bls-api";
 
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, federalRegisterPlugin, usaspendingPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, federalRegisterPlugin, usaspendingPlugin, blsPlugin];
 
 async function main() {
   const args = process.argv.slice(2);
