@@ -21,7 +21,7 @@ function db(params?: Record<string, unknown>) {
 
 function validateCode(code: unknown, paramName = "code"): string {
   if (code == null) throw new GovValidationError(paramName, undefined, "required NAICS code string");
-  const str = String(code);
+  const str = String(code).trim();
   if (!isValidNaicsFormat(str)) {
     throw new GovValidationError(paramName, str, "valid NAICS code (2-6 digits or range like 31-33)");
   }

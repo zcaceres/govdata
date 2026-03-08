@@ -17,13 +17,18 @@ export function escapeCSV(value: unknown): string {
   return str;
 }
 
+function escapeMarkdownCell(value: unknown): string {
+  if (value == null) return "";
+  return String(value).replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
+}
+
 export function arrayToMarkdownTable(items: Record<string, unknown>[]): string {
   if (items.length === 0) return "(no data)";
   const keys = Object.keys(items[0]);
   const header = `| ${keys.join(" | ")} |`;
   const separator = `| ${keys.map(() => "---").join(" | ")} |`;
   const rows = items.map(
-    (item) => `| ${keys.map((k) => item[k] == null ? "" : String(item[k])).join(" | ")} |`,
+    (item) => `| ${keys.map((k) => escapeMarkdownCell(item[k])).join(" | ")} |`,
   );
   return [header, separator, ...rows].join("\n");
 }
