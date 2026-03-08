@@ -263,6 +263,31 @@ describe("endpoints", () => {
       expect(result.data.length).toBe(0);
       expect(result.meta!.total_results).toBe(0);
     });
+
+    it("handles API response missing total_pages and results (zero results)", async () => {
+      // FR API omits total_pages and results when count is 0
+      globalThis.fetch = mock(async () =>
+        new Response(JSON.stringify({ count: 0, description: "..." }), { status: 200 }),
+      ) as any;
+      const result = await _searchDocuments({ term: "xyznonexistent12345" });
+      expect(result.kind).toBe("documents");
+      expect(result.data.length).toBe(0);
+      expect(result.meta!.total_results).toBe(0);
+      expect(result.meta!.pages).toBe(0);
+    });
+  });
+
+  describe("publicInspection.search empty results", () => {
+    it("handles API response missing total_pages and results (zero results)", async () => {
+      globalThis.fetch = mock(async () =>
+        new Response(JSON.stringify({ count: 0, description: "..." }), { status: 200 }),
+      ) as any;
+      const result = await _searchPI({ term: "xyznonexistent12345" });
+      expect(result.kind).toBe("public_inspection");
+      expect(result.data.length).toBe(0);
+      expect(result.meta!.total_results).toBe(0);
+      expect(result.meta!.pages).toBe(0);
+    });
   });
 
   describe("plugin coercion", () => {

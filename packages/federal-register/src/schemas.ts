@@ -191,10 +191,10 @@ const FacetEntrySchema = z.object({
 
 export const DocumentSearchResponseSchema = z.object({
   count: z.number(),
-  total_pages: z.number(),
+  total_pages: z.number().optional().default(0),
   next_page_url: z.string().nullable().optional(),
   description: z.string().optional(),
-  results: z.array(DocumentSchema),
+  results: z.array(DocumentSchema).optional().default([]),
 });
 
 export const SingleDocumentResponseSchema = DocumentSchema;
@@ -211,10 +211,10 @@ export const SingleAgencyResponseSchema = AgencySchema;
 
 export const PISearchResponseSchema = z.object({
   count: z.number(),
-  total_pages: z.number(),
+  total_pages: z.number().optional().default(0),
   next_page_url: z.string().nullable().optional(),
   description: z.string().optional(),
-  results: z.array(PIDocumentSchema),
+  results: z.array(PIDocumentSchema).optional().default([]),
 });
 
 export const PICurrentResponseSchema = z.object({
