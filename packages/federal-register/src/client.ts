@@ -34,8 +34,9 @@ export async function frGet<T>(
     if (response.status === 429) {
       if (attempt === maxRetries) {
         const retryAfter = response.headers.get("retry-after");
+        const retryMs = retryAfter ? parseInt(retryAfter, 10) * 1000 : null;
         throw new GovRateLimitError(
-          retryAfter ? parseInt(retryAfter, 10) * 1000 : null,
+          Number.isFinite(retryMs) ? retryMs : null,
         );
       }
       await sleep(initialRetryMs * 2 ** attempt);

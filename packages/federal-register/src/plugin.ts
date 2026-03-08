@@ -106,6 +106,9 @@ async function agency(params?: Record<string, unknown>): Promise<GovResult> {
     throw new FRValidationError("id", params?.id, "required number");
   }
   const id = Number(params.id);
+  if (!Number.isFinite(id)) {
+    throw new FRValidationError("id", params.id, "a finite number");
+  }
   return _findAgency(id);
 }
 

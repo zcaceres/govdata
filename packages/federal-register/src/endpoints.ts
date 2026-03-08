@@ -32,7 +32,17 @@ function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>
       const issue = err.issues[0];
       const field = issue.path.join(".") || "input";
       const expected = issue.message;
-      throw new FRValidationError(field, (params as any)?.[field], expected);
+      // Walk the path to get the actual received value (handles nested/array paths)
+      let received: unknown = params;
+      for (const segment of issue.path) {
+        if (received != null && typeof received === "object") {
+          received = (received as Record<string | number, unknown>)[segment as string | number];
+        } else {
+          received = undefined;
+          break;
+        }
+      }
+      throw new FRValidationError(field, received, expected);
     }
     throw err;
   }
