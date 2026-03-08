@@ -133,4 +133,56 @@ describe("endpoints", () => {
       expect(result.summary()).toContain("searches across");
     });
   });
+
+  describe("documents.findMany batching", () => {
+    it("sends a single request when document numbers fit in URL", async () => {
+      const fetchFn = mockFetch(loadFixture("documents-multi"));
+      const docNumbers = ["2024-02585", "2024-00574"];
+      const result = await _findManyDocuments(docNumbers);
+      expect(result.kind).toBe("documents_multi");
+      expect(fetchFn).toHaveBeenCalledTimes(1);
+    });
+
+    it("batches into multiple requests when document numbers exceed URL limit", async () => {
+      // Generate enough document numbers to exceed MAX_PATH_LENGTH (1800 chars)
+      // Each number like "2024-XXXXX" is ~10 chars encoded + comma
+      const docNumbers: string[] = [];
+      for (let i = 0; i < 200; i++) {
+        docNumbers.push(`2024-${String(i).padStart(5, "0")}`);
+      }
+
+      let callCount = 0;
+      const calledUrls: string[] = [];
+      const fixture = await loadFixture("documents-multi");
+      globalThis.fetch = mock(async (url: string) => {
+        callCount++;
+        calledUrls.push(url);
+        return new Response(JSON.stringify(fixture), { status: 200 });
+      }) as any;
+
+      const result = await _findManyDocuments(docNumbers);
+      expect(result.kind).toBe("documents_multi");
+      expect(callCount).toBeGreaterThan(1);
+      // Results should be merged from all batches
+      expect(result.data.length).toBe(fixture.results.length * callCount);
+
+      // Each batch URL path (before query params) should be under the limit
+      for (const url of calledUrls) {
+        const path = new URL(url).pathname;
+        expect(path.length).toBeLessThanOrEqual(1800 + "/api/v1/documents/.json".length);
+      }
+    });
+  });
+
+  describe("documents.search empty results", () => {
+    it("handles empty search results", async () => {
+      globalThis.fetch = mock(async () =>
+        new Response(JSON.stringify({ count: 0, total_pages: 0, results: [] }), { status: 200 }),
+      ) as any;
+      const result = await _searchDocuments({ term: "xyznonexistent12345" });
+      expect(result.kind).toBe("documents");
+      expect(result.data.length).toBe(0);
+      expect(result.meta!.total_results).toBe(0);
+    });
+  });
 });

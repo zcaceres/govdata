@@ -36,6 +36,40 @@ describe("schemas validate real API responses", () => {
     expect(result.publication_date).toBeDefined();
   });
 
+  it("parses expanded fields from real fixture", async () => {
+    const data = await loadFixture("document-single");
+    const result = SingleDocumentResponseSchema.parse(data);
+
+    // URL fields
+    expect(result.body_html_url).toContain("2025-07743");
+    expect(result.full_text_xml_url).toContain(".xml");
+    expect(result.mods_url).toContain("mods.xml");
+    expect(result.raw_text_url).toContain(".txt");
+    expect(result.public_inspection_pdf_url).toContain(".pdf");
+    expect(result.regulations_dot_gov_url).toBeNull();
+
+    // Date/deadline fields
+    expect(result.signing_date).toBeNull();
+    expect(result.comments_close_on).toBeNull();
+    expect(result.dates).toContain("May");
+
+    // Presidential fields
+    expect(result.presidential_document_number).toBeNull();
+    expect(result.proclamation_number).toBeNull();
+
+    // Regulatory fields
+    expect(result.cfr_references).toBeArray();
+    expect(result.cfr_references!.length).toBe(2);
+    expect(result.dockets).toBeArray();
+    expect(result.regulation_id_number_info).toBeDefined();
+
+    // Administrative fields
+    expect(result.correction_of).toBeNull();
+    expect(result.corrections).toEqual([]);
+    expect(result.page_length).toBe(1);
+    expect(result.toc_doc).toContain("Clean Energy");
+  });
+
   it("parses multi-document response", async () => {
     const data = await loadFixture("documents-multi");
     const result = MultiDocumentResponseSchema.parse(data);
@@ -91,6 +125,33 @@ describe("schemas validate real API responses", () => {
     const result = FacetsResponseSchema.parse(data);
     const keys = Object.keys(result);
     expect(keys.length).toBeGreaterThan(0);
+  });
+
+  it("parses document with expanded fields", () => {
+    const { DocumentSchema } = require("../src/schemas");
+    const doc = DocumentSchema.parse({
+      document_number: "2024-99999",
+      title: "Test",
+      body_html_url: "https://example.com/body.html",
+      full_text_xml_url: null,
+      signing_date: "2024-01-15",
+      comments_close_on: null,
+      dates: "Effective January 15, 2024",
+      presidential_document_number: null,
+      cfr_references: [{ title: 40, part: 60 }],
+      dockets: [],
+      regulation_id_number_info: { "1234-AB56": { priority: "routine" } },
+      correction_of: null,
+      not_received_for_publication: false,
+      page_length: 5,
+      toc_doc: null,
+      images: {},
+    });
+    expect(doc.document_number).toBe("2024-99999");
+    expect(doc.body_html_url).toBe("https://example.com/body.html");
+    expect(doc.signing_date).toBe("2024-01-15");
+    expect(doc.cfr_references).toHaveLength(1);
+    expect(doc.page_length).toBe(5);
   });
 
   it("parses suggested searches response", async () => {

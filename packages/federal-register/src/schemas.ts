@@ -93,6 +93,43 @@ export const DocumentSchema = z
     start_page: z.number().nullable().optional(),
     end_page: z.number().nullable().optional(),
     volume: z.number().nullable().optional(),
+
+    // URL fields
+    body_html_url: z.string().nullable().optional(),
+    full_text_xml_url: z.string().nullable().optional(),
+    mods_url: z.string().nullable().optional(),
+    raw_text_url: z.string().nullable().optional(),
+    public_inspection_pdf_url: z.string().nullable().optional(),
+    comment_url: z.string().nullable().optional(),
+    regulations_dot_gov_url: z.string().nullable().optional(),
+
+    // Date/deadline fields
+    signing_date: z.string().nullable().optional(),
+    comments_close_on: z.string().nullable().optional(),
+    dates: z.string().nullable().optional(),
+
+    // Presidential document fields
+    presidential_document_number: z.string().nullable().optional(),
+    proclamation_number: z.string().nullable().optional(),
+    executive_order_notes: z.string().nullable().optional(),
+
+    // Regulatory/docket fields
+    cfr_references: z.array(z.unknown()).optional(),
+    dockets: z.array(z.unknown()).optional(),
+    regulation_id_number_info: z.record(z.string(), z.unknown()).optional(),
+    regulations_dot_gov_info: z.unknown().nullable().optional(),
+
+    // Administrative fields
+    correction_of: z.string().nullable().optional(),
+    corrections: z.array(z.unknown()).optional(),
+    disposition_notes: z.string().nullable().optional(),
+    explanation: z.string().nullable().optional(),
+    not_received_for_publication: z.boolean().nullable().optional(),
+    page_length: z.number().nullable().optional(),
+    toc_doc: z.string().nullable().optional(),
+    toc_subject: z.string().nullable().optional(),
+    images: z.unknown().optional(),
+    images_metadata: z.unknown().optional(),
   })
   .passthrough();
 

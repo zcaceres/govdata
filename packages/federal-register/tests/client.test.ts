@@ -46,7 +46,12 @@ describe("frGet", () => {
 
   it("throws GovApiError on non-200 response", async () => {
     globalThis.fetch = mock(() =>
-      Promise.resolve(new Response(JSON.stringify({ message: "not found" }), { status: 404 })),
+      Promise.resolve(
+        new Response(JSON.stringify({ message: "not found" }), {
+          status: 404,
+          headers: { "content-type": "application/json" },
+        }),
+      ),
     ) as any;
 
     await expect(frGet("/bad.json", TestSchema)).rejects.toThrow("not found");
@@ -75,5 +80,44 @@ describe("frGet", () => {
     await expect(
       frGet("/test.json", TestSchema, undefined, { maxRetries: 0 }),
     ).rejects.toThrow("Rate limited");
+  });
+
+  it("handles HTML 404 response with 'Not found' message", async () => {
+    globalThis.fetch = mock(() =>
+      Promise.resolve(
+        new Response("<html><body>Not Found</body></html>", {
+          status: 404,
+          headers: { "content-type": "text/html; charset=utf-8" },
+        }),
+      ),
+    ) as any;
+
+    await expect(frGet("/bad.json", TestSchema)).rejects.toThrow("Not found");
+  });
+
+  it("uses JSON error message when content-type is application/json", async () => {
+    globalThis.fetch = mock(() =>
+      Promise.resolve(
+        new Response(JSON.stringify({ message: "Document not found" }), {
+          status: 404,
+          headers: { "content-type": "application/json" },
+        }),
+      ),
+    ) as any;
+
+    await expect(frGet("/bad.json", TestSchema)).rejects.toThrow("Document not found");
+  });
+
+  it("falls back to HTTP status for non-JSON non-404 errors", async () => {
+    globalThis.fetch = mock(() =>
+      Promise.resolve(
+        new Response("Internal Server Error", {
+          status: 500,
+          headers: { "content-type": "text/html" },
+        }),
+      ),
+    ) as any;
+
+    await expect(frGet("/bad.json", TestSchema)).rejects.toThrow("HTTP 500");
   });
 });

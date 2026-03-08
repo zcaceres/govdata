@@ -68,7 +68,9 @@ export async function _findDocument(
   return wrapResponse([raw], null, "document");
 }
 
-export async function _findManyDocuments(
+const MAX_PATH_LENGTH = 1800;
+
+async function _findManyDocumentsBatch(
   documentNumbers: string[],
   params?: { fields?: string[] },
   options?: ClientOptions,
@@ -82,6 +84,43 @@ export async function _findManyDocuments(
     options,
   );
   return wrapResponse(raw.results, null, "documents_multi");
+}
+
+export async function _findManyDocuments(
+  documentNumbers: string[],
+  params?: { fields?: string[] },
+  options?: ClientOptions,
+): Promise<FRResult<"documents_multi">> {
+  // Batch document numbers into chunks that fit in URL
+  const batches: string[][] = [];
+  let currentBatch: string[] = [];
+  let currentLength = 0;
+
+  for (const num of documentNumbers) {
+    const encoded = encodeURIComponent(num);
+    const addedLength = currentLength === 0 ? encoded.length : encoded.length + 1; // +1 for comma
+    if (currentLength + addedLength > MAX_PATH_LENGTH && currentBatch.length > 0) {
+      batches.push(currentBatch);
+      currentBatch = [num];
+      currentLength = encoded.length;
+    } else {
+      currentBatch.push(num);
+      currentLength += addedLength;
+    }
+  }
+  if (currentBatch.length > 0) batches.push(currentBatch);
+
+  // Single batch — no batching overhead
+  if (batches.length === 1) {
+    return _findManyDocumentsBatch(batches[0], params, options);
+  }
+
+  // Multiple batches — fetch in parallel, merge results
+  const results = await Promise.all(
+    batches.map(batch => _findManyDocumentsBatch(batch, params, options)),
+  );
+  const allDocs = results.flatMap(r => r.data);
+  return wrapResponse(allDocs, null, "documents_multi");
 }
 
 // --- Agency endpoints ---

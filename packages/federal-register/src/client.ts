@@ -44,12 +44,17 @@ export async function frGet<T>(
 
     if (!response.ok) {
       let message = `HTTP ${response.status}`;
-      try {
-        const body = await response.json();
-        if (body && typeof body === "object" && "message" in body) {
-          message = String(body.message);
-        }
-      } catch {}
+      const contentType = response.headers.get("content-type") ?? "";
+      if (contentType.includes("application/json")) {
+        try {
+          const body = await response.json();
+          if (body && typeof body === "object" && "message" in body) {
+            message = String(body.message);
+          }
+        } catch {}
+      } else if (response.status === 404) {
+        message = "Not found";
+      }
       throw new GovApiError(response.status, message);
     }
 

@@ -8,6 +8,16 @@ async function main() {
   const jsonFlag = args.includes("--json");
   const filteredArgs = args.filter((a) => a !== "--json");
 
+  if (filteredArgs.length === 0 || args.includes("--help")) {
+    const { endpoints } = federalRegisterPlugin.describe();
+    console.log("Usage: federal-register <endpoint> [--param value ...]\n");
+    console.log("Endpoints:");
+    for (const ep of endpoints) {
+      console.log(`  ${ep.name.padEnd(30)} ${ep.description}`);
+    }
+    process.exit(0);
+  }
+
   // Prepend the plugin prefix so dispatch can find it
   const result = await dispatch([federalRegisterPlugin], ["federal-register", ...filteredArgs]);
 
