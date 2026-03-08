@@ -14,6 +14,13 @@ async function main() {
     console.log("Endpoints:");
     for (const ep of endpoints) {
       console.log(`  ${ep.name.padEnd(30)} ${ep.description}`);
+      if (ep.params.length > 0) {
+        const paramList = ep.params.map(p => {
+          const flag = `--${p.name.replace(/_/g, "-")}`;
+          return p.required ? flag : `[${flag}]`;
+        });
+        console.log(`    ${paramList.join(" ")}`);
+      }
     }
     process.exit(0);
   }

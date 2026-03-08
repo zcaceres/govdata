@@ -185,10 +185,18 @@ export async function _getFacets(
   options?: ClientOptions,
 ): Promise<FRResult<"facets">> {
   FacetType.parse(facetType);
+  // Validate conditions if provided — strip pagination/fields/order keys
+  let validated = conditions
+    ? validateParams(DocumentSearchParamsSchema, { ...conditions } as Record<string, unknown>)
+    : undefined;
+  if (validated) {
+    const { fields, per_page, page, order, ...rest } = validated;
+    validated = rest as typeof validated;
+  }
   const raw = await frGet(
     `/documents/facets/${encodeURIComponent(facetType)}`,
     FacetsResponseSchema,
-    conditions,
+    validated,
     options,
   );
   return wrapResponse(raw, null, "facets");

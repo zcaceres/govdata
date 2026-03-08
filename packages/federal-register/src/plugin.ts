@@ -11,6 +11,7 @@ import {
   _listSuggestedSearches,
 } from "./endpoints";
 import { describe } from "./describe";
+import { FRValidationError } from "./errors";
 import type { FacetTypeValue } from "./types";
 
 /**
@@ -72,14 +73,20 @@ async function documents(params?: Record<string, unknown>): Promise<GovResult> {
 }
 
 async function document(params?: Record<string, unknown>): Promise<GovResult> {
-  const docNum = String(params?.document_number);
+  if (!params?.document_number) {
+    throw new FRValidationError("document_number", params?.document_number, "required string");
+  }
+  const docNum = String(params.document_number);
   return _findDocument(docNum, {
     fields: splitComma(params?.fields),
   });
 }
 
 async function documents_multi(params?: Record<string, unknown>): Promise<GovResult> {
-  const nums = String(params?.document_numbers).split(",").map((s) => s.trim());
+  if (!params?.document_numbers) {
+    throw new FRValidationError("document_numbers", params?.document_numbers, "required comma-separated string");
+  }
+  const nums = String(params.document_numbers).split(",").map((s) => s.trim());
   return _findManyDocuments(nums, {
     fields: splitComma(params?.fields),
   });
@@ -90,7 +97,10 @@ async function agencies(): Promise<GovResult> {
 }
 
 async function agency(params?: Record<string, unknown>): Promise<GovResult> {
-  const id = params?.id != null ? Number(params.id) : 0;
+  if (params?.id == null) {
+    throw new FRValidationError("id", params?.id, "required number");
+  }
+  const id = Number(params.id);
   return _findAgency(id);
 }
 
@@ -114,8 +124,23 @@ async function facets(params?: Record<string, unknown>): Promise<GovResult> {
   const conditions: Record<string, unknown> = {};
   if (params?.term != null) conditions.term = String(params.term);
   if (params?.agencies != null) conditions.agencies = splitComma(params.agencies);
-  if (params?.publication_date_gte != null) conditions.publication_date_gte = String(params.publication_date_gte);
-  if (params?.publication_date_lte != null) conditions.publication_date_lte = String(params.publication_date_lte);
+  if (params?.type != null) conditions.type = splitComma(params.type);
+  if (params?.significant != null) conditions.significant = Number(params.significant);
+  for (const dateKey of [
+    "publication_date_gte", "publication_date_lte", "publication_date_is",
+    "effective_date_gte", "effective_date_lte", "effective_date_is",
+    "comment_date_gte", "comment_date_lte", "comment_date_is",
+    "signing_date_gte", "signing_date_lte", "signing_date_is",
+  ]) {
+    if (params?.[dateKey] != null) conditions[dateKey] = String(params[dateKey]);
+  }
+  if (params?.presidential_document_type != null) conditions.presidential_document_type = splitComma(params.presidential_document_type);
+  if (params?.president != null) conditions.president = splitComma(params.president);
+  if (params?.docket_id != null) conditions.docket_id = splitComma(params.docket_id);
+  if (params?.regulation_id_number != null) conditions.regulation_id_number = splitComma(params.regulation_id_number);
+  if (params?.sections != null) conditions.sections = splitComma(params.sections);
+  if (params?.topics != null) conditions.topics = splitComma(params.topics);
+  if (params?.agency_ids != null) conditions.agency_ids = splitCommaNumbers(params.agency_ids);
   return _getFacets(facetType, Object.keys(conditions).length > 0 ? conditions as any : undefined);
 }
 

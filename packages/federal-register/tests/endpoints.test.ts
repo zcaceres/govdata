@@ -175,6 +175,48 @@ describe("endpoints", () => {
     });
   });
 
+  describe("plugin validation", () => {
+    it("document throws when document_number is missing", async () => {
+      expect(() => federalRegisterPlugin.endpoints.document({})).toThrow("document_number");
+      expect(() => federalRegisterPlugin.endpoints.document()).toThrow("document_number");
+    });
+
+    it("documents_multi throws when document_numbers is missing", async () => {
+      expect(() => federalRegisterPlugin.endpoints.documents_multi({})).toThrow("document_numbers");
+      expect(() => federalRegisterPlugin.endpoints.documents_multi()).toThrow("document_numbers");
+    });
+
+    it("agency throws when id is missing", async () => {
+      expect(() => federalRegisterPlugin.endpoints.agency({})).toThrow("id");
+      expect(() => federalRegisterPlugin.endpoints.agency()).toThrow("id");
+    });
+  });
+
+  describe("facets expanded conditions", () => {
+    it("passes through all condition params to facets", async () => {
+      let calledUrl = "";
+      globalThis.fetch = mock(async (url: string) => {
+        calledUrl = url;
+        return new Response(JSON.stringify({}), { status: 200 });
+      }) as any;
+
+      await federalRegisterPlugin.endpoints.facets({
+        facet_type: "agency",
+        term: "climate",
+        type: "RULE,PRORULE",
+        signing_date_gte: "2025-01-01",
+        topics: "environment",
+        agency_ids: "145,136",
+      });
+      expect(calledUrl).toContain("conditions[term]=climate");
+      expect(calledUrl).toContain("conditions[type][]");
+      expect(calledUrl).toContain("conditions[signing_date][gte]=2025-01-01");
+      expect(calledUrl).toContain("conditions[topics][]=environment");
+      expect(calledUrl).toContain("conditions[agency_ids][]=145");
+      expect(calledUrl).toContain("conditions[agency_ids][]=136");
+    });
+  });
+
   describe("documents.search empty results", () => {
     it("handles empty search results", async () => {
       globalThis.fetch = mock(async () =>

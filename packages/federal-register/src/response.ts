@@ -1,4 +1,4 @@
-import { createResult } from "govdata-core";
+import { createResult, escapeCSV } from "govdata-core";
 import type { GovResult, Meta } from "govdata-core";
 import type { Document, Agency, PIDocument, FacetsResponse, SuggestedSearchesResponse } from "./types";
 
@@ -37,12 +37,26 @@ export function wrapResponse<K extends EndpointKind>(
 ): FRResult<K> {
   const result = createResult(data, meta, kind) as FRResult<K>;
 
-  // Custom summary for facets (Record<string, {count, name}> shape)
+  // Custom summary/toMarkdown/toCSV for facets (Record<string, {count, name}> shape)
   if (kind === "facets") {
+    const facets = data as FacetsResponse;
     (result as any).summary = () => {
-      const facets = data as FacetsResponse;
       const count = Object.keys(facets).length;
       return `facets: ${count} entries`;
+    };
+    (result as any).toMarkdown = () => {
+      const entries = Object.entries(facets);
+      if (entries.length === 0) return "(no data)";
+      const header = "| slug | name | count |";
+      const separator = "| --- | --- | --- |";
+      const rows = entries.map(([slug, entry]) => `| ${slug} | ${entry.name} | ${entry.count} |`);
+      return [header, separator, ...rows].join("\n");
+    };
+    (result as any).toCSV = () => {
+      const entries = Object.entries(facets);
+      if (entries.length === 0) return "";
+      const rows = entries.map(([slug, entry]) => `${escapeCSV(slug)},${escapeCSV(entry.name)},${escapeCSV(entry.count)}`);
+      return ["slug,name,count", ...rows].join("\n");
     };
   }
 

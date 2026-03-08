@@ -49,6 +49,36 @@ describe("wrapResponse", () => {
     expect(result.summary()).toBe("suggested_searches: 3 searches across 2 sections");
   });
 
+  it("generates markdown table for facets", () => {
+    const facets = {
+      "epa": { count: 100, name: "Environmental Protection Agency" },
+      "doe": { count: 50, name: "Department of Energy" },
+    };
+    const result = wrapResponse(facets, null, "facets");
+    const md = result.toMarkdown();
+    expect(md).toContain("| slug | name | count |");
+    expect(md).toContain("| epa | Environmental Protection Agency | 100 |");
+    expect(md).toContain("| doe | Department of Energy | 50 |");
+  });
+
+  it("generates CSV for facets", () => {
+    const facets = {
+      "epa": { count: 100, name: "Environmental Protection Agency" },
+      "doe": { count: 50, name: "Department of Energy" },
+    };
+    const result = wrapResponse(facets, null, "facets");
+    const csv = result.toCSV();
+    expect(csv).toContain("slug,name,count");
+    expect(csv).toContain("epa,Environmental Protection Agency,100");
+    expect(csv).toContain("doe,Department of Energy,50");
+  });
+
+  it("handles empty facets for toMarkdown and toCSV", () => {
+    const result = wrapResponse({}, null, "facets");
+    expect(result.toMarkdown()).toBe("(no data)");
+    expect(result.toCSV()).toBe("");
+  });
+
   it("generates markdown table for document results", () => {
     const docs = [{ document_number: "2024-00001", title: "Test Rule" }];
     const result = wrapResponse(docs as any, null, "documents");

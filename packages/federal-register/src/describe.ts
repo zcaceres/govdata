@@ -12,7 +12,7 @@ const documentSearchParams: ParamDescription[] = [
   { name: "term", type: "string", required: false },
   { name: "agencies", type: "string", required: false },
   { name: "type", type: "string", required: false, values: DocumentType.options as unknown as string[] },
-  { name: "significant", type: "string", required: false, values: ["0", "1"] },
+  { name: "significant", type: "number", required: false, values: ["0", "1"] },
   { name: "publication_date_gte", type: "string", required: false },
   { name: "publication_date_lte", type: "string", required: false },
   { name: "effective_date_gte", type: "string", required: false },
@@ -124,12 +124,11 @@ const endpoints: EndpointDescription[] = [
     description: "Get aggregated facet counts for documents (by agency, daily, topic, section, or type)",
     params: [
       { name: "facet_type", type: "string", required: true, values: FacetType.options as unknown as string[] },
-      { name: "term", type: "string", required: false },
-      { name: "agencies", type: "string", required: false },
-      { name: "publication_date_gte", type: "string", required: false },
-      { name: "publication_date_lte", type: "string", required: false },
+      ...documentSearchParams.filter(p =>
+        !["fields", "page", "per_page", "order"].includes(p.name)
+      ),
     ],
-    responseFields: ["slug", "count", "name"],
+    responseFields: ["count", "name"],
   },
   {
     name: "suggested_searches",

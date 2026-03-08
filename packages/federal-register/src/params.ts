@@ -32,7 +32,6 @@ const ARRAY_CONDITIONS = new Set([
   "sections",
   "topics",
   "agency_ids",
-  "section_ids",
 ]);
 
 export function serializeParams(params: Record<string, unknown>): string {
