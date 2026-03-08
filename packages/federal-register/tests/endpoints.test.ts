@@ -190,6 +190,26 @@ describe("endpoints", () => {
       expect(() => federalRegisterPlugin.endpoints.agency({})).toThrow("id");
       expect(() => federalRegisterPlugin.endpoints.agency()).toThrow("id");
     });
+
+    it("facets throws when facet_type is missing", async () => {
+      expect(() => federalRegisterPlugin.endpoints.facets({})).toThrow("facet_type");
+      expect(() => federalRegisterPlugin.endpoints.facets()).toThrow("facet_type");
+    });
+
+    it("facets throws FRValidationError for invalid facet_type", async () => {
+      await expect(federalRegisterPlugin.endpoints.facets({ facet_type: "invalid" })).rejects.toThrow("facet_type");
+    });
+
+    it("empty agency_ids string does not send agency_ids param", async () => {
+      let calledUrl = "";
+      globalThis.fetch = mock(async (url: string) => {
+        calledUrl = url;
+        return new Response(JSON.stringify({ count: 0, total_pages: 0, results: [] }), { status: 200 });
+      }) as any;
+
+      await federalRegisterPlugin.endpoints.documents({ agency_ids: "" });
+      expect(calledUrl).not.toContain("agency_ids");
+    });
   });
 
   describe("facets expanded conditions", () => {

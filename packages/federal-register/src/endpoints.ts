@@ -184,7 +184,14 @@ export async function _getFacets(
   conditions?: Omit<DocumentSearchParams, "fields" | "per_page" | "page" | "order">,
   options?: ClientOptions,
 ): Promise<FRResult<"facets">> {
-  FacetType.parse(facetType);
+  try {
+    FacetType.parse(facetType);
+  } catch (err) {
+    if (err instanceof z.ZodError) {
+      throw new FRValidationError("facet_type", facetType, err.issues[0].message);
+    }
+    throw err;
+  }
   // Validate conditions if provided — strip pagination/fields/order keys
   let validated = conditions
     ? validateParams(DocumentSearchParamsSchema, { ...conditions } as Record<string, unknown>)

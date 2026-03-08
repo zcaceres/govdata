@@ -37,7 +37,8 @@ function toNumber(val: unknown): number | undefined {
 function splitCommaNumbers(val: unknown): number[] | undefined {
   if (val == null) return undefined;
   const parts = Array.isArray(val) ? val : String(val).split(",").map((s) => s.trim());
-  return parts.map(Number).filter(Number.isFinite);
+  const nums = parts.filter((s) => s !== "").map(Number).filter(Number.isFinite);
+  return nums.length > 0 ? nums : undefined;
 }
 
 async function documents(params?: Record<string, unknown>): Promise<GovResult> {
@@ -120,7 +121,10 @@ async function public_inspection_current(): Promise<GovResult> {
 }
 
 async function facets(params?: Record<string, unknown>): Promise<GovResult> {
-  const facetType = String(params?.facet_type) as FacetTypeValue;
+  if (!params?.facet_type) {
+    throw new FRValidationError("facet_type", params?.facet_type, "required string (agency, daily, topic, section, type)");
+  }
+  const facetType = String(params.facet_type) as FacetTypeValue;
   const conditions: Record<string, unknown> = {};
   if (params?.term != null) conditions.term = String(params.term);
   if (params?.agencies != null) conditions.agencies = splitComma(params.agencies);
