@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "mine_id": "1200084",
+      "subunit_cd": "99",
+      "calendar_yr": "2008",
+      "annual_hrs": 8733,
+      "annual_coal_prod": 0,
+      "avg_annual_empl": 4,
+      "load_dt": "2026-02-28T00:49:37"
+    },
+    {
+      "mine_id": "2302378",
+      "subunit_cd": "06",
+      "calendar_yr": "2010",
+      "annual_hrs": 29946,
+      "annual_coal_prod": 0,
+      "avg_annual_empl": 11,
+      "load_dt": "2026-02-28T00:49:37"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "mine_id": "3101567",
+      "mine_name": "CENTRAL QUARRY SHOP",
+      "contact_title": "Supt",
+      "nearest_town": null,
+      "business_name": "Benchmark Carolina Aggregates Inc",
+      "street": "5013 Denfield St",
+      "po_box": null,
+      "city": "DURHAM",
+      "state_abbr": "NC",
+      "fips_state_cd": "37",
+      "recd_state": "North Carolina",
+      "zip_cd": "27704",
+      "country": "USA",
+      "province": null,
+      "postal_code": null,
+      "mine_type_cd": "Surface",
+      "mine_status": "Abandoned",
+      "mine_status_dt": "1997-03-31T00:00:00",
+      "primary_sic_cd": "Crushed, Broken Granite",
+      "coal_metal_ind": "M",
+      "load_dt": "2026-02-28T00:49:34"
+    },
+    {
+      "mine_id": "3003937",
+      "mine_name": "Talmadge Hill Pit",
+      "contact_title": "President",
+      "nearest_town": "Waverly",
+      "business_name": "Austin Excavating & Paving Inc",
+      "street": "121 Talmadge Hill W Road",
+      "po_box": null,
+      "city": "Waverly",
+      "state_abbr": "NY",
+      "fips_state_cd": "36",
+      "recd_state": "New York",
+      "zip_cd": "14892",
+      "country": "USA",
+      "province": null,
+      "postal_code": null,
+      "mine_type_cd": "Surface",
+      "mine_status": "Abandoned",
+      "mine_status_dt": "2022-08-23T00:00:00",
+      "primary_sic_cd": "Construction Sand and Gravel",
+      "coal_metal_ind": "M",
+      "load_dt": "2026-02-28T00:49:34"
+    }
+  ]
+}

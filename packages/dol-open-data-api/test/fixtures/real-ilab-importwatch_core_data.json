@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "country": "Afghanistan",
+      "country_isocode": "AF",
+      "region": "IP",
+      "sector": "Manufacturing",
+      "good": "Bricks",
+      "all_exploitations": "CL FL FCL",
+      "cl": "2009-",
+      "fl": "2011-",
+      "fcl": "2011-",
+      "country_numericcode": 5310
+    },
+    {
+      "country": "Afghanistan",
+      "country_isocode": "AF",
+      "region": "IP",
+      "sector": "Manufacturing",
+      "good": "Carpets",
+      "all_exploitations": "CL",
+      "cl": "2009-",
+      "fl": null,
+      "fcl": null,
+      "country_numericcode": 5310
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "activity_nr": 170290,
+      "citation_id": "02001",
+      "pen_fta": "P",
+      "hist_event": "Z",
+      "hist_date": "1984-03-30T00:00:00",
+      "hist_penalty": null,
+      "hist_abate_date": "1984-05-31T00:00:00",
+      "hist_vtype": "O",
+      "hist_insp_nr": null,
+      "load_dt": "2011-10-14T16:48:14"
+    },
+    {
+      "activity_nr": 170290,
+      "citation_id": "02001",
+      "pen_fta": "P",
+      "hist_event": "P",
+      "hist_date": "1984-07-06T00:00:00",
+      "hist_penalty": null,
+      "hist_abate_date": "1984-05-31T00:00:00",
+      "hist_vtype": "O",
+      "hist_insp_nr": null,
+      "load_dt": "2011-10-14T16:48:14"
+    }
+  ]
+}

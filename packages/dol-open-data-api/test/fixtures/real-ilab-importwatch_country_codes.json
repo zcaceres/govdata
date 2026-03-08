@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "ilab_id": "1",
+      "comtrade_numcode": "all",
+      "comtrade_countryname": "All",
+      "cb_numeric_code": "9999",
+      "cb_countryname": "ANY",
+      "cb_overwrite": "*",
+      "latitude": "0",
+      "longitude": "0"
+    },
+    {
+      "ilab_id": "2",
+      "comtrade_numcode": "4",
+      "comtrade_countryname": "Afghanistan",
+      "cb_numeric_code": "5310",
+      "cb_countryname": "Afghanistan",
+      "cb_overwrite": null,
+      "latitude": "34.023",
+      "longitude": "65.5267"
+    }
+  ]
+}

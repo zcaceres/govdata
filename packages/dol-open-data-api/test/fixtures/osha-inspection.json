@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "activity_nr": 317722197,
+      "reporting_id": "0453720",
+      "state_flag": null,
+      "estab_name": "RANDSTAD NORTH AMERICA, LIMITED PARTNERSHIP DBA RA",
+      "site_address": "426 S CHIMNEY ROCK RD",
+      "site_city": "GREENSBORO",
+      "site_state": "NC",
+      "site_zip": "27409",
+      "owner_type": "A",
+      "owner_code": "0000",
+      "adv_notice": "N",
+      "safety_hlth": "S",
+      "sic_code": "7363",
+      "naics_code": "561320",
+      "insp_type": "G",
+      "insp_scope": "B",
+      "why_no_insp": null,
+      "union_status": "N",
+      "safety_manuf": "X",
+      "safety_const": null,
+      "safety_marit": null,
+      "health_manuf": null,
+      "health_const": null,
+      "health_marit": null,
+      "migrant": null,
+      "mail_street": "3410-A W. WENDOVER AVE",
+      "mail_city": "GREENSBORO",
+      "mail_state": "NC",
+      "mail_zip": "27407",
+      "host_est_key": "N097    000142921",
+      "nr_in_estab": "4",
+      "open_date": "2014-07-24T00:00:00",
+      "case_mod_date": "2014-08-22T00:00:00",
+      "close_conf_date": "2014-07-24T00:00:00",
+      "close_case_date": "2014-08-18T00:00:00",
+      "load_dt": "2014-08-25T01:01:15"
+    }
+  ]
+}

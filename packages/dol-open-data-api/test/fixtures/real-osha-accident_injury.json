@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "summary_nr": 84954,
+      "rel_insp_nr": 14199848,
+      "age": 0,
+      "sex": null,
+      "nature_of_inj": 12,
+      "part_of_body": 13,
+      "src_of_injury": 24,
+      "event_type": 2,
+      "evn_factor": 6,
+      "hum_factor": 1,
+      "occ_code": 0,
+      "degree_of_inj": 2,
+      "task_assigned": 1,
+      "hazsub": null,
+      "const_op": 0,
+      "const_op_cause": 0,
+      "fat_cause": 0,
+      "fall_distance": null,
+      "fall_ht": null,
+      "injury_line_nr": 1,
+      "load_dt": "2017-03-20T01:00:11"
+    },
+    {
+      "summary_nr": 88070,
+      "rel_insp_nr": 14324826,
+      "age": 0,
+      "sex": null,
+      "nature_of_inj": 12,
+      "part_of_body": 13,
+      "src_of_injury": 42,
+      "event_type": 4,
+      "evn_factor": 13,
+      "hum_factor": 1,
+      "occ_code": 0,
+      "degree_of_inj": 1,
+      "task_assigned": 1,
+      "hazsub": null,
+      "const_op": 0,
+      "const_op_cause": 0,
+      "fat_cause": 0,
+      "fall_distance": null,
+      "fall_ht": null,
+      "injury_line_nr": 1,
+      "load_dt": "2017-03-20T01:00:11"
+    }
+  ]
+}

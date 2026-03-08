@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "summary_nr": 200072106,
+      "report_id": "453720",
+      "event_date": "2003-12-03T14:00:00",
+      "event_time": null,
+      "event_desc": "Two employees sustain burns when LP gas tank explodes",
+      "event_keyword": "BURN,HEAT,SHEAR,FLAMMABLE LIQUID,FLAMMABLE VAPORS,GAS,PETROLEUM NAPHTHA,EXPLOSION,TANK",
+      "const_end_use": "D",
+      "build_stories": 1,
+      "nonbuild_ht": 5000,
+      "project_cost": "B",
+      "project_type": "E",
+      "sic_list": "1522",
+      "fatality": null,
+      "state_flag": null,
+      "abstract_text": null,
+      "load_dt": "2019-07-22T00:18:29"
+    },
+    {
+      "summary_nr": 200072114,
+      "report_id": "453720",
+      "event_date": "2004-03-14T09:20:00",
+      "event_time": null,
+      "event_desc": "One Employee Killed and One Injured by Falling Duct",
+      "event_keyword": "DUCT,MECHANIC,FALL,AERIAL LIFT",
+      "const_end_use": null,
+      "build_stories": null,
+      "nonbuild_ht": null,
+      "project_cost": null,
+      "project_type": null,
+      "sic_list": "2015",
+      "fatality": "X",
+      "state_flag": null,
+      "abstract_text": null,
+      "load_dt": "2019-07-22T00:18:29"
+    }
+  ]
+}

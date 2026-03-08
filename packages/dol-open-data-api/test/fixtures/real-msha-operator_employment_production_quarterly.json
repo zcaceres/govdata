@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "petreemine_id": "4406820",
+      "subunit_cd": "04",
+      "subunit_desc": "Auger",
+      "empl_prod_yr": "1998",
+      "empl_prod_qtr": "2",
+      "fiscal_yr": "1998",
+      "fiscal_qtr": "3",
+      "avg_empl_cnt": 2,
+      "empl_hrs": 42,
+      "coal_prod": 0,
+      "load_dt": "2026-02-28T00:42:49"
+    },
+    {
+      "petreemine_id": "3900024",
+      "subunit_cd": "30",
+      "subunit_desc": "Mills, Prep Plants or Breakers",
+      "empl_prod_yr": "2001",
+      "empl_prod_qtr": "3",
+      "fiscal_yr": "2001",
+      "fiscal_qtr": "4",
+      "avg_empl_cnt": 0,
+      "empl_hrs": 0,
+      "coal_prod": 0,
+      "load_dt": "2026-02-28T00:42:49"
+    }
+  ]
+}
