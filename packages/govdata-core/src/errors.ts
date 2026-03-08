@@ -24,6 +24,6 @@ export class GovValidationError extends Error {
     public readonly received: unknown,
     public readonly expected: string,
   ) {
-    super(`${field} must be ${expected}, got '${String(received)}'`);
+    super(`${field}: ${expected} (got '${String(received)}'`);
   }
 }
