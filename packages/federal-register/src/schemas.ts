@@ -33,7 +33,7 @@ export const DocumentSearchParamsSchema = z.object({
   per_page: z.number().int().positive().optional(),
   page: z.number().int().positive().optional(),
   order: OrderDirection.optional(),
-});
+}).strict();
 
 export const PISearchParamsSchema = z.object({
   term: z.string().optional(),
@@ -42,7 +42,7 @@ export const PISearchParamsSchema = z.object({
   agency_ids: z.array(z.number()).optional(),
   per_page: z.number().int().positive().optional(),
   page: z.number().int().positive().optional(),
-});
+}).strict();
 
 export const FacetType = z.enum(["agency", "daily", "topic", "section", "type"]);
 

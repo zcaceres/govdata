@@ -82,7 +82,7 @@ Key patterns:
 3. Implement `GovDataPlugin` interface: `prefix`, `describe()`, `endpoints` — this is the flat adapter used by CLI/MCP
 4. Create `describe.ts` with endpoint metadata (name, path, params, responseFields)
 5. Wrap endpoint functions in `plugin.ts` with param coercion for CLI compatibility
-6. Add `cli.ts` and `mcp.ts` standalone binaries for the plugin
+6. Add `cli.ts` and `mcp.ts` standalone binaries for the plugin. CLI must support `--help` (see CLI conventions below)
 7. Write a `README.md` documenting library usage, CLI usage, MCP usage, and available endpoints
 8. Add `workspace:*` dependency in root `package.json`
 9. Import plugin statically in `govdata-cli` and `govdata-mcp`
@@ -118,11 +118,39 @@ Key patterns:
 - `plugin.ts` is the adapter that wraps typed endpoints for the generic `GovDataPlugin` interface
 - Every plugin must have a `README.md` documenting library API, CLI usage, and MCP setup
 
+### CLI Conventions
+- Every standalone `cli.ts` must support `--help` that lists all endpoints with descriptions and exits with code 0
+- `--help` with no command shows top-level usage; the unified `govdata-cli` also supports `govdata <source> --help` for per-source help via `dispatch()`
+- CLIs should be agent-friendly: clear output, structured errors, discoverable via `--help`
+- Pattern: check for `--help` in args or empty args before dispatching; use `plugin.describe()` to generate help text dynamically
+
 ### Three-Mode Requirement
 Every plugin must work as:
 1. **Library** — ORM-style typed SDK importable by other TypeScript/JS projects
-2. **CLI** — standalone `cli.ts` binary + integration with `govdata-cli`
+2. **CLI** — standalone `cli.ts` binary with `--help` support + integration with `govdata-cli`
 3. **MCP** — standalone `mcp.ts` server + integration with `govdata-mcp`
+
+## Plugin Validation Principles
+
+These principles are derived from bugs found across multiple plugin audits. Follow them when building or modifying any plugin.
+
+### 1. Defend against `parseFlags` type coercion
+`parseFlags` converts `"123"` → `123` and bare `--flag` → `true`. Every plugin endpoint that receives CLI params must handle the possibility that types don't match what the schema or API expects. If the API needs a string, coerce with `String()`. If it needs a number, coerce with `Number()`. Don't assume the type is correct just because TypeScript says so — CLI input bypasses compile-time types.
+
+### 2. Use `.strict()` on param schemas
+Zod's `.object()` silently strips unknown keys by default. This means typos like `--sortby` (instead of `--sort-by`) succeed silently with the param ignored. Always use `.strict()` on param schemas that validate user input so unrecognized keys produce clear errors. (Response schemas should NOT use `.strict()` — APIs may add fields.)
+
+### 3. Treat empty string as a distinct case from absent
+`parseFlags` can produce empty strings (`--flag ""`), which behave differently from `undefined` in Zod validation and at the API level. Optional string params should consider whether `""` is a valid value or should be treated as absent. Use `.refine()` or explicit checks when empty strings would cause silent misbehavior.
+
+### 4. Don't re-template Zod error messages
+Zod's `issue.message` is already a human-readable sentence (e.g. `"Invalid option: expected one of ..."`). Don't wrap it in another sentence template like `"must be {message}"`. Pass it through directly or use a neutral format like `"field: {message} (got 'value')"`.
+
+### 5. Validate interdependent params explicitly
+APIs often have params that only make sense together (e.g. `filter`/`filter_value`, date range start/end). Zod's `.object()` validates each field independently. Use `.refine()` for cross-field rules — otherwise orphaned params get silently ignored by the API and users don't know their query is wrong.
+
+### 6. Keep `describe()` in sync with schemas
+When endpoints gain or lose params, `describe.ts` must be updated in the same change. `describe()` metadata drives CLI `--help` output and MCP tool schemas — if it drifts from the actual schemas, users won't discover available params and agents will construct invalid tool calls.
 
 ## Do Not
 

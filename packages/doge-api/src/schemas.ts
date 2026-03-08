@@ -15,7 +15,7 @@ export const SavingsParamsSchema = z.object({
   sort_by: SavingsSortBy.optional(),
   sort_order: SortOrder.optional(),
   ...paginationParams,
-});
+}).strict();
 
 export const PaymentsParamsSchema = z.object({
   sort_by: PaymentsSortBy.optional(),
@@ -23,7 +23,7 @@ export const PaymentsParamsSchema = z.object({
   filter: z.string().optional(),
   filter_value: z.string().optional(),
   ...paginationParams,
-}).refine(
+}).strict().refine(
   (data) => !data.filter_value || data.filter,
   { message: "filter is required when filter_value is provided", path: ["filter"] },
 ).refine(
