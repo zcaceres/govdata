@@ -152,6 +152,33 @@ APIs often have params that only make sense together (e.g. `filter`/`filter_valu
 ### 6. Keep `describe()` in sync with schemas
 When endpoints gain or lose params, `describe.ts` must be updated in the same change. `describe()` metadata drives CLI `--help` output and MCP tool schemas — if it drifts from the actual schemas, users won't discover available params and agents will construct invalid tool calls.
 
+### 7. Guard `Number()` coercion with `Number.isFinite()`
+`Number("abc")` returns `NaN`, not an error. Any plugin code that coerces user input with `Number()` must check `Number.isFinite()` before using the result — otherwise NaN propagates into URLs, API calls, or pagination logic silently. Same applies to `parseInt()` of external strings like HTTP headers.
+
+### 8. Non-tabular data needs dedicated result builders
+`createResult` from govdata-core formats data as markdown/CSV tables by calling `String()` on values. This produces `[object Object]` for nested objects. If an endpoint returns non-tabular data (e.g. `Record<string, {...}>` like facets, or objects with nested fields), build the `GovResult` object directly with custom `toMarkdown`/`toCSV`/`summary` methods — don't create via `createResult` then monkey-patch with `as any`. Use function overloads on `wrapResponse` to keep call sites type-safe.
+
+### 9. Redact secrets from error messages
+API keys or tokens appearing in URLs must be masked in error `.message` (e.g. `X-API-KEY=***`). Keep the raw value on structured fields like `.url` for programmatic use. Users copy-paste error messages into logs and issues.
+
+### 10. Pagination: check empty before yield
+In async generators that paginate, check `result.data.length === 0` and break *before* yielding — not after. Yielding then checking means callers receive one useless empty page.
+
+### 11. Every new plugin must be added to integration tests
+When adding a plugin, also add it to `tests/plugin-contract.test.ts` (plugin interface consistency) and `tests/mcp-integration.test.ts` (schema generation + tool dispatch). Include minimal fixtures for each endpoint. Without this, describe/endpoint mismatches and schema bugs ship undetected.
+
+### 12. Escape markdown special characters in table output
+Pipe `|` and newline `\n` characters in data values break markdown table rendering. Any `toMarkdown` implementation must escape these before interpolation.
+
+### 13. Validate required params exist before coercion in plugin.ts
+`String(undefined)` produces `"undefined"` and `Number(undefined) || 0` silently defaults to `0`. Plugin endpoint functions must check required params exist (`if (!params?.id) throw new ValidationError(...)`) before applying `String()`/`Number()`. Otherwise the API receives garbage values and returns confusing errors unrelated to the actual problem.
+
+### 14. MCP tool handlers must catch endpoint errors
+An unhandled throw from a plugin endpoint crashes the MCP server process. Every MCP tool handler must wrap its endpoint call in try/catch and return `{ content: [{ type: "text", text: error.message }], isError: true }` on failure. This applies to both standalone `mcp.ts` and `govdata-mcp`.
+
+### 15. Custom clients should handle varied API error response shapes
+Government APIs return errors in different formats: `{message: "..."}`, `{errors: {field: "msg"}}`, or plain text. Client error extraction must check for multiple shapes, not just `body.message`. Extract the most specific error text available so CLI users see actionable messages (e.g. `"agencies: invalid value"` instead of `"HTTP 400"`).
+
 ## Do Not
 
 - Do not use dynamic imports for plugins (breaks `bun build --compile`)
