@@ -3,6 +3,8 @@ import { buildSchemaFromParams } from "govdata-core";
 import type { GovDataPlugin } from "govdata-core";
 import { dogePlugin } from "doge-api";
 import { naicsPlugin } from "naics-api";
+import { dolPlugin } from "dol-open-data-api";
+import { usaspendingPlugin } from "usaspending-api";
 import { z } from "zod";
 
 /**
@@ -10,7 +12,7 @@ import { z } from "zod";
  * from describe() metadata, and tool dispatch for all plugins.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -19,8 +21,15 @@ function mockFetch(body: unknown) {
     new Response(JSON.stringify(body), { status: 200 })) as unknown as typeof fetch;
 }
 
+const originalDolKey = process.env.DOL_API_KEY;
+
 afterEach(() => {
   globalThis.fetch = originalFetch;
+  if (originalDolKey) {
+    process.env.DOL_API_KEY = originalDolKey;
+  } else {
+    delete process.env.DOL_API_KEY;
+  }
 });
 
 describe("MCP schema generation", () => {
@@ -153,6 +162,43 @@ describe("MCP tool dispatch", () => {
     statistics: statisticsFixture,
   };
 
+  const dolFixture = { data: [{ id: 1, field: "value", name: "test" }] };
+
+  // USAspending fixtures (minimal valid shapes for each endpoint)
+  const usaspendingFixtures: Record<string, unknown> = {
+    awards: {
+      limit: 10,
+      results: [{ internal_id: 1, "Award ID": "TEST001", "Award Amount": 1000, "Recipient Name": "Test Corp", generated_internal_id: "CONT_TEST" }],
+      page_metadata: { page: 1, hasNext: false },
+    },
+    award: {
+      id: 1, generated_unique_award_id: "CONT_TEST", piid: "TEST001", category: "contract",
+      type: "A", type_description: "Contract", description: "Test", total_obligation: 1000,
+    },
+    agency: {
+      toptier_code: "080", name: "NASA", abbreviation: "NASA", fiscal_year: 2024,
+    },
+    spending_by_agency: {
+      total: 100000, results: [{ amount: 50000, name: "Agency1", code: "001" }],
+    },
+    spending_by_state: [
+      { fips: "06", code: "CA", name: "California", amount: 500000, count: 100 },
+    ],
+    spending_over_time: {
+      group: "fiscal_year",
+      results: [{ aggregated_amount: 100000, time_period: { fiscal_year: "2024" } }],
+    },
+  };
+
+  const usaspendingTestParams: Record<string, Record<string, unknown>> = {
+    awards: { keyword: "test" },
+    award: { id: "CONT_TEST" },
+    agency: { toptier_code: "080" },
+    spending_by_agency: { type: "agency", fy: "2024", period: "12" },
+    spending_by_state: {},
+    spending_over_time: { group: "fiscal_year", keyword: "test" },
+  };
+
   // Naics endpoints need params to call — provide test params per endpoint
   const naicsTestParams: Record<string, Record<string, unknown>> = {
     sectors: {},
@@ -174,6 +220,14 @@ describe("MCP tool dispatch", () => {
         if (plugin.prefix === "naics") {
           params = naicsTestParams[endpoint.name];
           if (!params) return; // skip unknown naics endpoints
+        } else if (plugin.prefix === "dol") {
+          process.env.DOL_API_KEY = "test-key";
+          mockFetch(dolFixture);
+        } else if (plugin.prefix === "usaspending") {
+          const fixture = usaspendingFixtures[endpoint.name];
+          if (!fixture) return;
+          mockFetch(fixture);
+          params = usaspendingTestParams[endpoint.name];
         } else {
           const fixture = fixtures[endpoint.name];
           if (!fixture) return; // skip endpoints without fixtures

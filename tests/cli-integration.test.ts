@@ -3,13 +3,15 @@ import { dispatch, parseFlags } from "govdata-core";
 import type { GovDataPlugin } from "govdata-core";
 import { dogePlugin } from "doge-api";
 import { naicsPlugin } from "naics-api";
+import { dolPlugin } from "dol-open-data-api";
+import { usaspendingPlugin } from "usaspending-api";
 
 /**
  * CLI integration tests — verify dispatch routing, flag parsing, and error
  * handling using mocked fetch so tests don't hit the network.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -18,8 +20,15 @@ function mockFetch(body: unknown) {
     new Response(JSON.stringify(body), { status: 200 })) as unknown as typeof fetch;
 }
 
+const originalDolKey = process.env.DOL_API_KEY;
+
 afterEach(() => {
   globalThis.fetch = originalFetch;
+  if (originalDolKey) {
+    process.env.DOL_API_KEY = originalDolKey;
+  } else {
+    delete process.env.DOL_API_KEY;
+  }
 });
 
 const grantsFixture = {
@@ -137,6 +146,101 @@ describe("CLI dispatch — naics", () => {
     } catch (err: any) {
       expect(err.message).toContain("sectors");
       expect(err.message).toContain("search");
+    }
+  });
+});
+
+const dolFixture = { data: [{ id: 1, mine_id: "1234", field: "value" }] };
+
+describe("CLI dispatch — dol", () => {
+  it("routes to dol msha_accident", async () => {
+    process.env.DOL_API_KEY = "test-key";
+    mockFetch(dolFixture);
+    const result = await dispatch(plugins, ["dol", "msha_accident"]);
+    expect(result.kind).toBe("msha_accident");
+    expect(result.data).toBeInstanceOf(Array);
+  });
+
+  it("passes flags to dol endpoint", async () => {
+    process.env.DOL_API_KEY = "test-key";
+    let capturedUrl = "";
+    globalThis.fetch = (async (input: RequestInfo | URL) => {
+      capturedUrl = typeof input === "string" ? input : input.toString();
+      return new Response(JSON.stringify(dolFixture), { status: 200 });
+    }) as unknown as typeof fetch;
+
+    await dispatch(plugins, ["dol", "osha_inspection", "--limit", "5"]);
+    expect(capturedUrl).toContain("limit=5");
+  });
+
+  it("throws with only dol prefix and lists endpoints", async () => {
+    try {
+      await dispatch(plugins, ["dol"]);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toContain("Endpoints:");
+      expect(err.message).toContain("msha_accident");
+    }
+  });
+});
+
+const usaspendingAwardsFixture = {
+  limit: 10,
+  results: [{ internal_id: 1, "Award ID": "TEST001", "Award Amount": 1000, "Recipient Name": "Test Corp", generated_internal_id: "CONT_TEST" }],
+  page_metadata: { page: 1, hasNext: false },
+};
+
+describe("CLI dispatch — usaspending", () => {
+  it("routes to usaspending awards", async () => {
+    mockFetch(usaspendingAwardsFixture);
+    const result = await dispatch(plugins, ["usaspending", "awards", "--keyword", "NASA"]);
+    expect(result.kind).toBe("awards");
+    expect(result.data).toBeInstanceOf(Array);
+  });
+
+  it("routes to usaspending spending_by_state", async () => {
+    mockFetch([{ fips: "06", code: "CA", name: "California", amount: 500000, count: 100 }]);
+    const result = await dispatch(plugins, ["usaspending", "spending_by_state"]);
+    expect(result.kind).toBe("spending_by_state");
+    expect(result.data).toBeInstanceOf(Array);
+  });
+
+  it("throws with only usaspending prefix and lists endpoints", async () => {
+    try {
+      await dispatch(plugins, ["usaspending"]);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toContain("Endpoints:");
+      expect(err.message).toContain("awards");
+    }
+  });
+});
+
+describe("CLI dispatch — --help via dispatch", () => {
+  it("shows help for each plugin with --help flag", async () => {
+    for (const plugin of plugins) {
+      try {
+        await dispatch(plugins, [plugin.prefix, "--help"]);
+        expect(true).toBe(false);
+      } catch (err: any) {
+        expect(err.message).toContain("Usage:");
+        expect(err.message).toContain("Endpoints:");
+        // Every plugin should list at least one endpoint
+        const { endpoints } = plugin.describe();
+        for (const ep of endpoints) {
+          expect(err.message).toContain(ep.name);
+        }
+      }
+    }
+  });
+
+  it("shows help with --help after endpoint name", async () => {
+    try {
+      await dispatch(plugins, ["doge", "grants", "--help"]);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toContain("Endpoints:");
+      expect(err.message).toContain("grants");
     }
   });
 });
