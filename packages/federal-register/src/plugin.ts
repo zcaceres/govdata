@@ -21,7 +21,8 @@ import type { FacetTypeValue } from "./types";
 function splitComma(val: unknown): string[] | undefined {
   if (val == null) return undefined;
   if (Array.isArray(val)) return val.map(String);
-  return String(val).split(",").map((s) => s.trim());
+  const parts = String(val).split(",").map((s) => s.trim()).filter(Boolean);
+  return parts.length > 0 ? parts : undefined;
 }
 
 function toNumber(val: unknown): number | undefined {
@@ -87,7 +88,10 @@ async function documents_multi(params?: Record<string, unknown>): Promise<GovRes
   if (!params?.document_numbers) {
     throw new FRValidationError("document_numbers", params?.document_numbers, "required comma-separated string");
   }
-  const nums = String(params.document_numbers).split(",").map((s) => s.trim());
+  const nums = String(params.document_numbers).split(",").map((s) => s.trim()).filter(Boolean);
+  if (nums.length === 0) {
+    throw new FRValidationError("document_numbers", params.document_numbers, "at least one document number required");
+  }
   return _findManyDocuments(nums, {
     fields: splitComma(params?.fields),
   });

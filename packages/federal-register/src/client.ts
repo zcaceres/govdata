@@ -59,7 +59,18 @@ export async function frGet<T>(
     }
 
     const json = await response.json();
-    return schema.parse(json);
+    try {
+      return schema.parse(json);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        const issue = err.issues[0];
+        throw new GovApiError(
+          response.status,
+          `Unexpected API response shape: ${issue.path.join(".")} ${issue.message}`,
+        );
+      }
+      throw err;
+    }
   }
 
   throw new GovRateLimitError(null);

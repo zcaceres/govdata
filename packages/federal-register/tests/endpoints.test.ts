@@ -210,6 +210,22 @@ describe("endpoints", () => {
       await federalRegisterPlugin.endpoints.documents({ agency_ids: "" });
       expect(calledUrl).not.toContain("agency_ids");
     });
+
+    it("empty agencies string does not send agencies param", async () => {
+      let calledUrl = "";
+      globalThis.fetch = mock(async (url: string) => {
+        calledUrl = url;
+        return new Response(JSON.stringify({ count: 0, total_pages: 0, results: [] }), { status: 200 });
+      }) as any;
+
+      await federalRegisterPlugin.endpoints.documents({ agencies: "" });
+      expect(calledUrl).not.toContain("agencies");
+    });
+
+    it("documents_multi throws for empty comma string", async () => {
+      await expect(federalRegisterPlugin.endpoints.documents_multi({ document_numbers: ",,," }))
+        .rejects.toThrow("at least one document number required");
+    });
   });
 
   describe("facets expanded conditions", () => {

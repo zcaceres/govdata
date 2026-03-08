@@ -43,12 +43,19 @@ for (const plugin of plugins) {
       endpoint.description,
       schemaShape,
       async (args) => {
-        const { format, ...params } = args;
-        const hasParams = Object.keys(params).length > 0;
-        const result = await fn(hasParams ? params : undefined);
-        return {
-          content: [{ type: "text" as const, text: formatResult(result, (format as string) ?? "markdown") }],
-        };
+        try {
+          const { format, ...params } = args;
+          const hasParams = Object.keys(params).length > 0;
+          const result = await fn(hasParams ? params : undefined);
+          return {
+            content: [{ type: "text" as const, text: formatResult(result, (format as string) ?? "markdown") }],
+          };
+        } catch (err) {
+          return {
+            content: [{ type: "text" as const, text: `Error: ${err instanceof Error ? err.message : String(err)}` }],
+            isError: true,
+          };
+        }
       },
     );
   }

@@ -108,6 +108,14 @@ describe("frGet", () => {
     await expect(frGet("/bad.json", TestSchema)).rejects.toThrow("Document not found");
   });
 
+  it("wraps schema parse errors in GovApiError", async () => {
+    globalThis.fetch = mock(() =>
+      Promise.resolve(new Response(JSON.stringify({ unexpected: "shape" }), { status: 200 })),
+    ) as any;
+
+    await expect(frGet("/test.json", TestSchema)).rejects.toThrow("Unexpected API response shape");
+  });
+
   it("falls back to HTTP status for non-JSON non-404 errors", async () => {
     globalThis.fetch = mock(() =>
       Promise.resolve(
