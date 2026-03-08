@@ -5,6 +5,7 @@ import { dogePlugin } from "doge-api";
 import { naicsPlugin } from "naics-api";
 import { dolPlugin } from "dol-open-data-api";
 import { usaspendingPlugin } from "usaspending-api";
+import { federalRegisterPlugin } from "federal-register";
 import { z } from "zod";
 
 /**
@@ -12,7 +13,7 @@ import { z } from "zod";
  * from describe() metadata, and tool dispatch for all plugins.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -199,6 +200,46 @@ describe("MCP tool dispatch", () => {
     spending_over_time: { group: "fiscal_year", keyword: "test" },
   };
 
+  // Federal Register fixtures (minimal valid shapes matching Zod response schemas)
+  const frFixtures: Record<string, unknown> = {
+    documents: {
+      count: 1, total_pages: 1,
+      results: [{ document_number: "2025-00001", title: "Test Rule", type: "Rule" }],
+    },
+    document: { document_number: "2025-00001", title: "Test Rule", type: "Rule" },
+    documents_multi: {
+      count: 2,
+      results: [
+        { document_number: "2025-00001", title: "Test Rule", type: "Rule" },
+        { document_number: "2025-00002", title: "Test Notice", type: "Notice" },
+      ],
+    },
+    agencies: [{ id: 1, name: "Test Agency", slug: "test-agency" }],
+    agency: { id: 1, name: "Test Agency", slug: "test-agency" },
+    public_inspection: {
+      count: 1, total_pages: 1,
+      results: [{ document_number: "2025-00001", title: "Test PI", type: "Rule" }],
+    },
+    public_inspection_current: {
+      count: 1,
+      results: [{ document_number: "2025-00001", title: "Test PI Current", type: "Rule" }],
+    },
+    facets: { "test-agency": { count: 10, name: "Test Agency" } },
+    suggested_searches: { money: [{ slug: "test", title: "Test", section: "money", description: "Test search", search_conditions: {}, documents_in_last_year: 5, documents_with_open_comment_periods: 1, position: 0 }] },
+  };
+
+  const frTestParams: Record<string, Record<string, unknown>> = {
+    documents: { term: "test" },
+    document: { document_number: "2025-00001" },
+    documents_multi: { document_numbers: "2025-00001,2025-00002" },
+    agencies: {},
+    agency: { id: 1 },
+    public_inspection: {},
+    public_inspection_current: {},
+    facets: { facet_type: "agency" },
+    suggested_searches: {},
+  };
+
   // Naics endpoints need params to call — provide test params per endpoint
   const naicsTestParams: Record<string, Record<string, unknown>> = {
     sectors: {},
@@ -228,6 +269,11 @@ describe("MCP tool dispatch", () => {
           if (!fixture) return;
           mockFetch(fixture);
           params = usaspendingTestParams[endpoint.name];
+        } else if (plugin.prefix === "federal-register") {
+          const fixture = frFixtures[endpoint.name];
+          if (!fixture) return;
+          mockFetch(fixture);
+          params = frTestParams[endpoint.name];
         } else {
           const fixture = fixtures[endpoint.name];
           if (!fixture) return; // skip endpoints without fixtures
