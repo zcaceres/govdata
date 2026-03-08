@@ -2,16 +2,14 @@
   "name": "naics-api",
   "version": "0.1.0",
   "license": "Apache-2.0",
-  "module": "src/lib.ts",
-  "main": "src/lib.ts",
+  "module": "src/index.ts",
+  "main": "src/index.ts",
   "type": "module",
   "bin": {
     "naics": "src/cli.ts",
     "naics-mcp": "src/mcp.ts"
   },
   "scripts": {
-    "dev": "bun --hot src/index.ts",
-    "start": "bun src/index.ts",
     "build": "bun build src/cli.ts --compile --outfile dist/naics",
     "build-db": "bun scripts/build-db.ts",
     "build-db:2022": "bun scripts/build-db.ts 2022",
@@ -30,7 +28,6 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",
     "govdata-core": "workspace:*",
-    "hono": "^4.11.9",
     "zod": "^4.3"
   }
 }
