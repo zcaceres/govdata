@@ -9,7 +9,11 @@
     "test:naics": "bun test --cwd packages/naics-api",
     "test:dol": "bun test --cwd packages/dol-open-data-api",
     "test:fr": "bun test --cwd packages/federal-register",
-    "typecheck": "tsc -b packages/govdata-core packages/doge-api packages/naics-api packages/dol-open-data-api packages/federal-register packages/govdata-cli packages/govdata-mcp"
+    "test:usaspending": "bun test --cwd packages/usaspending-api",
+    "typecheck": "tsc -b packages/govdata-core packages/doge-api packages/naics-api packages/dol-open-data-api packages/federal-register packages/usaspending-api packages/govdata-cli packages/govdata-mcp",
+    "build": "bun build packages/govdata-cli/src/cli.ts --compile --outfile dist/govdata && bun build packages/govdata-mcp/src/mcp.ts --compile --outfile dist/govdata-mcp",
+    "build:cli": "bun build packages/govdata-cli/src/cli.ts --compile --outfile dist/govdata",
+    "build:mcp": "bun build packages/govdata-mcp/src/mcp.ts --compile --outfile dist/govdata-mcp"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -18,6 +22,7 @@
     "naics-api": "workspace:*",
     "dol-open-data-api": "workspace:*",
     "federal-register": "workspace:*",
+    "usaspending-api": "workspace:*",
     "typescript": "^5.7",
     "zod": "^4.3"
   }

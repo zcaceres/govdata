@@ -187,10 +187,18 @@ function createDatabase(dbPath: string): NaicsDatabase {
   };
 }
 
-const DATA_DIR = process.env.NAICS_DATA_DIR
-  ?? (existsSync(join(import.meta.dir, "..", "data"))
-    ? join(import.meta.dir, "..", "data")
-    : join(process.env.HOME ?? "~", ".naics", "data"));
+function resolveDataDir(): string {
+  if (process.env.NAICS_DATA_DIR) return process.env.NAICS_DATA_DIR;
+  // Source layout: src/ is sibling to data/
+  const srcSibling = join(import.meta.dir, "..", "data");
+  if (existsSync(srcSibling)) return srcSibling;
+  // Compiled binary: data/ next to the executable
+  const nextToBinary = join(import.meta.dir, "data");
+  if (existsSync(nextToBinary)) return nextToBinary;
+  // Fallback: ~/.naics/data
+  return join(process.env.HOME ?? "~", ".naics", "data");
+}
+const DATA_DIR = resolveDataDir();
 const databases = new Map<NaicsYear, NaicsDatabase>();
 
 for (const year of SUPPORTED_YEARS) {
