@@ -2,6 +2,7 @@ import { describe, it, expect, afterEach } from "bun:test";
 import { buildSchemaFromParams } from "govdata-core";
 import type { GovDataPlugin } from "govdata-core";
 import { dogePlugin } from "doge-api";
+import { naicsPlugin } from "naics-api";
 import { z } from "zod";
 
 /**
@@ -9,7 +10,7 @@ import { z } from "zod";
  * from describe() metadata, and tool dispatch for all plugins.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -152,15 +153,37 @@ describe("MCP tool dispatch", () => {
     statistics: statisticsFixture,
   };
 
+  // Naics endpoints need params to call — provide test params per endpoint
+  const naicsTestParams: Record<string, Record<string, unknown>> = {
+    sectors: {},
+    get: { code: "722511" },
+    batch: { codes: "722511,722513" },
+    children: { code: "72" },
+    ancestors: { code: "722511" },
+    descendants: { code: "72", limit: 5 },
+    search: { q: "restaurant", limit: 3 },
+    cross_references: { code: "722511" },
+    index_entries: { code: "722511" },
+  };
+
   for (const plugin of plugins) {
     for (const endpoint of plugin.describe().endpoints) {
       it(`${plugin.prefix}_${endpoint.name} returns a valid result`, async () => {
-        const fixture = fixtures[endpoint.name];
-        if (!fixture) return; // skip endpoints without fixtures
+        let params: Record<string, unknown> | undefined;
 
-        mockFetch(fixture);
+        if (plugin.prefix === "naics") {
+          params = naicsTestParams[endpoint.name];
+          if (!params) return; // skip unknown naics endpoints
+        } else {
+          const fixture = fixtures[endpoint.name];
+          if (!fixture) return; // skip endpoints without fixtures
+          mockFetch(fixture);
+        }
+
         const fn = plugin.endpoints[endpoint.name];
-        const result = await fn();
+        const result = params && Object.keys(params).length > 0
+          ? await fn(params)
+          : await fn();
 
         expect(result.kind).toBe(endpoint.name);
         expect(result.data).toBeDefined();
