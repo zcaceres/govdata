@@ -10,6 +10,7 @@ import {
   _getFacets,
   _listSuggestedSearches,
 } from "../src/endpoints";
+import { federalRegisterPlugin } from "../src/plugin";
 
 const loadFixture = (name: string) =>
   Bun.file(`${import.meta.dir}/../fixtures/${name}.json`).json();
@@ -183,6 +184,46 @@ describe("endpoints", () => {
       expect(result.kind).toBe("documents");
       expect(result.data.length).toBe(0);
       expect(result.meta!.total_results).toBe(0);
+    });
+  });
+
+  describe("plugin coercion", () => {
+    it("coerces agency_ids from comma-separated string to numbers", async () => {
+      let calledUrl = "";
+      globalThis.fetch = mock(async (url: string) => {
+        calledUrl = url;
+        return new Response(JSON.stringify({ count: 0, total_pages: 0, results: [] }), { status: 200 });
+      }) as any;
+
+      await federalRegisterPlugin.endpoints.documents({ agency_ids: "145,136" });
+      expect(calledUrl).toContain("conditions[agency_ids][]=145");
+      expect(calledUrl).toContain("conditions[agency_ids][]=136");
+    });
+
+    it("coerces signing_date params through plugin", async () => {
+      let calledUrl = "";
+      globalThis.fetch = mock(async (url: string) => {
+        calledUrl = url;
+        return new Response(JSON.stringify({ count: 0, total_pages: 0, results: [] }), { status: 200 });
+      }) as any;
+
+      await federalRegisterPlugin.endpoints.documents({
+        signing_date_gte: "2025-01-01",
+        signing_date_lte: "2025-12-31",
+      });
+      expect(calledUrl).toContain("conditions[signing_date][gte]=2025-01-01");
+      expect(calledUrl).toContain("conditions[signing_date][lte]=2025-12-31");
+    });
+
+    it("coerces agency_ids for public_inspection endpoint", async () => {
+      let calledUrl = "";
+      globalThis.fetch = mock(async (url: string) => {
+        calledUrl = url;
+        return new Response(JSON.stringify({ count: 0, total_pages: 0, results: [] }), { status: 200 });
+      }) as any;
+
+      await federalRegisterPlugin.endpoints.public_inspection({ agency_ids: "145" });
+      expect(calledUrl).toContain("conditions[agency_ids][]=145");
     });
   });
 });

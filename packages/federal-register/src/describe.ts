@@ -19,6 +19,12 @@ const documentSearchParams: ParamDescription[] = [
   { name: "effective_date_lte", type: "string", required: false },
   { name: "comment_date_gte", type: "string", required: false },
   { name: "comment_date_lte", type: "string", required: false },
+  { name: "comment_date_is", type: "string", required: false },
+  { name: "signing_date_gte", type: "string", required: false },
+  { name: "signing_date_lte", type: "string", required: false },
+  { name: "signing_date_is", type: "string", required: false },
+  { name: "publication_date_is", type: "string", required: false },
+  { name: "effective_date_is", type: "string", required: false },
   { name: "presidential_document_type", type: "string", required: false },
   { name: "president", type: "string", required: false },
   { name: "docket_id", type: "string", required: false },
@@ -26,6 +32,7 @@ const documentSearchParams: ParamDescription[] = [
   { name: "sections", type: "string", required: false },
   { name: "topics", type: "string", required: false },
   { name: "fields", type: "string", required: false },
+  { name: "agency_ids", type: "string", required: false },
   { name: "order", type: "string", required: false, values: OrderDirection.options as unknown as string[] },
   ...paginationParams,
 ];
@@ -34,6 +41,7 @@ const piSearchParams: ParamDescription[] = [
   { name: "term", type: "string", required: false },
   { name: "agencies", type: "string", required: false },
   { name: "type", type: "string", required: false, values: DocumentType.options as unknown as string[] },
+  { name: "agency_ids", type: "string", required: false },
   ...paginationParams,
 ];
 

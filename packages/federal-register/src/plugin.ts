@@ -29,6 +29,16 @@ function toNumber(val: unknown): number | undefined {
   return Number.isFinite(n) ? n : undefined;
 }
 
+/**
+ * Splits a comma-separated string into an array of numbers.
+ * CLI sends "145,136" as a string; the API expects number[].
+ */
+function splitCommaNumbers(val: unknown): number[] | undefined {
+  if (val == null) return undefined;
+  const parts = Array.isArray(val) ? val : String(val).split(",").map((s) => s.trim());
+  return parts.map(Number).filter(Number.isFinite);
+}
+
 async function documents(params?: Record<string, unknown>): Promise<GovResult> {
   return _searchDocuments({
     term: params?.term != null ? String(params.term) : undefined,
@@ -41,6 +51,12 @@ async function documents(params?: Record<string, unknown>): Promise<GovResult> {
     effective_date_lte: params?.effective_date_lte != null ? String(params.effective_date_lte) : undefined,
     comment_date_gte: params?.comment_date_gte != null ? String(params.comment_date_gte) : undefined,
     comment_date_lte: params?.comment_date_lte != null ? String(params.comment_date_lte) : undefined,
+    comment_date_is: params?.comment_date_is != null ? String(params.comment_date_is) : undefined,
+    signing_date_gte: params?.signing_date_gte != null ? String(params.signing_date_gte) : undefined,
+    signing_date_lte: params?.signing_date_lte != null ? String(params.signing_date_lte) : undefined,
+    signing_date_is: params?.signing_date_is != null ? String(params.signing_date_is) : undefined,
+    publication_date_is: params?.publication_date_is != null ? String(params.publication_date_is) : undefined,
+    effective_date_is: params?.effective_date_is != null ? String(params.effective_date_is) : undefined,
     presidential_document_type: splitComma(params?.presidential_document_type),
     president: splitComma(params?.president),
     docket_id: splitComma(params?.docket_id),
@@ -48,6 +64,7 @@ async function documents(params?: Record<string, unknown>): Promise<GovResult> {
     sections: splitComma(params?.sections),
     topics: splitComma(params?.topics),
     fields: splitComma(params?.fields),
+    agency_ids: splitCommaNumbers(params?.agency_ids),
     order: params?.order != null ? String(params.order) as any : undefined,
     per_page: toNumber(params?.per_page),
     page: toNumber(params?.page),
@@ -82,6 +99,7 @@ async function public_inspection(params?: Record<string, unknown>): Promise<GovR
     term: params?.term != null ? String(params.term) : undefined,
     agencies: splitComma(params?.agencies),
     type: splitComma(params?.type) as any,
+    agency_ids: splitCommaNumbers(params?.agency_ids),
     per_page: toNumber(params?.per_page),
     page: toNumber(params?.page),
   });

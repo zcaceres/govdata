@@ -43,6 +43,20 @@ testDescribe("describe", () => {
     expect(paramNames).toContain("per_page");
     expect(paramNames).toContain("order");
     expect(paramNames).toContain("publication_date_gte");
+    expect(paramNames).toContain("publication_date_is");
+    expect(paramNames).toContain("effective_date_is");
+    expect(paramNames).toContain("comment_date_is");
+    expect(paramNames).toContain("signing_date_gte");
+    expect(paramNames).toContain("signing_date_lte");
+    expect(paramNames).toContain("signing_date_is");
+    expect(paramNames).toContain("agency_ids");
+  });
+
+  it("public_inspection endpoint has agency_ids param", () => {
+    const { endpoints } = describe();
+    const pi = endpoints.find((e) => e.name === "public_inspection")!;
+    const paramNames = pi.params.map((p) => p.name);
+    expect(paramNames).toContain("agency_ids");
   });
 
   it("facets endpoint has facet_type required param", () => {

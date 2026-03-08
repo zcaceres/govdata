@@ -98,4 +98,9 @@ describe("serializeParams", () => {
     const result = serializeParams({ term: "clean & safe" });
     expect(result).toBe("conditions[term]=clean%20%26%20safe");
   });
+
+  it("serializes agency_ids as bracket array conditions", () => {
+    const result = serializeParams({ agency_ids: [145, 136] });
+    expect(result).toBe("conditions[agency_ids][]=145&conditions[agency_ids][]=136");
+  });
 });
