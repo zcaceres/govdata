@@ -8,4 +8,4 @@ export type { PaginatedEndpoint } from "./paginate";
 export type { ParamDescription, EndpointDescription } from "./describe";
 export type { GovDataPlugin } from "./plugin";
 export { buildSchemaFromParams } from "./mcp-utils";
-export { dispatch, parseFlags, kebabToSnake } from "./cli-utils";
+export { dispatch, parseFlags, kebabToSnake, GovHelpText } from "./cli-utils";

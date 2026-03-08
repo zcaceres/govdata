@@ -1,6 +1,10 @@
 import type { GovDataPlugin } from "./plugin";
 import type { GovResult } from "./response";
 
+export class GovHelpText extends Error {
+  name = "GovHelpText";
+}
+
 export function kebabToSnake(str: string): string {
   return str.replace(/-/g, "_");
 }
@@ -33,7 +37,7 @@ export async function dispatch(
 
   if (!pluginName) {
     const names = plugins.map((p) => p.prefix).join(", ");
-    throw new Error(`Usage: govdata <source> <endpoint> [options]\nSources: ${names}`);
+    throw new GovHelpText(`Usage: govdata <source> <endpoint> [options]\nSources: ${names}`);
   }
 
   const plugin = plugins.find((p) => p.prefix === pluginName);
@@ -42,9 +46,13 @@ export async function dispatch(
     throw new Error(`Unknown source '${pluginName}'. Available: ${names}`);
   }
 
-  if (!endpointName) {
-    const endpoints = plugin.describe().endpoints.map((e) => e.name).join(", ");
-    throw new Error(`Usage: govdata ${pluginName} <endpoint> [options]\nEndpoints: ${endpoints}`);
+  if (!endpointName || endpointName === "--help" || flagArgs.includes("--help")) {
+    const { endpoints } = plugin.describe();
+    const lines = [`Usage: govdata ${pluginName} <endpoint> [--param value ...]\n`, "Endpoints:"];
+    for (const ep of endpoints) {
+      lines.push(`  ${ep.name.padEnd(30)} ${ep.description}`);
+    }
+    throw new GovHelpText(lines.join("\n"));
   }
 
   const endpoint = plugin.endpoints[endpointName];

@@ -1,5 +1,5 @@
 #!/usr/bin/env bun
-import { dispatch } from "govdata-core";
+import { dispatch, GovHelpText } from "govdata-core";
 import type { GovDataPlugin } from "govdata-core";
 import { dogePlugin } from "doge-api";
 import { naicsPlugin } from "naics-api";
@@ -41,5 +41,5 @@ async function main() {
 
 main().catch((err) => {
   console.error(err.message);
-  process.exit(1);
+  process.exit(err instanceof GovHelpText ? 0 : 1);
 });
