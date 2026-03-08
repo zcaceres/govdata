@@ -70,7 +70,7 @@ async function descendants(params?: Record<string, unknown>): Promise<GovResult>
     params?.offset != null ? String(params.offset) : undefined,
     { defaultLimit: 100, maxLimit: 500 },
   );
-  if (!pag.ok) throw new GovValidationError("pagination", null, pag.error);
+  if (!pag.ok) throw new GovValidationError("pagination", `limit=${params?.limit}, offset=${params?.offset}`, pag.error);
   const result = db(params).codes.descendants(code, { limit: pag.limit, offset: pag.offset });
   const pages = Math.ceil(result.total / pag.limit);
   return createResult(result.data, { total_results: result.total, pages }, "descendants");
@@ -91,7 +91,7 @@ async function search(params?: Record<string, unknown>): Promise<GovResult> {
     params?.offset != null ? String(params.offset) : undefined,
     { defaultLimit: 20, maxLimit: 100 },
   );
-  if (!pag.ok) throw new GovValidationError("pagination", null, pag.error);
+  if (!pag.ok) throw new GovValidationError("pagination", `limit=${params?.limit}, offset=${params?.offset}`, pag.error);
 
   let result;
   try {
