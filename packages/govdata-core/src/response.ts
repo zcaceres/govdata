@@ -17,7 +17,7 @@ export function escapeCSV(value: unknown): string {
   return str;
 }
 
-function escapeMarkdownCell(value: unknown): string {
+export function escapeMarkdownCell(value: unknown): string {
   if (value == null) return "";
   return String(value).replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
 }

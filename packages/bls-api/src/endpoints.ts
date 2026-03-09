@@ -15,9 +15,7 @@ import type {
 import { blsPost, blsGet } from "./client";
 import { GovValidationError } from "govdata-core";
 import { wrapResponse } from "./response";
-import type { BlsResult } from "./response";
 import { describe } from "./describe";
-import type { GovDataPlugin } from "govdata-core";
 
 function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>): T {
   try {
@@ -114,38 +112,3 @@ export function createBls(defaultOptions?: ClientOptions) {
 }
 
 export const bls = createBls();
-
-export const blsPlugin: GovDataPlugin = {
-  prefix: "bls",
-  describe,
-  endpoints: {
-    timeseries: (params?: any) => {
-      if (!params?.series_id) {
-        throw new GovValidationError("series_id", undefined, "Required");
-      }
-      // Handle CLI string → array coercion for series_id
-      const coerced = { ...params };
-      if (typeof coerced.series_id === "string" && coerced.series_id.includes(",")) {
-        coerced.series_id = coerced.series_id.split(",").map((s: string) => s.trim());
-      }
-      // Coerce boolean strings from CLI
-      for (const key of ["calculations", "annual_averages", "catalog"] as const) {
-        if (coerced[key] === "true") coerced[key] = true;
-        else if (coerced[key] === "false") coerced[key] = false;
-      }
-      // Coerce year numbers
-      for (const key of ["start_year", "end_year"] as const) {
-        if (coerced[key] != null) {
-          const n = Number(coerced[key]);
-          if (!Number.isFinite(n)) {
-            throw new GovValidationError(key, coerced[key], "Must be a valid number");
-          }
-          coerced[key] = n;
-        }
-      }
-      return timeseries(coerced);
-    },
-    surveys: () => surveys(),
-    popular: () => popular(),
-  } as Record<string, (params?: any) => Promise<BlsResult>>,
-};

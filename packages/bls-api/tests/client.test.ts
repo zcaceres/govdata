@@ -90,6 +90,36 @@ describe("blsGet", () => {
   });
 });
 
+describe("API key redaction", () => {
+  it("in-band error messages do not contain API key", async () => {
+    const originalKey = process.env.BLS_API_KEY;
+    process.env.BLS_API_KEY = "SECRET_TEST_KEY_12345";
+
+    mockFetch({
+      status: "REQUEST_FAILED",
+      responseTime: 1,
+      message: ["Invalid series ID"],
+      Results: {},
+    });
+
+    try {
+      await blsPost("/timeseries/data/", SimpleSchema, {
+        seriesid: ["BAD"],
+        registrationkey: process.env.BLS_API_KEY,
+      });
+      expect(true).toBe(false); // should not reach
+    } catch (err: any) {
+      expect(err.message).not.toContain("SECRET_TEST_KEY_12345");
+    } finally {
+      if (originalKey != null) {
+        process.env.BLS_API_KEY = originalKey;
+      } else {
+        delete process.env.BLS_API_KEY;
+      }
+    }
+  });
+});
+
 describe("retry on 429", () => {
   it("retries and succeeds", async () => {
     let attempt = 0;

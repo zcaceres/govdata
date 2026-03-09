@@ -5,8 +5,9 @@ export {
   createBls,
   bls,
   describe,
-  blsPlugin,
 } from "./endpoints";
+
+export { blsPlugin } from "./plugin";
 
 export type {
   TimeseriesParams,
@@ -20,12 +21,9 @@ export type {
   PopularResult,
   BlsResult,
   EndpointKind,
+  KindDataMap,
   EndpointDescription,
   ParamDescription,
 } from "./types";
 
-export {
-  GovApiError as BlsApiError,
-  GovRateLimitError as BlsRateLimitError,
-  GovValidationError as BlsValidationError,
-} from "govdata-core";
+export { BlsApiError, BlsRateLimitError, BlsValidationError } from "./errors";

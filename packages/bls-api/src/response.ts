@@ -1,4 +1,4 @@
-import { createResult, escapeCSV } from "govdata-core";
+import { createResult, escapeCSV, escapeMarkdownCell } from "govdata-core";
 import type { GovResult } from "govdata-core";
 import type { BlsResult, EndpointKind, Series, Survey, Meta } from "./types";
 
@@ -27,9 +27,9 @@ function wrapTimeseries(series: Series[], meta: Meta | null): BlsResult<"timeser
         const header = "| Year | Period | Value |";
         const sep = "| --- | --- | --- |";
         const rows = points.map(
-          (p) => `| ${p.year} | ${p.periodName} | ${p.value} |`,
+          (p) => `| ${escapeMarkdownCell(p.year)} | ${escapeMarkdownCell(p.periodName)} | ${escapeMarkdownCell(p.value)} |`,
         );
-        sections.push(`### ${s.seriesID}\n\n${[header, sep, ...rows].join("\n")}`);
+        sections.push(`### ${escapeMarkdownCell(s.seriesID)}\n\n${[header, sep, ...rows].join("\n")}`);
       }
       return sections.join("\n\n");
     },

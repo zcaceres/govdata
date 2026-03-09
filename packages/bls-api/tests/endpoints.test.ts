@@ -1,5 +1,6 @@
 import { describe, it, expect, afterEach } from "bun:test";
-import { timeseries, surveys, popular, bls, blsPlugin } from "../src/endpoints";
+import { timeseries, surveys, popular, bls } from "../src/endpoints";
+import { blsPlugin } from "../src/plugin";
 
 const originalFetch = globalThis.fetch;
 
@@ -195,6 +196,14 @@ describe("blsPlugin", () => {
 
   it("plugin timeseries validates required series_id", () => {
     expect(() => blsPlugin.endpoints.timeseries({})).toThrow();
+  });
+
+  it("plugin timeseries rejects empty string series_id", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: "" })).toThrow();
+  });
+
+  it("plugin timeseries rejects whitespace-only series_id", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: "  " })).toThrow();
   });
 
   it("plugin timeseries splits comma-separated series_id", async () => {

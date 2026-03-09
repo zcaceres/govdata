@@ -1,6 +1,6 @@
 export { GovApiError, GovRateLimitError, GovValidationError } from "./errors";
 export type { Meta, ClientOptions } from "./types";
-export { createResult, escapeCSV, arrayToMarkdownTable, arrayToCSV } from "./response";
+export { createResult, escapeCSV, escapeMarkdownCell, arrayToMarkdownTable, arrayToCSV } from "./response";
 export type { GovResult } from "./response";
 export { govGet } from "./client";
 export { withPagination } from "./paginate";

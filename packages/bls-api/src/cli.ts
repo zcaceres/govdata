@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 import { dispatch, GovHelpText } from "govdata-core";
-import { blsPlugin } from "./endpoints";
+import { blsPlugin } from "./plugin";
 
 async function main() {
   const args = process.argv.slice(2);
