@@ -48,12 +48,21 @@ async function _fetchWithRetry(
   throw new GovRateLimitError(null);
 }
 
+function isRateLimitMessage(messages: string[]): boolean {
+  return messages.some(
+    (m) => m.includes("daily threshold") || m.includes("daily quota"),
+  );
+}
+
 function checkBLSStatus(json: { status?: string; message?: string[] }): void {
   if (json.status && json.status !== "REQUEST_SUCCEEDED") {
     const msg =
       json.message && json.message.length > 0
         ? json.message.join("; ")
         : "BLS request failed";
+    if (json.message && isRateLimitMessage(json.message)) {
+      throw new GovRateLimitError(null);
+    }
     throw new GovApiError(200, msg);
   }
 }

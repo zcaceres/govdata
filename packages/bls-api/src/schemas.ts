@@ -17,6 +17,12 @@ export const TimeseriesParamsSchema = z
     path: ["start_year"],
   });
 
+export const PopularParamsSchema = z
+  .object({
+    survey: z.string().optional(),
+  })
+  .strict();
+
 // --- Response schemas (NOT .strict() — APIs may add fields) ---
 
 export const FootnoteSchema = z.object({

@@ -38,6 +38,12 @@ export const blsPlugin: GovDataPlugin = {
       return timeseries(coerced);
     },
     surveys: () => surveys(),
-    popular: () => popular(),
+    popular: (params?: any) => {
+      const coerced: Record<string, unknown> = {};
+      if (params?.survey != null) {
+        coerced.survey = String(params.survey);
+      }
+      return popular(Object.keys(coerced).length > 0 ? coerced : undefined);
+    },
   } as Record<string, (params?: any) => Promise<BlsResult>>,
 };

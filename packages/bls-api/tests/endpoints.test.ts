@@ -160,6 +160,28 @@ describe("popular", () => {
     expect(result.kind).toBe("popular");
     expect(result.data).toBeDefined();
   });
+
+  it("passes survey filter as query param", async () => {
+    let capturedUrl: string | undefined;
+    globalThis.fetch = (async (url: any) => {
+      capturedUrl = String(url);
+      return new Response(JSON.stringify(popularFixture), { status: 200 });
+    }) as unknown as typeof fetch;
+
+    await popular({ survey: "CU" });
+    expect(capturedUrl).toContain("?survey=CU");
+  });
+
+  it("omits query param when no survey provided", async () => {
+    let capturedUrl: string | undefined;
+    globalThis.fetch = (async (url: any) => {
+      capturedUrl = String(url);
+      return new Response(JSON.stringify(popularFixture), { status: 200 });
+    }) as unknown as typeof fetch;
+
+    await popular();
+    expect(capturedUrl).not.toContain("?survey");
+  });
 });
 
 describe("error handling", () => {

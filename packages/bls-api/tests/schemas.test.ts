@@ -1,6 +1,7 @@
 import { describe, it, expect } from "bun:test";
 import {
   TimeseriesParamsSchema,
+  PopularParamsSchema,
   BLSResponseSchema,
   SurveysResponseSchema,
   PopularResponseSchema,
@@ -89,9 +90,26 @@ describe("SurveysResponseSchema", () => {
     const result = SurveysResponseSchema.safeParse(fixture);
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.Results.survey.length).toBeGreaterThan(0);
+      expect(result.data.Results.survey).toHaveLength(69);
       expect(result.data.Results.survey[0].survey_abbreviation).toBe("AP");
     }
+  });
+});
+
+describe("PopularParamsSchema", () => {
+  it("accepts empty object (no filter)", () => {
+    const result = PopularParamsSchema.safeParse({});
+    expect(result.success).toBe(true);
+  });
+
+  it("accepts survey abbreviation", () => {
+    const result = PopularParamsSchema.safeParse({ survey: "CU" });
+    expect(result.success).toBe(true);
+  });
+
+  it("rejects unknown keys (.strict())", () => {
+    const result = PopularParamsSchema.safeParse({ survey: "CU", bad: "key" });
+    expect(result.success).toBe(false);
   });
 });
 
@@ -103,8 +121,23 @@ describe("PopularResponseSchema", () => {
     const result = PopularResponseSchema.safeParse(fixture);
     expect(result.success).toBe(true);
     if (result.success) {
-      expect(result.data.Results.series.length).toBeGreaterThan(0);
+      expect(result.data.Results.series).toHaveLength(25);
       expect(result.data.Results.series[0].seriesID).toBe("CUUR0000SA0");
+    }
+  });
+
+  it("parses popular-survey-cu fixture", async () => {
+    const fixture = await Bun.file(
+      new URL("../fixtures/popular-survey-cu.json", import.meta.url).pathname,
+    ).json();
+    const result = PopularResponseSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.Results.series).toHaveLength(25);
+      // All CU survey series start with CU
+      for (const s of result.data.Results.series) {
+        expect(s.seriesID.startsWith("CU")).toBe(true);
+      }
     }
   });
 });

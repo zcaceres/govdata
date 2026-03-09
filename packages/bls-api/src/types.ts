@@ -1,6 +1,7 @@
 import type { z } from "zod";
 import type {
   TimeseriesParamsSchema,
+  PopularParamsSchema,
   DataPointSchema,
   SeriesSchema,
   SurveySchema,
@@ -10,6 +11,7 @@ export type { ClientOptions, Meta } from "govdata-core";
 export type { ParamDescription, EndpointDescription } from "govdata-core";
 
 export type TimeseriesParams = z.input<typeof TimeseriesParamsSchema>;
+export type PopularParams = z.input<typeof PopularParamsSchema>;
 export type DataPoint = z.infer<typeof DataPointSchema>;
 export type Series = z.infer<typeof SeriesSchema>;
 export type Survey = z.infer<typeof SurveySchema>;

@@ -27,8 +27,10 @@ const endpoints: EndpointDescription[] = [
   {
     name: "popular",
     path: "/timeseries/popular",
-    description: "Get the 25 most popular BLS time series",
-    params: [],
+    description: "Get the 25 most popular BLS time series, optionally filtered by survey",
+    params: [
+      { name: "survey", type: "string", required: false },
+    ],
     responseFields: ["seriesID"],
   },
 ];

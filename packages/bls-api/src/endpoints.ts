@@ -1,12 +1,14 @@
 import { z } from "zod";
 import {
   TimeseriesParamsSchema,
+  PopularParamsSchema,
   BLSResponseSchema,
   SurveysResponseSchema,
   PopularResponseSchema,
 } from "./schemas";
 import type {
   TimeseriesParams,
+  PopularParams,
   ClientOptions,
   TimeseriesResult,
   SurveysResult,
@@ -72,9 +74,14 @@ async function _surveys(
 }
 
 async function _popular(
+  params?: PopularParams,
   options?: ClientOptions,
 ): Promise<PopularResult> {
-  const raw = await blsGet("/timeseries/popular", PopularResponseSchema, options);
+  const validated = params ? validateParams(PopularParamsSchema, params) : {};
+  const path = validated.survey
+    ? `/timeseries/popular?survey=${encodeURIComponent(validated.survey)}`
+    : "/timeseries/popular";
+  const raw = await blsGet(path, PopularResponseSchema, options);
   return wrapResponse(raw.Results.series, "popular");
 }
 
@@ -92,9 +99,10 @@ export async function surveys(
 }
 
 export async function popular(
+  params?: PopularParams,
   options?: ClientOptions,
 ): Promise<PopularResult> {
-  return _popular(options);
+  return _popular(params, options);
 }
 
 export { describe };
@@ -105,8 +113,8 @@ export function createBls(defaultOptions?: ClientOptions) {
       _timeseries(params, { ...defaultOptions, ...options }),
     surveys: (options?: ClientOptions) =>
       _surveys({ ...defaultOptions, ...options }),
-    popular: (options?: ClientOptions) =>
-      _popular({ ...defaultOptions, ...options }),
+    popular: (params?: PopularParams, options?: ClientOptions) =>
+      _popular(params, { ...defaultOptions, ...options }),
     describe,
   };
 }

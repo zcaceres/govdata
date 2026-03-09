@@ -26,10 +26,13 @@ desc("describe()", () => {
     expect(surveys.params).toHaveLength(0);
   });
 
-  it("popular has 0 params", () => {
+  it("popular has 1 optional param (survey)", () => {
     const result = describe();
     const popular = result.endpoints.find((e) => e.name === "popular")!;
-    expect(popular.params).toHaveLength(0);
+    expect(popular.params).toHaveLength(1);
+    const survey = popular.params.find((p) => p.name === "survey")!;
+    expect(survey.required).toBe(false);
+    expect(survey.type).toBe("string");
   });
 
   it("all endpoints have responseFields", () => {

@@ -1,5 +1,6 @@
 import { describe, it, expect, afterEach } from "bun:test";
 import { z } from "zod";
+import { GovRateLimitError } from "govdata-core";
 import { blsPost, blsGet } from "../src/client";
 
 const originalFetch = globalThis.fetch;
@@ -116,6 +117,43 @@ describe("API key redaction", () => {
       } else {
         delete process.env.BLS_API_KEY;
       }
+    }
+  });
+});
+
+describe("in-band rate limit detection", () => {
+  it("throws GovRateLimitError for daily threshold message", async () => {
+    mockFetch({
+      status: "REQUEST_NOT_SERVICED",
+      responseTime: 0,
+      message: [
+        "Request could not be serviced, as the daily threshold for total number of requests allocated to the user has been reached.",
+      ],
+      Results: {},
+    });
+
+    try {
+      await blsGet("/surveys/", SimpleSchema);
+      expect(true).toBe(false); // should not reach
+    } catch (err: any) {
+      expect(err).toBeInstanceOf(GovRateLimitError);
+    }
+  });
+
+  it("throws GovApiError (not GovRateLimitError) for other in-band errors", async () => {
+    mockFetch({
+      status: "REQUEST_FAILED",
+      responseTime: 1,
+      message: ["Invalid series ID"],
+      Results: {},
+    });
+
+    try {
+      await blsGet("/surveys/", SimpleSchema);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err).not.toBeInstanceOf(GovRateLimitError);
+      expect(err.message).toBe("Invalid series ID");
     }
   });
 });
