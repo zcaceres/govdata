@@ -295,7 +295,7 @@ Facet types: `agency`, `daily`, `topic`, `section`, `type`.
 
 ```bash
 bun install
-bun test                          # 54 unit tests
+bun test                          # 89 unit tests
 bun fixtures/fetch-fixtures.ts    # refresh API fixtures
 bun fixtures/exercise-api.ts      # run live API integration tests
 ```
