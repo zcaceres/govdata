@@ -81,6 +81,8 @@ export function createResult<K extends string>(
           }
         }
         if (sections.length > 0) return sections.join("\n\n");
+        // Plain object (not object-of-arrays): wrap in array for table display
+        return arrayToMarkdownTable([data as Record<string, unknown>]);
       }
       return arrayToMarkdownTable(data as Record<string, unknown>[]);
     },
@@ -93,6 +95,8 @@ export function createResult<K extends string>(
           }
         }
         if (sections.length > 0) return sections.join("\n\n");
+        // Plain object: wrap in array for CSV display
+        return arrayToCSV([data as Record<string, unknown>]);
       }
       return arrayToCSV(data as Record<string, unknown>[]);
     },
@@ -104,6 +108,8 @@ export function createResult<K extends string>(
           const parts = entries.map(([k, v]) => `${(v as unknown[]).length} ${k}`);
           return `${kind}: ${parts.join(", ")}`;
         }
+        // Plain object: single result
+        return `${kind}: 1 result`;
       }
       const items = data as unknown[];
       if (!meta) return `${kind}: ${items.length} results`;

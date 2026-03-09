@@ -516,7 +516,7 @@ async function agency_treasury_account_program_activity(params?: Record<string, 
 function makeDisasterEndpoint(fn: (params?: any, options?: any) => Promise<GovResult>) {
   return async (params?: Record<string, unknown>): Promise<GovResult> => {
     return fn({
-      def_codes: params?.def_codes != null ? String(params.def_codes).split(",") : undefined,
+      def_codes: params?.def_codes != null ? String(params.def_codes).split(",").map(s => s.trim()) : undefined,
       spending_type: params?.spending_type != null ? String(params.spending_type) : undefined,
       sort: params?.sort != null ? String(params.sort) : undefined,
       order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
@@ -702,7 +702,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     disaster_recipient_count: makeDisasterEndpoint(_disasterRecipientCount),
     disaster_spending_by_geography: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _disasterSpendingByGeography({
-        def_codes: params?.def_codes != null ? String(params.def_codes).split(",") : undefined,
+        def_codes: params?.def_codes != null ? String(params.def_codes).split(",").map(s => s.trim()) : undefined,
         spending_type: params?.spending_type != null ? String(params.spending_type) : undefined,
         geo_layer: params?.geo_layer != null ? String(params.geo_layer) : undefined,
         scope: params?.scope != null ? String(params.scope) : undefined,
@@ -750,7 +750,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     // --- IDV endpoints ---
     idv_accounts: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvAccounts({
-        award_id: toNumber(params?.award_id),
+        award_id: requireNumber(params, "award_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
@@ -759,7 +759,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     idv_activity: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvActivity({
-        award_id: toNumber(params?.award_id),
+        award_id: requireNumber(params, "award_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
@@ -769,7 +769,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     idv_child_awards: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvChildAwards({
-        award_id: toNumber(params?.award_id),
+        award_id: requireNumber(params, "award_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
@@ -778,7 +778,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     idv_child_idvs: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvChildIdvs({
-        award_id: toNumber(params?.award_id),
+        award_id: requireNumber(params, "award_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
@@ -793,7 +793,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     idv_funding: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvFunding({
-        award_id: toNumber(params?.award_id),
+        award_id: requireNumber(params, "award_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
@@ -1004,7 +1004,9 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _downloadStatus(requireParam(params, "file_name"));
     },
     download_disaster: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      const def_codes = params?.def_codes != null ? String(params.def_codes).split(",") : [];
+      const def_codes = params?.def_codes != null
+        ? String(params.def_codes).split(",").map(s => s.trim())
+        : ["L", "M", "N", "O", "P", "U", "V"];
       return _downloadDisaster({ filters: { def_codes } });
     },
     bulk_download_list_agencies_accounts: async (): Promise<GovResult> => {

@@ -1,4 +1,5 @@
 import type { GovResult } from "govdata-core";
+import { GovValidationError } from "govdata-core";
 import { AwardTypeCodes } from "./shared-schemas";
 
 export function toNumber(val: unknown): number | undefined {
@@ -30,6 +31,12 @@ export function buildFilters(params: Record<string, unknown>) {
     const codes = AwardTypeCodes[typeKey];
     if (codes) {
       filters.award_type_codes = [...codes];
+    } else {
+      throw new GovValidationError(
+        "award_type",
+        params.award_type,
+        `one of: ${Object.keys(AwardTypeCodes).join(", ")}`,
+      );
     }
   }
 
@@ -59,29 +66,3 @@ export function buildFilters(params: Record<string, unknown>) {
   return filters;
 }
 
-/**
- * Wrap a GET endpoint function for plugin.endpoints.
- * Extracts path params from flat params and passes the rest as options.
- */
-export function makeGetEndpoint(
-  fn: (...args: any[]) => Promise<GovResult>,
-  pathParams: string[],
-): (params?: Record<string, unknown>) => Promise<GovResult> {
-  return async (params?: Record<string, unknown>) => {
-    const args = pathParams.map((p) => String(params?.[p]));
-    return fn(...args);
-  };
-}
-
-/**
- * Wrap a POST endpoint that uses buildFilters for search-style queries.
- */
-export function makeSearchEndpoint(
-  fn: (params: any, options?: any) => Promise<GovResult>,
-  buildBody: (params: Record<string, unknown>) => any,
-): (params?: Record<string, unknown>) => Promise<GovResult> {
-  return async (params?: Record<string, unknown>) => {
-    const body = params ? buildBody(params) : buildBody({});
-    return fn(body);
-  };
-}

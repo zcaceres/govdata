@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test";
-import { toNumber, buildFilters, makeGetEndpoint, makeSearchEndpoint } from "../src/plugin-helpers";
+import { toNumber, buildFilters } from "../src/plugin-helpers";
 
 describe("toNumber", () => {
   it("converts string to number", () => {
@@ -95,6 +95,12 @@ describe("buildFilters", () => {
     }]);
   });
 
+  it("throws on invalid award_type", () => {
+    expect(() => buildFilters({ award_type: "invalid_type" })).toThrow(
+      "one of: contracts, idvs, grants, direct_payments, loans, other"
+    );
+  });
+
   it("ignores unknown params", () => {
     const filters = buildFilters({ unknown_param: "value" });
     expect(Object.keys(filters).length).toBe(0);
@@ -117,49 +123,3 @@ describe("buildFilters", () => {
   });
 });
 
-describe("makeGetEndpoint", () => {
-  it("extracts path params and calls function", async () => {
-    let calledWith: string[] = [];
-    const mockFn = async (...args: string[]) => {
-      calledWith = args;
-      return { data: [], meta: null, kind: "test" } as any;
-    };
-
-    const wrapped = makeGetEndpoint(mockFn, ["id"]);
-    await wrapped({ id: "123" });
-    expect(calledWith).toEqual(["123"]);
-  });
-
-  it("handles multiple path params", async () => {
-    let calledWith: string[] = [];
-    const mockFn = async (...args: string[]) => {
-      calledWith = args;
-      return { data: [], meta: null, kind: "test" } as any;
-    };
-
-    const wrapped = makeGetEndpoint(mockFn, ["code", "year"]);
-    await wrapped({ code: "080", year: "2024" });
-    expect(calledWith).toEqual(["080", "2024"]);
-  });
-});
-
-describe("makeSearchEndpoint", () => {
-  it("builds body from params and calls function", async () => {
-    let calledWith: any;
-    const mockFn = async (body: any) => {
-      calledWith = body;
-      return { data: [], meta: null, kind: "test" } as any;
-    };
-
-    const wrapped = makeSearchEndpoint(mockFn, (params) => ({
-      group: params.group,
-      filters: { keywords: params.keyword ? [String(params.keyword)] : [] },
-    }));
-
-    await wrapped({ group: "fiscal_year", keyword: "NASA" });
-    expect(calledWith).toEqual({
-      group: "fiscal_year",
-      filters: { keywords: ["NASA"] },
-    });
-  });
-});
