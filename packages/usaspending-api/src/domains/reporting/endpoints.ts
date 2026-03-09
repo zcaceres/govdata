@@ -93,10 +93,16 @@ export async function _reportingDifferences(
   params?: ReportingPageParams,
   options?: ClientOptions,
 ): Promise<USAResult<"reporting_differences">> {
+  const q: Record<string, string> = {
+    fiscal_year: String(fiscalYear),
+    fiscal_period: String(fiscalPeriod),
+  };
+  const pq = toPageQuery(params);
+  if (pq) Object.assign(q, pq);
   const raw = await usaGet(
-    `/api/v2/reporting/agencies/${enc(toptierCode)}/${enc(String(fiscalYear))}/${enc(String(fiscalPeriod))}/differences/`,
+    `/api/v2/reporting/agencies/${enc(toptierCode)}/differences/`,
     ReportingDifferencesResponseSchema,
-    toPageQuery(params),
+    q,
     options,
   );
   const pm = raw.page_metadata;
@@ -111,10 +117,16 @@ export async function _reportingDiscrepancies(
   params?: ReportingPageParams,
   options?: ClientOptions,
 ): Promise<USAResult<"reporting_discrepancies">> {
+  const q: Record<string, string> = {
+    fiscal_year: String(fiscalYear),
+    fiscal_period: String(fiscalPeriod),
+  };
+  const pq = toPageQuery(params);
+  if (pq) Object.assign(q, pq);
   const raw = await usaGet(
-    `/api/v2/reporting/agencies/${enc(toptierCode)}/${enc(String(fiscalYear))}/${enc(String(fiscalPeriod))}/discrepancies/`,
+    `/api/v2/reporting/agencies/${enc(toptierCode)}/discrepancies/`,
     ReportingDiscrepanciesResponseSchema,
-    toPageQuery(params),
+    q,
     options,
   );
   const pm = raw.page_metadata;

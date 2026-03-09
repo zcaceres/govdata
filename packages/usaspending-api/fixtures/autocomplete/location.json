@@ -1,46 +1,35 @@
 {
-  "count": 10,
+  "count": 6,
   "results": {
     "cities": [
       {
-        "city_name": "NASAN",
-        "country_name": "IRAN"
+        "city_name": "CALIFORNIA",
+        "country_name": "HONDURAS"
       },
       {
-        "city_name": "NASAR",
-        "country_name": "CHAD"
+        "city_name": "CALIFORNIA",
+        "country_name": "VENEZUELA"
       },
       {
-        "city_name": "NASA",
-        "country_name": "GHANA"
+        "city_name": "CALIFORNIA",
+        "state_name": "MISSOURI",
+        "country_name": "UNITED STATES"
       },
       {
-        "city_name": "NASA",
-        "country_name": "CHINA"
+        "city_name": "CALIFORNIA BAR",
+        "state_name": "OREGON",
+        "country_name": "UNITED STATES"
       },
       {
-        "city_name": "NASAR",
-        "country_name": "IRAN"
-      },
+        "city_name": "CALIFORNIA JUNCTION",
+        "state_name": "IOWA",
+        "country_name": "UNITED STATES"
+      }
+    ],
+    "states": [
       {
-        "city_name": "NASAU",
-        "country_name": "FIJI"
-      },
-      {
-        "city_name": "NASAO",
-        "country_name": "FIJI"
-      },
-      {
-        "city_name": "NASA",
-        "country_name": "JAPAN"
-      },
-      {
-        "city_name": "NASABĪ",
-        "country_name": "IRAN"
-      },
-      {
-        "city_name": "NASAMA",
-        "country_name": "FIJI"
+        "state_name": "CALIFORNIA",
+        "country_name": "UNITED STATES"
       }
     ]
   },

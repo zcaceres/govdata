@@ -2,7 +2,7 @@
   "page_metadata": {
     "page": 1,
     "total": 111,
-    "limit": 10,
+    "limit": 5,
     "next": 2,
     "previous": null,
     "hasNext": true,
@@ -103,101 +103,6 @@
       "unlinked_contract_award_count": 9534,
       "unlinked_assistance_award_count": 35706,
       "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P06-036_Department%20of%20Veterans%20Affairs%20(VA)-Agency_Comments.txt"
-    },
-    {
-      "agency_name": "Department of Agriculture",
-      "abbreviation": "USDA",
-      "toptier_code": "012",
-      "agency_id": 95,
-      "current_total_budget_authority_amount": 390225546696.52,
-      "recent_publication_date": "2025-05-22T16:51:14.491695Z",
-      "recent_publication_date_certified": true,
-      "tas_account_discrepancies_totals": {
-        "gtas_obligation_total": 240795032521.56,
-        "tas_accounts_total": 120397516260.78,
-        "tas_obligation_not_in_gtas_total": 0,
-        "missing_tas_accounts_count": 0
-      },
-      "obligation_difference": -542819652.37,
-      "unlinked_contract_award_count": 506,
-      "unlinked_assistance_award_count": 5882,
-      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P06-012_Department%20of%20Agriculture%20(USDA)-Agency_Comments.txt"
-    },
-    {
-      "agency_name": "Office of Personnel Management",
-      "abbreviation": "OPM",
-      "toptier_code": "024",
-      "agency_id": 503,
-      "current_total_budget_authority_amount": 343383105429.26,
-      "recent_publication_date": "2024-04-29T19:05:33.405543Z",
-      "recent_publication_date_certified": true,
-      "tas_account_discrepancies_totals": {
-        "gtas_obligation_total": 200626972730.02,
-        "tas_accounts_total": 100313486365.01,
-        "tas_obligation_not_in_gtas_total": 0,
-        "missing_tas_accounts_count": 0
-      },
-      "obligation_difference": 50667372.16,
-      "unlinked_contract_award_count": 4,
-      "unlinked_assistance_award_count": 0,
-      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P06-024_Office%20of%20Personnel%20Management%20(OPM)-Agency_Comments.txt"
-    },
-    {
-      "agency_name": "Department of Transportation",
-      "abbreviation": "DOT",
-      "toptier_code": "069",
-      "agency_id": 731,
-      "current_total_budget_authority_amount": 272216118267.17,
-      "recent_publication_date": "2024-05-15T17:09:20.311959Z",
-      "recent_publication_date_certified": true,
-      "tas_account_discrepancies_totals": {
-        "gtas_obligation_total": 94251331707.58,
-        "tas_accounts_total": 47125665853.79,
-        "tas_obligation_not_in_gtas_total": 0,
-        "missing_tas_accounts_count": 0
-      },
-      "obligation_difference": 307994.57,
-      "unlinked_contract_award_count": 135,
-      "unlinked_assistance_award_count": 145,
-      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P06-069_Department%20of%20Transportation%20(DOT)-Agency_Comments.txt"
-    },
-    {
-      "agency_name": "Department of Housing and Urban Development",
-      "abbreviation": "HUD",
-      "toptier_code": "086",
-      "agency_id": 882,
-      "current_total_budget_authority_amount": 259148172923.05,
-      "recent_publication_date": "2024-05-15T20:03:59.749837Z",
-      "recent_publication_date_certified": true,
-      "tas_account_discrepancies_totals": {
-        "gtas_obligation_total": 63406959471.66,
-        "tas_accounts_total": 31703479735.83,
-        "tas_obligation_not_in_gtas_total": 0,
-        "missing_tas_accounts_count": 0
-      },
-      "obligation_difference": 0,
-      "unlinked_contract_award_count": 21,
-      "unlinked_assistance_award_count": 24,
-      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P06-086_Department%20of%20Housing%20and%20Urban%20Development%20(HUD)-Agency_Comments.txt"
-    },
-    {
-      "agency_name": "Federal Deposit Insurance Corporation",
-      "abbreviation": "FDIC",
-      "toptier_code": "051",
-      "agency_id": 682,
-      "current_total_budget_authority_amount": 162115676012.29,
-      "recent_publication_date": "2024-04-29T14:29:10.132562Z",
-      "recent_publication_date_certified": true,
-      "tas_account_discrepancies_totals": {
-        "gtas_obligation_total": 136095448048.96,
-        "tas_accounts_total": 68047724024.48,
-        "tas_obligation_not_in_gtas_total": 0,
-        "missing_tas_accounts_count": 0
-      },
-      "obligation_difference": 0,
-      "unlinked_contract_award_count": 0,
-      "unlinked_assistance_award_count": 0,
-      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P06-051_Federal%20Deposit%20Insurance%20Corporation%20(FDIC)-Agency_Comments.txt"
     }
   ],
   "messages": []

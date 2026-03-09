@@ -1,8 +1,8 @@
 {
   "page_metadata": {
     "page": 1,
-    "total": 18266839,
-    "limit": 10,
+    "total": 162,
+    "limit": 5,
     "next": 2,
     "previous": null,
     "hasNext": true,
@@ -10,84 +10,44 @@
   },
   "results": [
     {
-      "id": "7fe0d08f-685f-a9cc-f9f6-f9e6c6c20e22-R",
-      "duns": "796528263",
-      "uei": "JE73CDQUAPA7",
-      "name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
-      "recipient_level": "R",
-      "amount": 113152992341.3
-    },
-    {
-      "id": "78e2168c-91dc-4ee3-f4cb-fb8e0cff6ea8-R",
-      "duns": "806781340",
-      "uei": "F863WQVMZSK7",
-      "name": "NYS DEPARTMENT OF HEALTH",
-      "recipient_level": "R",
-      "amount": 74047758397.8
-    },
-    {
-      "id": "b97d19b0-833c-8d8f-3a2c-157d04ea55ef-P",
-      "duns": "834951691",
-      "uei": "ZFN2JJXBLZT3",
-      "name": "LOCKHEED MARTIN CORP",
+      "id": "419ccd27-d6f4-d363-aeaf-b9e2c3ae6f5d-P",
+      "duns": "009256819",
+      "uei": "NU2UC8MX6NK1",
+      "name": "THE BOEING COMPANY",
       "recipient_level": "P",
-      "amount": 49921211661.85
+      "amount": 19381987120.36
     },
     {
-      "id": "69c8604f-ea1e-49e0-22cb-93d490bb3c7e-P",
-      "duns": "003027539",
-      "uei": "TN75GJE1S7G3",
-      "name": "COMMONWEALTH OF PENNSYLVANIA",
-      "recipient_level": "P",
-      "amount": 47243247866.15
-    },
-    {
-      "id": "f8c7c4f5-efd2-f1e4-30da-6db0467247a0-R",
-      "duns": "806781373",
-      "uei": "G6JLG3FANUA9",
-      "name": "HEALTH & HUMAN SVC COMMN TX",
-      "recipient_level": "R",
-      "amount": 44721529897.41
-    },
-    {
-      "id": "57f974b6-d609-1314-2fec-ef9a6e7ef679-C",
-      "duns": "796567790",
-      "uei": "FYVAZVJGDFA4",
-      "name": "PA DEPARTMENT OF HUMAN SERVICES",
+      "id": "22d282c6-4508-7d30-97f1-7401ea73b12a-C",
+      "duns": "039267141",
+      "uei": "WZWRLY4G3PL8",
+      "name": "THE BOEING COMPANY",
       "recipient_level": "C",
-      "amount": 38890652321.9
+      "amount": 3484940568.1
     },
     {
-      "id": "0b6dcb21-c78d-ba50-bb72-5502bfa9ab83-P",
-      "duns": "065232498",
-      "uei": "GQ46SB5L2HK4",
-      "name": "STATE OF ILLINOIS",
-      "recipient_level": "P",
-      "amount": 36633869620.57
+      "id": "9ab85632-42cc-5fa4-2a9c-d734034ddd33-C",
+      "duns": "149879157",
+      "uei": "JJM4FRDZJDX1",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "C",
+      "amount": 3341437815.07
     },
     {
-      "id": "44c05f0e-2559-a608-5a78-7cedb80b5c53-R",
-      "duns": "809785363",
-      "uei": "DKT3LLBWFVL3",
-      "name": "NORTH CAROLINA DEPARTMENT OF HEALTH & HUMAN SERVICES",
-      "recipient_level": "R",
-      "amount": 32105924117.05
+      "id": "27b04395-cee8-a47d-2a5c-3e2b78dc7b0a-C",
+      "duns": "832963453",
+      "uei": "LAJJQWA1PF31",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "C",
+      "amount": 2715116059.85
     },
     {
-      "id": "756a8a16-9243-05a8-a60e-3d662b56fd1d-R",
-      "duns": "078802679",
-      "uei": "HFRCKLH34V17",
-      "name": "OHIO DEPARTMENT OF MEDICAID",
-      "recipient_level": "R",
-      "amount": 29467909034
-    },
-    {
-      "id": "b1c79ca1-81a2-62ef-7b57-d19a910640b1-R",
-      "duns": "135837198",
-      "uei": "ULZMDBF4YKY7",
-      "name": "FLORIDA AGENCY FOR HEALTH CARE ADMINISTRATION",
-      "recipient_level": "R",
-      "amount": 26530935957.5
+      "id": "5fa231ae-15e3-afd3-8c5c-bb9911ba57f8-C",
+      "duns": "781650619",
+      "uei": "UEGFHX6R6KJ1",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "C",
+      "amount": 2033652594.92
     }
   ]
 }

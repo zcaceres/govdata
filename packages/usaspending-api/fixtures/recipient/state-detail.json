@@ -9,10 +9,10 @@
   "median_household_income": 67739,
   "mhi_year": 2016,
   "mhi_source": "U.S. Census Bureau, 2016 American Community Survey 1-Year Estimates",
-  "total_prime_amount": 181313689005.14,
-  "total_prime_awards": 168748,
+  "total_prime_amount": 181314035758.3,
+  "total_prime_awards": 168808,
   "total_face_value_loan_amount": 23621498351.3,
   "total_face_value_loan_prime_awards": 67507,
-  "award_amount_per_capita": 4585.96,
+  "award_amount_per_capita": 4585.97,
   "total_outlays": 144778177465.18
 }

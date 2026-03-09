@@ -6,54 +6,84 @@
   },
   "results": [
     {
-      "id": 803,
-      "code": "073",
-      "description": "Small Business Administration",
+      "id": 1522,
+      "code": "077",
+      "description": "U.S. International Development Finance Corporation",
       "children": [],
       "award_count": null,
-      "obligation": 908536127704.26,
-      "outlay": 908786606183.53,
-      "total_budgetary_resources": 911831498076.2
+      "obligation": 99043.63,
+      "outlay": 99043.63,
+      "total_budgetary_resources": 100000
     },
     {
-      "id": 456,
-      "code": "020",
-      "description": "Department of the Treasury",
+      "id": 1475,
+      "code": "418",
+      "description": "National Endowment for the Humanities",
       "children": [],
       "award_count": null,
-      "obligation": 806353647867.01,
-      "outlay": 806298440761.37,
-      "total_budgetary_resources": 823078743243.94
+      "obligation": 74506449.62,
+      "outlay": 74490624.62,
+      "total_budgetary_resources": 75000000
     },
     {
-      "id": 267,
-      "code": "1601",
-      "description": "Department of Labor",
+      "id": 1474,
+      "code": "474",
+      "description": "Institute of Museum and Library Services",
       "children": [],
       "award_count": null,
-      "obligation": 674529019904.37,
-      "outlay": 670085381228.93,
-      "total_budgetary_resources": 691796448750.36
+      "obligation": 49226387.59,
+      "outlay": 49121372.59,
+      "total_budgetary_resources": 50000000
     },
     {
-      "id": 806,
-      "code": "075",
-      "description": "Department of Health and Human Services",
+      "id": 1412,
+      "code": "096",
+      "description": "Corps of Engineers - Civil Works",
       "children": [],
       "award_count": null,
-      "obligation": 241525659863.56,
-      "outlay": 236495216249.61,
-      "total_budgetary_resources": 244031296447.68
+      "obligation": 65127744.1,
+      "outlay": 65073749.8,
+      "total_budgetary_resources": 70000000
     },
     {
-      "id": 95,
-      "code": "012",
-      "description": "Department of Agriculture",
+      "id": 1173,
+      "code": "097",
+      "description": "Department of Defense",
       "children": [],
       "award_count": null,
-      "obligation": 93808031826.22,
-      "outlay": 92777935363.8,
-      "total_budgetary_resources": 172407571519.07
+      "obligation": 8514171307.26,
+      "outlay": 8520664567.82,
+      "total_budgetary_resources": 8742901729.61
+    },
+    {
+      "id": null,
+      "code": "373",
+      "description": "Institute of American Indian and Alaska Native Culture and Arts Development",
+      "children": [],
+      "award_count": null,
+      "obligation": 78000,
+      "outlay": 78000,
+      "total_budgetary_resources": 78000
+    },
+    {
+      "id": 1141,
+      "code": "525",
+      "description": "Election Assistance Commission",
+      "children": [],
+      "award_count": null,
+      "obligation": 332546130.72,
+      "outlay": 332546130.72,
+      "total_budgetary_resources": 332546130.72
+    },
+    {
+      "id": 1132,
+      "code": "542",
+      "description": "Council of the Inspectors General on Integrity and Efficiency",
+      "children": [],
+      "award_count": null,
+      "obligation": 41576524.24,
+      "outlay": 43036451.55,
+      "total_budgetary_resources": 80000000
     },
     {
       "id": 1068,
@@ -66,44 +96,14 @@
       "total_budgetary_resources": 57440781877.67
     },
     {
-      "id": 766,
-      "code": "070",
-      "description": "Department of Homeland Security",
+      "id": 930,
+      "code": "089",
+      "description": "Department of Energy",
       "children": [],
       "award_count": null,
-      "obligation": 41135956045.67,
-      "outlay": 41124065143.81,
-      "total_budgetary_resources": 43508896703.22
-    },
-    {
-      "id": 731,
-      "code": "069",
-      "description": "Department of Transportation",
-      "children": [],
-      "award_count": null,
-      "obligation": 36034323920.99,
-      "outlay": 35626869173.85,
-      "total_budgetary_resources": 36077752931.18
-    },
-    {
-      "id": 561,
-      "code": "036",
-      "description": "Department of Veterans Affairs",
-      "children": [],
-      "award_count": null,
-      "obligation": 19261132114.95,
-      "outlay": 19159459178.63,
-      "total_budgetary_resources": 19629500000
-    },
-    {
-      "id": 882,
-      "code": "086",
-      "description": "Department of Housing and Urban Development",
-      "children": [],
-      "award_count": null,
-      "obligation": 12658357476.78,
-      "outlay": 11619193144.93,
-      "total_budgetary_resources": 12464529426.93
+      "obligation": 127146365.56,
+      "outlay": 127134479.42,
+      "total_budgetary_resources": 127248061.19
     }
   ],
   "page_metadata": {

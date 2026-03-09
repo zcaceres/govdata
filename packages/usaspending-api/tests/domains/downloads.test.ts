@@ -87,7 +87,7 @@ describe("downloads domain", () => {
       mockFetch("downloads/count.json");
       const result = await _downloadCount({ filters: { keywords: ["test"] } });
       expect(result.kind).toBe("download_count");
-      expect(result.data.calculated_transaction_count).toBe(3459);
+      expect(result.data.calculated_transaction_count).toBe(119115);
       expect(result.data.maximum_transaction_limit).toBe(500000);
       expect(result.data.transaction_rows_gt_limit).toBe(false);
       expect(result.meta).toBeNull();
@@ -359,7 +359,7 @@ describe("downloads domain", () => {
     it("DownloadCountResponseSchema parses fixture", async () => {
       const data = await Bun.file(`${import.meta.dir}/../../fixtures/downloads/count.json`).json();
       const result = DownloadCountResponseSchema.parse(data);
-      expect(result.calculated_transaction_count).toBe(3459);
+      expect(result.calculated_transaction_count).toBe(119115);
       expect(result.maximum_transaction_limit).toBe(500000);
       expect(result.transaction_rows_gt_limit).toBe(false);
       expect(result.messages).toBeInstanceOf(Array);

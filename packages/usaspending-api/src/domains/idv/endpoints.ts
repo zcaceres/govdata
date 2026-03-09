@@ -118,16 +118,16 @@ export async function _idvCountFederalAccount(
   return wrapResponse(raw, null, "idv_count_federal_account");
 }
 
-// --- GET /api/v2/idvs/funding_rollup/{award_id}/ ---
+// --- POST /api/v2/idvs/funding_rollup/ ---
 
 export async function _idvFundingRollup(
   awardId: string,
   options?: ClientOptions,
 ): Promise<USAResult<"idv_funding_rollup">> {
-  const raw = await usaGet(
-    `/api/v2/idvs/funding_rollup/${enc(awardId)}/`,
+  const raw = await usaPost(
+    `/api/v2/idvs/funding_rollup/`,
     IdvFundingRollupSchema,
-    undefined,
+    { award_id: awardId },
     options,
   );
   return wrapResponse(raw, null, "idv_funding_rollup");

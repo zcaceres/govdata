@@ -74,8 +74,9 @@ export const AvailableObjectClassItemSchema = z.object({
   minor_object_class: z.array(MinorObjectClassSchema).optional(),
 }).passthrough();
 
+/** API returns `{results: [...]}` with data, or `{results: {}}` when empty */
 export const AvailableObjectClassResponseSchema = z.object({
-  results: z.array(AvailableObjectClassItemSchema),
+  results: z.union([z.array(AvailableObjectClassItemSchema), z.record(z.string(), z.unknown())]),
 }).passthrough();
 
 // --- Spending by object class ---

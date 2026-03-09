@@ -1,1 +1,29 @@
-{"results":[{"year_retired":2017,"naics":"454111","naics_description":"Electronic Shopping"},{"year_retired":2017,"naics":"454112","naics_description":"Electronic Auctions"},{"year_retired":2017,"naics":"454113","naics_description":"Mail-Order Houses"},{"year_retired":2012,"naics":"454311","naics_description":"Heating Oil Dealers"},{"year_retired":2012,"naics":"454312","naics_description":"Liquefied Petroleum Gas (Bottled Gas) Dealers"},{"year_retired":2012,"naics":"454319","naics_description":"Other Fuel Dealers"},{"year_retired":2007,"naics":"541710","naics_description":"Research and Development in the Physical, Engineering, and Life Sciences"},{"year_retired":2017,"naics":"541711","naics_description":"Research and Development in Biotechnology"},{"year_retired":2017,"naics":"541712","naics_description":"Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)"},{"year_retired":null,"naics":"325411","naics_description":"Medicinal and Botanical Manufacturing"}]}
+{
+  "results": [
+    {
+      "year_retired": 2012,
+      "naics": "334611",
+      "naics_description": "Software Reproducing"
+    },
+    {
+      "year_retired": 2012,
+      "naics": "334612",
+      "naics_description": "Prerecorded Compact Disc (except Software), Tape, and Record Reproducing"
+    },
+    {
+      "year_retired": 2012,
+      "naics": "443120",
+      "naics_description": "Computer and Software Stores"
+    },
+    {
+      "year_retired": null,
+      "naics": "423430",
+      "naics_description": "Computer and Computer Peripheral Equipment and Software Merchant Wholesalers"
+    },
+    {
+      "year_retired": null,
+      "naics": "513210",
+      "naics_description": "Software Publishers"
+    }
+  ]
+}

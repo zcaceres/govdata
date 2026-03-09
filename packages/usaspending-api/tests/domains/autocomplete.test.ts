@@ -412,7 +412,7 @@ describe("autocomplete domain", () => {
       const result = AutocompleteAgencyResponseSchema.parse(data);
       expect(result.results).toBeInstanceOf(Array);
       expect(result.results.length).toBeGreaterThan(0);
-      expect(result.results[0].toptier_agency!.name).toBe("National Aeronautics and Space Administration");
+      expect(result.results[0].toptier_agency!.name).toBe("Defense Nuclear Facilities Safety Board");
     });
 
     it("AutocompleteAgencyResponseSchema parses funding-agency fixture", async () => {
@@ -420,7 +420,7 @@ describe("autocomplete domain", () => {
       const result = AutocompleteAgencyResponseSchema.parse(data);
       expect(result.results).toBeInstanceOf(Array);
       expect(result.results.length).toBeGreaterThan(0);
-      expect(result.results[0].id).toBe(862);
+      expect(result.results[0].id).toBe(806);
     });
 
     it("AutocompleteAgencyOfficeResponseSchema parses awarding-agency-office fixture", async () => {
@@ -443,7 +443,7 @@ describe("autocomplete domain", () => {
       const data = await Bun.file(`${import.meta.dir}/../../fixtures/autocomplete/cfda.json`).json();
       const result = AutocompleteCfdaResponseSchema.parse(data);
       expect(result.results).toBeInstanceOf(Array);
-      expect(result.results[0].program_number).toBe("43.014");
+      expect(result.results[0].program_number).toBe("11.021");
     });
 
     it("AutocompleteCityResponseSchema parses fixture", async () => {
@@ -458,16 +458,16 @@ describe("autocomplete domain", () => {
       const data = await Bun.file(`${import.meta.dir}/../../fixtures/autocomplete/glossary.json`).json();
       const result = AutocompleteGlossaryResponseSchema.parse(data);
       expect(result.results).toBeInstanceOf(Array);
-      expect(result.count).toBe(0);
-      expect(result.search_text).toBe("NASA");
+      expect(result.count).toBe(3);
+      expect(result.search_text).toBe("obligation");
     });
 
     it("AutocompleteLocationResponseSchema parses fixture", async () => {
       const data = await Bun.file(`${import.meta.dir}/../../fixtures/autocomplete/location.json`).json();
       const result = AutocompleteLocationResponseSchema.parse(data);
       expect(result.results.cities).toBeInstanceOf(Array);
-      expect(result.count).toBe(10);
-      expect(result.results.cities![0].city_name).toBe("NASAN");
+      expect(result.count).toBe(6);
+      expect(result.results.cities![0].city_name).toBe("CALIFORNIA");
     });
 
     it("AutocompleteNaicsResponseSchema parses fixture", async () => {
@@ -475,7 +475,7 @@ describe("autocomplete domain", () => {
       const result = AutocompleteNaicsResponseSchema.parse(data);
       expect(result.results).toBeInstanceOf(Array);
       expect(result.results.length).toBeGreaterThan(0);
-      expect(result.results[0].naics).toBe("454111");
+      expect(result.results[0].naics).toBe("334611");
     });
 
     it("AutocompletePscResponseSchema parses fixture", async () => {
@@ -489,14 +489,14 @@ describe("autocomplete domain", () => {
       const result = AutocompleteProgramActivityResponseSchema.parse(data);
       expect(result.results).toBeInstanceOf(Array);
       expect(result.results.length).toBeGreaterThan(0);
-      expect(result.results[0].program_activity_code).toBe("0000");
+      expect(result.results[0].program_activity_code).toBe("0001");
     });
 
     it("AutocompleteRecipientResponseSchema parses fixture", async () => {
       const data = await Bun.file(`${import.meta.dir}/../../fixtures/autocomplete/recipient.json`).json();
       const result = AutocompleteRecipientResponseSchema.parse(data);
       expect(result.results).toBeInstanceOf(Array);
-      expect(result.count).toBe(20);
+      expect(result.count).toBe(5);
       expect(result.results[0].recipient_name).toBeTruthy();
     });
 

@@ -108,12 +108,14 @@ describe("reporting domain", () => {
       expect(result.meta).not.toBeNull();
     });
 
-    it("includes toptier_code, fiscal_year, fiscal_period in URL", async () => {
+    it("includes toptier_code in path and fiscal_year, fiscal_period as query params", async () => {
       const getCapture = mockFetchCapture("agency-differences.json");
       await _reportingDifferences("020", 2024, 6);
       const captured = getCapture();
       expect(captured!.init).toBeUndefined();
-      expect(captured!.url).toContain("/api/v2/reporting/agencies/020/2024/6/differences/");
+      expect(captured!.url).toContain("/api/v2/reporting/agencies/020/differences/");
+      expect(captured!.url).toContain("fiscal_year=2024");
+      expect(captured!.url).toContain("fiscal_period=6");
     });
   });
 
@@ -126,12 +128,14 @@ describe("reporting domain", () => {
       expect(result.meta).not.toBeNull();
     });
 
-    it("includes toptier_code, fiscal_year, fiscal_period in URL", async () => {
+    it("includes toptier_code in path and fiscal_year, fiscal_period as query params", async () => {
       const getCapture = mockFetchCapture("agency-discrepancies.json");
       await _reportingDiscrepancies("080", 2025, 11);
       const captured = getCapture();
       expect(captured!.init).toBeUndefined();
-      expect(captured!.url).toContain("/api/v2/reporting/agencies/080/2025/11/discrepancies/");
+      expect(captured!.url).toContain("/api/v2/reporting/agencies/080/discrepancies/");
+      expect(captured!.url).toContain("fiscal_year=2025");
+      expect(captured!.url).toContain("fiscal_period=11");
     });
   });
 

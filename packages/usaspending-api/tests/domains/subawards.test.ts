@@ -47,10 +47,10 @@ describe("subawards domain", () => {
       mockFetch("subawards/list.json");
       const result = await _subawardList();
       const item = result.data[0];
-      expect(item.id).toBe(8283722);
-      expect(item.subaward_number).toBe("20180913000000000966");
+      expect(item.id).toBe(2040919);
+      expect(item.subaward_number).toBe("ZZRZX5QAANX3 MAYA BRIDGE UCP OY2");
       expect(item.description).toBeDefined();
-      expect(item.action_date).toBe("2020-01-10");
+      expect(item.action_date).toBe("2024-09-05");
     });
 
     it("sends POST request to correct URL", async () => {
@@ -87,10 +87,10 @@ describe("subawards domain", () => {
       mockFetch("subawards/by-award.json");
       const result = await _subawardByAward({ award_id: "test-award" });
       const item = result.data[0];
-      expect(item.id).toBe(10237638);
-      expect(item.subaward_number).toBe("1769221-60");
-      expect(item.amount).toBe(1148071);
-      expect(item.recipient_name).toBe("VACCO INDUSTRIES");
+      expect(item.id).toBe(10238157);
+      expect(item.subaward_number).toBe("694540-112");
+      expect(item.amount).toBe(904540);
+      expect(item.recipient_name).toBe("GENERAL DYNAMICS-OTS, INC.");
     });
 
     it("sends POST request with award_id in body", async () => {
@@ -165,7 +165,7 @@ describe("subawards domain", () => {
       const result = SubawardListResponseSchema.parse(data);
       expect(result.results.length).toBeGreaterThan(0);
       expect(result.page_metadata.hasNext).toBe(true);
-      expect(result.results[0].subaward_number).toBe("20180913000000000966");
+      expect(result.results[0].subaward_number).toBe("ZZRZX5QAANX3 MAYA BRIDGE UCP OY2");
     });
 
     it("SubawardListResponseSchema parses by-award fixture", async () => {
@@ -173,7 +173,7 @@ describe("subawards domain", () => {
       const result = SubawardListResponseSchema.parse(data);
       expect(result.results.length).toBeGreaterThan(0);
       expect(result.page_metadata.hasNext).toBe(true);
-      expect(result.results[0].recipient_name).toBe("VACCO INDUSTRIES");
+      expect(result.results[0].recipient_name).toBe("GENERAL DYNAMICS-OTS, INC.");
     });
 
     it("TransactionListResponseSchema parses transactions fixture", async () => {

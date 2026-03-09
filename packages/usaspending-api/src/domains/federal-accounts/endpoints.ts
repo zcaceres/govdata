@@ -36,7 +36,7 @@ export async function _federalAccountList(
   if (params?.sort_direction != null) body.sort_direction = params.sort_direction;
 
   const raw = await usaPost(
-    "/api/v2/federal_account/",
+    "/api/v2/federal_accounts/",
     FederalAccountListResponseSchema,
     body,
     options,
@@ -57,7 +57,7 @@ export async function _federalAccountDetail(
   options?: ClientOptions,
 ): Promise<USAResult<"federal_account_detail">> {
   const raw = await usaGet(
-    `/api/v2/federal_account/${enc(String(id))}/`,
+    `/api/v2/federal_accounts/${enc(String(id))}/`,
     FederalAccountDetailSchema,
     undefined,
     options,
@@ -73,8 +73,8 @@ export async function _federalAccountFiscalYearSnapshot(
   options?: ClientOptions,
 ): Promise<USAResult<"federal_account_fiscal_year_snapshot">> {
   const path = fy != null
-    ? `/api/v2/federal_account/${enc(String(id))}/fiscal_year_snapshot/${enc(String(fy))}/`
-    : `/api/v2/federal_account/${enc(String(id))}/fiscal_year_snapshot/`;
+    ? `/api/v2/federal_accounts/${enc(String(id))}/fiscal_year_snapshot/${enc(String(fy))}/`
+    : `/api/v2/federal_accounts/${enc(String(id))}/fiscal_year_snapshot/`;
 
   const raw = await usaGet(
     path,
@@ -92,12 +92,13 @@ export async function _federalAccountAvailableObjectClasses(
   options?: ClientOptions,
 ): Promise<USAResult<"federal_account_available_object_classes">> {
   const raw = await usaGet(
-    `/api/v2/federal_account/${enc(String(id))}/available_object_classes/`,
+    `/api/v2/federal_accounts/${enc(String(id))}/available_object_classes/`,
     AvailableObjectClassResponseSchema,
     undefined,
     options,
   );
-  return wrapResponse(raw.results, null, "federal_account_available_object_classes");
+  const data = Array.isArray(raw.results) ? raw.results : [];
+  return wrapResponse(data, null, "federal_account_available_object_classes");
 }
 
 // --- Spending by object class (POST) ---
@@ -117,7 +118,7 @@ export async function _federalAccountObjectClasses(
   if (params?.limit != null) body.limit = params.limit;
 
   const raw = await usaPost(
-    `/api/v2/federal_account/${enc(String(id))}/spending_by_object_class/`,
+    `/api/v2/federal_accounts/${enc(String(id))}/spending_by_object_class/`,
     ObjectClassTotalResponseSchema,
     body,
     options,
@@ -144,7 +145,7 @@ export async function _federalAccountProgramActivities(
   if (params?.limit != null) body.limit = params.limit;
 
   const raw = await usaPost(
-    `/api/v2/federal_account/${enc(String(id))}/spending_by_program_activity/`,
+    `/api/v2/federal_accounts/${enc(String(id))}/spending_by_program_activity/`,
     ProgramActivityResponseSchema,
     body,
     options,
@@ -171,7 +172,7 @@ export async function _federalAccountProgramActivitiesTotal(
   if (params?.limit != null) body.limit = params.limit;
 
   const raw = await usaPost(
-    `/api/v2/federal_account/${enc(String(id))}/spending_by_program_activity_object_class/`,
+    `/api/v2/federal_accounts/${enc(String(id))}/spending_by_program_activity_object_class/`,
     ProgramActivityTotalResponseSchema,
     body,
     options,

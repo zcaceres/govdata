@@ -7,6 +7,16 @@
   },
   "results": [
     {
+      "id": 1522,
+      "code": "077",
+      "description": "U.S. International Development Finance Corporation",
+      "children": [],
+      "award_count": 1,
+      "obligation": 99043.63,
+      "outlay": 99043.63,
+      "face_value_of_loan": 24486834
+    },
+    {
       "id": 803,
       "code": "073",
       "description": "Small Business Administration",
@@ -25,16 +35,6 @@
       "obligation": 20756314.88,
       "outlay": 507500,
       "face_value_of_loan": 156410326.32
-    },
-    {
-      "id": 1522,
-      "code": "077",
-      "description": "U.S. International Development Finance Corporation",
-      "children": [],
-      "award_count": 1,
-      "obligation": 99043.63,
-      "outlay": 99043.63,
-      "face_value_of_loan": 24486834
     }
   ],
   "page_metadata": {

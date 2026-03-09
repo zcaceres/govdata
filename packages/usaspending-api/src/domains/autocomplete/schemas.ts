@@ -55,11 +55,20 @@ export const AutocompleteCityResponseSchema = z.object({
 }).passthrough();
 
 // Glossary autocomplete
+export const GlossaryMatchedTermSchema = z.object({
+  term: z.string(),
+  slug: z.string().nullable().optional(),
+  data_act_term: z.string().nullable().optional(),
+  plain: z.string().nullable().optional(),
+  official: z.string().nullable().optional(),
+  resources: z.string().nullable().optional(),
+}).passthrough();
+
 export const AutocompleteGlossaryResponseSchema = z.object({
   search_text: z.string().optional(),
   results: z.array(z.unknown()),
   count: z.number().optional(),
-  matched_terms: z.array(z.string()).optional(),
+  matched_terms: z.array(GlossaryMatchedTermSchema).optional(),
 }).passthrough();
 
 // Location autocomplete

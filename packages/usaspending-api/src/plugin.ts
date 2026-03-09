@@ -171,6 +171,21 @@ import {
 } from "./domains/downloads";
 import { describe } from "./describe";
 import { toNumber, buildFilters } from "./plugin-helpers";
+import { USAValidationError } from "./errors";
+
+function requireParam(params: Record<string, unknown> | undefined, name: string): string {
+  const val = params?.[name];
+  if (val == null) throw new USAValidationError(name, undefined, "required");
+  return String(val);
+}
+
+function requireNumber(params: Record<string, unknown> | undefined, name: string): number {
+  const val = params?.[name];
+  if (val == null) throw new USAValidationError(name, undefined, "required");
+  const n = Number(val);
+  if (!Number.isFinite(n)) throw new USAValidationError(name, val, "a valid number");
+  return n;
+}
 
 async function awards(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
@@ -184,20 +199,20 @@ async function awards(params?: Record<string, unknown>): Promise<GovResult> {
 }
 
 async function award(params?: Record<string, unknown>): Promise<GovResult> {
-  const id = String(params?.id);
+  const id = requireParam(params, "id");
   return _findAward(id);
 }
 
 async function agency(params?: Record<string, unknown>): Promise<GovResult> {
-  const toptierCode = String(params?.toptier_code);
+  const toptierCode = requireParam(params, "toptier_code");
   return _agencyOverview(toptierCode);
 }
 
 async function spending_by_agency(params?: Record<string, unknown>): Promise<GovResult> {
   return _spendingByAgency({
-    type: String(params?.type) as any,
+    type: requireParam(params, "type") as any,
     filters: {
-      fy: String(params?.fy),
+      fy: requireParam(params, "fy"),
       period: params?.period != null ? String(params.period) : undefined,
       quarter: params?.quarter != null ? String(params.quarter) : undefined,
     },
@@ -211,7 +226,7 @@ async function spending_by_state(): Promise<GovResult> {
 async function spending_over_time(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
   return _spendingOverTime({
-    group: String(params?.group) as any,
+    group: requireParam(params, "group") as any,
     filters,
   });
 }
@@ -284,7 +299,7 @@ async function subaward_grouped(params?: Record<string, unknown>): Promise<GovRe
 async function new_awards_over_time(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
   return _newAwardsOverTime({
-    group: String(params?.group) as any,
+    group: requireParam(params, "group") as any,
     filters,
   });
 }
@@ -315,25 +330,25 @@ async function recipient_count(params?: Record<string, unknown>): Promise<GovRes
 }
 
 async function recipient_detail(params?: Record<string, unknown>): Promise<GovResult> {
-  return _recipientDetail(String(params?.recipient_id), {
+  return _recipientDetail(requireParam(params, "recipient_id"), {
     year: params?.year != null ? String(params.year) : undefined,
   });
 }
 
 async function recipient_children(params?: Record<string, unknown>): Promise<GovResult> {
-  return _recipientChildren(String(params?.recipient_id), {
+  return _recipientChildren(requireParam(params, "recipient_id"), {
     year: params?.year != null ? String(params.year) : undefined,
   });
 }
 
 async function state_detail(params?: Record<string, unknown>): Promise<GovResult> {
-  return _stateDetail(String(params?.fips), {
+  return _stateDetail(requireParam(params, "fips"), {
     year: toNumber(params?.year),
   });
 }
 
 async function state_awards(params?: Record<string, unknown>): Promise<GovResult> {
-  return _stateAwards(String(params?.fips), {
+  return _stateAwards(requireParam(params, "fips"), {
     year: toNumber(params?.year),
   });
 }
@@ -359,7 +374,7 @@ async function ref_toptier_agencies(params?: Record<string, unknown>): Promise<G
 }
 
 async function ref_agency(params?: Record<string, unknown>): Promise<GovResult> {
-  return _refAgency(toNumber(params?.agency_id) ?? 0);
+  return _refAgency(requireNumber(params, "agency_id"));
 }
 
 async function ref_glossary(params?: Record<string, unknown>): Promise<GovResult> {
@@ -403,13 +418,13 @@ async function ref_cfda_totals(params?: Record<string, unknown>): Promise<GovRes
 // --- Agency endpoints ---
 
 async function agency_awards(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyAwards(String(params?.toptier_code), {
+  return _agencyAwards(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_new_award_count(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyNewAwardCount(String(params?.toptier_code), {
+  return _agencyNewAwardCount(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
@@ -421,26 +436,26 @@ async function agency_awards_count(params?: Record<string, unknown>): Promise<Go
 }
 
 async function agency_budget_function(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyBudgetFunction(String(params?.toptier_code), {
+  return _agencyBudgetFunction(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_budget_function_count(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyBudgetFunctionCount(String(params?.toptier_code), {
+  return _agencyBudgetFunctionCount(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_budgetary_resources(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyBudgetaryResources(String(params?.toptier_code));
+  return _agencyBudgetaryResources(requireParam(params, "toptier_code"));
 }
 
 function makeAgencyPaginatedEndpoint(
   fn: (toptierCode: string, params?: any, options?: any) => Promise<GovResult>,
 ) {
   return async (params?: Record<string, unknown>): Promise<GovResult> => {
-    return fn(String(params?.toptier_code), {
+    return fn(requireParam(params, "toptier_code"), {
       fiscal_year: toNumber(params?.fiscal_year),
       page: toNumber(params?.page),
       limit: toNumber(params?.limit),
@@ -451,47 +466,47 @@ function makeAgencyPaginatedEndpoint(
 }
 
 async function agency_federal_account_count(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyFederalAccountCount(String(params?.toptier_code), {
+  return _agencyFederalAccountCount(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_object_class_count(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyObjectClassCount(String(params?.toptier_code), {
+  return _agencyObjectClassCount(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_obligations_by_award_category(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyObligationsByAwardCategory(String(params?.toptier_code), {
+  return _agencyObligationsByAwardCategory(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_program_activity_count(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencyProgramActivityCount(String(params?.toptier_code), {
+  return _agencyProgramActivityCount(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_sub_agency_count(params?: Record<string, unknown>): Promise<GovResult> {
-  return _agencySubAgencyCount(String(params?.toptier_code), {
+  return _agencySubAgencyCount(requireParam(params, "toptier_code"), {
     fiscal_year: toNumber(params?.fiscal_year),
   });
 }
 
 async function agency_treasury_account_object_class(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyTreasuryAccountObjectClass(
-    String(params?.toptier_code),
-    String(params?.account_code),
+    requireParam(params, "toptier_code"),
+    requireParam(params, "account_code"),
     { fiscal_year: toNumber(params?.fiscal_year), page: toNumber(params?.page), limit: toNumber(params?.limit) },
   );
 }
 
 async function agency_treasury_account_program_activity(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyTreasuryAccountProgramActivity(
-    String(params?.toptier_code),
-    String(params?.account_code),
+    requireParam(params, "toptier_code"),
+    requireParam(params, "account_code"),
     { fiscal_year: toNumber(params?.fiscal_year), page: toNumber(params?.page), limit: toNumber(params?.limit) },
   );
 }
@@ -524,28 +539,28 @@ export const usaspendingPlugin: GovDataPlugin = {
     awards,
     award,
     award_accounts: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _awardAccounts(String(params?.id), {
+      return _awardAccounts(requireParam(params, "id"), {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
     },
     award_count_federal_account: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _awardCountFederalAccount(String(params?.id));
+      return _awardCountFederalAccount(requireParam(params, "id"));
     },
     award_count_subaward: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _awardCountSubaward(String(params?.id));
+      return _awardCountSubaward(requireParam(params, "id"));
     },
     award_count_transaction: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _awardCountTransaction(String(params?.id));
+      return _awardCountTransaction(requireParam(params, "id"));
     },
     award_funding: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _awardFunding(String(params?.id), {
+      return _awardFunding(requireParam(params, "id"), {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
     },
     award_funding_rollup: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _awardFundingRollup(String(params?.id));
+      return _awardFundingRollup(requireParam(params, "id"));
     },
     award_last_updated: async (): Promise<GovResult> => {
       return _awardLastUpdated();
@@ -705,28 +720,28 @@ export const usaspendingPlugin: GovDataPlugin = {
       });
     },
     federal_account_detail: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _federalAccountDetail(toNumber(params?.id) ?? 0);
+      return _federalAccountDetail(requireNumber(params, "id"));
     },
     federal_account_fiscal_year_snapshot: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _federalAccountFiscalYearSnapshot(toNumber(params?.id) ?? 0, toNumber(params?.fy));
+      return _federalAccountFiscalYearSnapshot(requireNumber(params, "id"), toNumber(params?.fy));
     },
     federal_account_available_object_classes: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _federalAccountAvailableObjectClasses(toNumber(params?.id) ?? 0);
+      return _federalAccountAvailableObjectClasses(requireNumber(params, "id"));
     },
     federal_account_object_classes: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _federalAccountObjectClasses(toNumber(params?.id) ?? 0, {
+      return _federalAccountObjectClasses(requireNumber(params, "id"), {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
     },
     federal_account_program_activities: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _federalAccountProgramActivities(toNumber(params?.id) ?? 0, {
+      return _federalAccountProgramActivities(requireNumber(params, "id"), {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
     },
     federal_account_program_activities_total: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _federalAccountProgramActivitiesTotal(toNumber(params?.id) ?? 0, {
+      return _federalAccountProgramActivitiesTotal(requireNumber(params, "id"), {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
@@ -750,7 +765,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       });
     },
     idv_amounts: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _idvAmounts(String(params?.award_id));
+      return _idvAmounts(requireParam(params, "award_id"));
     },
     idv_child_awards: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvChildAwards({
@@ -771,10 +786,10 @@ export const usaspendingPlugin: GovDataPlugin = {
       });
     },
     idv_count_federal_account: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _idvCountFederalAccount(String(params?.award_id));
+      return _idvCountFederalAccount(requireParam(params, "award_id"));
     },
     idv_funding_rollup: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _idvFundingRollup(String(params?.award_id));
+      return _idvFundingRollup(requireParam(params, "award_id"));
     },
     idv_funding: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvFunding({
@@ -812,9 +827,9 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     reporting_differences: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingDifferences(
-        String(params?.toptier_code),
-        toNumber(params?.fiscal_year) ?? 0,
-        toNumber(params?.fiscal_period) ?? 0,
+        requireParam(params, "toptier_code"),
+        requireNumber(params, "fiscal_year"),
+        requireNumber(params, "fiscal_period"),
         {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
@@ -825,9 +840,9 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     reporting_discrepancies: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingDiscrepancies(
-        String(params?.toptier_code),
-        toNumber(params?.fiscal_year) ?? 0,
-        toNumber(params?.fiscal_period) ?? 0,
+        requireParam(params, "toptier_code"),
+        requireNumber(params, "fiscal_year"),
+        requireNumber(params, "fiscal_period"),
         {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
@@ -838,7 +853,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     reporting_agency_overview: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingAgencyOverview(
-        String(params?.toptier_code),
+        requireParam(params, "toptier_code"),
         {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
@@ -849,9 +864,9 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     reporting_submission_history: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingSubmissionHistory(
-        String(params?.toptier_code),
-        toNumber(params?.fiscal_year) ?? 0,
-        toNumber(params?.fiscal_period) ?? 0,
+        requireParam(params, "toptier_code"),
+        requireNumber(params, "fiscal_year"),
+        requireNumber(params, "fiscal_period"),
         {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
@@ -862,48 +877,48 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     reporting_unlinked_assistance: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingUnlinkedAssistance(
-        String(params?.toptier_code),
-        toNumber(params?.fiscal_year) ?? 0,
-        toNumber(params?.fiscal_period) ?? 0,
+        requireParam(params, "toptier_code"),
+        requireNumber(params, "fiscal_year"),
+        requireNumber(params, "fiscal_period"),
       );
     },
     reporting_unlinked_procurement: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingUnlinkedProcurement(
-        String(params?.toptier_code),
-        toNumber(params?.fiscal_year) ?? 0,
-        toNumber(params?.fiscal_period) ?? 0,
+        requireParam(params, "toptier_code"),
+        requireNumber(params, "fiscal_year"),
+        requireNumber(params, "fiscal_period"),
       );
     },
 
     // --- Financial endpoints ---
     financial_federal_obligations: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _financialFederalObligations({
-        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
-        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
+        funding_agency_id: requireNumber(params, "funding_agency_id"),
+        fiscal_year: requireNumber(params, "fiscal_year"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
     },
     financial_balances: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _financialBalances({
-        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
-        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
+        funding_agency_id: requireNumber(params, "funding_agency_id"),
+        fiscal_year: requireNumber(params, "fiscal_year"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
     },
     financial_spending_major_object_class: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _financialSpendingMajorObjectClass({
-        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
-        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
+        fiscal_year: requireNumber(params, "fiscal_year"),
+        funding_agency_id: requireNumber(params, "funding_agency_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
       });
     },
     financial_spending_object_class: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _financialSpendingObjectClass({
-        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
-        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
+        fiscal_year: requireNumber(params, "fiscal_year"),
+        funding_agency_id: requireNumber(params, "funding_agency_id"),
         major_object_class_code: toNumber(params?.major_object_class_code),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
@@ -923,7 +938,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     subaward_by_award: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _subawardByAward({
-        award_id: String(params?.award_id),
+        award_id: requireParam(params, "award_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
@@ -932,7 +947,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     subaward_transactions: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _subawardTransactions({
-        award_id: toNumber(params?.award_id) ?? 0,
+        award_id: requireNumber(params, "award_id"),
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
@@ -945,7 +960,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _budgetFunctionList();
     },
     budget_function_subfunctions: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _budgetFunctionSubfunctions(String(params?.budget_function_code));
+      return _budgetFunctionSubfunctions(requireParam(params, "budget_function_code"));
     },
 
     // --- Download endpoints ---
@@ -969,24 +984,24 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     download_idv: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadIdv({
-        award_id: toNumber(params?.award_id) ?? 0,
+        award_id: requireNumber(params, "award_id"),
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },
     download_contract: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadContract({
-        award_id: toNumber(params?.award_id) ?? 0,
+        award_id: requireNumber(params, "award_id"),
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },
     download_assistance: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadAssistance({
-        award_id: toNumber(params?.award_id) ?? 0,
+        award_id: requireNumber(params, "award_id"),
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },
     download_status: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _downloadStatus(String(params?.file_name));
+      return _downloadStatus(requireParam(params, "file_name"));
     },
     download_disaster: async (params?: Record<string, unknown>): Promise<GovResult> => {
       const def_codes = params?.def_codes != null ? String(params.def_codes).split(",") : [];
@@ -999,11 +1014,11 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _bulkDownloadListAgenciesAwards();
     },
     bulk_download_list_monthly_files: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      const agency = String(params?.agency);
+      const agencyRaw = requireParam(params, "agency");
       return _bulkDownloadListMonthlyFiles({
-        agency: agency === "all" ? "all" : toNumber(params?.agency) ?? 0,
-        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
-        type: String(params?.type) as any,
+        agency: agencyRaw === "all" ? "all" : requireNumber(params, "agency"),
+        fiscal_year: requireNumber(params, "fiscal_year"),
+        type: requireParam(params, "type") as any,
       });
     },
     bulk_download_awards: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -1014,7 +1029,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       });
     },
     bulk_download_status: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _bulkDownloadStatus(String(params?.file_name));
+      return _bulkDownloadStatus(requireParam(params, "file_name"));
     },
   },
 };

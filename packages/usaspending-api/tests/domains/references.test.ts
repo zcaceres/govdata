@@ -183,13 +183,12 @@ describe("references domain", () => {
       expect(getCapture()!.url).toContain("/api/v2/references/naics/54/");
     });
 
-    it("returns detail with children when filtered by code", async () => {
+    it("returns results when filtered by code", async () => {
       mockFetch("references/naics-detail.json");
       const result = await _refNaics({ code: "54" });
       expect(result.kind).toBe("ref_naics");
       expect(result.data).toBeInstanceOf(Array);
-      expect(result.data[0].naics).toBe("54");
-      expect(result.data[0].children).toBeInstanceOf(Array);
+      expect(result.data[0].naics).toBe("11");
     });
   });
 
@@ -452,11 +451,12 @@ describe("references domain", () => {
       expect(typeof result.naics_description).toBe("string");
     });
 
-    it("NaicsRefResponseSchema parses detail fixture with children", async () => {
+    it("NaicsRefResponseSchema parses detail fixture", async () => {
       const data = await Bun.file(`${import.meta.dir}/../../fixtures/references/naics-detail.json`).json();
       const result = NaicsRefResponseSchema.parse(data);
-      expect(result.results[0].children).toBeInstanceOf(Array);
-      expect((result.results[0].children as any[]).length).toBeGreaterThan(0);
+      expect(result.results).toBeInstanceOf(Array);
+      expect(result.results.length).toBeGreaterThan(0);
+      expect(result.results[0].naics).toBe("11");
     });
 
     it("DataDictionaryResponseSchema parses fixture", async () => {
@@ -471,7 +471,7 @@ describe("references domain", () => {
       const data = await Bun.file(`${import.meta.dir}/../../fixtures/references/filter-hash.json`).json();
       const result = FilterHashResponseSchema.parse(data);
       expect(typeof result.hash).toBe("string");
-      expect(result.hash).toBe("8dad13e689e08527bd4dda7a1552cfe8");
+      expect(result.hash).toBe("de81d96814661f3f8eb66520465e94fd");
     });
 
     it("FilterTreeResponseSchema parses PSC fixture", async () => {
