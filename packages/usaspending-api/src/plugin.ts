@@ -139,6 +139,36 @@ import {
   _reportingUnlinkedAssistance,
   _reportingUnlinkedProcurement,
 } from "./domains/reporting";
+import {
+  _financialFederalObligations,
+  _financialBalances,
+  _financialSpendingMajorObjectClass,
+  _financialSpendingObjectClass,
+} from "./domains/financial";
+import {
+  _subawardList,
+  _subawardByAward,
+  _subawardTransactions,
+} from "./domains/subawards";
+import {
+  _budgetFunctionList,
+  _budgetFunctionSubfunctions,
+} from "./domains/budget-functions";
+import {
+  _downloadCount,
+  _downloadAwards,
+  _downloadTransactions,
+  _downloadIdv,
+  _downloadContract,
+  _downloadAssistance,
+  _downloadStatus,
+  _downloadDisaster,
+  _bulkDownloadListAgenciesAccounts,
+  _bulkDownloadListAgenciesAwards,
+  _bulkDownloadListMonthlyFiles,
+  _bulkDownloadAwards,
+  _bulkDownloadStatus,
+} from "./domains/downloads";
 import { describe } from "./describe";
 import { toNumber, buildFilters } from "./plugin-helpers";
 
@@ -843,6 +873,148 @@ export const usaspendingPlugin: GovDataPlugin = {
         toNumber(params?.fiscal_year) ?? 0,
         toNumber(params?.fiscal_period) ?? 0,
       );
+    },
+
+    // --- Financial endpoints ---
+    financial_federal_obligations: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _financialFederalObligations({
+        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
+        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
+        page: toNumber(params?.page),
+        limit: toNumber(params?.limit),
+      });
+    },
+    financial_balances: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _financialBalances({
+        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
+        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
+        page: toNumber(params?.page),
+        limit: toNumber(params?.limit),
+      });
+    },
+    financial_spending_major_object_class: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _financialSpendingMajorObjectClass({
+        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
+        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
+        page: toNumber(params?.page),
+        limit: toNumber(params?.limit),
+      });
+    },
+    financial_spending_object_class: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _financialSpendingObjectClass({
+        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
+        funding_agency_id: toNumber(params?.funding_agency_id) ?? 0,
+        major_object_class_code: toNumber(params?.major_object_class_code),
+        page: toNumber(params?.page),
+        limit: toNumber(params?.limit),
+      });
+    },
+
+    // --- Subaward endpoints ---
+    subaward_list: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _subawardList({
+        page: toNumber(params?.page),
+        limit: toNumber(params?.limit),
+        sort: params?.sort != null ? String(params.sort) : undefined,
+        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+        keyword: params?.keyword != null ? String(params.keyword) : undefined,
+        award_id: params?.award_id != null ? String(params.award_id) : undefined,
+      });
+    },
+    subaward_by_award: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _subawardByAward({
+        award_id: String(params?.award_id),
+        page: toNumber(params?.page),
+        limit: toNumber(params?.limit),
+        sort: params?.sort != null ? String(params.sort) : undefined,
+        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+      });
+    },
+    subaward_transactions: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _subawardTransactions({
+        award_id: toNumber(params?.award_id) ?? 0,
+        page: toNumber(params?.page),
+        limit: toNumber(params?.limit),
+        sort: params?.sort != null ? String(params.sort) : undefined,
+        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+      });
+    },
+
+    // --- Budget functions endpoints ---
+    budget_function_list: async (): Promise<GovResult> => {
+      return _budgetFunctionList();
+    },
+    budget_function_subfunctions: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _budgetFunctionSubfunctions(String(params?.budget_function_code));
+    },
+
+    // --- Download endpoints ---
+    download_count: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      const filters = params ? buildFilters(params) : {};
+      return _downloadCount({ filters });
+    },
+    download_awards: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      const filters = params ? buildFilters(params) : {};
+      return _downloadAwards({
+        filters,
+        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+      });
+    },
+    download_transactions: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      const filters = params ? buildFilters(params) : {};
+      return _downloadTransactions({
+        filters,
+        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+      });
+    },
+    download_idv: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _downloadIdv({
+        award_id: toNumber(params?.award_id) ?? 0,
+        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+      });
+    },
+    download_contract: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _downloadContract({
+        award_id: toNumber(params?.award_id) ?? 0,
+        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+      });
+    },
+    download_assistance: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _downloadAssistance({
+        award_id: toNumber(params?.award_id) ?? 0,
+        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+      });
+    },
+    download_status: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _downloadStatus(String(params?.file_name));
+    },
+    download_disaster: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      const def_codes = params?.def_codes != null ? String(params.def_codes).split(",") : [];
+      return _downloadDisaster({ filters: { def_codes } });
+    },
+    bulk_download_list_agencies_accounts: async (): Promise<GovResult> => {
+      return _bulkDownloadListAgenciesAccounts();
+    },
+    bulk_download_list_agencies_awards: async (): Promise<GovResult> => {
+      return _bulkDownloadListAgenciesAwards();
+    },
+    bulk_download_list_monthly_files: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      const agency = String(params?.agency);
+      return _bulkDownloadListMonthlyFiles({
+        agency: agency === "all" ? "all" : toNumber(params?.agency) ?? 0,
+        fiscal_year: toNumber(params?.fiscal_year) ?? 0,
+        type: String(params?.type) as any,
+      });
+    },
+    bulk_download_awards: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      const filters = params ? buildFilters(params) : {};
+      return _bulkDownloadAwards({
+        filters,
+        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+      });
+    },
+    bulk_download_status: async (params?: Record<string, unknown>): Promise<GovResult> => {
+      return _bulkDownloadStatus(String(params?.file_name));
     },
   },
 };

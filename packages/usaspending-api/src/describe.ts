@@ -10,6 +10,10 @@ import { referencesEndpoints } from "./domains/references";
 import { reportingEndpoints } from "./domains/reporting";
 import { searchEndpoints } from "./domains/search";
 import { spendingEndpoints } from "./domains/spending";
+import { financialEndpoints } from "./domains/financial";
+import { subawardEndpoints } from "./domains/subawards";
+import { budgetFunctionsEndpoints } from "./domains/budget-functions";
+import { downloadsEndpoints } from "./domains/downloads";
 
 export type { ParamDescription, EndpointDescription };
 
@@ -25,6 +29,10 @@ const endpoints: EndpointDescription[] = [
   ...federalAccountsEndpoints,
   ...idvEndpoints,
   ...reportingEndpoints,
+  ...financialEndpoints,
+  ...subawardEndpoints,
+  ...budgetFunctionsEndpoints,
+  ...downloadsEndpoints,
 ];
 
 export function describe(): { endpoints: EndpointDescription[] } {

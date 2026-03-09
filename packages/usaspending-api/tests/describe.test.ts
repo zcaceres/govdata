@@ -6,7 +6,7 @@ describe("describe()", () => {
   it("returns endpoint array", () => {
     const { endpoints } = describeEndpoints();
     expect(endpoints).toBeInstanceOf(Array);
-    expect(endpoints.length).toBe(137);
+    expect(endpoints.length).toBe(159);
   });
 
   it("every endpoint has required fields", () => {

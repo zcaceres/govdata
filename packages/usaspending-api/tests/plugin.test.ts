@@ -30,7 +30,7 @@ describe("plugin prefix and structure", () => {
   });
 
   it("has 94 endpoints", () => {
-    expect(Object.keys(usaspendingPlugin.endpoints).length).toBe(137);
+    expect(Object.keys(usaspendingPlugin.endpoints).length).toBe(159);
   });
 });
 

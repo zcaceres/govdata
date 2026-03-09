@@ -37,6 +37,10 @@ import { referencesEndpoints } from "../src/domains/references";
 import { reportingEndpoints } from "../src/domains/reporting";
 import { searchEndpoints } from "../src/domains/search";
 import { spendingEndpoints } from "../src/domains/spending";
+import { financialEndpoints } from "../src/domains/financial";
+import { subawardEndpoints } from "../src/domains/subawards";
+import { budgetFunctionsEndpoints } from "../src/domains/budget-functions";
+import { downloadsEndpoints } from "../src/domains/downloads";
 
 describe("domain aggregation", () => {
   describe("re-exported schemas match domain schemas", () => {
@@ -98,7 +102,11 @@ describe("domain aggregation", () => {
         referencesEndpoints.length +
         reportingEndpoints.length +
         searchEndpoints.length +
-        spendingEndpoints.length;
+        spendingEndpoints.length +
+        financialEndpoints.length +
+        subawardEndpoints.length +
+        budgetFunctionsEndpoints.length +
+        downloadsEndpoints.length;
       expect(endpoints.length).toBe(domainTotal);
     });
 

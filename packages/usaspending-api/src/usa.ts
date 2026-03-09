@@ -147,6 +147,36 @@ import {
   _reportingUnlinkedAssistance,
   _reportingUnlinkedProcurement,
 } from "./domains/reporting";
+import {
+  _financialFederalObligations,
+  _financialBalances,
+  _financialSpendingMajorObjectClass,
+  _financialSpendingObjectClass,
+} from "./domains/financial";
+import {
+  _subawardList,
+  _subawardByAward,
+  _subawardTransactions,
+} from "./domains/subawards";
+import {
+  _budgetFunctionList,
+  _budgetFunctionSubfunctions,
+} from "./domains/budget-functions";
+import {
+  _downloadCount,
+  _downloadAwards,
+  _downloadTransactions,
+  _downloadIdv,
+  _downloadContract,
+  _downloadAssistance,
+  _downloadStatus,
+  _downloadDisaster,
+  _bulkDownloadListAgenciesAccounts,
+  _bulkDownloadListAgenciesAwards,
+  _bulkDownloadListMonthlyFiles,
+  _bulkDownloadAwards,
+  _bulkDownloadStatus,
+} from "./domains/downloads";
 import { describe } from "./describe";
 
 export function createUSASpending(defaultOptions?: ClientOptions) {
@@ -428,6 +458,60 @@ export function createUSASpending(defaultOptions?: ClientOptions) {
         _reportingUnlinkedAssistance(toptierCode, fiscalYear, fiscalPeriod, { ...defaultOptions, ...options }),
       unlinkedProcurement: (toptierCode: string, fiscalYear: number, fiscalPeriod: number, options?: ClientOptions) =>
         _reportingUnlinkedProcurement(toptierCode, fiscalYear, fiscalPeriod, { ...defaultOptions, ...options }),
+    },
+    financial: {
+      federalObligations: (params: { funding_agency_id: number; fiscal_year: number; page?: number; limit?: number }, options?: ClientOptions) =>
+        _financialFederalObligations(params, { ...defaultOptions, ...options }),
+      balances: (params: { funding_agency_id: number; fiscal_year: number; page?: number; limit?: number }, options?: ClientOptions) =>
+        _financialBalances(params, { ...defaultOptions, ...options }),
+      spendingMajorObjectClass: (params: { fiscal_year: number; funding_agency_id: number; page?: number; limit?: number }, options?: ClientOptions) =>
+        _financialSpendingMajorObjectClass(params, { ...defaultOptions, ...options }),
+      spendingObjectClass: (params: { fiscal_year: number; funding_agency_id: number; major_object_class_code?: number; page?: number; limit?: number }, options?: ClientOptions) =>
+        _financialSpendingObjectClass(params, { ...defaultOptions, ...options }),
+    },
+    subawards: {
+      list: (params?: { page?: number; limit?: number; sort?: string; order?: "asc" | "desc"; keyword?: string; award_id?: string }, options?: ClientOptions) =>
+        _subawardList(params, { ...defaultOptions, ...options }),
+      byAward: (params: { award_id: string; page?: number; limit?: number; sort?: string; order?: "asc" | "desc" }, options?: ClientOptions) =>
+        _subawardByAward(params, { ...defaultOptions, ...options }),
+      transactions: (params: { award_id: number; page?: number; limit?: number; sort?: string; order?: "asc" | "desc" }, options?: ClientOptions) =>
+        _subawardTransactions(params, { ...defaultOptions, ...options }),
+    },
+    budgetFunctions: {
+      list: (options?: ClientOptions) =>
+        _budgetFunctionList({ ...defaultOptions, ...options }),
+      subfunctions: (budgetFunctionCode: string, options?: ClientOptions) =>
+        _budgetFunctionSubfunctions(budgetFunctionCode, { ...defaultOptions, ...options }),
+    },
+    downloads: {
+      count: (params: { filters: Record<string, unknown> }, options?: ClientOptions) =>
+        _downloadCount(params, { ...defaultOptions, ...options }),
+      awards: (params: { filters: Record<string, unknown>; columns?: string[]; file_format?: "csv" | "tsv" }, options?: ClientOptions) =>
+        _downloadAwards(params, { ...defaultOptions, ...options }),
+      transactions: (params: { filters: Record<string, unknown>; columns?: string[]; file_format?: "csv" | "tsv" }, options?: ClientOptions) =>
+        _downloadTransactions(params, { ...defaultOptions, ...options }),
+      idv: (params: { award_id: number; columns?: string[]; file_format?: "csv" | "tsv" }, options?: ClientOptions) =>
+        _downloadIdv(params, { ...defaultOptions, ...options }),
+      contract: (params: { award_id: number; columns?: string[]; file_format?: "csv" | "tsv" }, options?: ClientOptions) =>
+        _downloadContract(params, { ...defaultOptions, ...options }),
+      assistance: (params: { award_id: number; columns?: string[]; file_format?: "csv" | "tsv" }, options?: ClientOptions) =>
+        _downloadAssistance(params, { ...defaultOptions, ...options }),
+      status: (fileName: string, options?: ClientOptions) =>
+        _downloadStatus(fileName, { ...defaultOptions, ...options }),
+      disaster: (params: { filters: { def_codes: string[]; [key: string]: unknown } }, options?: ClientOptions) =>
+        _downloadDisaster(params, { ...defaultOptions, ...options }),
+    },
+    bulkDownloads: {
+      listAgenciesAccounts: (options?: ClientOptions) =>
+        _bulkDownloadListAgenciesAccounts({ ...defaultOptions, ...options }),
+      listAgenciesAwards: (options?: ClientOptions) =>
+        _bulkDownloadListAgenciesAwards({ ...defaultOptions, ...options }),
+      listMonthlyFiles: (params: { agency: number | "all"; fiscal_year: number; type: "contracts" | "assistance" | "sub_contracts" | "sub_grants" }, options?: ClientOptions) =>
+        _bulkDownloadListMonthlyFiles(params, { ...defaultOptions, ...options }),
+      awards: (params: { filters: Record<string, unknown>; file_format?: "csv" | "tsv" }, options?: ClientOptions) =>
+        _bulkDownloadAwards(params, { ...defaultOptions, ...options }),
+      status: (fileName: string, options?: ClientOptions) =>
+        _bulkDownloadStatus(fileName, { ...defaultOptions, ...options }),
     },
     describe,
   };

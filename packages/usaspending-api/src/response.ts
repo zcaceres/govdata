@@ -11,19 +11,27 @@ import type { SpendingKindMap } from "./domains/spending";
 import type { IdvKindMap } from "./domains/idv";
 import type { ReportingKindMap } from "./domains/reporting";
 import type { DisasterKindMap } from "./domains/disaster";
+import type { BudgetFunctionsKindMap } from "./domains/budget-functions";
+import type { FinancialKindMap } from "./domains/financial";
+import type { SubawardsKindMap } from "./domains/subawards";
+import type { DownloadsKindMap } from "./domains/downloads";
 
 export type KindDataMap =
   & AgencyKindMap
   & AutocompleteKindMap
   & AwardsKindMap
+  & BudgetFunctionsKindMap
+  & DownloadsKindMap
   & FederalAccountsKindMap
+  & FinancialKindMap
   & IdvKindMap
   & RecipientKindMap
   & ReferencesKindMap
   & SearchKindMap
   & SpendingKindMap
   & ReportingKindMap
-  & DisasterKindMap;
+  & DisasterKindMap
+  & SubawardsKindMap;
 
 export type EndpointKind = keyof KindDataMap;
 
