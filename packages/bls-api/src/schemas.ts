@@ -16,6 +16,10 @@ export const TimeseriesParamsSchema = z
   .refine((d) => !(d.end_year && !d.start_year), {
     message: "start_year required when end_year is provided",
     path: ["start_year"],
+  })
+  .refine((d) => !(d.start_year && d.end_year && d.start_year > d.end_year), {
+    message: "start_year must be <= end_year",
+    path: ["start_year"],
   });
 
 export const PopularParamsSchema = z

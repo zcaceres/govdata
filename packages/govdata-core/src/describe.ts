@@ -4,6 +4,7 @@ export interface ParamDescription {
   required: boolean;
   values?: string[];
   min?: number;
+  description?: string;
 }
 
 export interface EndpointDescription {

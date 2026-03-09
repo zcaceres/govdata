@@ -52,6 +52,18 @@ describe("TimeseriesParamsSchema", () => {
     expect(result.success).toBe(false);
   });
 
+  it("rejects start_year > end_year", () => {
+    const result = TimeseriesParamsSchema.safeParse({
+      series_id: "CUUR0000SA0",
+      start_year: 2025,
+      end_year: 2020,
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.message).toContain("start_year must be <= end_year");
+    }
+  });
+
   it("rejects missing series_id", () => {
     const result = TimeseriesParamsSchema.safeParse({});
     expect(result.success).toBe(false);

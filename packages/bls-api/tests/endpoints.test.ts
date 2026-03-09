@@ -297,6 +297,19 @@ describe("blsPlugin", () => {
     expect(capturedBody.seriesid).toEqual(["CUUR0000SA0", "LNS14000000"]);
   });
 
+  it("plugin timeseries rejects boolean series_id (bare --series-id flag)", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: true })).toThrow("series_id");
+  });
+
+  it("plugin timeseries rejects start_year > end_year", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: "CUUR0000SA0", start_year: 2025, end_year: 2020 })).toThrow("start_year must be <= end_year");
+  });
+
+  it("plugin popular rejects unknown params via .strict()", async () => {
+    mockFetch(popularFixture);
+    await expect(blsPlugin.endpoints.popular({ survey: "CU", bad: "x" })).rejects.toThrow();
+  });
+
   it("plugin timeseries coerces boolean strings", async () => {
     let capturedBody: any;
     globalThis.fetch = (async (_url: any, init?: RequestInit) => {

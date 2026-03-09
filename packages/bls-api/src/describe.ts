@@ -8,9 +8,9 @@ const endpoints: EndpointDescription[] = [
     path: "/timeseries/data/",
     description: "Fetch time series data for BLS series IDs (CPI, unemployment, etc.)",
     params: [
-      { name: "series_id", type: "string", required: true },
-      { name: "start_year", type: "number", required: false },
-      { name: "end_year", type: "number", required: false },
+      { name: "series_id", type: "string", required: true, description: "BLS series ID(s), comma-separated for multiple" },
+      { name: "start_year", type: "number", required: false, min: 1900 },
+      { name: "end_year", type: "number", required: false, min: 1900 },
       { name: "calculations", type: "boolean", required: false },
       { name: "annual_averages", type: "boolean", required: false },
       { name: "catalog", type: "boolean", required: false },

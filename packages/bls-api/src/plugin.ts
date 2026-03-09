@@ -11,6 +11,7 @@ export const blsPlugin: GovDataPlugin = {
     timeseries: (params?: any) => {
       if (
         !params?.series_id ||
+        params.series_id === true ||
         (typeof params.series_id === "string" && params.series_id.trim() === "")
       ) {
         throw new GovValidationError("series_id", params?.series_id, "Required");
@@ -43,15 +44,20 @@ export const blsPlugin: GovDataPlugin = {
           coerced[key] = n;
         }
       }
+      // Check year ordering after coercion
+      if (coerced.start_year != null && coerced.end_year != null && coerced.start_year > coerced.end_year) {
+        throw new GovValidationError("start_year", coerced.start_year, "start_year must be <= end_year");
+      }
       return timeseries(coerced);
     },
     surveys: () => surveys(),
     popular: (params?: any) => {
-      const coerced: Record<string, unknown> = {};
-      if (params?.survey != null) {
-        coerced.survey = String(params.survey);
+      if (!params || Object.keys(params).length === 0) return popular();
+      const coerced = { ...params };
+      if (coerced.survey != null) {
+        coerced.survey = String(coerced.survey);
       }
-      return popular(Object.keys(coerced).length > 0 ? coerced : undefined);
+      return popular(coerced);
     },
   } as Record<string, (params?: any) => Promise<BlsResult>>,
 };

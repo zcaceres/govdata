@@ -20,7 +20,7 @@ export function buildSchemaFromParams(
       schema = schema.optional();
     }
     schemaShape[param.name] = schema.describe(
-      param.values ? `One of: ${param.values.join(", ")}` : param.type,
+      param.description ?? (param.values ? `One of: ${param.values.join(", ")}` : param.type),
     );
   }
   return schemaShape;

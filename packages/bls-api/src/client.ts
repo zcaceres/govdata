@@ -54,6 +54,7 @@ async function _fetchWithRetry(
     return response;
   }
 
+  // TypeScript exhaustive return guard — unreachable unless maxRetries < 0
   throw new GovRateLimitError(null);
 }
 
