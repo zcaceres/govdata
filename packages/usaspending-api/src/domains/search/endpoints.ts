@@ -26,12 +26,13 @@ import type {
 import { wrapResponse } from "../../response";
 import type { USAResult } from "../../response";
 import { validateParams } from "../../plugin-helpers";
+import { ALL_AWARD_TYPE_CODES } from "../../shared-schemas";
 
 export async function _searchAwards(
   params?: AwardSearchParams,
   options?: ClientOptions,
 ): Promise<USAResult<"awards">> {
-  const ALL_AWARD_TYPES = ["A", "B", "C", "D", "IDV_A", "IDV_B", "IDV_B_A", "IDV_B_B", "IDV_B_C", "IDV_C", "IDV_D", "IDV_E", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+  const ALL_AWARD_TYPES = [...ALL_AWARD_TYPE_CODES];
 
   const defaultFilters = {
     award_type_codes: ALL_AWARD_TYPES,
@@ -116,7 +117,7 @@ export async function _spendingByCategory(
   params?: CategoryParams,
   options?: ClientOptions,
 ): Promise<USAResult<"category">> {
-  const ALL_AWARD_TYPES = ["A", "B", "C", "D", "IDV_A", "IDV_B", "IDV_B_A", "IDV_B_B", "IDV_B_C", "IDV_C", "IDV_D", "IDV_E", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+  const ALL_AWARD_TYPES = [...ALL_AWARD_TYPE_CODES];
   const defaultFilters = {
     award_type_codes: ALL_AWARD_TYPES,
     ...params?.filters,
@@ -158,7 +159,7 @@ export async function _spendingByTransaction(
   params?: AwardSearchParams,
   options?: ClientOptions,
 ): Promise<USAResult<"transactions">> {
-  const ALL_AWARD_TYPES = ["A", "B", "C", "D", "IDV_A", "IDV_B", "IDV_B_A", "IDV_B_B", "IDV_B_C", "IDV_C", "IDV_D", "IDV_E", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+  const ALL_AWARD_TYPES = [...ALL_AWARD_TYPE_CODES];
   const defaultFilters = {
     award_type_codes: ALL_AWARD_TYPES,
     ...params?.filters,
@@ -211,7 +212,7 @@ export async function _spendingByTransactionGrouped(
   params?: AwardSearchParams,
   options?: ClientOptions,
 ): Promise<USAResult<"transaction_grouped">> {
-  const ALL_AWARD_TYPES = ["A", "B", "C", "D", "IDV_A", "IDV_B", "IDV_B_A", "IDV_B_B", "IDV_B_C", "IDV_C", "IDV_D", "IDV_E", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+  const ALL_AWARD_TYPES = [...ALL_AWARD_TYPE_CODES];
   const defaultFilters = {
     award_type_codes: ALL_AWARD_TYPES,
     ...params?.filters,
@@ -239,7 +240,7 @@ export async function _spendingBySubawardGrouped(
   params?: AwardSearchParams,
   options?: ClientOptions,
 ): Promise<USAResult<"subaward_grouped">> {
-  const ALL_AWARD_TYPES = ["A", "B", "C", "D", "IDV_A", "IDV_B", "IDV_B_A", "IDV_B_B", "IDV_B_C", "IDV_C", "IDV_D", "IDV_E", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+  const ALL_AWARD_TYPES = [...ALL_AWARD_TYPE_CODES];
   const defaultFilters = {
     award_type_codes: ALL_AWARD_TYPES,
     ...params?.filters,

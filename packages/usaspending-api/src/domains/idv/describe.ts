@@ -71,7 +71,7 @@ export const idvEndpoints: EndpointDescription[] = [
   },
   {
     name: "idv_funding_rollup",
-    path: "/api/v2/idvs/funding_rollup/{award_id}/",
+    path: "/api/v2/idvs/funding_rollup/",
     description: "Get a funding rollup summary for an IDV including agency and account counts",
     params: [
       { name: "award_id", type: "string", required: true },

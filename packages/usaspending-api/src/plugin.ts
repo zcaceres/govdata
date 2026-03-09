@@ -179,6 +179,19 @@ function requireParam(params: Record<string, unknown> | undefined, name: string)
   return String(val);
 }
 
+function toOrder(val: unknown): "asc" | "desc" | undefined {
+  if (val == null) return undefined;
+  const s = String(val);
+  if (s !== "asc" && s !== "desc") throw new USAValidationError("order", val, "one of: asc, desc");
+  return s;
+}
+
+function requireEnum<T extends string>(params: Record<string, unknown> | undefined, name: string, values: readonly T[]): T {
+  const val = requireParam(params, name);
+  if (!values.includes(val as T)) throw new USAValidationError(name, val, `one of: ${values.join(", ")}`);
+  return val as T;
+}
+
 function requireNumber(params: Record<string, unknown> | undefined, name: string): number {
   const val = params?.[name];
   if (val == null) throw new USAValidationError(name, undefined, "required");
@@ -194,7 +207,7 @@ async function awards(params?: Record<string, unknown>): Promise<GovResult> {
     page: toNumber(params?.page),
     limit: toNumber(params?.limit),
     sort: params?.sort != null ? String(params.sort) : undefined,
-    order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+    order: toOrder(params?.order),
   });
 }
 
@@ -208,9 +221,12 @@ async function agency(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyOverview(toptierCode);
 }
 
+const SPENDING_BY_AGENCY_TYPES = ["agency", "federal_account", "object_class", "budget_function", "budget_subfunction", "recipient", "award", "program_activity"] as const;
+const SPENDING_TIME_GROUPS = ["fiscal_year", "quarter", "month"] as const;
+
 async function spending_by_agency(params?: Record<string, unknown>): Promise<GovResult> {
   return _spendingByAgency({
-    type: requireParam(params, "type") as any,
+    type: requireEnum(params, "type", SPENDING_BY_AGENCY_TYPES) as any,
     filters: {
       fy: requireParam(params, "fy"),
       period: params?.period != null ? String(params.period) : undefined,
@@ -226,7 +242,7 @@ async function spending_by_state(): Promise<GovResult> {
 async function spending_over_time(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
   return _spendingOverTime({
-    group: requireParam(params, "group") as any,
+    group: requireEnum(params, "group", SPENDING_TIME_GROUPS) as any,
     filters,
   });
 }
@@ -265,7 +281,7 @@ async function transactions(params?: Record<string, unknown>): Promise<GovResult
     page: toNumber(params?.page),
     limit: toNumber(params?.limit),
     sort: params?.sort != null ? String(params.sort) : undefined,
-    order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+    order: toOrder(params?.order),
   });
 }
 
@@ -281,7 +297,7 @@ async function transaction_grouped(params?: Record<string, unknown>): Promise<Go
     page: toNumber(params?.page),
     limit: toNumber(params?.limit),
     sort: params?.sort != null ? String(params.sort) : undefined,
-    order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+    order: toOrder(params?.order),
   });
 }
 
@@ -292,14 +308,14 @@ async function subaward_grouped(params?: Record<string, unknown>): Promise<GovRe
     page: toNumber(params?.page),
     limit: toNumber(params?.limit),
     sort: params?.sort != null ? String(params.sort) : undefined,
-    order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+    order: toOrder(params?.order),
   });
 }
 
 async function new_awards_over_time(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
   return _newAwardsOverTime({
-    group: requireParam(params, "group") as any,
+    group: requireEnum(params, "group", SPENDING_TIME_GROUPS) as any,
     filters,
   });
 }
@@ -318,7 +334,7 @@ async function recipient_list(params?: Record<string, unknown>): Promise<GovResu
     page: toNumber(params?.page),
     limit: toNumber(params?.limit),
     sort: params?.sort != null ? String(params.sort) : undefined,
-    order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+    order: toOrder(params?.order),
   });
 }
 
@@ -369,7 +385,7 @@ function makeAutocompleteEndpoint(fn: (params: { search_text: string; limit?: nu
 async function ref_toptier_agencies(params?: Record<string, unknown>): Promise<GovResult> {
   return _refToptierAgencies({
     sort: params?.sort != null ? String(params.sort) : undefined,
-    order: params?.order != null ? String(params.order) : undefined,
+    order: toOrder(params?.order),
   });
 }
 
@@ -459,7 +475,7 @@ function makeAgencyPaginatedEndpoint(
       fiscal_year: toNumber(params?.fiscal_year),
       page: toNumber(params?.page),
       limit: toNumber(params?.limit),
-      order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+      order: toOrder(params?.order),
       sort: params?.sort != null ? String(params.sort) : undefined,
     });
   };
@@ -519,7 +535,7 @@ function makeDisasterEndpoint(fn: (params?: any, options?: any) => Promise<GovRe
       def_codes: params?.def_codes != null ? String(params.def_codes).split(",").map(s => s.trim()) : undefined,
       spending_type: params?.spending_type != null ? String(params.spending_type) : undefined,
       sort: params?.sort != null ? String(params.sort) : undefined,
-      order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+      order: toOrder(params?.order),
       page: toNumber(params?.page),
       limit: toNumber(params?.limit),
     });
@@ -610,7 +626,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _autocompleteCity({
         search_text: requireParam(params, "search_text"),
         limit: toNumber(params?.limit),
-        filter: params?.country_code ? { country_code: String(params.country_code), scope: String(params.scope ?? "recipient_location") } : undefined,
+        filter: params?.country_code != null ? { country_code: String(params.country_code), scope: String(params.scope ?? "recipient_location") } : undefined,
       });
     },
     autocomplete_glossary: makeAutocompleteEndpoint(_autocompleteGlossary),
@@ -754,7 +770,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) : undefined,
+        order: toOrder(params?.order),
       });
     },
     idv_activity: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -773,7 +789,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) : undefined,
+        order: toOrder(params?.order),
       });
     },
     idv_child_idvs: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -782,7 +798,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) : undefined,
+        order: toOrder(params?.order),
       });
     },
     idv_count_federal_account: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -797,7 +813,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) : undefined,
+        order: toOrder(params?.order),
         piid: params?.piid != null ? String(params.piid) : undefined,
       });
     },
@@ -808,7 +824,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+        order: toOrder(params?.order),
         fiscal_year: toNumber(params?.fiscal_year),
         fiscal_period: toNumber(params?.fiscal_period),
         filter: params?.filter != null ? String(params.filter) : undefined,
@@ -819,7 +835,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+        order: toOrder(params?.order),
         fiscal_year: toNumber(params?.fiscal_year),
         fiscal_period: toNumber(params?.fiscal_period),
         filter: params?.filter != null ? String(params.filter) : undefined,
@@ -834,7 +850,7 @@ export const usaspendingPlugin: GovDataPlugin = {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
           sort: params?.sort != null ? String(params.sort) : undefined,
-          order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+          order: toOrder(params?.order),
         },
       );
     },
@@ -847,7 +863,7 @@ export const usaspendingPlugin: GovDataPlugin = {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
           sort: params?.sort != null ? String(params.sort) : undefined,
-          order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+          order: toOrder(params?.order),
         },
       );
     },
@@ -858,7 +874,7 @@ export const usaspendingPlugin: GovDataPlugin = {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
           sort: params?.sort != null ? String(params.sort) : undefined,
-          order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+          order: toOrder(params?.order),
         },
       );
     },
@@ -871,7 +887,7 @@ export const usaspendingPlugin: GovDataPlugin = {
           page: toNumber(params?.page),
           limit: toNumber(params?.limit),
           sort: params?.sort != null ? String(params.sort) : undefined,
-          order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+          order: toOrder(params?.order),
         },
       );
     },
@@ -931,7 +947,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+        order: toOrder(params?.order),
         keyword: params?.keyword != null ? String(params.keyword) : undefined,
         award_id: params?.award_id != null ? String(params.award_id) : undefined,
       });
@@ -942,7 +958,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+        order: toOrder(params?.order),
       });
     },
     subaward_transactions: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -951,7 +967,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort: params?.sort != null ? String(params.sort) : undefined,
-        order: params?.order != null ? String(params.order) as "asc" | "desc" : undefined,
+        order: toOrder(params?.order),
       });
     },
 
@@ -972,6 +988,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       const filters = params ? buildFilters(params) : {};
       return _downloadAwards({
         filters,
+        columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },
@@ -979,24 +996,28 @@ export const usaspendingPlugin: GovDataPlugin = {
       const filters = params ? buildFilters(params) : {};
       return _downloadTransactions({
         filters,
+        columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },
     download_idv: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadIdv({
         award_id: requireNumber(params, "award_id"),
+        columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },
     download_contract: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadContract({
         award_id: requireNumber(params, "award_id"),
+        columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },
     download_assistance: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadAssistance({
         award_id: requireNumber(params, "award_id"),
+        columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
         file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
       });
     },

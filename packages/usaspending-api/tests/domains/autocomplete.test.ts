@@ -582,7 +582,6 @@ describe("autocomplete domain", () => {
 
     it("account endpoints have optional search_text param", () => {
       const accountEndpoints = [
-        "autocomplete_accounts_aid",
         "autocomplete_accounts_a",
         "autocomplete_accounts_ata",
         "autocomplete_accounts_bpoa",
@@ -595,6 +594,17 @@ describe("autocomplete domain", () => {
         expect(ep).toBeDefined();
         expect(ep!.params.find((p) => p.name === "search_text")?.required).toBe(false);
       }
+    });
+
+    it("autocomplete_accounts_aid has filter params instead of search_text", () => {
+      const ep = autocompleteEndpoints.find((e) => e.name === "autocomplete_accounts_aid");
+      expect(ep).toBeDefined();
+      for (const paramName of ["aid", "ata", "main", "sub", "bpoa", "epoa", "a"]) {
+        const param = ep!.params.find((p) => p.name === paramName);
+        expect(param).toBeDefined();
+        expect(param!.required).toBe(false);
+      }
+      expect(ep!.params.find((p) => p.name === "search_text")).toBeUndefined();
     });
 
     it("city endpoint has filter params", () => {

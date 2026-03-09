@@ -80,6 +80,8 @@ export const AwardSearchFiltersSchema = z.object({
 
 // --- Award type codes ---
 
+export const ALL_AWARD_TYPE_CODES = ["A", "B", "C", "D", "IDV_A", "IDV_B", "IDV_B_A", "IDV_B_B", "IDV_B_C", "IDV_C", "IDV_D", "IDV_E", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"] as const;
+
 export const AwardTypeCodes = {
   contracts: ["A", "B", "C", "D"],
   idvs: ["IDV_A", "IDV_B", "IDV_B_A", "IDV_B_B", "IDV_B_C", "IDV_C", "IDV_D", "IDV_E"],
