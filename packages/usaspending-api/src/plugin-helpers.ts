@@ -76,7 +76,9 @@ export function validateParams<T>(schema: z.ZodType<T>, params: Record<string, u
       const issue = err.issues[0];
       const field = issue.path.join(".");
       const expected = issue.message;
-      throw new USAValidationError(field, (params as any)?.[field], expected);
+      let val: unknown = params;
+      for (const seg of issue.path) val = (val as any)?.[seg];
+      throw new USAValidationError(field, val, expected);
     }
     throw err;
   }

@@ -265,12 +265,15 @@ function makeCategoryEndpoint(subPath: CategorySubPath) {
   };
 }
 
+const GEO_SCOPES = ["place_of_performance", "recipient_location"] as const;
+const GEO_LAYERS = ["state", "county", "district"] as const;
+
 async function spending_by_geography(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
   return _spendingByGeography({
     filters,
-    scope: params?.scope != null ? String(params.scope) as any : undefined,
-    geo_layer: params?.geo_layer != null ? String(params.geo_layer) as any : undefined,
+    scope: params?.scope != null ? requireEnum(params, "scope", GEO_SCOPES) as any : undefined,
+    geo_layer: params?.geo_layer != null ? requireEnum(params, "geo_layer", GEO_LAYERS) as any : undefined,
   });
 }
 
@@ -719,9 +722,9 @@ export const usaspendingPlugin: GovDataPlugin = {
     disaster_spending_by_geography: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _disasterSpendingByGeography({
         def_codes: params?.def_codes != null ? String(params.def_codes).split(",").map(s => s.trim()) : undefined,
-        spending_type: params?.spending_type != null ? String(params.spending_type) : undefined,
-        geo_layer: params?.geo_layer != null ? String(params.geo_layer) : undefined,
-        scope: params?.scope != null ? String(params.scope) : undefined,
+        spending_type: params?.spending_type != null ? requireEnum(params, "spending_type", ["obligation", "outlay", "face_value_of_loan"] as const) : undefined,
+        geo_layer: params?.geo_layer != null ? requireEnum(params, "geo_layer", GEO_LAYERS) : undefined,
+        scope: params?.scope != null ? requireEnum(params, "scope", GEO_SCOPES) : undefined,
       });
     },
 
@@ -732,7 +735,7 @@ export const usaspendingPlugin: GovDataPlugin = {
         page: toNumber(params?.page),
         limit: toNumber(params?.limit),
         sort_field: params?.sort_field != null ? String(params.sort_field) : undefined,
-        sort_direction: params?.sort_direction != null ? String(params.sort_direction) : undefined,
+        sort_direction: params?.sort_direction != null ? toOrder(params.sort_direction) : undefined,
       });
     },
     federal_account_detail: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -1041,7 +1044,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _bulkDownloadListMonthlyFiles({
         agency: agencyRaw === "all" ? "all" : requireNumber(params, "agency"),
         fiscal_year: requireNumber(params, "fiscal_year"),
-        type: requireParam(params, "type") as any,
+        type: requireEnum(params, "type", ["contracts", "assistance", "sub_contracts", "sub_grants"] as const) as any,
       });
     },
     bulk_download_awards: async (params?: Record<string, unknown>): Promise<GovResult> => {

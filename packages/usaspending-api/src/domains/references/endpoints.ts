@@ -23,8 +23,8 @@ export async function _refToptierAgencies(
   options?: ClientOptions,
 ): Promise<USAResult<"ref_toptier_agencies">> {
   const q: Record<string, string> = {};
-  if (params?.sort) q.sort = params.sort;
-  if (params?.order) q.order = params.order;
+  if (params?.sort != null) q.sort = params.sort;
+  if (params?.order != null) q.order = params.order;
   const raw = await usaGet(
     "/api/v2/references/toptier_agencies/",
     ToptierAgenciesResponseSchema,
@@ -136,7 +136,7 @@ export async function _refFilterTreePsc(
 ): Promise<USAResult<"ref_filter_tree_psc">> {
   const q: Record<string, string> = {};
   if (params?.depth != null) q.depth = String(params.depth);
-  if (params?.filter) q.filter = params.filter;
+  if (params?.filter != null) q.filter = params.filter;
   const raw = await usaGet(
     "/api/v2/references/filter_tree/psc/",
     FilterTreeResponseSchema,
@@ -152,7 +152,7 @@ export async function _refFilterTreeTas(
 ): Promise<USAResult<"ref_filter_tree_tas">> {
   const q: Record<string, string> = {};
   if (params?.depth != null) q.depth = String(params.depth);
-  if (params?.filter) q.filter = params.filter;
+  if (params?.filter != null) q.filter = params.filter;
   const raw = await usaGet(
     "/api/v2/references/filter_tree/tas/",
     FilterTreeResponseSchema,
@@ -203,7 +203,7 @@ export async function _refCfdaTotals(
   options?: ClientOptions,
 ): Promise<USAResult<"ref_cfda_totals">> {
   const q: Record<string, string> = {};
-  if (params?.cfda) q.cfda = params.cfda;
+  if (params?.cfda != null) q.cfda = params.cfda;
   const raw = await usaGet(
     "/api/v2/references/cfda/totals/",
     CfdaTotalsResponseSchema,

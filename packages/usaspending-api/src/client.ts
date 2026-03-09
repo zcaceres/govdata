@@ -35,8 +35,10 @@ async function _fetchWithRetry(
       let message = `HTTP ${response.status}`;
       try {
         const body = await response.json();
-        if (body && typeof body === "object" && "detail" in body) {
-          message = String(body.detail);
+        if (body && typeof body === "object") {
+          if ("detail" in body) message = String(body.detail);
+          else if ("message" in body) message = String(body.message);
+          else if ("messages" in body && Array.isArray(body.messages)) message = body.messages.join("; ");
         }
       } catch {}
       throw new GovApiError(response.status, message);

@@ -6,6 +6,9 @@ const filterParams = [
   { name: "end_date", type: "string", required: false },
   { name: "award_type", type: "string", required: false, values: ["contracts", "idvs", "grants", "direct_payments", "loans", "other"] },
   { name: "agency", type: "string", required: false },
+  { name: "naics_code", type: "string", required: false },
+  { name: "recipient", type: "string", required: false },
+  { name: "state", type: "string", required: false },
 ];
 
 const fileFormatParam = { name: "file_format", type: "string", required: false, values: ["csv", "tsv"] };
