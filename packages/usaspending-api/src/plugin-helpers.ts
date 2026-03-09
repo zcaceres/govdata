@@ -1,5 +1,7 @@
 import type { GovResult } from "govdata-core";
 import { GovValidationError } from "govdata-core";
+import { z } from "zod";
+import { USAValidationError } from "./errors";
 import { AwardTypeCodes } from "./shared-schemas";
 
 export function toNumber(val: unknown): number | undefined {
@@ -64,5 +66,19 @@ export function buildFilters(params: Record<string, unknown>) {
   }
 
   return filters;
+}
+
+export function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>): T {
+  try {
+    return schema.parse(params);
+  } catch (err) {
+    if (err instanceof z.ZodError) {
+      const issue = err.issues[0];
+      const field = issue.path.join(".");
+      const expected = issue.message;
+      throw new USAValidationError(field, (params as any)?.[field], expected);
+    }
+    throw err;
+  }
 }
 

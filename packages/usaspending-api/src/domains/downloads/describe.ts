@@ -83,7 +83,7 @@ export const downloadsEndpoints: EndpointDescription[] = [
     path: "/api/v2/download/disaster/",
     description: "Generate a disaster spending download file",
     params: [
-      { name: "def_codes", type: "string", required: true },
+      { name: "def_codes", type: "string", required: false },
     ],
     responseFields: ["status_url", "file_name", "file_url", "download_request_id", "status", "message"],
   },

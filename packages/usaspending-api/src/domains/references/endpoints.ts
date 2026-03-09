@@ -64,8 +64,8 @@ export async function _refGlossary(
   options?: ClientOptions,
 ): Promise<USAResult<"ref_glossary">> {
   const q: Record<string, string> = {};
-  if (params?.page) q.page = String(params.page);
-  if (params?.limit) q.limit = String(params.limit);
+  if (params?.page != null) q.page = String(params.page);
+  if (params?.limit != null) q.limit = String(params.limit);
   const raw = await usaGet(
     "/api/v2/references/glossary/",
     GlossaryResponseSchema,

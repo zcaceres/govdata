@@ -46,14 +46,14 @@ export const reportingEndpoints: EndpointDescription[] = [
   },
   {
     name: "reporting_differences",
-    path: "/api/v2/reporting/agencies/{toptier_code}/{fiscal_year}/{fiscal_period}/differences/",
+    path: "/api/v2/reporting/agencies/{toptier_code}/differences/",
     description: "Get TAS/GTAS obligation differences for an agency in a specific fiscal period",
     params: agencyPeriodParams,
     responseFields: ["tas", "file_a_obligation", "file_b_obligation", "difference"],
   },
   {
     name: "reporting_discrepancies",
-    path: "/api/v2/reporting/agencies/{toptier_code}/{fiscal_year}/{fiscal_period}/discrepancies/",
+    path: "/api/v2/reporting/agencies/{toptier_code}/discrepancies/",
     description: "Get TAS discrepancies (missing TAS accounts) for an agency in a specific fiscal period",
     params: agencyPeriodParams,
     responseFields: ["tas", "account_number", "gtas_obligation_amount"],

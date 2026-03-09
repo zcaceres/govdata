@@ -20,11 +20,11 @@ function buildDisasterBody(params?: DisasterFilterParams): Record<string, unknow
   const body: Record<string, unknown> = {
     filter: { def_codes: params?.def_codes ?? ["L", "M", "N", "O", "P", "U", "V"] },
   };
-  if (params?.spending_type) body.spending_type = params.spending_type;
-  if (params?.sort) body.sort = params.sort;
-  if (params?.order) body.order = params.order;
-  if (params?.page) body.page = params.page;
-  if (params?.limit) body.limit = params.limit;
+  if (params?.spending_type != null) body.spending_type = params.spending_type;
+  if (params?.sort != null) body.sort = params.sort;
+  if (params?.order != null) body.order = params.order;
+  if (params?.page != null) body.page = params.page;
+  if (params?.limit != null) body.limit = params.limit;
   return body;
 }
 
@@ -33,8 +33,8 @@ function buildGeoBody(params?: DisasterFilterParams): Record<string, unknown> {
     filter: { def_codes: params?.def_codes ?? ["L", "M", "N", "O", "P", "U", "V"] },
     spending_type: params?.spending_type ?? "obligation",
   };
-  if (params?.geo_layer) body.geo_layer = params.geo_layer;
-  if (params?.scope) body.scope = params.scope;
+  if (params?.geo_layer != null) body.geo_layer = params.geo_layer;
+  if (params?.scope != null) body.scope = params.scope;
   return body;
 }
 

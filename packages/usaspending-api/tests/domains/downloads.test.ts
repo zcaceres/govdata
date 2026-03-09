@@ -430,12 +430,12 @@ describe("downloads domain", () => {
       expect(required[0].name).toBe("file_name");
     });
 
-    it("download_disaster requires def_codes", () => {
+    it("download_disaster has optional def_codes", () => {
       const ep = downloadsEndpoints.find(e => e.name === "download_disaster");
       expect(ep).toBeDefined();
-      const required = ep!.params.filter(p => p.required);
-      expect(required.length).toBe(1);
-      expect(required[0].name).toBe("def_codes");
+      const defCodesParam = ep!.params.find(p => p.name === "def_codes");
+      expect(defCodesParam).toBeDefined();
+      expect(defCodesParam!.required).toBe(false);
     });
 
     it("bulk_download_list_agencies_accounts has no params", () => {

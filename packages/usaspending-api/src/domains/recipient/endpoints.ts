@@ -33,12 +33,12 @@ export async function _recipientList(
   options?: ClientOptions,
 ): Promise<USAResult<"recipient_list">> {
   const body: Record<string, unknown> = {};
-  if (params?.keyword) body.keyword = params.keyword;
-  if (params?.award_type) body.award_type = params.award_type;
-  if (params?.page) body.page = params.page;
-  if (params?.limit) body.limit = params.limit;
-  if (params?.order) body.order = params.order;
-  if (params?.sort) body.sort = params.sort;
+  if (params?.keyword != null) body.keyword = params.keyword;
+  if (params?.award_type != null) body.award_type = params.award_type;
+  if (params?.page != null) body.page = params.page;
+  if (params?.limit != null) body.limit = params.limit;
+  if (params?.order != null) body.order = params.order;
+  if (params?.sort != null) body.sort = params.sort;
   const raw = await usaPost(
     "/api/v2/recipient/",
     RecipientListResponseSchema,
@@ -55,8 +55,8 @@ export async function _recipientCount(
   options?: ClientOptions,
 ): Promise<USAResult<"recipient_count">> {
   const body: Record<string, unknown> = {};
-  if (params?.keyword) body.keyword = params.keyword;
-  if (params?.award_type) body.award_type = params.award_type;
+  if (params?.keyword != null) body.keyword = params.keyword;
+  if (params?.award_type != null) body.award_type = params.award_type;
   const raw = await usaPost(
     "/api/v2/recipient/count/",
     RecipientCountSchema,
@@ -72,7 +72,7 @@ export async function _recipientDetail(
   options?: ClientOptions,
 ): Promise<USAResult<"recipient_detail">> {
   const q: Record<string, string> = {};
-  if (params?.year) q.year = params.year;
+  if (params?.year != null) q.year = params.year;
   const raw = await usaGet(
     `/api/v2/recipient/${enc(recipientId)}/`,
     RecipientDetailSchema,
@@ -88,7 +88,7 @@ export async function _recipientChildren(
   options?: ClientOptions,
 ): Promise<USAResult<"recipient_children">> {
   const q: Record<string, string> = {};
-  if (params?.year) q.year = params.year;
+  if (params?.year != null) q.year = params.year;
   const raw = await usaGet(
     `/api/v2/recipient/${enc(recipientId)}/children/`,
     RecipientChildrenResponseSchema,
@@ -104,7 +104,7 @@ export async function _stateDetail(
   options?: ClientOptions,
 ): Promise<USAResult<"state_detail">> {
   const q: Record<string, string> = {};
-  if (params?.year) q.year = String(params.year);
+  if (params?.year != null) q.year = String(params.year);
   const raw = await usaGet(
     `/api/v2/recipient/state/${enc(fips)}/`,
     StateDetailSchema,
@@ -120,7 +120,7 @@ export async function _stateAwards(
   options?: ClientOptions,
 ): Promise<USAResult<"state_awards">> {
   const q: Record<string, string> = {};
-  if (params?.year) q.year = String(params.year);
+  if (params?.year != null) q.year = String(params.year);
   const raw = await usaGet(
     `/api/v2/recipient/state/awards/${enc(fips)}/`,
     StateAwardsResponseSchema,

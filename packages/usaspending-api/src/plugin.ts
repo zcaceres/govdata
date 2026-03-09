@@ -358,7 +358,7 @@ async function state_awards(params?: Record<string, unknown>): Promise<GovResult
 function makeAutocompleteEndpoint(fn: (params: { search_text: string; limit?: number }, options?: any) => Promise<GovResult>) {
   return async (params?: Record<string, unknown>): Promise<GovResult> => {
     return fn({
-      search_text: String(params?.search_text ?? ""),
+      search_text: requireParam(params, "search_text"),
       limit: toNumber(params?.limit),
     });
   };
@@ -608,7 +608,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     autocomplete_cfda: makeAutocompleteEndpoint(_autocompleteCfda),
     autocomplete_city: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _autocompleteCity({
-        search_text: String(params?.search_text ?? ""),
+        search_text: requireParam(params, "search_text"),
         limit: toNumber(params?.limit),
         filter: params?.country_code ? { country_code: String(params.country_code), scope: String(params.scope ?? "recipient_location") } : undefined,
       });

@@ -1,6 +1,4 @@
-import { z } from "zod";
 import type { ClientOptions } from "govdata-core";
-import { USAValidationError } from "../../errors";
 import { usaPost } from "../../client";
 import {
   AwardSearchParamsSchema,
@@ -27,20 +25,7 @@ import type {
 } from "./types";
 import { wrapResponse } from "../../response";
 import type { USAResult } from "../../response";
-
-function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>): T {
-  try {
-    return schema.parse(params);
-  } catch (err) {
-    if (err instanceof z.ZodError) {
-      const issue = err.issues[0];
-      const field = issue.path.join(".");
-      const expected = issue.message;
-      throw new USAValidationError(field, (params as any)?.[field], expected);
-    }
-    throw err;
-  }
-}
+import { validateParams } from "../../plugin-helpers";
 
 export async function _searchAwards(
   params?: AwardSearchParams,
