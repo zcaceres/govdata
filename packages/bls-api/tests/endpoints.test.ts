@@ -206,6 +206,19 @@ describe("createBls factory", () => {
   });
 });
 
+describe("multi-error validation", () => {
+  it("reports all validation errors, not just the first", async () => {
+    try {
+      await timeseries({ series_id: "CUUR0000SA0", start_year: "not_a_number" as any, end_year: "also_bad" as any });
+      expect(true).toBe(false); // should not reach
+    } catch (err: any) {
+      // Should mention both start_year and end_year issues
+      expect(err.message).toContain("start_year");
+      expect(err.message).toContain("end_year");
+    }
+  });
+});
+
 describe("blsPlugin", () => {
   it("has correct prefix", () => {
     expect(blsPlugin.prefix).toBe("bls");
@@ -227,6 +240,17 @@ describe("blsPlugin", () => {
 
   it("plugin timeseries rejects whitespace-only series_id", () => {
     expect(() => blsPlugin.endpoints.timeseries({ series_id: "  " })).toThrow();
+  });
+
+  it("plugin timeseries splits space-separated series_id", async () => {
+    let capturedBody: any;
+    globalThis.fetch = (async (_url: any, init?: RequestInit) => {
+      capturedBody = JSON.parse(init?.body as string);
+      return new Response(JSON.stringify(multiSeriesFixture), { status: 200 });
+    }) as unknown as typeof fetch;
+
+    await blsPlugin.endpoints.timeseries({ series_id: "CUUR0000SA0 LNS14000000" });
+    expect(capturedBody.seriesid).toEqual(["CUUR0000SA0", "LNS14000000"]);
   });
 
   it("plugin timeseries splits comma-separated series_id", async () => {

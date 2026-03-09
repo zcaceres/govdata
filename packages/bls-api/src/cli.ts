@@ -8,7 +8,7 @@ async function main() {
   const jsonFlag = args.includes("--json");
   const filteredArgs = args.filter((a) => a !== "--json");
 
-  if (filteredArgs.length === 0 || args.includes("--help")) {
+  if (filteredArgs.length === 0 || (args.includes("--help") && !filteredArgs[0]?.match(/^[a-z]/))) {
     const { endpoints } = blsPlugin.describe();
     console.log("Usage: bls-api <endpoint> [--param value ...]\n");
     console.log("Endpoints:");

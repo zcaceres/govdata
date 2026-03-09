@@ -18,6 +18,7 @@ export type {
   DataPoint,
   Series,
   Survey,
+  PopularSeries,
   Meta,
   ClientOptions,
   TimeseriesResult,

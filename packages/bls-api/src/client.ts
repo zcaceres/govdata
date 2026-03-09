@@ -17,7 +17,16 @@ async function _fetchWithRetry(
   initialRetryMs: number,
 ): Promise<Response> {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
-    const response = await fetch(url, init);
+    let response: Response;
+    try {
+      response = await fetch(url, init);
+    } catch (err: unknown) {
+      // Network-level error — redact API key from message
+      if (err instanceof Error && err.message.includes("registrationkey=")) {
+        err.message = err.message.replace(/registrationkey=[^&\s]*/g, "registrationkey=***");
+      }
+      throw err;
+    }
 
     if (response.status === 429) {
       if (attempt === maxRetries) {
@@ -55,7 +64,7 @@ function isRateLimitMessage(messages: string[]): boolean {
 }
 
 function checkBLSStatus(json: { status?: string; message?: string[] }): void {
-  if (json.status && json.status !== "REQUEST_SUCCEEDED") {
+  if (json.status != null && json.status !== "REQUEST_SUCCEEDED") {
     const msg =
       json.message && json.message.length > 0
         ? json.message.join("; ")
@@ -67,6 +76,11 @@ function checkBLSStatus(json: { status?: string; message?: string[] }): void {
   }
 }
 
+/**
+ * POST to the BLS API. Does NOT inject the API key — callers must include
+ * `registrationkey` in the body themselves (see `buildPostBody` in endpoints.ts).
+ * This is intentional: POST APIs put the key in the body, not the URL.
+ */
 export async function blsPost<T>(
   path: string,
   schema: z.ZodType<T>,

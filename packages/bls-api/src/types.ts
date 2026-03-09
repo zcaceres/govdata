@@ -22,12 +22,13 @@ export type DataPoint = z.infer<typeof DataPointSchema>;
 export type Series = z.infer<typeof SeriesSchema>;
 export type Survey = z.infer<typeof SurveySchema>;
 
+export type PopularSeries = { seriesID: string };
 export type EndpointKind = "timeseries" | "surveys" | "popular";
 
 export interface KindDataMap {
   timeseries: Series[];
   surveys: Survey[];
-  popular: Series[];
+  popular: PopularSeries[];
 }
 
 export interface BlsResult<K extends EndpointKind = EndpointKind> extends GovResult<K> {

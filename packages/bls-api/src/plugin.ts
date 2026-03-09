@@ -17,8 +17,12 @@ export const blsPlugin: GovDataPlugin = {
       }
       // Handle CLI string → array coercion for series_id
       const coerced = { ...params };
-      if (typeof coerced.series_id === "string" && coerced.series_id.includes(",")) {
-        coerced.series_id = coerced.series_id.split(",").map((s: string) => s.trim());
+      if (typeof coerced.series_id === "string") {
+        if (coerced.series_id.includes(",")) {
+          coerced.series_id = coerced.series_id.split(",").map((s: string) => s.trim()).filter(Boolean);
+        } else if (coerced.series_id.includes(" ")) {
+          coerced.series_id = coerced.series_id.split(/\s+/).filter(Boolean);
+        }
       }
       // Coerce boolean strings from CLI
       for (const key of ["calculations", "annual_averages", "catalog", "aspects"] as const) {

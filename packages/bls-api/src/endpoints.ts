@@ -24,10 +24,17 @@ function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>
     return schema.parse(params);
   } catch (err) {
     if (err instanceof z.ZodError) {
-      const issue = err.issues[0];
-      const field = issue.path.join(".") || "input";
-      const expected = issue.message;
-      throw new GovValidationError(field, (params as any)?.[field], expected);
+      if (err.issues.length === 1) {
+        const issue = err.issues[0];
+        const field = issue.path.join(".") || "input";
+        throw new GovValidationError(field, (params as any)?.[field], issue.message);
+      }
+      // Multiple errors: join them all
+      const messages = err.issues.map((issue) => {
+        const field = issue.path.join(".") || "input";
+        return `${field}: ${issue.message}`;
+      });
+      throw new GovValidationError("input", undefined, messages.join("; "));
     }
     throw err;
   }

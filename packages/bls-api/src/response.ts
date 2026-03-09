@@ -1,6 +1,6 @@
 import { createResult, escapeCSV, escapeMarkdownCell } from "govdata-core";
 import type { GovResult } from "govdata-core";
-import type { BlsResult, EndpointKind, Series, Survey, DataPoint, Meta } from "./types";
+import type { BlsResult, EndpointKind, Series, Survey, PopularSeries, DataPoint, Meta } from "./types";
 
 export type { BlsResult, EndpointKind };
 
@@ -28,6 +28,8 @@ function hasFootnotes(series: Series[]): boolean {
  */
 function wrapTimeseries(series: Series[], meta: Meta | null): BlsResult<"timeseries"> {
   const totalPoints = series.reduce((sum, s) => sum + (s.data?.length ?? 0), 0);
+  // Columns are computed globally across all series for consistent tabular output.
+  // If any series has calculations/aspects/footnotes, all series get those columns (with empty cells for missing).
   const showCalcs = hasCalculations(series);
   const showAspects = hasAspects(series);
   const showFootnotes = hasFootnotes(series);
@@ -196,7 +198,7 @@ function wrapSurveys(surveys: Survey[], meta: Meta | null): BlsResult<"surveys">
 
 function wrapPopular(series: Series[], meta: Meta | null): BlsResult<"popular"> {
   // Popular returns just seriesIDs (no data), make a simple table
-  const rows = series.map((s) => ({ seriesID: s.seriesID }));
+  const rows: PopularSeries[] = series.map((s) => ({ seriesID: s.seriesID }));
   return createResult(rows, meta, "popular") as BlsResult<"popular">;
 }
 

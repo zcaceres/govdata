@@ -49,9 +49,10 @@ for (const endpoint of describe().endpoints) {
     if (!param.required) {
       schema = schema.optional();
     }
-    schemaShape[param.name] = schema.describe(
-      param.values ? `One of: ${param.values.join(", ")}` : param.type,
-    );
+    const description = param.name === "series_id"
+      ? "BLS series ID(s), comma-separated for multiple"
+      : param.values ? `One of: ${param.values.join(", ")}` : param.type;
+    schemaShape[param.name] = schema.describe(description);
   }
 
   Object.assign(schemaShape, formatParam);
@@ -63,6 +64,10 @@ for (const endpoint of describe().endpoints) {
     async (args) => {
       try {
         const { format, ...params } = args;
+        // Split comma-separated series_id for MCP callers (matching plugin.ts pattern)
+        if (typeof params.series_id === "string" && params.series_id.includes(",")) {
+          (params as any).series_id = params.series_id.split(",").map((s: string) => s.trim());
+        }
         const hasParams = Object.keys(params).length > 0;
         const result = await fn(hasParams ? params : undefined);
         return { content: [{ type: "text" as const, text: formatResult(result, format as string) }] };

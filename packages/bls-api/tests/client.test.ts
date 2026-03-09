@@ -121,6 +121,44 @@ describe("API key redaction", () => {
   });
 });
 
+describe("network error API key redaction", () => {
+  it("redacts registrationkey from network error messages", async () => {
+    const originalKey = process.env.BLS_API_KEY;
+    process.env.BLS_API_KEY = "SECRET_NET_KEY_99999";
+
+    globalThis.fetch = (() => {
+      throw new Error("fetch failed: https://api.bls.gov/publicAPI/v2/surveys/?registrationkey=SECRET_NET_KEY_99999 ECONNREFUSED");
+    }) as unknown as typeof fetch;
+
+    try {
+      await blsGet("/surveys/", SimpleSchema, { maxRetries: 0 });
+      expect(true).toBe(false); // should not reach
+    } catch (err: any) {
+      expect(err.message).not.toContain("SECRET_NET_KEY_99999");
+      expect(err.message).toContain("registrationkey=***");
+    } finally {
+      if (originalKey != null) {
+        process.env.BLS_API_KEY = originalKey;
+      } else {
+        delete process.env.BLS_API_KEY;
+      }
+    }
+  });
+
+  it("does not modify network errors without registrationkey", async () => {
+    globalThis.fetch = (() => {
+      throw new Error("fetch failed: ECONNREFUSED");
+    }) as unknown as typeof fetch;
+
+    try {
+      await blsGet("/surveys/", SimpleSchema, { maxRetries: 0 });
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toBe("fetch failed: ECONNREFUSED");
+    }
+  });
+});
+
 describe("in-band rate limit detection", () => {
   it("throws GovRateLimitError for daily threshold message", async () => {
     mockFetch({
