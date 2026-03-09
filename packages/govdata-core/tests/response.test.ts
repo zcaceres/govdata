@@ -1,5 +1,56 @@
 import { describe, it, expect } from "bun:test";
-import { createResult, escapeCSV, arrayToMarkdownTable, arrayToCSV } from "../src/response";
+import { createResult, stringifyValue, escapeCSV, escapeMarkdownCell, arrayToMarkdownTable, arrayToCSV } from "../src/response";
+
+describe("stringifyValue", () => {
+  it("returns empty string for null/undefined", () => {
+    expect(stringifyValue(null)).toBe("");
+    expect(stringifyValue(undefined)).toBe("");
+  });
+
+  it("returns String() for primitives", () => {
+    expect(stringifyValue("hello")).toBe("hello");
+    expect(stringifyValue(42)).toBe("42");
+    expect(stringifyValue(true)).toBe("true");
+  });
+
+  it("extracts name from object", () => {
+    expect(stringifyValue({ name: "EPA", id: 145 })).toBe("EPA");
+  });
+
+  it("extracts title from object when no name", () => {
+    expect(stringifyValue({ title: "My Doc", id: 1 })).toBe("My Doc");
+  });
+
+  it("extracts slug from object when no name/title", () => {
+    expect(stringifyValue({ slug: "epa", id: 145 })).toBe("epa");
+  });
+
+  it("extracts label from object when no name/title/slug", () => {
+    expect(stringifyValue({ label: "Category A", count: 10 })).toBe("Category A");
+  });
+
+  it("falls back to JSON for objects without label fields", () => {
+    expect(stringifyValue({ count: 5, last_updated: "2025-01-01" })).toBe(
+      '{"count":5,"last_updated":"2025-01-01"}',
+    );
+  });
+
+  it("joins array of primitives with commas", () => {
+    expect(stringifyValue(["a", "b", "c"])).toBe("a, b, c");
+  });
+
+  it("extracts names from array of objects", () => {
+    const agencies = [
+      { name: "EPA", id: 145 },
+      { name: "DOE", id: 136 },
+    ];
+    expect(stringifyValue(agencies)).toBe("EPA, DOE");
+  });
+
+  it("handles empty array", () => {
+    expect(stringifyValue([])).toBe("");
+  });
+});
 
 describe("escapeCSV", () => {
   it("returns plain strings unchanged", () => {
@@ -31,6 +82,24 @@ describe("arrayToMarkdownTable", () => {
     expect(md).toContain("| name | age |");
     expect(md).toContain("| --- | --- |");
     expect(md).toContain("| Alice | 30 |");
+  });
+});
+
+describe("escapeMarkdownCell", () => {
+  it("renders array of objects by extracting names", () => {
+    const agencies = [{ name: "EPA", id: 145 }, { name: "DOE", id: 136 }];
+    expect(escapeMarkdownCell(agencies)).toBe("EPA, DOE");
+  });
+
+  it("renders nested object without [object Object]", () => {
+    const pageViews = { count: 500, last_updated: "2025-01-01" };
+    const result = escapeMarkdownCell(pageViews);
+    expect(result).not.toContain("[object Object]");
+    expect(result).toContain("500");
+  });
+
+  it("escapes pipes in stringified values", () => {
+    expect(escapeMarkdownCell({ name: "a|b" })).toBe("a\\|b");
   });
 });
 

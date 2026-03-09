@@ -9,8 +9,28 @@ export interface GovResult<K extends string = string> {
   summary(): string;
 }
 
+/**
+ * Stringify a value for display in tables.
+ * Arrays of objects extract a label field (name/title/slug); plain objects
+ * try the same fields then fall back to JSON. Primitives use String().
+ */
+export function stringifyValue(value: unknown): string {
+  if (value == null) return "";
+  if (Array.isArray(value)) {
+    return value.map((item) => stringifyValue(item)).join(", ");
+  }
+  if (typeof value === "object") {
+    const obj = value as Record<string, unknown>;
+    for (const key of ["name", "title", "slug", "label"]) {
+      if (typeof obj[key] === "string") return obj[key] as string;
+    }
+    return JSON.stringify(value);
+  }
+  return String(value);
+}
+
 export function escapeCSV(value: unknown): string {
-  const str = value == null ? "" : String(value);
+  const str = stringifyValue(value);
   if (str.includes(",") || str.includes('"') || str.includes("\n")) {
     return `"${str.replace(/"/g, '""')}"`;
   }
@@ -19,7 +39,7 @@ export function escapeCSV(value: unknown): string {
 
 export function escapeMarkdownCell(value: unknown): string {
   if (value == null) return "";
-  return String(value).replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
+  return stringifyValue(value).replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
 }
 
 export function arrayToMarkdownTable(items: Record<string, unknown>[]): string {
