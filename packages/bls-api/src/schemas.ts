@@ -10,6 +10,7 @@ export const TimeseriesParamsSchema = z
     calculations: z.boolean().optional(),
     annual_averages: z.boolean().optional(),
     catalog: z.boolean().optional(),
+    aspects: z.boolean().optional(),
   })
   .strict()
   .refine((d) => !(d.end_year && !d.start_year), {
@@ -30,6 +31,17 @@ export const FootnoteSchema = z.object({
   text: z.string().optional(),
 });
 
+export const CalculationsSchema = z.object({
+  net_changes: z.record(z.string(), z.string()).optional(),
+  pct_changes: z.record(z.string(), z.string()).optional(),
+});
+
+export const AspectSchema = z.object({
+  name: z.string(),
+  value: z.string(),
+  footnotes: z.array(FootnoteSchema).optional(),
+});
+
 export const DataPointSchema = z.object({
   year: z.string(),
   period: z.string(),
@@ -37,7 +49,8 @@ export const DataPointSchema = z.object({
   latest: z.string().optional(),
   value: z.string(),
   footnotes: z.array(FootnoteSchema).optional(),
-  calculations: z.record(z.string(), z.unknown()).optional(),
+  calculations: CalculationsSchema.optional(),
+  aspects: z.array(AspectSchema).optional(),
 });
 
 export const SeriesSchema = z.object({

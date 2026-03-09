@@ -40,6 +40,7 @@ function buildPostBody(params: {
   calculations?: boolean;
   annual_averages?: boolean;
   catalog?: boolean;
+  aspects?: boolean;
 }): Record<string, unknown> {
   const body: Record<string, unknown> = {
     seriesid: Array.isArray(params.series_id) ? params.series_id : [params.series_id],
@@ -49,6 +50,7 @@ function buildPostBody(params: {
   if (params.calculations != null) body.calculations = params.calculations;
   if (params.annual_averages != null) body.annualaverage = params.annual_averages;
   if (params.catalog != null) body.catalog = params.catalog;
+  if (params.aspects != null) body.aspects = params.aspects;
 
   const apiKey = process.env.BLS_API_KEY;
   if (apiKey) body.registrationkey = apiKey;

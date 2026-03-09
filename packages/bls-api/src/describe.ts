@@ -14,8 +14,9 @@ const endpoints: EndpointDescription[] = [
       { name: "calculations", type: "boolean", required: false },
       { name: "annual_averages", type: "boolean", required: false },
       { name: "catalog", type: "boolean", required: false },
+      { name: "aspects", type: "boolean", required: false },
     ],
-    responseFields: ["seriesID", "year", "period", "periodName", "value"],
+    responseFields: ["seriesID", "year", "period", "periodName", "value", "footnotes", "calculations", "catalog", "aspects"],
   },
   {
     name: "surveys",

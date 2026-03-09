@@ -21,7 +21,7 @@ export const blsPlugin: GovDataPlugin = {
         coerced.series_id = coerced.series_id.split(",").map((s: string) => s.trim());
       }
       // Coerce boolean strings from CLI
-      for (const key of ["calculations", "annual_averages", "catalog"] as const) {
+      for (const key of ["calculations", "annual_averages", "catalog", "aspects"] as const) {
         if (coerced[key] === "true") coerced[key] = true;
         else if (coerced[key] === "false") coerced[key] = false;
       }

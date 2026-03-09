@@ -12,6 +12,9 @@ export { blsPlugin } from "./plugin";
 export type {
   TimeseriesParams,
   PopularParams,
+  Footnote,
+  Calculations,
+  Aspect,
   DataPoint,
   Series,
   Survey,

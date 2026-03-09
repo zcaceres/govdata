@@ -57,12 +57,13 @@ describe("TimeseriesParamsSchema", () => {
     expect(result.success).toBe(false);
   });
 
-  it("accepts boolean params", () => {
+  it("accepts boolean params including aspects", () => {
     const result = TimeseriesParamsSchema.safeParse({
       series_id: "CUUR0000SA0",
       calculations: true,
       annual_averages: true,
       catalog: false,
+      aspects: true,
     });
     expect(result.success).toBe(true);
   });
@@ -78,6 +79,65 @@ describe("BLSResponseSchema", () => {
     if (result.success) {
       expect(result.data.Results.series).toHaveLength(1);
       expect(result.data.Results.series[0].seriesID).toBe("CUUR0000SA0");
+    }
+  });
+
+  it("parses multi-series fixture", async () => {
+    const fixture = await Bun.file(
+      new URL("../fixtures/timeseries-multi.json", import.meta.url).pathname,
+    ).json();
+    const result = BLSResponseSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      expect(result.data.Results.series).toHaveLength(2);
+      const ids = result.data.Results.series.map((s) => s.seriesID).sort();
+      expect(ids).toEqual(["CUUR0000SA0", "LNS14000000"]);
+    }
+  });
+
+  it("parses year-range fixture", async () => {
+    const fixture = await Bun.file(
+      new URL("../fixtures/timeseries-year-range.json", import.meta.url).pathname,
+    ).json();
+    const result = BLSResponseSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const years = new Set(result.data.Results.series[0].data?.map((d) => d.year));
+      expect(years.has("2020")).toBe(true);
+      expect(years.has("2024")).toBe(true);
+      expect(years.has("2025")).toBe(false);
+    }
+  });
+
+  it("parses calculations fixture with net_changes and pct_changes", async () => {
+    const fixture = await Bun.file(
+      new URL("../fixtures/timeseries-calculations.json", import.meta.url).pathname,
+    ).json();
+    const result = BLSResponseSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const points = result.data.Results.series[0].data ?? [];
+      // Should have M13 annual average
+      const annual = points.find((p) => p.period === "M13");
+      expect(annual).toBeDefined();
+      expect(annual!.periodName).toBe("Annual");
+      // Should have calculations on data points
+      const withCalcs = points.filter((p) => p.calculations != null);
+      expect(withCalcs.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("parses catalog fixture with series metadata", async () => {
+    const fixture = await Bun.file(
+      new URL("../fixtures/timeseries-catalog.json", import.meta.url).pathname,
+    ).json();
+    const result = BLSResponseSchema.safeParse(fixture);
+    expect(result.success).toBe(true);
+    if (result.success) {
+      const series = result.data.Results.series[0];
+      expect(series.catalog).toBeDefined();
+      expect(series.catalog!.series_title).toBeDefined();
+      expect(series.catalog!.survey_name).toBeDefined();
     }
   });
 });

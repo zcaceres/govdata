@@ -100,16 +100,17 @@ describe("timeseries", () => {
     expect(capturedBody.endyear).toBe("2025");
   });
 
-  it("supports calculations and annual_averages flags", async () => {
+  it("supports calculations, annual_averages, and aspects flags", async () => {
     let capturedBody: any;
     globalThis.fetch = (async (_url: any, init?: RequestInit) => {
       capturedBody = JSON.parse(init?.body as string);
       return new Response(JSON.stringify(timeseriesFixture), { status: 200 });
     }) as unknown as typeof fetch;
 
-    await timeseries({ series_id: "CUUR0000SA0", calculations: true, annual_averages: true });
+    await timeseries({ series_id: "CUUR0000SA0", calculations: true, annual_averages: true, aspects: true });
     expect(capturedBody.calculations).toBe(true);
     expect(capturedBody.annualaverage).toBe(true);
+    expect(capturedBody.aspects).toBe(true);
   });
 
   it("throws validation error for missing series_id", async () => {
@@ -246,7 +247,8 @@ describe("blsPlugin", () => {
       return new Response(JSON.stringify(timeseriesFixture), { status: 200 });
     }) as unknown as typeof fetch;
 
-    await blsPlugin.endpoints.timeseries({ series_id: "CUUR0000SA0", calculations: "true" });
+    await blsPlugin.endpoints.timeseries({ series_id: "CUUR0000SA0", calculations: "true", aspects: "true" });
     expect(capturedBody.calculations).toBe(true);
+    expect(capturedBody.aspects).toBe(true);
   });
 });

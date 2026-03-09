@@ -99,7 +99,11 @@ export async function blsGet<T>(
   const maxRetries = options?.maxRetries ?? DEFAULT_MAX_RETRIES;
   const initialRetryMs = options?.initialRetryMs ?? DEFAULT_INITIAL_RETRY_MS;
 
-  const url = `${baseUrl}${path}`;
+  const apiKey = process.env.BLS_API_KEY;
+  const separator = path.includes("?") ? "&" : "?";
+  const url = apiKey
+    ? `${baseUrl}${path}${separator}registrationkey=${encodeURIComponent(apiKey)}`
+    : `${baseUrl}${path}`;
   const response = await _fetchWithRetry(url, undefined, maxRetries, initialRetryMs);
   const json = await response.json();
   checkBLSStatus(json);

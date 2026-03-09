@@ -9,15 +9,16 @@ desc("describe()", () => {
     expect(names).toEqual(["timeseries", "surveys", "popular"]);
   });
 
-  it("timeseries has 6 params with series_id required", () => {
+  it("timeseries has 7 params with series_id required", () => {
     const result = describe();
     const ts = result.endpoints.find((e) => e.name === "timeseries")!;
-    expect(ts.params).toHaveLength(6);
+    expect(ts.params).toHaveLength(7);
     const seriesId = ts.params.find((p) => p.name === "series_id")!;
     expect(seriesId.required).toBe(true);
     expect(seriesId.type).toBe("string");
     const optional = ts.params.filter((p) => !p.required);
-    expect(optional).toHaveLength(5);
+    expect(optional).toHaveLength(6);
+    expect(ts.params.find((p) => p.name === "aspects")).toBeDefined();
   });
 
   it("surveys has 0 params", () => {
