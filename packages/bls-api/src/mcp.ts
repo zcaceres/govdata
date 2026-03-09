@@ -1,16 +1,11 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { timeseries, surveys, popular, describe } from "./endpoints";
+import { blsPlugin } from "./plugin";
+import { describe } from "./endpoints";
 import type { BlsResult } from "./response";
 
 const server = new McpServer({ name: "bls-api", version: "0.1.0" });
-
-const endpointFns: Record<string, (params?: any) => Promise<BlsResult>> = {
-  timeseries,
-  surveys,
-  popular,
-};
 
 function formatResult(result: BlsResult, format: string): string {
   switch (format) {
@@ -31,7 +26,7 @@ const formatParam = {
 };
 
 for (const endpoint of describe().endpoints) {
-  const fn = endpointFns[endpoint.name];
+  const fn = blsPlugin.endpoints[endpoint.name];
   if (!fn) continue;
 
   const schemaShape: Record<string, z.ZodTypeAny> = {};
@@ -64,12 +59,16 @@ for (const endpoint of describe().endpoints) {
     async (args) => {
       try {
         const { format, ...params } = args;
-        // Split comma-separated series_id for MCP callers (matching plugin.ts pattern)
-        if (typeof params.series_id === "string" && params.series_id.includes(",")) {
-          (params as any).series_id = params.series_id.split(",").map((s: string) => s.trim());
+        // Split comma/space-separated series_id for MCP callers (defense-in-depth, plugin.ts also handles this)
+        if (typeof params.series_id === "string") {
+          if (params.series_id.includes(",")) {
+            (params as any).series_id = params.series_id.split(",").map((s: string) => s.trim()).filter(Boolean);
+          } else if (params.series_id.includes(" ")) {
+            (params as any).series_id = params.series_id.split(/\s+/).filter(Boolean);
+          }
         }
         const hasParams = Object.keys(params).length > 0;
-        const result = await fn(hasParams ? params : undefined);
+        const result = await fn(hasParams ? params : undefined) as BlsResult;
         return { content: [{ type: "text" as const, text: formatResult(result, format as string) }] };
       } catch (err: unknown) {
         return { content: [{ type: "text" as const, text: String((err as Error).message ?? err) }], isError: true };

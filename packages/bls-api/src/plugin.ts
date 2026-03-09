@@ -24,6 +24,10 @@ export const blsPlugin: GovDataPlugin = {
           coerced.series_id = coerced.series_id.split(/\s+/).filter(Boolean);
         }
       }
+      // Guard against empty array after splitting (e.g. "," or "  ")
+      if (Array.isArray(coerced.series_id) && coerced.series_id.length === 0) {
+        throw new GovValidationError("series_id", params.series_id, "Required");
+      }
       // Coerce boolean strings from CLI
       for (const key of ["calculations", "annual_averages", "catalog", "aspects"] as const) {
         if (coerced[key] === "true") coerced[key] = true;
@@ -33,8 +37,8 @@ export const blsPlugin: GovDataPlugin = {
       for (const key of ["start_year", "end_year"] as const) {
         if (coerced[key] != null) {
           const n = Number(coerced[key]);
-          if (!Number.isFinite(n)) {
-            throw new GovValidationError(key, coerced[key], "Must be a valid number");
+          if (!Number.isFinite(n) || n < 1900) {
+            throw new GovValidationError(key, coerced[key], "Must be a valid year (>= 1900)");
           }
           coerced[key] = n;
         }

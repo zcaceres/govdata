@@ -26,8 +26,12 @@ function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>
     if (err instanceof z.ZodError) {
       if (err.issues.length === 1) {
         const issue = err.issues[0];
-        const field = issue.path.join(".") || "input";
-        throw new GovValidationError(field, (params as any)?.[field], issue.message);
+        const field = issue.path.join(".");
+        if (field) {
+          throw new GovValidationError(field, (params as any)?.[field], issue.message);
+        }
+        // Root-level error (e.g. .strict() rejection) — no specific field
+        throw new GovValidationError("input", undefined, issue.message);
       }
       // Multiple errors: join them all
       const messages = err.issues.map((issue) => {

@@ -219,6 +219,18 @@ describe("multi-error validation", () => {
   });
 });
 
+describe("strict validation errors", () => {
+  it("unknown key error does not include 'got undefined'", async () => {
+    try {
+      await timeseries({ series_id: "CUUR0000SA0", bad_key: "oops" } as any);
+      expect(true).toBe(false);
+    } catch (err: any) {
+      expect(err.message).toContain("Unrecognized key");
+      expect(err.message).not.toContain("got 'undefined'");
+    }
+  });
+});
+
 describe("blsPlugin", () => {
   it("has correct prefix", () => {
     expect(blsPlugin.prefix).toBe("bls");
@@ -251,6 +263,27 @@ describe("blsPlugin", () => {
 
     await blsPlugin.endpoints.timeseries({ series_id: "CUUR0000SA0 LNS14000000" });
     expect(capturedBody.seriesid).toEqual(["CUUR0000SA0", "LNS14000000"]);
+  });
+
+  it("plugin timeseries rejects comma-only series_id", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: "," })).toThrow("series_id");
+  });
+
+  it("plugin timeseries rejects comma-separated empty strings", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: ",," })).toThrow("series_id");
+  });
+
+  it("plugin timeseries rejects space-only series_id after split", () => {
+    // "  " is caught by the trim check, but " , " splits to empty after filter
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: " , " })).toThrow("series_id");
+  });
+
+  it("plugin timeseries rejects year 0 (empty string coerced)", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: "CUUR0000SA0", start_year: "" })).toThrow("Must be a valid year");
+  });
+
+  it("plugin timeseries rejects year below 1900", () => {
+    expect(() => blsPlugin.endpoints.timeseries({ series_id: "CUUR0000SA0", start_year: 100 })).toThrow("Must be a valid year");
   });
 
   it("plugin timeseries splits comma-separated series_id", async () => {

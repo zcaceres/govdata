@@ -92,6 +92,31 @@ describe("MCP schema generation", () => {
   }
 });
 
+describe("buildSchemaFromParams boolean handling", () => {
+  it("generates z.boolean() for boolean-typed params", () => {
+    const shape = buildSchemaFromParams([
+      { name: "flag", type: "boolean", required: false, description: "A boolean flag" },
+    ]);
+    const schema = z.object(shape);
+    // Should accept boolean
+    expect(schema.safeParse({ flag: true }).success).toBe(true);
+    expect(schema.safeParse({ flag: false }).success).toBe(true);
+    // Should reject string
+    expect(schema.safeParse({ flag: "true" }).success).toBe(false);
+  });
+
+  it("BLS boolean params generate boolean schemas via unified MCP", () => {
+    const blsEndpoints = blsPlugin.describe().endpoints;
+    const timeseriesEndpoint = blsEndpoints.find((e) => e.name === "timeseries");
+    expect(timeseriesEndpoint).toBeDefined();
+    const shape = buildSchemaFromParams(timeseriesEndpoint!.params);
+    const schema = z.object(shape);
+    // calculations should accept boolean, not string
+    expect(schema.safeParse({ series_id: "CUUR0000SA0", calculations: true }).success).toBe(true);
+    expect(schema.safeParse({ series_id: "CUUR0000SA0", calculations: "true" }).success).toBe(false);
+  });
+});
+
 describe("MCP tool naming", () => {
   it("generates unique tool names across all plugins", () => {
     const names = new Set<string>();
