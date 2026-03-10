@@ -310,6 +310,14 @@ describe("blsPlugin", () => {
     await expect(blsPlugin.endpoints.popular({ survey: "CU", bad: "x" })).rejects.toThrow();
   });
 
+  it("plugin popular rejects bare boolean survey (--survey with no value)", () => {
+    expect(() => blsPlugin.endpoints.popular({ survey: true })).toThrow("survey");
+  });
+
+  it("plugin popular rejects empty string survey", () => {
+    expect(() => blsPlugin.endpoints.popular({ survey: "" })).toThrow("survey");
+  });
+
   it("plugin timeseries coerces boolean strings", async () => {
     let capturedBody: any;
     globalThis.fetch = (async (_url: any, init?: RequestInit) => {

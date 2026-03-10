@@ -55,6 +55,9 @@ export const blsPlugin: GovDataPlugin = {
       if (!params || Object.keys(params).length === 0) return popular();
       const coerced = { ...params };
       if (coerced.survey != null) {
+        if (coerced.survey === true || (typeof coerced.survey === "string" && coerced.survey.trim() === "")) {
+          throw new GovValidationError("survey", coerced.survey, "Survey abbreviation required (e.g. CU, LN)");
+        }
         coerced.survey = String(coerced.survey);
       }
       return popular(coerced);

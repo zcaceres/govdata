@@ -120,19 +120,18 @@ function wrapTimeseries(series: Series[], meta: Meta | null): BlsResult<"timeser
     },
     toCSV(): string {
       if (series.length === 0) return "";
-      const sections: string[] = [];
+      // Build CSV columns dynamically (same for all series)
+      const cols = ["seriesID", "year", "period", "periodName", "value", "latest"];
+      if (showCalcs) cols.push("net_chg_1m", "net_chg_3m", "net_chg_6m", "net_chg_12m", "pct_chg_1m", "pct_chg_3m", "pct_chg_6m", "pct_chg_12m");
+      if (showAspects) cols.push("aspects");
+      if (showFootnotes) cols.push("footnotes");
+
+      const allRows: string[] = [cols.join(",")];
       for (const s of series) {
         const points = s.data ?? [];
         if (points.length === 0) continue;
 
-        // Build CSV columns dynamically
-        const cols = ["seriesID", "year", "period", "periodName", "value", "latest"];
-        if (showCalcs) cols.push("net_chg_1m", "net_chg_3m", "net_chg_6m", "net_chg_12m", "pct_chg_1m", "pct_chg_3m", "pct_chg_6m", "pct_chg_12m");
-        if (showAspects) cols.push("aspects");
-        if (showFootnotes) cols.push("footnotes");
-
-        const header = cols.join(",");
-        const rows = points.map((p) => {
+        for (const p of points) {
           const cells = [
             escapeCSV(s.seriesID),
             escapeCSV(p.year),
@@ -164,11 +163,10 @@ function wrapTimeseries(series: Series[], meta: Meta | null): BlsResult<"timeser
           if (showFootnotes) {
             cells.push(escapeCSV(formatFootnotes(p)));
           }
-          return cells.join(",");
-        });
-        sections.push([header, ...rows].join("\n"));
+          allRows.push(cells.join(","));
+        }
       }
-      return sections.join("\n\n");
+      return allRows.join("\n");
     },
     summary(): string {
       const years = new Set<string>();

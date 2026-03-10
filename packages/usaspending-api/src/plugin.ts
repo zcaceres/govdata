@@ -267,6 +267,8 @@ function makeCategoryEndpoint(subPath: CategorySubPath) {
 
 const GEO_SCOPES = ["place_of_performance", "recipient_location"] as const;
 const GEO_LAYERS = ["state", "county", "district"] as const;
+const DISASTER_SPENDING_TYPES = ["total", "obligation", "outlay"] as const;
+const FILE_FORMATS = ["csv", "tsv"] as const;
 
 async function spending_by_geography(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
@@ -536,7 +538,7 @@ function makeDisasterEndpoint(fn: (params?: any, options?: any) => Promise<GovRe
   return async (params?: Record<string, unknown>): Promise<GovResult> => {
     return fn({
       def_codes: params?.def_codes != null ? String(params.def_codes).split(",").map(s => s.trim()) : undefined,
-      spending_type: params?.spending_type != null ? String(params.spending_type) : undefined,
+      spending_type: params?.spending_type != null ? requireEnum(params, "spending_type", DISASTER_SPENDING_TYPES) : undefined,
       sort: params?.sort != null ? String(params.sort) : undefined,
       order: toOrder(params?.order),
       page: toNumber(params?.page),
@@ -992,7 +994,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _downloadAwards({
         filters,
         columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
-        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+        file_format: params?.file_format != null ? requireEnum(params, "file_format", FILE_FORMATS) : undefined,
       });
     },
     download_transactions: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -1000,28 +1002,28 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _downloadTransactions({
         filters,
         columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
-        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+        file_format: params?.file_format != null ? requireEnum(params, "file_format", FILE_FORMATS) : undefined,
       });
     },
     download_idv: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadIdv({
         award_id: requireNumber(params, "award_id"),
         columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
-        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+        file_format: params?.file_format != null ? requireEnum(params, "file_format", FILE_FORMATS) : undefined,
       });
     },
     download_contract: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadContract({
         award_id: requireNumber(params, "award_id"),
         columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
-        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+        file_format: params?.file_format != null ? requireEnum(params, "file_format", FILE_FORMATS) : undefined,
       });
     },
     download_assistance: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _downloadAssistance({
         award_id: requireNumber(params, "award_id"),
         columns: params?.columns != null ? String(params.columns).split(",").map(s => s.trim()) : undefined,
-        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+        file_format: params?.file_format != null ? requireEnum(params, "file_format", FILE_FORMATS) : undefined,
       });
     },
     download_status: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -1051,7 +1053,7 @@ export const usaspendingPlugin: GovDataPlugin = {
       const filters = params ? buildFilters(params) : {};
       return _bulkDownloadAwards({
         filters,
-        file_format: params?.file_format != null ? String(params.file_format) as "csv" | "tsv" : undefined,
+        file_format: params?.file_format != null ? requireEnum(params, "file_format", FILE_FORMATS) : undefined,
       });
     },
     bulk_download_status: async (params?: Record<string, unknown>): Promise<GovResult> => {

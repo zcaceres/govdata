@@ -1,6 +1,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import { buildSchemaFromParams } from "govdata-core";
 import { blsPlugin } from "./plugin";
 import { describe } from "./endpoints";
 import type { BlsResult } from "./response";
@@ -29,27 +30,7 @@ for (const endpoint of describe().endpoints) {
   const fn = blsPlugin.endpoints[endpoint.name];
   if (!fn) continue;
 
-  const schemaShape: Record<string, z.ZodTypeAny> = {};
-  for (const param of endpoint.params) {
-    let schema: z.ZodTypeAny;
-    if (param.values) {
-      schema = z.enum(param.values as [string, ...string[]]);
-    } else if (param.type === "number") {
-      schema = z.number().int();
-    } else if (param.type === "boolean") {
-      schema = z.boolean();
-    } else {
-      schema = z.string();
-    }
-    if (!param.required) {
-      schema = schema.optional();
-    }
-    const description = param.name === "series_id"
-      ? "BLS series ID(s), comma-separated for multiple"
-      : param.values ? `One of: ${param.values.join(", ")}` : param.type;
-    schemaShape[param.name] = schema.describe(description);
-  }
-
+  const schemaShape = buildSchemaFromParams(endpoint.params);
   Object.assign(schemaShape, formatParam);
 
   server.tool(
