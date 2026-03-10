@@ -179,6 +179,9 @@ An unhandled throw from a plugin endpoint crashes the MCP server process. Every 
 ### 15. Custom clients should handle varied API error response shapes
 Government APIs return errors in different formats: `{message: "..."}`, `{errors: {field: "msg"}}`, or plain text. Client error extraction must check for multiple shapes, not just `body.message`. Extract the most specific error text available so CLI users see actionable messages (e.g. `"agencies: invalid value"` instead of `"HTTP 400"`).
 
+### 16. Never guess data shapes — fetch real data first
+Do not invent response schemas, field names, or payload structures based on documentation alone or assumptions. Always fetch real data from the API and save it as a fixture before writing schemas, types, or response handling. Real responses reveal actual field names, nesting, null patterns, and edge cases that docs omit or get wrong. Use these fixtures to drive implementation and tests.
+
 ## Do Not
 
 - Do not use dynamic imports for plugins (breaks `bun build --compile`)
