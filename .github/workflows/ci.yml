@@ -18,5 +18,6 @@ jobs:
           bun-version: latest
 
       - run: bun install
+      - run: bun run --cwd packages/naics-api build-db 2022
       - run: bun run typecheck
       - run: bun test
