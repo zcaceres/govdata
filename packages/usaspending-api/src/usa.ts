@@ -367,7 +367,7 @@ export function createUSASpending(defaultOptions?: ClientOptions) {
     },
     disaster: {
       overview: (options?: ClientOptions) =>
-        _disasterOverview(undefined, { ...defaultOptions, ...options }),
+        _disasterOverview({ ...defaultOptions, ...options }),
       awardAmount: (params?: DisasterFilterParams, options?: ClientOptions) =>
         _disasterAwardAmount(params, { ...defaultOptions, ...options }),
       awardCount: (params?: DisasterFilterParams, options?: ClientOptions) =>

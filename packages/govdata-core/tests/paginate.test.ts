@@ -27,7 +27,7 @@ describe("withPagination", () => {
     expect(pages).toHaveLength(3);
   });
 
-  it("all() concatenates data", async () => {
+  it("all() concatenates data and updates meta", async () => {
     const fn = async (params?: { page?: number }) => {
       const page = params?.page ?? 1;
       return makePage(page, 2);
@@ -36,6 +36,8 @@ describe("withPagination", () => {
     const paginated = withPagination(fn);
     const result = await paginated.all();
     expect(result.data).toHaveLength(2);
+    expect(result.meta?.total_results).toBe(2);
+    expect(result.meta?.pages).toBe(2);
   });
 
   it("all() respects maxPages", async () => {

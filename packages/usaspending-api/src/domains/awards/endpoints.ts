@@ -105,7 +105,7 @@ export async function _awardFunding(
   );
   const pm = raw.page_metadata;
   const pages = pm.hasNext ? pm.page + 1 : pm.page;
-  return wrapResponse(raw.results, { total_results: raw.results.length, pages }, "award_funding");
+  return wrapResponse(raw.results, { pages }, "award_funding");
 }
 
 export async function _awardFundingRollup(

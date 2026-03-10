@@ -140,6 +140,20 @@ describe("createResult - array data", () => {
     expect(result.summary()).toBe("things: 1 results");
   });
 
+  it("summary with pages but no total_results shows more available", () => {
+    const data = [{ a: 1 }, { a: 2 }];
+    const meta = { pages: 3 };
+    const result = createResult(data, meta, "things");
+    expect(result.summary()).toBe("things: 2 results (more available)");
+  });
+
+  it("summary with pages=1 and no total_results omits more indicator", () => {
+    const data = [{ a: 1 }];
+    const meta = { pages: 1 };
+    const result = createResult(data, meta, "things");
+    expect(result.summary()).toBe("things: 1 results");
+  });
+
   it("toMarkdown generates table", () => {
     const data = [{ name: "X", count: 5 }];
     const result = createResult(data, null, "items");

@@ -41,7 +41,6 @@ function buildGeoBody(params?: DisasterFilterParams): Record<string, unknown> {
 // --- Overview (GET) ---
 
 export async function _disasterOverview(
-  params?: Record<string, unknown>,
   options?: ClientOptions,
 ): Promise<USAResult<"disaster_overview">> {
   const raw = await usaGet("/api/v2/disaster/overview/", DisasterOverviewSchema, undefined, options);

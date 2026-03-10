@@ -204,8 +204,8 @@ async function awards(params?: Record<string, unknown>): Promise<GovResult> {
   const filters = params ? buildFilters(params) : {};
   return _searchAwards({
     filters,
-    page: toNumber(params?.page),
-    limit: toNumber(params?.limit),
+    page: toNumber(params?.page, "page"),
+    limit: toNumber(params?.limit, "limit"),
     sort: params?.sort != null ? String(params.sort) : undefined,
     order: toOrder(params?.order),
   });
@@ -259,8 +259,8 @@ function makeCategoryEndpoint(subPath: CategorySubPath) {
     const filters = params ? buildFilters(params) : {};
     return _spendingByCategory(subPath, {
       filters,
-      limit: toNumber(params?.limit),
-      page: toNumber(params?.page),
+      limit: toNumber(params?.limit, "limit"),
+      page: toNumber(params?.page, "page"),
     });
   };
 }
@@ -283,8 +283,8 @@ async function transactions(params?: Record<string, unknown>): Promise<GovResult
   const filters = params ? buildFilters(params) : {};
   return _spendingByTransaction({
     filters,
-    page: toNumber(params?.page),
-    limit: toNumber(params?.limit),
+    page: toNumber(params?.page, "page"),
+    limit: toNumber(params?.limit, "limit"),
     sort: params?.sort != null ? String(params.sort) : undefined,
     order: toOrder(params?.order),
   });
@@ -299,8 +299,8 @@ async function transaction_grouped(params?: Record<string, unknown>): Promise<Go
   const filters = params ? buildFilters(params) : {};
   return _spendingByTransactionGrouped({
     filters,
-    page: toNumber(params?.page),
-    limit: toNumber(params?.limit),
+    page: toNumber(params?.page, "page"),
+    limit: toNumber(params?.limit, "limit"),
     sort: params?.sort != null ? String(params.sort) : undefined,
     order: toOrder(params?.order),
   });
@@ -310,8 +310,8 @@ async function subaward_grouped(params?: Record<string, unknown>): Promise<GovRe
   const filters = params ? buildFilters(params) : {};
   return _spendingBySubawardGrouped({
     filters,
-    page: toNumber(params?.page),
-    limit: toNumber(params?.limit),
+    page: toNumber(params?.page, "page"),
+    limit: toNumber(params?.limit, "limit"),
     sort: params?.sort != null ? String(params.sort) : undefined,
     order: toOrder(params?.order),
   });
@@ -336,8 +336,8 @@ async function recipient_list(params?: Record<string, unknown>): Promise<GovResu
   return _recipientList({
     keyword: params?.keyword != null ? String(params.keyword) : undefined,
     award_type: params?.award_type != null ? String(params.award_type) : undefined,
-    page: toNumber(params?.page),
-    limit: toNumber(params?.limit),
+    page: toNumber(params?.page, "page"),
+    limit: toNumber(params?.limit, "limit"),
     sort: params?.sort != null ? String(params.sort) : undefined,
     order: toOrder(params?.order),
   });
@@ -364,13 +364,13 @@ async function recipient_children(params?: Record<string, unknown>): Promise<Gov
 
 async function state_detail(params?: Record<string, unknown>): Promise<GovResult> {
   return _stateDetail(requireParam(params, "fips"), {
-    year: toNumber(params?.year),
+    year: toNumber(params?.year, "year"),
   });
 }
 
 async function state_awards(params?: Record<string, unknown>): Promise<GovResult> {
   return _stateAwards(requireParam(params, "fips"), {
-    year: toNumber(params?.year),
+    year: toNumber(params?.year, "year"),
   });
 }
 
@@ -380,7 +380,7 @@ function makeAutocompleteEndpoint(fn: (params: { search_text: string; limit?: nu
   return async (params?: Record<string, unknown>): Promise<GovResult> => {
     return fn({
       search_text: requireParam(params, "search_text"),
-      limit: toNumber(params?.limit),
+      limit: toNumber(params?.limit, "limit"),
     });
   };
 }
@@ -400,8 +400,8 @@ async function ref_agency(params?: Record<string, unknown>): Promise<GovResult> 
 
 async function ref_glossary(params?: Record<string, unknown>): Promise<GovResult> {
   return _refGlossary({
-    page: toNumber(params?.page),
-    limit: toNumber(params?.limit),
+    page: toNumber(params?.page, "page"),
+    limit: toNumber(params?.limit, "limit"),
   });
 }
 
@@ -418,14 +418,14 @@ async function ref_filter_hash(params?: Record<string, unknown>): Promise<GovRes
 
 async function ref_filter_tree_psc(params?: Record<string, unknown>): Promise<GovResult> {
   return _refFilterTreePsc({
-    depth: toNumber(params?.depth),
+    depth: toNumber(params?.depth, "depth"),
     filter: params?.filter != null ? String(params.filter) : undefined,
   });
 }
 
 async function ref_filter_tree_tas(params?: Record<string, unknown>): Promise<GovResult> {
   return _refFilterTreeTas({
-    depth: toNumber(params?.depth),
+    depth: toNumber(params?.depth, "depth"),
     filter: params?.filter != null ? String(params.filter) : undefined,
   });
 }
@@ -440,31 +440,31 @@ async function ref_cfda_totals(params?: Record<string, unknown>): Promise<GovRes
 
 async function agency_awards(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyAwards(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_new_award_count(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyNewAwardCount(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_awards_count(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyAwardsCount({
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_budget_function(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyBudgetFunction(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_budget_function_count(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyBudgetFunctionCount(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
@@ -477,9 +477,9 @@ function makeAgencyPaginatedEndpoint(
 ) {
   return async (params?: Record<string, unknown>): Promise<GovResult> => {
     return fn(requireParam(params, "toptier_code"), {
-      fiscal_year: toNumber(params?.fiscal_year),
-      page: toNumber(params?.page),
-      limit: toNumber(params?.limit),
+      fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
+      page: toNumber(params?.page, "page"),
+      limit: toNumber(params?.limit, "limit"),
       order: toOrder(params?.order),
       sort: params?.sort != null ? String(params.sort) : undefined,
     });
@@ -488,31 +488,31 @@ function makeAgencyPaginatedEndpoint(
 
 async function agency_federal_account_count(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyFederalAccountCount(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_object_class_count(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyObjectClassCount(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_obligations_by_award_category(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyObligationsByAwardCategory(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_program_activity_count(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencyProgramActivityCount(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
 async function agency_sub_agency_count(params?: Record<string, unknown>): Promise<GovResult> {
   return _agencySubAgencyCount(requireParam(params, "toptier_code"), {
-    fiscal_year: toNumber(params?.fiscal_year),
+    fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
   });
 }
 
@@ -520,7 +520,7 @@ async function agency_treasury_account_object_class(params?: Record<string, unkn
   return _agencyTreasuryAccountObjectClass(
     requireParam(params, "toptier_code"),
     requireParam(params, "account_code"),
-    { fiscal_year: toNumber(params?.fiscal_year), page: toNumber(params?.page), limit: toNumber(params?.limit) },
+    { fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"), page: toNumber(params?.page, "page"), limit: toNumber(params?.limit, "limit") },
   );
 }
 
@@ -528,7 +528,7 @@ async function agency_treasury_account_program_activity(params?: Record<string, 
   return _agencyTreasuryAccountProgramActivity(
     requireParam(params, "toptier_code"),
     requireParam(params, "account_code"),
-    { fiscal_year: toNumber(params?.fiscal_year), page: toNumber(params?.page), limit: toNumber(params?.limit) },
+    { fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"), page: toNumber(params?.page, "page"), limit: toNumber(params?.limit, "limit") },
   );
 }
 
@@ -541,8 +541,8 @@ function makeDisasterEndpoint(fn: (params?: any, options?: any) => Promise<GovRe
       spending_type: params?.spending_type != null ? requireEnum(params, "spending_type", DISASTER_SPENDING_TYPES) : undefined,
       sort: params?.sort != null ? String(params.sort) : undefined,
       order: toOrder(params?.order),
-      page: toNumber(params?.page),
-      limit: toNumber(params?.limit),
+      page: toNumber(params?.page, "page"),
+      limit: toNumber(params?.limit, "limit"),
     });
   };
 }
@@ -561,8 +561,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     award,
     award_accounts: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _awardAccounts(requireParam(params, "id"), {
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     award_count_federal_account: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -576,8 +576,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     award_funding: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _awardFunding(requireParam(params, "id"), {
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     award_funding_rollup: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -588,10 +588,10 @@ export const usaspendingPlugin: GovDataPlugin = {
     },
     award_spending_recipient: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _awardSpendingRecipient({
-        awarding_agency_id: toNumber(params?.awarding_agency_id),
-        fiscal_year: toNumber(params?.fiscal_year),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        awarding_agency_id: toNumber(params?.awarding_agency_id, "awarding_agency_id"),
+        fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     agency,
@@ -630,7 +630,7 @@ export const usaspendingPlugin: GovDataPlugin = {
     autocomplete_city: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _autocompleteCity({
         search_text: requireParam(params, "search_text"),
-        limit: toNumber(params?.limit),
+        limit: toNumber(params?.limit, "limit"),
         filter: params?.country_code != null ? { country_code: String(params.country_code), scope: String(params.scope ?? "recipient_location") } : undefined,
       });
     },
@@ -734,8 +734,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     federal_account_list: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _federalAccountList({
         keyword: params?.keyword != null ? String(params.keyword) : undefined,
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort_field: params?.sort_field != null ? String(params.sort_field) : undefined,
         sort_direction: params?.sort_direction != null ? toOrder(params.sort_direction) : undefined,
       });
@@ -744,27 +744,27 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _federalAccountDetail(requireNumber(params, "id"));
     },
     federal_account_fiscal_year_snapshot: async (params?: Record<string, unknown>): Promise<GovResult> => {
-      return _federalAccountFiscalYearSnapshot(requireNumber(params, "id"), toNumber(params?.fy));
+      return _federalAccountFiscalYearSnapshot(requireNumber(params, "id"), toNumber(params?.fy, "fy"));
     },
     federal_account_available_object_classes: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _federalAccountAvailableObjectClasses(requireNumber(params, "id"));
     },
     federal_account_object_classes: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _federalAccountObjectClasses(requireNumber(params, "id"), {
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     federal_account_program_activities: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _federalAccountProgramActivities(requireNumber(params, "id"), {
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     federal_account_program_activities_total: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _federalAccountProgramActivitiesTotal(requireNumber(params, "id"), {
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
 
@@ -772,8 +772,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     idv_accounts: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvAccounts({
         award_id: requireNumber(params, "award_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
       });
@@ -781,8 +781,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     idv_activity: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvActivity({
         award_id: requireNumber(params, "award_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     idv_amounts: async (params?: Record<string, unknown>): Promise<GovResult> => {
@@ -791,8 +791,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     idv_child_awards: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvChildAwards({
         award_id: requireNumber(params, "award_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
       });
@@ -800,8 +800,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     idv_child_idvs: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvChildIdvs({
         award_id: requireNumber(params, "award_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
       });
@@ -815,8 +815,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     idv_funding: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _idvFunding({
         award_id: requireNumber(params, "award_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
         piid: params?.piid != null ? String(params.piid) : undefined,
@@ -826,23 +826,23 @@ export const usaspendingPlugin: GovDataPlugin = {
     // --- Reporting endpoints ---
     reporting_agencies_overview: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingAgenciesOverview({
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
-        fiscal_year: toNumber(params?.fiscal_year),
-        fiscal_period: toNumber(params?.fiscal_period),
+        fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
+        fiscal_period: toNumber(params?.fiscal_period, "fiscal_period"),
         filter: params?.filter != null ? String(params.filter) : undefined,
       });
     },
     reporting_publish_dates: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _reportingPublishDates({
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
-        fiscal_year: toNumber(params?.fiscal_year),
-        fiscal_period: toNumber(params?.fiscal_period),
+        fiscal_year: toNumber(params?.fiscal_year, "fiscal_year"),
+        fiscal_period: toNumber(params?.fiscal_period, "fiscal_period"),
         filter: params?.filter != null ? String(params.filter) : undefined,
       });
     },
@@ -852,8 +852,8 @@ export const usaspendingPlugin: GovDataPlugin = {
         requireNumber(params, "fiscal_year"),
         requireNumber(params, "fiscal_period"),
         {
-          page: toNumber(params?.page),
-          limit: toNumber(params?.limit),
+          page: toNumber(params?.page, "page"),
+          limit: toNumber(params?.limit, "limit"),
           sort: params?.sort != null ? String(params.sort) : undefined,
           order: toOrder(params?.order),
         },
@@ -865,8 +865,8 @@ export const usaspendingPlugin: GovDataPlugin = {
         requireNumber(params, "fiscal_year"),
         requireNumber(params, "fiscal_period"),
         {
-          page: toNumber(params?.page),
-          limit: toNumber(params?.limit),
+          page: toNumber(params?.page, "page"),
+          limit: toNumber(params?.limit, "limit"),
           sort: params?.sort != null ? String(params.sort) : undefined,
           order: toOrder(params?.order),
         },
@@ -876,8 +876,8 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _reportingAgencyOverview(
         requireParam(params, "toptier_code"),
         {
-          page: toNumber(params?.page),
-          limit: toNumber(params?.limit),
+          page: toNumber(params?.page, "page"),
+          limit: toNumber(params?.limit, "limit"),
           sort: params?.sort != null ? String(params.sort) : undefined,
           order: toOrder(params?.order),
         },
@@ -889,8 +889,8 @@ export const usaspendingPlugin: GovDataPlugin = {
         requireNumber(params, "fiscal_year"),
         requireNumber(params, "fiscal_period"),
         {
-          page: toNumber(params?.page),
-          limit: toNumber(params?.limit),
+          page: toNumber(params?.page, "page"),
+          limit: toNumber(params?.limit, "limit"),
           sort: params?.sort != null ? String(params.sort) : undefined,
           order: toOrder(params?.order),
         },
@@ -916,41 +916,41 @@ export const usaspendingPlugin: GovDataPlugin = {
       return _financialFederalObligations({
         funding_agency_id: requireNumber(params, "funding_agency_id"),
         fiscal_year: requireNumber(params, "fiscal_year"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     financial_balances: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _financialBalances({
         funding_agency_id: requireNumber(params, "funding_agency_id"),
         fiscal_year: requireNumber(params, "fiscal_year"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     financial_spending_major_object_class: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _financialSpendingMajorObjectClass({
         fiscal_year: requireNumber(params, "fiscal_year"),
         funding_agency_id: requireNumber(params, "funding_agency_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
     financial_spending_object_class: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _financialSpendingObjectClass({
         fiscal_year: requireNumber(params, "fiscal_year"),
         funding_agency_id: requireNumber(params, "funding_agency_id"),
-        major_object_class_code: toNumber(params?.major_object_class_code),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        major_object_class_code: toNumber(params?.major_object_class_code, "major_object_class_code"),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
       });
     },
 
     // --- Subaward endpoints ---
     subaward_list: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _subawardList({
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
         keyword: params?.keyword != null ? String(params.keyword) : undefined,
@@ -960,8 +960,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     subaward_by_award: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _subawardByAward({
         award_id: requireParam(params, "award_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
       });
@@ -969,8 +969,8 @@ export const usaspendingPlugin: GovDataPlugin = {
     subaward_transactions: async (params?: Record<string, unknown>): Promise<GovResult> => {
       return _subawardTransactions({
         award_id: requireNumber(params, "award_id"),
-        page: toNumber(params?.page),
-        limit: toNumber(params?.limit),
+        page: toNumber(params?.page, "page"),
+        limit: toNumber(params?.limit, "limit"),
         sort: params?.sort != null ? String(params.sort) : undefined,
         order: toOrder(params?.order),
       });

@@ -70,7 +70,7 @@ export async function _searchAwards(
 
   return wrapResponse(
     raw.results,
-    { total_results: raw.results.length, pages },
+    { pages },
     "awards",
   );
 }
@@ -136,7 +136,7 @@ export async function _spendingByCategory(
   const pages = hasNext ? currentPage + 1 : currentPage;
   return wrapResponse(
     raw.results,
-    { total_results: raw.results.length, pages },
+    { pages },
     "category",
   );
 }
@@ -190,7 +190,7 @@ export async function _spendingByTransaction(
   const pages = hasNext ? currentPage + 1 : currentPage;
   return wrapResponse(
     raw.results,
-    { total_results: raw.results.length, pages },
+    { pages },
     "transactions",
   );
 }
@@ -231,7 +231,7 @@ export async function _spendingByTransactionGrouped(
   const pages = hasNext ? currentPage + 1 : currentPage;
   return wrapResponse(
     raw.results,
-    { total_results: raw.results.length, pages },
+    { pages },
     "transaction_grouped",
   );
 }
@@ -259,7 +259,7 @@ export async function _spendingBySubawardGrouped(
   const pages = hasNext ? currentPage + 1 : currentPage;
   return wrapResponse(
     raw.results,
-    { total_results: raw.results.length, pages },
+    { pages },
     "subaward_grouped",
   );
 }

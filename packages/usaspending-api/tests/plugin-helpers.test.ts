@@ -18,16 +18,20 @@ describe("toNumber", () => {
     expect(toNumber(undefined)).toBeUndefined();
   });
 
-  it("returns undefined for non-numeric strings", () => {
-    expect(toNumber("abc")).toBeUndefined();
+  it("throws for non-numeric strings", () => {
+    expect(() => toNumber("abc")).toThrow("a valid number");
   });
 
-  it("returns undefined for NaN", () => {
-    expect(toNumber(NaN)).toBeUndefined();
+  it("throws for non-numeric strings with field name", () => {
+    expect(() => toNumber("abc", "page")).toThrow("page");
   });
 
-  it("returns undefined for Infinity", () => {
-    expect(toNumber(Infinity)).toBeUndefined();
+  it("throws for NaN", () => {
+    expect(() => toNumber(NaN)).toThrow("a valid number");
+  });
+
+  it("throws for Infinity", () => {
+    expect(() => toNumber(Infinity)).toThrow("a valid number");
   });
 
   it("handles float strings", () => {

@@ -113,7 +113,11 @@ export function createResult<K extends string>(
       }
       const items = data as unknown[];
       if (!meta) return `${kind}: ${items.length} results`;
-      return `${kind}: ${items.length} of ${meta.total_results} results (${meta.pages} pages)`;
+      if (meta.total_results != null) {
+        return `${kind}: ${items.length} of ${meta.total_results} results (${meta.pages} pages)`;
+      }
+      const moreIndicator = meta.pages > 1 ? " (more available)" : "";
+      return `${kind}: ${items.length} results${moreIndicator}`;
     },
   };
 }

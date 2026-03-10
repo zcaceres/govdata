@@ -4,10 +4,13 @@ import { z } from "zod";
 import { USAValidationError } from "./errors";
 import { AwardTypeCodes } from "./shared-schemas";
 
-export function toNumber(val: unknown): number | undefined {
+export function toNumber(val: unknown, fieldName?: string): number | undefined {
   if (val == null) return undefined;
   const n = Number(val);
-  return Number.isFinite(n) ? n : undefined;
+  if (!Number.isFinite(n)) {
+    throw new USAValidationError(fieldName ?? "number param", val, "a valid number");
+  }
+  return n;
 }
 
 /**
