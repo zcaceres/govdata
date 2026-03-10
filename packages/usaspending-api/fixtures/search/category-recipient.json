@@ -1,0 +1,58 @@
+{
+  "category": "recipient",
+  "spending_level": "transactions",
+  "limit": 5,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "amount": 108963399845.08,
+      "recipient_id": "9ab85632-42cc-5fa4-2a9c-d734034ddd33-C",
+      "name": "THE BOEING COMPANY",
+      "code": "149879157",
+      "uei": "JJM4FRDZJDX1",
+      "total_outlays": null
+    },
+    {
+      "amount": 83114358216.31,
+      "recipient_id": "22d282c6-4508-7d30-97f1-7401ea73b12a-C",
+      "name": "THE BOEING COMPANY",
+      "code": "039267141",
+      "uei": "WZWRLY4G3PL8",
+      "total_outlays": null
+    },
+    {
+      "amount": 38764598992.34,
+      "recipient_id": "846d3ff4-b2cb-3924-018c-2dee1e0259b7-C",
+      "name": "BELL BOEING JOINT PROJECT OFFICE",
+      "code": "106632750",
+      "uei": "JHFZTG8ZC9V2",
+      "total_outlays": null
+    },
+    {
+      "amount": 32939713942.25,
+      "recipient_id": "3632dc26-45b8-9d0e-1128-63e866708c8f-C",
+      "name": "THE BOEING COMPANY",
+      "code": "126368257",
+      "uei": "SML4NN2CT556",
+      "total_outlays": null
+    },
+    {
+      "amount": 25622763848.19,
+      "recipient_id": "5fa231ae-15e3-afd3-8c5c-bb9911ba57f8-C",
+      "name": "THE BOEING COMPANY",
+      "code": "781650619",
+      "uei": "UEGFHX6R6KJ1",
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

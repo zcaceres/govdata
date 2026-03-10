@@ -1,0 +1,74 @@
+{
+  "description": "Documents matching 'clean energy'",
+  "count": 10000,
+  "total_pages": 50,
+  "next_page_url": "https://www.federalregister.gov/api/v1/documents?conditions%5Bterm%5D=clean+energy&format=json&page=2&per_page=3",
+  "results": [
+    {
+      "title": "Clean Energy for New Federal Buildings and Major Renovations of Federal Buildings; Stay",
+      "type": "Rule",
+      "abstract": "The Department of Energy (DOE) is reviewing its recent guidance related to the implementation of newly adopted provisions regarding Clean Energy for New Federal Buildings and Major Renovations of Federal Buildings (CER). While DOE reviews the CER implementation guidance, DOE is staying the compliance date for the newly adopted provisions in the Code of Federal Regulations (CFR).",
+      "document_number": "2025-07743",
+      "html_url": "https://www.federalregister.gov/documents/2025/05/05/2025-07743/clean-energy-for-new-federal-buildings-and-major-renovations-of-federal-buildings-stay",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-05-05/pdf/2025-07743.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2025-07743.pdf?1746189937",
+      "publication_date": "2025-05-05",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF ENERGY",
+          "name": "Energy Department",
+          "id": 136,
+          "url": "https://www.federalregister.gov/agencies/energy-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+          "parent_id": null,
+          "slug": "energy-department"
+        }
+      ],
+      "excerpts": "petitions for downward adjustment.\n \n \n \n 1 \n  89 FR 35384, \n <span class=\"match\">Clean</span> <span class=\"match\">Energy</span> for New Federal Buildings and Major Renovations of Federal Buildings, \n Final Rule (May 1, 2024).\n \n \n \n \n 2 \n  Available at \n https://www.energy.gov/sites/default/files/2025-03/<span class=\"match\">clean</span>-<span class=\"match\">energy</span>-rule_implementation-guidance_jan2025.pdf. \n \n \n \n Shortly after DOE published the implementation guidance document and the petition template, President Trump announced new <span class=\"match\">energy</span> policies, specifically those relating to <span class=\"match\">energy</span> security and reliability.\n 3 \n \n DOE is currently reviewing"
+    },
+    {
+      "title": "Residential Property Assessed Clean Energy Financing (Regulation Z)",
+      "type": "Rule",
+      "abstract": "Section 307 of the Economic Growth, Regulatory Relief, and Consumer Protection Act (EGRRCPA) directs the Consumer Financial Protection Bureau (CFPB or Bureau) to prescribe ability-to-repay rules for Property Assessed Clean Energy (PACE) financing and to apply the civil liability provisions of the Truth in Lending Act (TILA) for violations. PACE financing is financing to cover the costs of home improvements that results in a tax assessment on the real property of the consumer. In this final rule, the CFPB implements EGRRCPA section 307 and amends Regulation Z to address how TILA applies to PACE transactions.",
+      "document_number": "2024-30628",
+      "html_url": "https://www.federalregister.gov/documents/2025/01/10/2024-30628/residential-property-assessed-clean-energy-financing-regulation-z",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2025-01-10/pdf/2024-30628.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2024-30628.pdf?1736343918",
+      "publication_date": "2025-01-10",
+      "agencies": [
+        {
+          "raw_name": "Consumer Financial Protection Bureau",
+          "name": "Consumer Financial Protection Bureau",
+          "id": 573,
+          "url": "https://www.federalregister.gov/agencies/consumer-financial-protection-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/573",
+          "parent_id": null,
+          "slug": "consumer-financial-protection-bureau"
+        }
+      ],
+      "excerpts": "Assessed <span class=\"match\">Clean</span> <span class=\"match\">Energy</span> Loans \n (Dec. 16, 2020), \n https://selling-guide.fanniemae.com/sel/b5-3.4-01/property-assessed-<span class=\"match\">clean</span>-<span class=\"match\">energy</span>-loans \n and Freddie Mac, \n Refinance of Mortgages secured by properties subject to an <span class=\"match\">energy</span> retrofit loan \n (Sept. 4, 2024), \n https://guide.freddiemac.com/app/guide/section/4301.8. \n Similarly, the FHA updated its handbook requirements in 2017 to prohibit insurance of mortgage on properties with outstanding first-lien PACE obligations, \n see \n U.S. Dept. of Hous. &amp; Urb. Dev., \n Property Assessed <span class=\"match\">Clean</span> <span class=\"match\">Energy</span> (PACE)"
+    },
+    {
+      "title": "National Clean Energy Action Month, 2024",
+      "type": "Presidential Document",
+      "abstract": null,
+      "document_number": "2024-22990",
+      "html_url": "https://www.federalregister.gov/documents/2024/10/03/2024-22990/national-clean-energy-action-month-2024",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2024-10-03/pdf/2024-22990.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2024-22990.pdf?1727873145",
+      "publication_date": "2024-10-03",
+      "agencies": [
+        {
+          "raw_name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+          "name": "Executive Office of the President",
+          "id": 538,
+          "url": "https://www.federalregister.gov/agencies/executive-office-of-the-president",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/538",
+          "parent_id": null,
+          "slug": "executive-office-of-the-president"
+        }
+      ],
+      "excerpts": "Proclamation 10823 of September 30, 2024 \n National <span class=\"match\">Clean</span> <span class=\"match\">Energy</span> Action Month, 2024 \n \n A Proclamation \n When I think of <span class=\"match\">clean</span> <span class=\"match\">energy</span>, I think of good-paying jobs for American workers. Our Nation is leading the fight against the existential threat of climate change all while growing our economy and transitioning this country to a <span class=\"match\">clean</span>, reliable, and affordable <span class=\"match\">energy</span> future. During National <span class=\"match\">Clean</span> <span class=\"match\">Energy</span> Action Month, we recommit to investing in America and American workers as we build a cleaner, more <span class=\"match\">energy</span> secure future. \n Since day one of my Administration"
+    }
+  ]
+}

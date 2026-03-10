@@ -12,7 +12,11 @@
   "dependencies": {
     "govdata-core": "workspace:*",
     "doge-api": "workspace:*",
-    "naics-api": "workspace:*"
+    "naics-api": "workspace:*",
+    "dol-open-data-api": "workspace:*",
+    "federal-register": "workspace:*",
+    "usaspending-api": "workspace:*",
+    "bls-api": "workspace:*"
   },
   "devDependencies": {
     "@types/bun": "latest",

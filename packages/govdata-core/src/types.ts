@@ -1,5 +1,5 @@
 export interface Meta {
-  total_results: number;
+  total_results?: number;
   pages: number;
 }
 

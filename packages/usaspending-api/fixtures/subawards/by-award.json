@@ -1,0 +1,51 @@
+{
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": 10238157,
+      "subaward_number": "694540-112",
+      "description": "PURCHASED OUTSIDE PRODUCTION",
+      "action_date": "2026-01-20",
+      "amount": 904540,
+      "recipient_name": "GENERAL DYNAMICS-OTS, INC."
+    },
+    {
+      "id": 10237770,
+      "subaward_number": "2800303-00",
+      "description": "NON PRODUCTION",
+      "action_date": "2026-01-28",
+      "amount": 59399.5,
+      "recipient_name": "CORNERSTONE SUPPLY INC"
+    },
+    {
+      "id": 10237919,
+      "subaward_number": "2800250-00",
+      "description": "AEROSPACE SUPPORT",
+      "action_date": "2026-01-30",
+      "amount": 52593.2,
+      "recipient_name": "ALL POINTS LOGISTICS LLC"
+    },
+    {
+      "id": 10237891,
+      "subaward_number": "2797214-00",
+      "description": "NON PRODUCTION",
+      "action_date": "2026-01-23",
+      "amount": 71994.5,
+      "recipient_name": "FUTURAMIC TOOL & ENGINEERING CO"
+    },
+    {
+      "id": 10237833,
+      "subaward_number": "2797042-00",
+      "description": "NON PRODUCTION",
+      "action_date": "2026-01-16",
+      "amount": 97920,
+      "recipient_name": "TECHNICAL MICRONICS CONTROL, INC."
+    }
+  ]
+}

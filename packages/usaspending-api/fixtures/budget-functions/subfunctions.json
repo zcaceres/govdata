@@ -1,0 +1,292 @@
+{
+  "results": [
+    {
+      "budget_subfunction_code": "352",
+      "budget_subfunction_title": "Agricultural research and services"
+    },
+    {
+      "budget_subfunction_code": "402",
+      "budget_subfunction_title": "Air transportation"
+    },
+    {
+      "budget_subfunction_code": "452",
+      "budget_subfunction_title": "Area and regional development"
+    },
+    {
+      "budget_subfunction_code": "053",
+      "budget_subfunction_title": "Atomic energy defense activities"
+    },
+    {
+      "budget_subfunction_code": "803",
+      "budget_subfunction_title": "Central fiscal operations"
+    },
+    {
+      "budget_subfunction_code": "805",
+      "budget_subfunction_title": "Central personnel management"
+    },
+    {
+      "budget_subfunction_code": "451",
+      "budget_subfunction_title": "Community development"
+    },
+    {
+      "budget_subfunction_code": "153",
+      "budget_subfunction_title": "Conduct of foreign affairs"
+    },
+    {
+      "budget_subfunction_code": "302",
+      "budget_subfunction_title": "Conservation and land management"
+    },
+    {
+      "budget_subfunction_code": "554",
+      "budget_subfunction_title": "Consumer and occupational health and safety"
+    },
+    {
+      "budget_subfunction_code": "754",
+      "budget_subfunction_title": "Criminal justice assistance"
+    },
+    {
+      "budget_subfunction_code": "809",
+      "budget_subfunction_title": "Deductions for offsetting receipts"
+    },
+    {
+      "budget_subfunction_code": "054",
+      "budget_subfunction_title": "Defense-related activities"
+    },
+    {
+      "budget_subfunction_code": "051",
+      "budget_subfunction_title": "Department of Defense-Military"
+    },
+    {
+      "budget_subfunction_code": "373",
+      "budget_subfunction_title": "Deposit insurance"
+    },
+    {
+      "budget_subfunction_code": "453",
+      "budget_subfunction_title": "Disaster relief and insurance"
+    },
+    {
+      "budget_subfunction_code": "501",
+      "budget_subfunction_title": "Elementary, secondary, and vocational education"
+    },
+    {
+      "budget_subfunction_code": "274",
+      "budget_subfunction_title": "Emergency energy preparedness"
+    },
+    {
+      "budget_subfunction_code": "272",
+      "budget_subfunction_title": "Energy conservation"
+    },
+    {
+      "budget_subfunction_code": "276",
+      "budget_subfunction_title": "Energy information, policy, and regulation"
+    },
+    {
+      "budget_subfunction_code": "271",
+      "budget_subfunction_title": "Energy supply"
+    },
+    {
+      "budget_subfunction_code": "802",
+      "budget_subfunction_title": "Executive direction and management"
+    },
+    {
+      "budget_subfunction_code": "351",
+      "budget_subfunction_title": "Farm income stabilization"
+    },
+    {
+      "budget_subfunction_code": "753",
+      "budget_subfunction_title": "Federal correctional activities"
+    },
+    {
+      "budget_subfunction_code": "602",
+      "budget_subfunction_title": "Federal employee retirement and disability"
+    },
+    {
+      "budget_subfunction_code": "751",
+      "budget_subfunction_title": "Federal law enforcement activities"
+    },
+    {
+      "budget_subfunction_code": "752",
+      "budget_subfunction_title": "Federal litigative and judicial activities"
+    },
+    {
+      "budget_subfunction_code": "605",
+      "budget_subfunction_title": "Food and nutrition assistance"
+    },
+    {
+      "budget_subfunction_code": "154",
+      "budget_subfunction_title": "Foreign information and exchange activities"
+    },
+    {
+      "budget_subfunction_code": "804",
+      "budget_subfunction_title": "General property and records management"
+    },
+    {
+      "budget_subfunction_code": "806",
+      "budget_subfunction_title": "General purpose fiscal assistance"
+    },
+    {
+      "budget_subfunction_code": "601",
+      "budget_subfunction_title": "General retirement and disability insurance (excluding social se"
+    },
+    {
+      "budget_subfunction_code": "251",
+      "budget_subfunction_title": "General science and basic research"
+    },
+    {
+      "budget_subfunction_code": "000",
+      "budget_subfunction_title": "Governmental Receipts"
+    },
+    {
+      "budget_subfunction_code": "401",
+      "budget_subfunction_title": "Ground transportation"
+    },
+    {
+      "budget_subfunction_code": "551",
+      "budget_subfunction_title": "Health care services"
+    },
+    {
+      "budget_subfunction_code": "552",
+      "budget_subfunction_title": "Health research and training"
+    },
+    {
+      "budget_subfunction_code": "502",
+      "budget_subfunction_title": "Higher education"
+    },
+    {
+      "budget_subfunction_code": "703",
+      "budget_subfunction_title": "Hospital and medical care for veterans"
+    },
+    {
+      "budget_subfunction_code": "604",
+      "budget_subfunction_title": "Housing assistance"
+    },
+    {
+      "budget_subfunction_code": "701",
+      "budget_subfunction_title": "Income security for veterans"
+    },
+    {
+      "budget_subfunction_code": "901",
+      "budget_subfunction_title": "Interest on Treasury debt securities (gross)"
+    },
+    {
+      "budget_subfunction_code": "151",
+      "budget_subfunction_title": "International development and humanitarian assistance"
+    },
+    {
+      "budget_subfunction_code": "155",
+      "budget_subfunction_title": "International financial programs"
+    },
+    {
+      "budget_subfunction_code": "152",
+      "budget_subfunction_title": "International security assistance"
+    },
+    {
+      "budget_subfunction_code": "801",
+      "budget_subfunction_title": "Legislative functions"
+    },
+    {
+      "budget_subfunction_code": "571",
+      "budget_subfunction_title": "Medicare"
+    },
+    {
+      "budget_subfunction_code": "371",
+      "budget_subfunction_title": "Mortgage credit"
+    },
+    {
+      "budget_subfunction_code": "999",
+      "budget_subfunction_title": "Multiple functions"
+    },
+    {
+      "budget_subfunction_code": "050",
+      "budget_subfunction_title": "National Defense"
+    },
+    {
+      "budget_subfunction_code": "376",
+      "budget_subfunction_title": "Other advancement of commerce"
+    },
+    {
+      "budget_subfunction_code": "808",
+      "budget_subfunction_title": "Other general government"
+    },
+    {
+      "budget_subfunction_code": "609",
+      "budget_subfunction_title": "Other income security"
+    },
+    {
+      "budget_subfunction_code": "908",
+      "budget_subfunction_title": "Other interest"
+    },
+    {
+      "budget_subfunction_code": "505",
+      "budget_subfunction_title": "Other labor services"
+    },
+    {
+      "budget_subfunction_code": "306",
+      "budget_subfunction_title": "Other natural resources"
+    },
+    {
+      "budget_subfunction_code": "407",
+      "budget_subfunction_title": "Other transportation"
+    },
+    {
+      "budget_subfunction_code": "705",
+      "budget_subfunction_title": "Other veterans benefits and services"
+    },
+    {
+      "budget_subfunction_code": "304",
+      "budget_subfunction_title": "Pollution control and abatement"
+    },
+    {
+      "budget_subfunction_code": "372",
+      "budget_subfunction_title": "Postal service"
+    },
+    {
+      "budget_subfunction_code": "303",
+      "budget_subfunction_title": "Recreational resources"
+    },
+    {
+      "budget_subfunction_code": "503",
+      "budget_subfunction_title": "Research and general education aids"
+    },
+    {
+      "budget_subfunction_code": "651",
+      "budget_subfunction_title": "Social security"
+    },
+    {
+      "budget_subfunction_code": "506",
+      "budget_subfunction_title": "Social services"
+    },
+    {
+      "budget_subfunction_code": "252",
+      "budget_subfunction_title": "Space flight, research, and supporting activities"
+    },
+    {
+      "budget_subfunction_code": "504",
+      "budget_subfunction_title": "Training and employment"
+    },
+    {
+      "budget_subfunction_code": "400",
+      "budget_subfunction_title": "Transportation"
+    },
+    {
+      "budget_subfunction_code": "603",
+      "budget_subfunction_title": "Unemployment compensation"
+    },
+    {
+      "budget_subfunction_code": "702",
+      "budget_subfunction_title": "Veterans education, training, and rehabilitation"
+    },
+    {
+      "budget_subfunction_code": "704",
+      "budget_subfunction_title": "Veterans housing"
+    },
+    {
+      "budget_subfunction_code": "301",
+      "budget_subfunction_title": "Water resources"
+    },
+    {
+      "budget_subfunction_code": "403",
+      "budget_subfunction_title": "Water transportation"
+    }
+  ]
+}

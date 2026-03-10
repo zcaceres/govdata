@@ -1,0 +1,73 @@
+{
+  "limit": 10,
+  "results": [
+    {
+      "award_id": "W91QF424P0005",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W91QF424P0005_9700_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "W91CRB24F0536",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W91CRB24F0536_9700_W91CRB23D0005_9700"
+    },
+    {
+      "award_id": "W912PL22C0003",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912PL22C0003_9700_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "W912PL21F0047",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912PL21F0047_9700_W912PL21D0022_9700"
+    },
+    {
+      "award_id": "W912PA24F0048",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912PA24F0048_9700_47QSWA18D0056_4732"
+    },
+    {
+      "award_id": "W912HQ24P0036",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912HQ24P0036_9700_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "W912HP24C4000",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912HP24C4000_9700_-NONE-_-NONE-"
+    },
+    {
+      "award_id": "W912HP23F4001",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912HP23F4001_9700_W912HP21D2006_9700"
+    },
+    {
+      "award_id": "W912HP23F4000",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912HP23F4000_9700_W912HP21D2001_9700"
+    },
+    {
+      "award_id": "W912EP25F0025",
+      "subaward_count": 0,
+      "subaward_obligation": 0,
+      "award_generated_internal_id": "CONT_AWD_W912EP25F0025_9700_W912EP21D0003_9700"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "hasNext": false
+  },
+  "messages": [
+    "This endpoint is under active development and subject to change",
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. "
+  ]
+}

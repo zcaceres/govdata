@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "activity_nr": 390765,
+      "rel_type": "C",
+      "rel_act_nr": 79482386,
+      "rel_safety": null,
+      "rel_health": null,
+      "load_dt": "2011-10-14T16:41:57"
+    },
+    {
+      "activity_nr": 390799,
+      "rel_type": "R",
+      "rel_act_nr": 900044124,
+      "rel_safety": null,
+      "rel_health": null,
+      "load_dt": "2011-10-14T16:41:57"
+    }
+  ]
+}

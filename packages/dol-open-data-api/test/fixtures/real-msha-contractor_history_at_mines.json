@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "mine_id": "2800747",
+      "cntctr_id": "4ZM",
+      "cntctr_nm": "George Schofield & Co The",
+      "cntctr_start_dt": "2003-04-24T00:00:00",
+      "cntctr_end_dt": null,
+      "load_dt": "2026-02-28T00:49:40"
+    },
+    {
+      "mine_id": "3600884",
+      "cntctr_id": "F649",
+      "cntctr_nm": "Shirley Ann Trucking--M&M Enterprise Transportatio",
+      "cntctr_start_dt": "2003-04-01T00:00:00",
+      "cntctr_end_dt": null,
+      "load_dt": "2026-02-28T00:49:40"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "mine_id": "1201787",
+      "oper_id": "P09818",
+      "oper_start_dt": "1980-05-01T00:00:00",
+      "oper_end_dt": null,
+      "oper_nm": "K & K Excavating Inc",
+      "mine_nm": "Spencer #9",
+      "load_dt": "2026-02-28T00:49:41"
+    },
+    {
+      "mine_id": "3401664",
+      "oper_id": "L10756",
+      "oper_start_dt": "1989-01-01T00:00:00",
+      "oper_end_dt": null,
+      "oper_nm": "Woodward County",
+      "mine_nm": "DISTRICT #1",
+      "load_dt": "2026-02-28T00:49:41"
+    }
+  ]
+}

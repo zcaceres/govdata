@@ -1,0 +1,88 @@
+{
+  "category": "cfda",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": 1221,
+      "code": "43.001",
+      "name": "Science",
+      "amount": 152393208.74,
+      "total_outlays": null
+    },
+    {
+      "id": 2059,
+      "code": "93.855",
+      "name": "Allergy and Infectious Diseases Research",
+      "amount": 61031752.35,
+      "total_outlays": null
+    },
+    {
+      "id": 1226,
+      "code": "43.008",
+      "name": "Office of Stem Engagement (OSTEM)",
+      "amount": 44845614.15,
+      "total_outlays": null
+    },
+    {
+      "id": 1254,
+      "code": "47.050",
+      "name": "Geosciences",
+      "amount": 44616607,
+      "total_outlays": null
+    },
+    {
+      "id": 1223,
+      "code": "43.003",
+      "name": "Exploration",
+      "amount": 31408257,
+      "total_outlays": null
+    },
+    {
+      "id": 1644,
+      "code": "93.067",
+      "name": "Global AIDS",
+      "amount": 27418558,
+      "total_outlays": null
+    },
+    {
+      "id": 2046,
+      "code": "93.837",
+      "name": "Cardiovascular Diseases Research",
+      "amount": 26847388.82,
+      "total_outlays": null
+    },
+    {
+      "id": 1222,
+      "code": "43.002",
+      "name": "Aeronautics",
+      "amount": 22291742.16,
+      "total_outlays": null
+    },
+    {
+      "id": 1781,
+      "code": "93.310",
+      "name": "Trans-NIH Research Support",
+      "amount": 13345892.96,
+      "total_outlays": null
+    },
+    {
+      "id": 1259,
+      "code": "47.078",
+      "name": "Polar Programs",
+      "amount": 11394370,
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

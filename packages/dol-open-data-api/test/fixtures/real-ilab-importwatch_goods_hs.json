@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "good": "Alcoholic Beverages",
+      "hts_code": "2203"
+    },
+    {
+      "id": "10",
+      "good": "Bamboo",
+      "hts_code": "4402.1"
+    }
+  ]
+}

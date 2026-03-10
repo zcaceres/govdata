@@ -1,0 +1,72 @@
+[
+  {
+    "short_name": "mine_id",
+    "full_name": "mine identifier",
+    "variable_description": "Mine ID. Identification number assigned to the mine by MSHA. It is the mine identification number of the mine where the accident/injury/illness occurred.",
+    "application_datatype": "varchar",
+    "variable_category": "identification"
+  },
+  {
+    "short_name": "cntctr_id",
+    "full_name": "contractor identifier",
+    "variable_description": "Contractor ID. Identification number assigned by MSHA for companies working as contractors at a mine. It is the contractor id of the contractor or contractor employee involved in the accident/injury. May not contain data (null values) if the accident involved an operator.",
+    "application_datatype": "varchar",
+    "variable_category": "identification"
+  },
+  {
+    "short_name": "subunit_cd",
+    "full_name": "subunit code",
+    "variable_description": "Subunit Code. Code that identifies the location within a mine where the accident/injury/illness occurred.",
+    "application_datatype": "varchar",
+    "variable_category": "location"
+  },
+  {
+    "short_name": "subunit_desc",
+    "full_name": "subunit code description",
+    "variable_description": "Subunit Code Description. \"Description of the subunit code referring to a location within a mine: (01) Underground operation; (02) Surface operation at underground mine; (03) Strip, quarry or open pit; (04) Auger (Coal only); (05) Culm bank or refuse pile (Coal only); (06) Dredge; (12) Other surface (Metal/Non-Metal only);(17) Independent shop or yard;(30) Mill operation, preparation plant or breaker;(99) Office workers at mine site.\"",
+    "application_datatype": "varchar",
+    "variable_category": "location"
+  },
+  {
+    "short_name": "ai_dt",
+    "full_name": "accident date",
+    "variable_description": "Accident Date. Date the accident/injury/illness occurred (mm/dd/yyyy).",
+    "application_datatype": "date",
+    "variable_category": "date"
+  },
+  {
+    "short_name": "inj_degr_desc",
+    "full_name": "degree of injury description",
+    "variable_description": "Degree of Injury Code Description. \"Description of the degree of injury/illness to the individual: (0) Accident only; (1) Fatality; (2) Perm total or perm partial disability; (3) Days away from work only; (4) Days away from work and restricted activity; (5) Days restricted activity only; (6) Injuries that do not result in death, or days away from work, or days of restricted work activity; (7) Occupational illnesses; (8) Fatal and non-fatal injuries due to the natural causes; (9) Fatal and non-fatal injuries to non-employees; (10) All other cases, including first aid; (?) No value found.\"",
+    "application_datatype": "varchar",
+    "variable_category": "classification"
+  },
+  {
+    "short_name": "ai_class_desc",
+    "full_name": "accident classification description",
+    "variable_description": "Accident Classification Description. Description of the accident classification code that identifies the circumstances which contributed most directly to the resulting accident.",
+    "application_datatype": "varchar",
+    "variable_category": "classification"
+  },
+  {
+    "short_name": "ai_occ_desc",
+    "full_name": "occupation code description",
+    "variable_description": "Occupation Code Description. Description of the occupation code.",
+    "application_datatype": "varchar",
+    "variable_category": "classification"
+  },
+  {
+    "short_name": "ai_acty_desc",
+    "full_name": "miner activity description",
+    "variable_description": "Miner Activity Code Description. Description of the activity code. May be 'No Value Found' if activity code is invalid.",
+    "application_datatype": "varchar",
+    "variable_category": "classification"
+  },
+  {
+    "short_name": "exper_tot_calc",
+    "full_name": "total experience",
+    "variable_description": "Total Experience. Total mining experience of the person affected calculated in decimal years. The calculation uses both the years and months experience. May not contain data (null values).",
+    "application_datatype": "number",
+    "variable_category": "measure"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "count": 6,
+  "results": {
+    "cities": [
+      {
+        "city_name": "CALIFORNIA",
+        "country_name": "HONDURAS"
+      },
+      {
+        "city_name": "CALIFORNIA",
+        "country_name": "VENEZUELA"
+      },
+      {
+        "city_name": "CALIFORNIA",
+        "state_name": "MISSOURI",
+        "country_name": "UNITED STATES"
+      },
+      {
+        "city_name": "CALIFORNIA BAR",
+        "state_name": "OREGON",
+        "country_name": "UNITED STATES"
+      },
+      {
+        "city_name": "CALIFORNIA JUNCTION",
+        "state_name": "IOWA",
+        "country_name": "UNITED STATES"
+      }
+    ],
+    "states": [
+      {
+        "state_name": "CALIFORNIA",
+        "country_name": "UNITED STATES"
+      }
+    ]
+  },
+  "messages": [
+    ""
+  ]
+}

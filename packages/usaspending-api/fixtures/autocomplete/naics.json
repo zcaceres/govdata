@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "year_retired": 2012,
+      "naics": "334611",
+      "naics_description": "Software Reproducing"
+    },
+    {
+      "year_retired": 2012,
+      "naics": "334612",
+      "naics_description": "Prerecorded Compact Disc (except Software), Tape, and Record Reproducing"
+    },
+    {
+      "year_retired": 2012,
+      "naics": "443120",
+      "naics_description": "Computer and Software Stores"
+    },
+    {
+      "year_retired": null,
+      "naics": "423430",
+      "naics_description": "Computer and Computer Peripheral Equipment and Software Merchant Wholesalers"
+    },
+    {
+      "year_retired": null,
+      "naics": "513210",
+      "naics_description": "Software Publishers"
+    }
+  ]
+}

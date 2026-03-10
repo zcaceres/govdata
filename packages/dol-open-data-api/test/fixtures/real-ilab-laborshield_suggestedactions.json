@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "country_numeric_iso_code": 4,
+      "country_iso_code": "AF",
+      "country": "Afghanistan",
+      "year": 2016,
+      "area": "Legal Framework",
+      "suggested_action": "Ensure that debt bondage is criminally prohibited."
+    },
+    {
+      "country_numeric_iso_code": 4,
+      "country_iso_code": "AF",
+      "country": "Afghanistan",
+      "year": 2016,
+      "area": "Enforcement",
+      "suggested_action": "Establish a CPAN in all of Afghanistan 2019s 34 provinces."
+    }
+  ]
+}

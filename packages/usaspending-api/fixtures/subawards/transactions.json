@@ -1,0 +1,141 @@
+{
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_509_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2026-03-03",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "509",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_508_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2026-02-25",
+      "action_type": "C",
+      "action_type_description": "FUNDING ONLY ACTION",
+      "modification_number": "508",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 7300000,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_506_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2026-02-06",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "506",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_507_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2026-02-06",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "507",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_505_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2026-01-28",
+      "action_type": "C",
+      "action_type_description": "FUNDING ONLY ACTION",
+      "modification_number": "505",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 12750000,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_504_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2026-01-09",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "504",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_503_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2026-01-07",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "503",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_502_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2025-12-18",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "502",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES I UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_501_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2025-12-17",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "501",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    },
+    {
+      "id": "CONT_TX_8000_-NONE-_NNM07AB03C_500_-NONE-_0",
+      "type": "D",
+      "type_description": "DEFINITIVE CONTRACT",
+      "action_date": "2025-12-08",
+      "action_type": "B",
+      "action_type_description": "SUPPLEMENTAL AGREEMENT FOR WORK WITHIN SCOPE",
+      "modification_number": "500",
+      "description": "PROVIDE DEVELOPMENTAL HARDWARE AND TEST ARTICLES, AND MANUFACTURE AND ASSEMBLE ARES 1 UPPER STAGE.",
+      "federal_action_obligation": 0,
+      "face_value_loan_guarantee": 0,
+      "original_loan_subsidy_cost": 0
+    }
+  ]
+}

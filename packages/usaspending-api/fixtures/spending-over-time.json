@@ -1,0 +1,125 @@
+{
+  "group": "fiscal_year",
+  "results": [
+    {
+      "aggregated_amount": 4492351329.2,
+      "time_period": {
+        "fiscal_year": "2020"
+      },
+      "Contract_Obligations": 3016961395.79,
+      "Direct_Obligations": 900642.57,
+      "Grant_Obligations": 434086975.21,
+      "Idv_Obligations": 1030631495.51,
+      "Loan_Obligations": 9614460.12,
+      "Other_Obligations": 156360,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 5600385308.61,
+      "time_period": {
+        "fiscal_year": "2021"
+      },
+      "Contract_Obligations": 3404633561.89,
+      "Direct_Obligations": 1727289.2,
+      "Grant_Obligations": 823200321.74,
+      "Idv_Obligations": 1364144318.05,
+      "Loan_Obligations": 6459737.73,
+      "Other_Obligations": 220080,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 4319504560.25,
+      "time_period": {
+        "fiscal_year": "2022"
+      },
+      "Contract_Obligations": 2670872338.17,
+      "Direct_Obligations": 523312.35,
+      "Grant_Obligations": 644341402.99,
+      "Idv_Obligations": 1003537150.81,
+      "Loan_Obligations": 230355.93,
+      "Other_Obligations": 0,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 5615536192.429999,
+      "time_period": {
+        "fiscal_year": "2023"
+      },
+      "Contract_Obligations": 4020234601.89,
+      "Direct_Obligations": 0,
+      "Grant_Obligations": 706706046.01,
+      "Idv_Obligations": 888606116.82,
+      "Loan_Obligations": -10572.29,
+      "Other_Obligations": 0,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 4368126540.82,
+      "time_period": {
+        "fiscal_year": "2024"
+      },
+      "Contract_Obligations": 2626597726.96,
+      "Direct_Obligations": 0,
+      "Grant_Obligations": 554351853.73,
+      "Idv_Obligations": 1186622868.13,
+      "Loan_Obligations": 0,
+      "Other_Obligations": 554092,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 664385483.47,
+      "time_period": {
+        "fiscal_year": "2025"
+      },
+      "Contract_Obligations": 493096386.93,
+      "Direct_Obligations": 0,
+      "Grant_Obligations": 62727589.6,
+      "Idv_Obligations": 108561506.94,
+      "Loan_Obligations": 0,
+      "Other_Obligations": 0,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    }
+  ],
+  "spending_level": "transactions",
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "The 'subawards' field will be deprecated in the future. Set 'spending_level' to 'subawards' instead. See documentation for more information.",
+    "You may see additional month, quarter and year results when searching for Awards or Subawards. This is due to Awards or Subawards overlapping with the time period specified but having an 'action date' outside of that time period."
+  ]
+}

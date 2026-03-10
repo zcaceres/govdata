@@ -1,0 +1,53 @@
+{
+  "page_metadata": {
+    "page": 1,
+    "total": 162,
+    "limit": 5,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": "419ccd27-d6f4-d363-aeaf-b9e2c3ae6f5d-P",
+      "duns": "009256819",
+      "uei": "NU2UC8MX6NK1",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "P",
+      "amount": 19381987120.36
+    },
+    {
+      "id": "22d282c6-4508-7d30-97f1-7401ea73b12a-C",
+      "duns": "039267141",
+      "uei": "WZWRLY4G3PL8",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "C",
+      "amount": 3484940568.1
+    },
+    {
+      "id": "9ab85632-42cc-5fa4-2a9c-d734034ddd33-C",
+      "duns": "149879157",
+      "uei": "JJM4FRDZJDX1",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "C",
+      "amount": 3341437815.07
+    },
+    {
+      "id": "27b04395-cee8-a47d-2a5c-3e2b78dc7b0a-C",
+      "duns": "832963453",
+      "uei": "LAJJQWA1PF31",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "C",
+      "amount": 2715116059.85
+    },
+    {
+      "id": "5fa231ae-15e3-afd3-8c5c-bb9911ba57f8-C",
+      "duns": "781650619",
+      "uei": "UEGFHX6R6KJ1",
+      "name": "THE BOEING COMPANY",
+      "recipient_level": "C",
+      "amount": 2033652594.92
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "geo_layer": "state",
+  "spending_type": "obligation",
+  "scope": "recipient_location",
+  "results": [
+    {
+      "amount": 168977635878.89,
+      "display_name": "California",
+      "shape_code": "CA",
+      "population": 39538223,
+      "per_capita": 4273.78,
+      "award_count": 2657870
+    },
+    {
+      "amount": 84238272137,
+      "display_name": "Florida",
+      "shape_code": "FL",
+      "population": 21538187,
+      "per_capita": 3911.11,
+      "award_count": 2154285
+    },
+    {
+      "amount": 127464557291.7,
+      "display_name": "Texas",
+      "shape_code": "TX",
+      "population": 29145505,
+      "per_capita": 4373.39,
+      "award_count": 1780427
+    },
+    {
+      "amount": 100643981108.74,
+      "display_name": "New York",
+      "shape_code": "NY",
+      "population": 20201249,
+      "per_capita": 4982.07,
+      "award_count": 1535351
+    },
+    {
+      "amount": 70928436944.18,
+      "display_name": "Illinois",
+      "shape_code": "IL",
+      "population": 12812508,
+      "per_capita": 5535.87,
+      "award_count": 1080233
+    },
+    {
+      "amount": 52402487651.8,
+      "display_name": "Georgia",
+      "shape_code": "GA",
+      "population": 10711908,
+      "per_capita": 4891.98,
+      "award_count": 1018414
+    },
+    {
+      "amount": 49203583345,
+      "display_name": "Pennsylvania",
+      "shape_code": "PA",
+      "population": 13002700,
+      "per_capita": 3784.11,
+      "award_count": 617094
+    },
+    {
+      "amount": 40506142419.32,
+      "display_name": "New Jersey",
+      "shape_code": "NJ",
+      "population": 9288994,
+      "per_capita": 4360.66,
+      "award_count": 616669
+    },
+    {
+      "amount": 42172541487.8,
+      "display_name": "Ohio",
+      "shape_code": "OH",
+      "population": 11799448,
+      "per_capita": 3574.11,
+      "award_count": 575303
+    },
+    {
+      "amount": 38664602554.9,
+      "display_name": "Michigan",
+      "shape_code": "MI",
+      "population": 10077331,
+      "per_capita": 3836.79,
+      "award_count": 511097
+    },
+    {
+      "amount": 33172511158.33,
+      "display_name": "North Carolina",
+      "shape_code": "NC",
+      "population": 10439388,
+      "per_capita": 3177.63,
+      "award_count": 496601
+    },
+    {
+      "amount": 37867041376.1,
+      "display_name": "Virginia",
+      "shape_code": "VA",
+      "population": 8631393,
+      "per_capita": 4387.13,
+      "award_count": 423904
+    },
+    {
+      "amount": 20313876148.39,
+      "display_name": "Louisiana",
+      "shape_code": "LA",
+      "population": 4657757,
+      "per_capita": 4361.3,
+      "award_count": 389138
+    },
+    {
+      "amount": 37218020996.65,
+      "display_name": "Massachusetts",
+      "shape_code": "MA",
+      "population": 7029917,
+      "per_capita": 5294.23,
+      "award_count": 384027
+    },
+    {
+      "amount": 22578448559.76,
+      "display_name": "Tennessee",
+      "shape_code": "TN",
+      "population": 6910840,
+      "per_capita": 3267.11,
+      "award_count": 381440
+    },
+    {
+      "amount": 27527001134.55,
+      "display_name": "Maryland",
+      "shape_code": "MD",
+      "population": 6177224,
+      "per_capita": 4456.21,
+      "award_count": 362823
+    },
+    {
+      "amount": 32512034500.68,
+      "display_name": "Washington",
+      "shape_code": "WA",
+      "population": 7705281,
+      "per_capita": 4219.45,
+      "award_count": 362329
+    },
+    {
+      "amount": 22103191669.3,
+      "display_name": "Missouri",
+      "shape_code": "MO",
+      "population": 6154913,
+      "per_capita": 3591.15,
+      "award_count": 355757
+    },
+    {
+      "amount": 176672684314.65,
+      "display_name": "Minnesota",
+      "shape_code": "MN",
+      "population": 5706494,
+      "per_capita": 30959.94,
+      "award_count": 351660
+    },
+    {
+      "amount": 25098202287.69,
+      "display_name": "Colorado",
+      "shape_code": "CO",
+      "population": 5773714,
+      "per_capita": 4346.98,
+      "award_count": 343629
+    },
+    {
+      "amount": 23481520848.46,
+      "display_name": "Arizona",
+      "shape_code": "AZ",
+      "population": 7151502,
+      "per_capita": 3283.44,
+      "award_count": 325141
+    },
+    {
+      "amount": 21763315838.23,
+      "display_name": "Wisconsin",
+      "shape_code": "WI",
+      "population": 5893718,
+      "per_capita": 3692.63,
+      "award_count": 309920
+    },
+    {
+      "amount": 21533187536.81,
+      "display_name": "Indiana",
+      "shape_code": "IN",
+      "population": 6785528,
+      "per_capita": 3173.4,
+      "award_count": 305492
+    },
+    {
+      "amount": 16398560846.49,
+      "display_name": "Alabama",
+      "shape_code": "AL",
+      "population": 5024279,
+      "per_capita": 3263.86,
+      "award_count": 287963
+    },
+    {
+      "amount": 14832133034.27,
+      "display_name": "South Carolina",
+      "shape_code": "SC",
+      "population": 5118425,
+      "per_capita": 2897.79,
+      "award_count": 273213
+    },
+    {
+      "amount": 15973042003.72,
+      "display_name": "Oklahoma",
+      "shape_code": "OK",
+      "population": 3959353,
+      "per_capita": 4034.26,
+      "award_count": 245617
+    },
+    {
+      "amount": 11474536300.88,
+      "display_name": "Iowa",
+      "shape_code": "IA",
+      "population": 3190369,
+      "per_capita": 3596.62,
+      "award_count": 230899
+    },
+    {
+      "amount": 11162283780.82,
+      "display_name": "Mississippi",
+      "shape_code": "MS",
+      "population": 2961279,
+      "per_capita": 3769.41,
+      "award_count": 221271
+    },
+    {
+      "amount": 12241045454.53,
+      "display_name": "Nevada",
+      "shape_code": "NV",
+      "population": 3104614,
+      "per_capita": 3942.86,
+      "award_count": 219510
+    },
+    {
+      "amount": 16104152720.14,
+      "display_name": "Oregon",
+      "shape_code": "OR",
+      "population": 4237256,
+      "per_capita": 3800.61,
+      "award_count": 216780
+    },
+    {
+      "amount": 14993816988.38,
+      "display_name": "Connecticut",
+      "shape_code": "CT",
+      "population": 3605944,
+      "per_capita": 4158.08,
+      "award_count": 208655
+    },
+    {
+      "amount": 13769279373.55,
+      "display_name": "Kentucky",
+      "shape_code": "KY",
+      "population": 4505836,
+      "per_capita": 3055.88,
+      "award_count": 200911
+    },
+    {
+      "amount": 11462121871,
+      "display_name": "Kansas",
+      "shape_code": "KS",
+      "population": 2937880,
+      "per_capita": 3901.49,
+      "award_count": 184186
+    },
+    {
+      "amount": 8331499105.53,
+      "display_name": "Arkansas",
+      "shape_code": "AR",
+      "population": 3011524,
+      "per_capita": 2766.54,
+      "award_count": 162757
+    },
+    {
+      "amount": 8445839528.71,
+      "display_name": "Nebraska",
+      "shape_code": "NE",
+      "population": 1961504,
+      "per_capita": 4305.8,
+      "award_count": 159712
+    },
+    {
+      "amount": 11566333286.1,
+      "display_name": "Utah",
+      "shape_code": "UT",
+      "population": 3271616,
+      "per_capita": 3535.36,
+      "award_count": 143034
+    },
+    {
+      "amount": 22622139466.47,
+      "display_name": "Puerto Rico",
+      "shape_code": "PR",
+      "population": 3285874,
+      "per_capita": 6884.66,
+      "award_count": 123862
+    },
+    {
+      "amount": 7845517696.58,
+      "display_name": "Hawaii",
+      "shape_code": "HI",
+      "population": 1455271,
+      "per_capita": 5391.1,
+      "award_count": 92666
+    },
+    {
+      "amount": 5136633064.01,
+      "display_name": "South Dakota",
+      "shape_code": "SD",
+      "population": 886667,
+      "per_capita": 5793.19,
+      "award_count": 90871
+    },
+    {
+      "amount": 5803819460.87,
+      "display_name": "Idaho",
+      "shape_code": "ID",
+      "population": 1839106,
+      "per_capita": 3155.78,
+      "award_count": 87405
+    },
+    {
+      "amount": 7306759677.08,
+      "display_name": "New Mexico",
+      "shape_code": "NM",
+      "population": 2117522,
+      "per_capita": 3450.62,
+      "award_count": 79199
+    },
+    {
+      "amount": 5758320782.32,
+      "display_name": "Maine",
+      "shape_code": "ME",
+      "population": 1362359,
+      "per_capita": 4226.73,
+      "award_count": 77352
+    },
+    {
+      "amount": 5004366997.11,
+      "display_name": "Montana",
+      "shape_code": "MT",
+      "population": 1084225,
+      "per_capita": 4615.62,
+      "award_count": 77082
+    },
+    {
+      "amount": 4952213127.7,
+      "display_name": "North Dakota",
+      "shape_code": "ND",
+      "population": 779094,
+      "per_capita": 6356.37,
+      "award_count": 70984
+    },
+    {
+      "amount": 5908981854.37,
+      "display_name": "New Hampshire",
+      "shape_code": "NH",
+      "population": 1377529,
+      "per_capita": 4289.55,
+      "award_count": 70950
+    },
+    {
+      "amount": 5530836346.29,
+      "display_name": "Rhode Island",
+      "shape_code": "RI",
+      "population": 1097379,
+      "per_capita": 5040.04,
+      "award_count": 62320
+    },
+    {
+      "amount": 9310950060.88,
+      "display_name": "District Of Columbia",
+      "shape_code": "DC",
+      "population": 689545,
+      "per_capita": 13503.03,
+      "award_count": 56332
+    },
+    {
+      "amount": 5437275054.2,
+      "display_name": "West Virginia",
+      "shape_code": "WV",
+      "population": 1793716,
+      "per_capita": 3031.29,
+      "award_count": 55762
+    },
+    {
+      "amount": 4659911542.45,
+      "display_name": "Delaware",
+      "shape_code": "DE",
+      "population": 989948,
+      "per_capita": 4707.23,
+      "award_count": 51298
+    },
+    {
+      "amount": 6645229838.05,
+      "display_name": "Alaska",
+      "shape_code": "AK",
+      "population": 733391,
+      "per_capita": 9060.96,
+      "award_count": 44875
+    },
+    {
+      "amount": 3573504931.47,
+      "display_name": "Vermont",
+      "shape_code": "VT",
+      "population": 643077,
+      "per_capita": 5556.88,
+      "award_count": 41478
+    },
+    {
+      "amount": 3865176072.49,
+      "display_name": "Wyoming",
+      "shape_code": "WY",
+      "population": 576851,
+      "per_capita": 6700.48,
+      "award_count": 39971
+    },
+    {
+      "amount": 980498105.15,
+      "display_name": "U.S. Virgin Islands",
+      "shape_code": "VI",
+      "population": 87146,
+      "per_capita": 11251.21,
+      "award_count": 7189
+    },
+    {
+      "amount": 1160146399.3,
+      "display_name": "Guam",
+      "shape_code": "GU",
+      "population": 153836,
+      "per_capita": 7541.45,
+      "award_count": 6891
+    },
+    {
+      "amount": 1441358375.99,
+      "display_name": null,
+      "shape_code": null,
+      "population": null,
+      "per_capita": null,
+      "award_count": 3663
+    },
+    {
+      "amount": 619750012.82,
+      "display_name": "Northern Mariana Islands",
+      "shape_code": "MP",
+      "population": 47329,
+      "per_capita": 13094.51,
+      "award_count": 1685
+    },
+    {
+      "amount": 183002978.27,
+      "display_name": "American Samoa",
+      "shape_code": "AS",
+      "population": 49710,
+      "per_capita": 3681.41,
+      "award_count": 795
+    },
+    {
+      "amount": 25851461.01,
+      "display_name": "Federated States Of Micronesia",
+      "shape_code": "FM",
+      "population": null,
+      "per_capita": null,
+      "award_count": 39
+    },
+    {
+      "amount": 29210239.55,
+      "display_name": "Palau",
+      "shape_code": "PW",
+      "population": null,
+      "per_capita": null,
+      "award_count": 27
+    },
+    {
+      "amount": 20554877.84,
+      "display_name": "Marshall Islands",
+      "shape_code": "MH",
+      "population": null,
+      "per_capita": null,
+      "award_count": 19
+    },
+    {
+      "amount": 229225,
+      "display_name": null,
+      "shape_code": "AP",
+      "population": null,
+      "per_capita": null,
+      "award_count": 4
+    }
+  ]
+}

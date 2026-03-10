@@ -33,7 +33,7 @@ function validateParams<T>(schema: z.ZodType<T>, params: Record<string, unknown>
   } catch (err) {
     if (err instanceof z.ZodError) {
       const issue = err.issues[0];
-      const field = issue.path.join(".");
+      const field = issue.path.join(".") || "input";
       const expected = issue.message;
       throw new DogeValidationError(field, (params as any)?.[field], expected);
     }

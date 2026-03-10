@@ -1,0 +1,161 @@
+{
+  "totals": {
+    "obligation": 1512780068872.86,
+    "outlay": 1496208056652.67,
+    "award_count": 21182373
+  },
+  "results": [
+    {
+      "id": 2246,
+      "code": "98.008",
+      "description": "Food for Peace Emergency Program (EP)",
+      "award_count": 1,
+      "resource_link": "https://sam.gov/fal/0463c36b6fe748af80c3070d2480a9a3/view",
+      "cfda_federal_agency": "AGENCY FOR INTERNATIONAL DEVELOPMENT, AGENCY FOR INTERNATIONAL DEVELOPMENT",
+      "cfda_objectives": "To improve access, availability and utilization of food in food insecure environments abroad. The priority for Title II emergency programs is to prevent hunger and malnutrition in food insecure areas or countries.",
+      "cfda_website": "http://www.usaid.gov",
+      "applicant_eligibility": "Private non-profit institutions/organizations are eligible for this program.  Specifically, an organization must be a Private Voluntary Organization (PVO) or cooperative.  If a U.S. based PVO, the organization must be registered with USAID as of the date of its application.  In order to be awarded a program the organization must also be registered with the Office of Food for Peace.",
+      "beneficiary_eligibility": "Private, non-profit institutions/organizations will benefit from this program along with vulnerable and food insecure populations.",
+      "obligation": 2195058,
+      "outlay": 2195057.81
+    },
+    {
+      "id": 2244,
+      "code": "98.006",
+      "description": "Foreign Assistance to American Schools and Hospitals Abroad (ASHA)",
+      "award_count": 1,
+      "resource_link": "https://sam.gov/fal/124c061770d54465a109d40f26b59bcb/view",
+      "cfda_federal_agency": "AGENCY FOR INTERNATIONAL DEVELOPMENT, AGENCY FOR INTERNATIONAL DEVELOPMENT",
+      "cfda_objectives": "The purpose of the American Schools and Hospitals Abroad (ASHA) program is to furnish assistance to schools and libraries outside the United States founded or sponsored by United States citizens and serving as study and demonstration centers for ideas and practices of the United States, and to hospital centers for medical education and research outside the United States, founded or sponsored by United States citizens. Within this context of the U.S. Foreign Assistance Program, the objectives of the ASHA program are to strengthen overseas schools and hospitals that best demonstrate American ideas and practices, and are likely to survive over a long term. ",
+      "cfda_website": "https://www.usaid.gov/work-usaid/business-funding/grant-programs/american-schools-and-hospitals-abroad",
+      "applicant_eligibility": "Pursuant to Section 214 of the Foreign Assistance Act of 1961, as amended, grant assistance is made available to schools and libraries outside the United States founded or sponsored by United States citizens and serving as study and demonstration centers for ideas and practices of the United States, and to hospital centers for medical education and research outside the United States, founded or sponsored by United States citizens.  Grants made under this program help such institutions demonstrate to people overseas the achievements of the United States in education and medicine.\r\n\r\nThe applicant must be a non-profit U.S. organization, which either founded or sponsors the institution for which assistance is sought.  The applicant, for example, can be a nonprofit university or a tax exempt organization under Section 501(c) (3) of the Internal Revenue Code of 1954 as amended.\r\n\r\nThe applicant must demonstrate a continuing supportive relationship with the overseas institution.  Evidence of this would be the provision of financial and management support for the institution.\r\n\r\nOther more detailed eligibility requirements are addressed in the published Request for Applications which appear on the USAID/ASHA web site and www.grants.gov.\r\n",
+      "beneficiary_eligibility": "Beneficiaries must be institutions located outside the U.S. and must not be under the control or management of a government or any other of its agencies. The majority of the users of these overseas institutions, e.g., students or patients, must be citizens of countries other than the U.S.\r\n\r\n",
+      "obligation": 1250000,
+      "outlay": 1250000
+    },
+    {
+      "id": 2242,
+      "code": "98.004",
+      "description": "Non-Governmental Organization Strengthening (NGO)",
+      "award_count": 1,
+      "resource_link": "https://sam.gov/fal/6af6bff1fae0434f87fd83b938537726/view",
+      "cfda_federal_agency": "AGENCY FOR INTERNATIONAL DEVELOPMENT, AGENCY FOR INTERNATIONAL DEVELOPMENT",
+      "cfda_objectives": "The NGO Strengthening program aims to help local indigenous non-governmental organizations, networks, and intermediate service organizations become more efficient and effective in the delivery of development services.",
+      "cfda_website": "http://www.usaid.gov",
+      "applicant_eligibility": "1.  Applicants must meet the following eligibility requirements.  Be registered as a PVO with USAID;  Receive at least 20 percent of total annual financial support for its international programs from non-U.S. government sources; and  2. Current Matching Grants recipients are eligible.",
+      "beneficiary_eligibility": "Direct beneficiaries are foreign private institutions or organizations; indirect beneficiaries are the recipients of improved service delivery in developing countries.",
+      "obligation": 4450000,
+      "outlay": 4750000
+    },
+    {
+      "id": 2239,
+      "code": "98.001",
+      "description": "USAID Foreign Assistance for Programs Overseas",
+      "award_count": 366,
+      "resource_link": "https://sam.gov/fal/8037d16673d5435bbbc40d0e157110ad/view",
+      "cfda_federal_agency": "AGENCY FOR INTERNATIONAL DEVELOPMENT, AGENCY FOR INTERNATIONAL DEVELOPMENT",
+      "cfda_objectives": "The Foreign Assistance Program works to support long-term and equitable economic growth and advance U.S. foreign policy objectives by supporting economic growth, agriculture and trade; global health; and democracy, conflict prevention and humanitarian assistance.",
+      "cfda_website": "http://www.usaid.gov",
+      "applicant_eligibility": "While an individual grant may include limitations on whom may apply, generally any type of applicant may apply.",
+      "beneficiary_eligibility": "Beneficiaries are foreign governments, foreign public or private institutions or organizations, or foreign individuals.",
+      "obligation": 825790706.51,
+      "outlay": 867901490.94
+    },
+    {
+      "id": 2238,
+      "code": "97.134",
+      "description": "Presidential Residence Protection Security Grant",
+      "award_count": 2,
+      "resource_link": "https://sam.gov/fal/019cc6b64152497f819808614584c1fb/view",
+      "cfda_federal_agency": "FEDERAL EMERGENCY MANAGEMENT AGENCY, HOMELAND SECURITY, DEPARTMENT OF",
+      "cfda_objectives": "The purpose of FEMA's PRPA grant program is to provide assistance and support for the protection of presidential residences. This program aims to enhance the security measures and capabilities of presidential residences to ensure the safety and well-being of the President of the United States and their immediate family.",
+      "cfda_website": "http://fema.gov/grants",
+      "applicant_eligibility": "Eligible applicants are limited to state and local law enforcement and emergency response agencies , either directly or through the State Administrative Agency (SAA), that conducted protection activities associated with any non-governmental residence of the President of the United States designated or identified to be secured by the USSS. The SAA may apply on behalf of one or more eligible agencies. If the SAA submits an application on behalf of any agency, those agencies covered under the SAA’s application cannot also apply directly to FEMA for funding under the applicable year’s Notice of Funding Opportunity (NOFO). Multiple applications may result in a delay in reimbursement and/or an application to be denied funding. Coordination between the SAA and any eligible agencies agency is therefore encouraged. Local includes designated Indian Tribes, but excludes institutions of higher education and hospitals.",
+      "beneficiary_eligibility": "DHS/FEMA grant funds may only be used for the purpose set forth in the grant, and must be consistent with the statutory authority for the award. Grant funds must be used in accordance with 2 C.F.R. Part 200. Award funds may not be used for matching funds for any other Federal award, lobbying, or intervention in Federal regulatory or adjudicatory proceedings. In addition, Federal funds may not be used to sue the Federal Government or any other government entity. Costs incurred as a result of normal agency activities (e.g., salaries incurred during normal patrol hours for security operations) are not allowable for reimbursement. Funding shall not be used for hiring new or additional personnel. Funding shall not be used for purchasing equipment.",
+      "obligation": 34913477.19,
+      "outlay": 0
+    },
+    {
+      "id": 2236,
+      "code": "97.132",
+      "description": "Financial Assistance for Targeted Violence and Terrorism Prevention",
+      "award_count": 29,
+      "resource_link": "https://sam.gov/fal/a44b6f53113645b2bcffe11e98ee9564/view",
+      "cfda_federal_agency": "FEDERAL EMERGENCY MANAGEMENT AGENCY, HOMELAND SECURITY, DEPARTMENT OF",
+      "cfda_objectives": "The TVTP Grant Program has six objectives:\n•\tThe local community has awareness of the signs that someone may be escalating towards violence and of the threats of targeted violence and terrorism.\n•\tThe local community has awareness of both risk factors for – and protective factors against – escalation to violence.\n•\tMembers of the local community engage the broadest and most diverse set of local stakeholders, sharing resources and best practices and building trusted partnerships to address targeted violence and terrorism. •Members of the local community can act on bystander training and help individuals before they escalate to violence by understanding the role of, and the means to contact, threat assessment, and management teams.\n•\tMembers of the local community have access to multi-disciplinary threat assessment and management teams comprised of individuals such as psychologists, educators, faith leaders, and medical personnel that can provide support to an individual before an act of violence takes place.\n•\tThe local community has programs that address risk factors for, and strengthen protective factors against, escalation to violence, including recidivism reduction programming.\nPriorities: \nThe TVTP Grant Program has five priorities:\n•\tImplementing Prevention Capabilities in Small and Mid-Sized Communities;\n•\tAdvancing Equity in Awards and Engaging Underserved Communities in Prevention;\n•\tAddressing Online Aspects of Targeted Violence and Terrorism;\n•\tPreventing Domestic Violent Extremism; and\n•\tEnhancing Local Threat Assessment and Management Capabilities.\nPerformance Measures:\nPerformance Measures for the TVTP program are provided in the TVTPs Notice of Funding Opportunity available at grants.gov.",
+      "cfda_website": "https://www.dhs.gov/targeted-violence-and-terrorism-prevention-applicant-grant-program-applicant-resources",
+      "applicant_eligibility": "State (includes District of Columbia, public institutions of higher education and hospitals), Local (includes State-designated lndian Tribes, excludes institutions of higher education and hospitals, Public nonprofit institution/organization (includes institutions of higher education and hospitals), Federally Recognized lndian Tribal Governments, Private nonprofit institution/organization (includes institutions of higher education and hospitals).",
+      "beneficiary_eligibility": "Refer to the Funding Opportunity Announcement for the program.",
+      "obligation": 10000000,
+      "outlay": 0
+    },
+    {
+      "id": 2235,
+      "code": "97.131",
+      "description": "Emergency Management Baseline Assessments Grant (EMBAG)",
+      "award_count": 4,
+      "resource_link": "https://sam.gov/fal/3b4058ab3b0643308af808ee4fd424a0/view",
+      "cfda_federal_agency": "FEDERAL EMERGENCY MANAGEMENT AGENCY, HOMELAND SECURITY, DEPARTMENT OF",
+      "cfda_objectives": "The purpose of the 2024 EMBAG cooperative agreement is to support the use of national-level standards for emergency management to help ensure that state, local, tribal, and territorial (SLTT) communities have accredited emergency management programs and certified emergency managers in place before an incident occurs. To achieve this purpose, the EMBAG supports voluntary national-level standards and peer review assessment processes that communities can use to identify the capacity and shortfalls of their emergency management programs and emergency managers and develop a path to compliance with these standards. These national-level standards fall under “other assistance” called out under Section 503 (b)(2)(G) of the Homeland Security Act of 2002 to “build tribal, local, State, regional, and national capabilities…necessary to respond to a natural disaster, act of terrorism, or other man-made disaster.” See 6 U.S.C. § 313(b)(2)(G). \n\nThe EMBAG directly supports the DHS Strategic Plan Fiscal Years 2020-2024, Goal 5: Strengthen Preparedness and Resilience, Objective 5.1: Build a National Culture of Preparedness and Objective 5.2: Respond During Incidents, by supporting efforts that can help ensure that state, tribal, territorial, and local communities have accredited emergency management programs and certified emergency managers in place before an incident occurs. The EMBAG program reinforces FEMA’s mission of advancing all-hazards preparedness, consistent with the Post-Katrina Emergency Management Reform Act of 2006 (PKEMRA) and Presidential Policy Directive 8 (PPD-8), National Preparedness. \n\nThe performance of the EMBAG is measured against the intended outcomes identified in the Objectives section of Section A: Program Description in the 2024 EMBAG NOFO. Applicants should refer to Appendix B: Detail on EMBAG Performance Measurement of the 2024 EMBAG NOFO for additional information on these metrics, including guidance and a template for reporting. Please refer to the 2024 NOFO for additional information: \nhttps://www.grants.gov/search-results-detail/356059.",
+      "cfda_website": "http://www.fema.gov",
+      "applicant_eligibility": "The following are eligible applicants for this funding opportunity:\n•\tNonprofits as defined by 2 C.F.R. § 200.1; and\n•\tInstitutions of higher education as defined by 2 CFR § 200.1.\nAlso see NOFO Section C, Eligibility Information, for additional criterion based on demonstrating competence in emergency management program accreditation and/or emergency manager certification.",
+      "beneficiary_eligibility": "Funding under this program is ultimately intended to benefit U.S. State, Local, Tribal, and Territorial emergency management programs and emergency managers.",
+      "obligation": 2525000,
+      "outlay": 0
+    },
+    {
+      "id": 2217,
+      "code": "97.088",
+      "description": "Disaster Assistance Projects",
+      "award_count": 50,
+      "resource_link": "https://sam.gov/fal/e5c54ed2395b4d0295401eb012fc3af1/view",
+      "cfda_federal_agency": "FEDERAL EMERGENCY MANAGEMENT AGENCY, HOMELAND SECURITY, DEPARTMENT OF",
+      "cfda_objectives": "This category is not for unsolicited proposals. Provides funding that has been designated by Congressionally appropriated authorization, generally for a specified project, or to provide unique or limited scope funding for certain disaster assistance Projects identified by Congress or a DHS program office. Program funds support the National Preparedness Goal of enhancing core capabilities in the areas of disaster response and recovery. One such disaster project is the Disaster Case Management (DCM) Program, which is a disaster-related federal award. DCM supports the Recovery core capability and mission area as defined in the National Preparedness Goal. The objective of DCM is to assist individuals and households through the recovery process by connecting survivors with local resources to meet their disaster-caused unmet needs. A disaster-caused unmet need is any un-resourced item, support, or assistance that has been assessed and verified as necessary for a survivor to recover from disaster. This may include but is not limited to: food, clothing, shelter, first aid, emotional and spiritual care, household items, temporary housing, home repair, or rebuilding.",
+      "cfda_website": "http://www.fema.gov",
+      "applicant_eligibility": "State (includes the fifty states, the District of Columbia, and the U.S. territories), local government (includes state-designated Indian tribes), public or private non-profit institution/organization (includes institutions of higher education and hospitals), public or private profit institution/organization, and federally-recognized Indian tribal governments. Funds are restricted to non-federal entities, e.g., state, local government, private, public, profit or nonprofit organization, Indian tribal government.",
+      "beneficiary_eligibility": "Funding is restricted to nonfederal entities providing case management services to individuals and families impacted by a major disaster declared under the Stafford Act with Individual Assistance authorized. See IAPPG 1.1., at p. 188. The need for DCM must exceed the capacity of the SLTT government.",
+      "obligation": -43922003.26,
+      "outlay": 18366811.68
+    },
+    {
+      "id": 2216,
+      "code": "97.083",
+      "description": "Staffing for Adequate Fire and Emergency Response (SAFER)",
+      "award_count": 1,
+      "resource_link": "https://sam.gov/fal/1086d7b7492149d2aff6c86c4508ddd4/view",
+      "cfda_federal_agency": "FEDERAL EMERGENCY MANAGEMENT AGENCY, HOMELAND SECURITY, DEPARTMENT OF",
+      "cfda_objectives": "The goal of the SAFER Grant Program is to assist local fire departments with staffing and deployment capabilities in order to respond to emergencies and assure that communities have adequate protection from fire and fire-related hazards. Local fire departments accomplish this by improving staffing and deployment capabilities, so they may more effectively and safely respond to emergencies. With enhanced staffing levels, recipients should experience a reduction in response times and an increase in the number of trained personnel assembled at the incident scene. The authorizing authority for the program is Section 34 of the Federal Fire Prevention and Control Act of 1974, Pub. L. No. 93-498, as amended (15 U.S.C § 2229a). The SAFER Program directly supports Goal 3 of the 2022-2026 FEMA Strategic Plan to Promote and Sustain a Ready FEMA and Prepared Nation.\n\nPerformance Measures:\nGrant Recipients:\n•\tNumber of front-line personnel hired\n•\tNumber of volunteer firefighters recruited\n•\tNumber of firefighters retained\nSAFER Program Office\n•\tNumber of grants awarded\n•\tNumber of grants completed",
+      "cfda_website": "http://www.fema.gov/firegrants",
+      "applicant_eligibility": "This program is restricted to the jurisdictions/organizations described in program guidance documents. In summary, for the purpose of this program, \"State\" is defined as the fifty States, the District of Columbia, Puerto Rico, the U.S. Virgin Islands, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands. The Alaska Village Initiative, a nonprofit organization incorporated in the State of Alaska, shall also be considered eligible for purposes of receiving assistance under this program on behalf of Alaska Native villages. A \"fire department\" is defined as an agency or organization that has a formally recognized arrangement with a State, territory, local, or tribal authority (city, county, parish, fire district, township, town, or other governing body) to provide fire suppression on a first-due basis to a population within a fixed geographical area. Fire departments may be comprised of members who are all volunteer, combination volunteer/career, or all career.",
+      "beneficiary_eligibility": "Local or tribal communities serviced by the fire department including, local businesses, homeowners and property owners.",
+      "obligation": -1613,
+      "outlay": 0
+    },
+    {
+      "id": 2215,
+      "code": "97.082",
+      "description": "Earthquake State Assistance",
+      "award_count": 4,
+      "resource_link": "https://sam.gov/fal/226c00bf60e64e56aae6c0aeeb7471b1/view",
+      "cfda_federal_agency": "FEDERAL EMERGENCY MANAGEMENT AGENCY, HOMELAND SECURITY, DEPARTMENT OF",
+      "cfda_objectives": "The National Earthquake Hazards Reduction Program (NEHRP) is the Federal Government’s coordinated approach to addressing earthquake risks. In support of NEHRP, the Federal Emergency Management Agency (FEMA) administers the Earthquake State Assistance grant program which is designed to increase and enhance the effective implementation of earthquake risk reduction activities at the national, regional, state and local level, by making funding available through annual, non-competitive and competitive grants. NEHRP implements the Department of Homeland Security (DHS) and Presidential Policy Directive (PPD -8) objective of hazard mitigation, to develop and maintain those capabilities necessary to reduce the loss of lives and property by lessening the impact of earthquakes. In an effort to provide eligible States and Territories with multiple funding and project management options, as well as to allow for multi-state coordination of projects, the Earthquake State Assistance grant program utilizes two separate funding opportunities: Individual State Earthquake Assistance (ISEA), and Multi-State and National Earthquake Assistance (MSNEA). The Individual State Earthquake Assistance funding opportunity provides funding directly to those States and Territories that have been determined to be at a high, or a very high risk of earthquakes, and who can provide the statutory 25 percent cost-share. They must also be able to demonstrate that the assistance will result in enhanced seismic safety in the State. Funding is provided to eligible States and Territories through non-competitive grants that are administered by FEMA Regional earthquake program management staff. Allowable activities include: Support of seismic mitigation planning, developing inventories and conducting seismic safety inspections of critical structures and lifeline infrastructure, updating building codes, zoning codes, and ordinances to enhance seismic safety, increasing earthquake awareness and education, participation in emergency management exercises that substantially benefit earthquake mitigation efforts, and the promotion of earthquake insurance. Additionally, the Multi-State and National Earthquake Assistance funding opportunity is designed to facilitate the development and management of National, regional and multi-state earthquake risk reductions activities. Funding is made available through competitive grants to nonprofit organizations, as defined by 2 C.F.R. §200.70 and institutions of higher education as defined by 2 C.F.R. §200.55. The grants are administered by FEMA Headquarters’ earthquake program management staff.",
+      "cfda_website": "https://www.fema.gov/emergency-managers/risk-management/earthquake/state-assistance-program-grants",
+      "applicant_eligibility": "The purpose of this funding is to support the earthquake mitigation efforts of States and Territories with High to Very High seismic risk as determined by the DHS, FEMA Program Office, non-profit organizations as defined by 2 C.F.R. §200.70 and institutions of higher education as defined by 2 C.F.R. §200.55. These efforts include 1) delivering and increasing awareness and education; 2) developing policies, tools, and products; and 3) implementing programs or projects to support risk reduction and resilience activities from earthquakes.",
+      "beneficiary_eligibility": "U.S. Territories, State, Local, Federally Recognized Indian Tribal Governments, eligible States and Territories with High to Very High seismic risks as determined by the DHS, FEMA Program Office, and eligible non-profit organizations and institutions of higher education.",
+      "obligation": 119467.23,
+      "outlay": 0
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 390,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "messages": [
+    "Notice! API Request to sort on 'id' field isn't fully implemented. Results were actually sorted using 'description' field."
+  ]
+}

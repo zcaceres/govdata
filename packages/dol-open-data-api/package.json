@@ -1,0 +1,27 @@
+{
+  "name": "dol-open-data-api",
+  "version": "0.1.0",
+  "description": "TypeScript client library for the DOL Open Data API",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "dol-api": "bin/cli.ts",
+    "dol-mcp": "src/mcp.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "build": "bun build bin/cli.ts --compile --outfile dist/dol-api",
+    "build:mcp": "bun build src/mcp.ts --compile --outfile dist/dol-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "govdata-core": "workspace:*",
+    "zod": "^4.3"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0",
+    "typescript": "^5.7.0"
+  }
+}

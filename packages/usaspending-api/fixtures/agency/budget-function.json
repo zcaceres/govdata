@@ -1,0 +1,52 @@
+{
+  "toptier_code": "080",
+  "fiscal_year": 2024,
+  "results": [
+    {
+      "name": "General Science, Space, and Technology",
+      "children": [
+        {
+          "name": "Space flight, research, and supporting activities",
+          "obligated_amount": 26195350653.52,
+          "gross_outlay_amount": 26159397543.9
+        }
+      ],
+      "obligated_amount": 26195350653.52,
+      "gross_outlay_amount": 26159397543.9
+    },
+    {
+      "name": "Transportation",
+      "children": [
+        {
+          "name": "Air transportation",
+          "obligated_amount": 974177042.63,
+          "gross_outlay_amount": 946997471.71
+        }
+      ],
+      "obligated_amount": 974177042.63,
+      "gross_outlay_amount": 946997471.71
+    },
+    {
+      "name": "Education, Training, Employment, and Social Services",
+      "children": [
+        {
+          "name": "Research and general education aids",
+          "obligated_amount": 500000,
+          "gross_outlay_amount": 828844.43
+        }
+      ],
+      "obligated_amount": 500000,
+      "gross_outlay_amount": 828844.43
+    }
+  ],
+  "messages": [],
+  "page_metadata": {
+    "page": 1,
+    "total": 3,
+    "limit": 10,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  }
+}

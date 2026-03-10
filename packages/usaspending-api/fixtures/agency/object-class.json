@@ -1,0 +1,66 @@
+{
+  "toptier_code": "080",
+  "fiscal_year": 2024,
+  "page_metadata": {
+    "page": 1,
+    "total": 26,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "name": "Research and development contracts",
+      "obligated_amount": 14011259463.92,
+      "gross_outlay_amount": 14126887460
+    },
+    {
+      "name": "Full-time permanent",
+      "obligated_amount": 2619290535.39,
+      "gross_outlay_amount": 2698980978.06
+    },
+    {
+      "name": "Advisory and assistance services",
+      "obligated_amount": 1697838744.7,
+      "gross_outlay_amount": 1607397733.59
+    },
+    {
+      "name": "Transportation of things",
+      "obligated_amount": 1611967235.92,
+      "gross_outlay_amount": 1453313744.17
+    },
+    {
+      "name": "Grants, subsidies, and contributions",
+      "obligated_amount": 1297001465.88,
+      "gross_outlay_amount": 1331153399.54
+    },
+    {
+      "name": "Civilian personnel benefits",
+      "obligated_amount": 990564825.72,
+      "gross_outlay_amount": 1021105010.3
+    },
+    {
+      "name": "Equipment",
+      "obligated_amount": 836815374.66,
+      "gross_outlay_amount": 696757598.45
+    },
+    {
+      "name": "Other services from non-Federal sources",
+      "obligated_amount": 809775937.66,
+      "gross_outlay_amount": 902879652.45
+    },
+    {
+      "name": "Operation and maintenance of equipment",
+      "obligated_amount": 676722231.78,
+      "gross_outlay_amount": 669917094.27
+    },
+    {
+      "name": "Operation and maintenance of facilities",
+      "obligated_amount": 633682768.63,
+      "gross_outlay_amount": 596419648.42
+    }
+  ],
+  "messages": []
+}

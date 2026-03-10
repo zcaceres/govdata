@@ -1,0 +1,45 @@
+{
+  "count": 26,
+  "results": [
+    {
+      "city_name": "HOUSTON",
+      "state_code": "TX"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "MS"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "MO"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "MN"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "WI"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "PA"
+    },
+    {
+      "city_name": "HOUSTONIA",
+      "state_code": "MO"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "DE"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "AR"
+    },
+    {
+      "city_name": "HOUSTON",
+      "state_code": "OH"
+    }
+  ]
+}

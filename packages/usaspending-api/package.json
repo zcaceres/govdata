@@ -1,0 +1,26 @@
+{
+  "name": "usaspending-api",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "usaspending": "src/cli.ts",
+    "usaspending-mcp": "src/mcp.ts"
+  },
+  "scripts": {
+    "test": "bun test",
+    "fixtures": "bun fixtures/fetch-fixtures.ts",
+    "build": "bun build src/cli.ts --compile --outfile dist/usaspending",
+    "build:mcp": "bun build src/mcp.ts --compile --outfile dist/usaspending-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "govdata-core": "workspace:*",
+    "zod": "^4.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7"
+  }
+}

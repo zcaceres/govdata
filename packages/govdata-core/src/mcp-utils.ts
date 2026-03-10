@@ -10,7 +10,9 @@ export function buildSchemaFromParams(
     if (param.values) {
       schema = z.enum(param.values as [string, ...string[]]);
     } else if (param.type === "number") {
-      schema = z.number().int().positive();
+      schema = param.min !== undefined ? z.number().int().min(param.min) : z.number().int().positive();
+    } else if (param.type === "boolean") {
+      schema = z.boolean();
     } else {
       schema = z.string();
     }
@@ -18,7 +20,7 @@ export function buildSchemaFromParams(
       schema = schema.optional();
     }
     schemaShape[param.name] = schema.describe(
-      param.values ? `One of: ${param.values.join(", ")}` : param.type,
+      param.description ?? (param.values ? `One of: ${param.values.join(", ")}` : param.type),
     );
   }
   return schemaShape;

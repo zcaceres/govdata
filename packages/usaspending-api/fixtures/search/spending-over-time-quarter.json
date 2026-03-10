@@ -1,0 +1,171 @@
+{
+  "group": "quarter",
+  "results": [
+    {
+      "aggregated_amount": 715908158.81,
+      "time_period": {
+        "fiscal_year": "2023",
+        "quarter": "2"
+      },
+      "Contract_Obligations": 37684975.18,
+      "Direct_Obligations": 1558352,
+      "Grant_Obligations": 664490621.47,
+      "Idv_Obligations": 11838617.9,
+      "Loan_Obligations": -37155.36,
+      "Other_Obligations": 372747.62,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 4546250069.389999,
+      "time_period": {
+        "fiscal_year": "2023",
+        "quarter": "3"
+      },
+      "Contract_Obligations": 55273911.57,
+      "Direct_Obligations": 5428723.59,
+      "Grant_Obligations": 4427187025.44,
+      "Idv_Obligations": 48194,
+      "Loan_Obligations": 0,
+      "Other_Obligations": 58312214.79,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 3543242235,
+      "time_period": {
+        "fiscal_year": "2023",
+        "quarter": "4"
+      },
+      "Contract_Obligations": 120466231.8,
+      "Direct_Obligations": 10089743,
+      "Grant_Obligations": 3274020495.14,
+      "Idv_Obligations": 3300000,
+      "Loan_Obligations": 21679000,
+      "Other_Obligations": 113686765.06,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 551381143.2,
+      "time_period": {
+        "fiscal_year": "2024",
+        "quarter": "1"
+      },
+      "Contract_Obligations": 8139908.38,
+      "Direct_Obligations": 3091540,
+      "Grant_Obligations": 529964543.95,
+      "Idv_Obligations": 3062467,
+      "Loan_Obligations": 0,
+      "Other_Obligations": 7122683.87,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 1043484478.32,
+      "time_period": {
+        "fiscal_year": "2024",
+        "quarter": "2"
+      },
+      "Contract_Obligations": 19502209.36,
+      "Direct_Obligations": 441075,
+      "Grant_Obligations": 997866192.58,
+      "Idv_Obligations": 0,
+      "Loan_Obligations": -2550000,
+      "Other_Obligations": 28225001.38,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 1699177942.3500001,
+      "time_period": {
+        "fiscal_year": "2024",
+        "quarter": "3"
+      },
+      "Contract_Obligations": 39790020.13,
+      "Direct_Obligations": 12668857,
+      "Grant_Obligations": 1612978069.28,
+      "Idv_Obligations": 17935165.23,
+      "Loan_Obligations": 0,
+      "Other_Obligations": 15805830.71,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 25640134055.309998,
+      "time_period": {
+        "fiscal_year": "2024",
+        "quarter": "4"
+      },
+      "Contract_Obligations": 220311900.94,
+      "Direct_Obligations": 20424297,
+      "Grant_Obligations": 25155624555.89,
+      "Idv_Obligations": -1249702.88,
+      "Loan_Obligations": -12473100,
+      "Other_Obligations": 257496104.36,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    },
+    {
+      "aggregated_amount": 7594950137.400001,
+      "time_period": {
+        "fiscal_year": "2025",
+        "quarter": "1"
+      },
+      "Contract_Obligations": 56731499.91,
+      "Direct_Obligations": 28669812.4,
+      "Grant_Obligations": 7189358482.42,
+      "Idv_Obligations": 10726254,
+      "Loan_Obligations": 0,
+      "Other_Obligations": 309464088.67,
+      "total_outlays": null,
+      "Contract_Outlays": null,
+      "Direct_Outlays": null,
+      "Grant_Outlays": null,
+      "Idv_Outlays": null,
+      "Loan_Outlays": null,
+      "Other_Outlays": null
+    }
+  ],
+  "spending_level": "transactions",
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "The 'subawards' field will be deprecated in the future. Set 'spending_level' to 'subawards' instead. See documentation for more information.",
+    "You may see additional month, quarter and year results when searching for Awards or Subawards. This is due to Awards or Subawards overlapping with the time period specified but having an 'action date' outside of that time period."
+  ]
+}

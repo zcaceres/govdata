@@ -1,0 +1,65 @@
+{
+  "fiscal_year": 2026,
+  "toptier_code": "068",
+  "name": "Environmental Protection Agency",
+  "abbreviation": "EPA",
+  "agency_id": 700,
+  "icon_filename": "EPA.jpg",
+  "mission": "Our mission is to protect human health and the environment.",
+  "website": "https://www.epa.gov/",
+  "congressional_justification_url": "https://www.epa.gov/cj",
+  "about_agency_data": null,
+  "subtier_agency_count": 2,
+  "def_codes": [
+    {
+      "code": "AAK",
+      "public_law": "Emergency P.L. 118-158",
+      "title": "American Relief Act, 2025",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-118publ158/pdf/PLAW-118publ158.pdf",
+      "disaster": null
+    },
+    {
+      "code": "C",
+      "public_law": "Emergency P.L. 115-123",
+      "title": "Bipartisan Budget Act of 2018",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-115publ123/pdf/PLAW-115publ123.pdf",
+      "disaster": null
+    },
+    {
+      "code": "E",
+      "public_law": "Emergency P.L. 116-20",
+      "title": "Additional Supplemental Appropriations for Disaster Relief Act, 2019",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-116publ20/pdf/PLAW-116publ20.pdf",
+      "disaster": null
+    },
+    {
+      "code": "K",
+      "public_law": "Emergency P.L. 116-113",
+      "title": "United States-Mexico-Canada Agreement Implementation Act",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-116publ113/pdf/PLAW-116publ113.pdf",
+      "disaster": null
+    },
+    {
+      "code": "Q",
+      "public_law": "Not Designated Nonemergency/Emergency/Disaster/Wildfire Suppression",
+      "title": "Not Designated Nonemergency/Emergency/Disaster/Wildfire Suppression",
+      "urls": null,
+      "disaster": null
+    },
+    {
+      "code": "V",
+      "public_law": "Non-emergency P.L. 117-2",
+      "title": "American Rescue Plan Act of 2021",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ2/pdf/PLAW-117publ2.pdf",
+      "disaster": "covid_19"
+    },
+    {
+      "code": "Z",
+      "public_law": "Emergency P.L. 117-58",
+      "title": "Infrastructure Investment and Jobs Act",
+      "urls": "http://www.govinfo.gov/content/pkg/PLAW-117publ58/pdf/PLAW-117publ58.pdf",
+      "disaster": "infrastructure"
+    }
+  ],
+  "messages": []
+}

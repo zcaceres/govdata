@@ -2,8 +2,6 @@ export const SUPPORTED_YEARS = [2022, 2017, 2012] as const;
 export type NaicsYear = (typeof SUPPORTED_YEARS)[number];
 export const DEFAULT_YEAR: NaicsYear = 2022;
 
-export type AppEnv = { Variables: { year: NaicsYear } };
-
 export interface NaicsCode {
   code: string;
   title: string;

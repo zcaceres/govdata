@@ -1,0 +1,127 @@
+{
+  "totals": {
+    "obligation": 1557620159130.32,
+    "outlay": 1534281794450.74,
+    "award_count": 21235831
+  },
+  "results": [
+    {
+      "id": [
+        "fc867408-6f47-59c6-774e-3d3daa59c99d-C"
+      ],
+      "code": "071778674",
+      "description": "UNITED HEALTHCARE SERVICES,INC.",
+      "award_count": 6,
+      "obligation": 151704455660.96,
+      "outlay": 151704211305.29
+    },
+    {
+      "id": [
+        "e09d0ed4-e655-171d-8c61-8c1f94964f32-C",
+        "e09d0ed4-e655-171d-8c61-8c1f94964f32-R"
+      ],
+      "code": "138613646",
+      "description": "GOVERNOR'S AUTHORIZED REPRESENTATIVE",
+      "award_count": 49,
+      "obligation": 13148910177.94,
+      "outlay": 622893462.45
+    },
+    {
+      "id": [
+        "74ab7d5b-db02-22ce-fb7b-e0e3f7fde450-C",
+        "74ab7d5b-db02-22ce-fb7b-e0e3f7fde450-R"
+      ],
+      "code": "006979801",
+      "description": "AMERICAN AIRLINES, INC",
+      "award_count": 7,
+      "obligation": 12789127368.27,
+      "outlay": 12830723869.61
+    },
+    {
+      "id": [
+        "3b9c0dbd-b9c4-b7d2-3441-01e53b2136d6-C"
+      ],
+      "code": "006924872",
+      "description": "DELTA AIR LINES, INC.",
+      "award_count": 4,
+      "obligation": 11949001702.68,
+      "outlay": 11949210470.68
+    },
+    {
+      "id": [
+        "bb18115b-8199-6ea7-5c6d-a09f770985a9-C",
+        "bb18115b-8199-6ea7-5c6d-a09f770985a9-R"
+      ],
+      "code": "106881035",
+      "description": "CALIFORNIA STATE TREASURES OFF",
+      "award_count": 2,
+      "obligation": 9525564743.6,
+      "outlay": 9525564743.6
+    },
+    {
+      "id": [
+        "399c3bd7-89c1-4663-c5f6-9809acd0f8cd-C",
+        "399c3bd7-89c1-4663-c5f6-9809acd0f8cd-R"
+      ],
+      "code": "613673185",
+      "description": "DEPARTMENT OF SOCIAL SERVICES CALIFORNIA",
+      "award_count": 22,
+      "obligation": 8718246485.64,
+      "outlay": 9197839717.11
+    },
+    {
+      "id": [
+        "b34cb2e3-60c2-69e0-9288-a94226437041-C",
+        "b34cb2e3-60c2-69e0-9288-a94226437041-R"
+      ],
+      "code": "790238638",
+      "description": "DOMESTIC AWARDEES (UNDISCLOSED)",
+      "award_count": 202,
+      "obligation": 8622171309.9,
+      "outlay": 8632851925.06
+    },
+    {
+      "id": [
+        "660d4d23-77c9-c296-9cc3-358d88d9dba2-C"
+      ],
+      "code": "093565575",
+      "description": "GOVERNOR, TEXAS OFFICE OF THE",
+      "award_count": 3,
+      "obligation": 8075587209.8,
+      "outlay": 8075585120.6
+    },
+    {
+      "id": [
+        "cfac3ae1-5dbb-bba6-80af-36f438addf14-C"
+      ],
+      "code": "099447401",
+      "description": "UNITED AIRLINES, INC.",
+      "award_count": 5,
+      "obligation": 7902739872.52,
+      "outlay": 7902645105.86
+    },
+    {
+      "id": [
+        "f8c7c4f5-efd2-f1e4-30da-6db0467247a0-C",
+        "f8c7c4f5-efd2-f1e4-30da-6db0467247a0-R"
+      ],
+      "code": "806781373",
+      "description": "HEALTH & HUMAN SVC COMMN TX",
+      "award_count": 30,
+      "obligation": 7846109264.14,
+      "outlay": 7796979840.84
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 10000,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "messages": [
+    "Notice! API Request is capped at 10,000 results. Either download to view all results or filter using the 'query' attribute."
+  ]
+}

@@ -50,6 +50,9 @@ export function withPagination<TParams extends { page?: number }, TResult extend
 
     const mutableResult = lastResult as { -readonly [K in keyof TResult]: TResult[K] };
     mutableResult.data = allData as TResult["data"];
+    if (lastResult.meta) {
+      mutableResult.meta = { ...lastResult.meta, total_results: allData.length, pages: pageCount } as TResult["meta"];
+    }
     return lastResult;
   };
 

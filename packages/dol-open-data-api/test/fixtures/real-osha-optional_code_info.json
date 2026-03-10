@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "activity_nr": 654491,
+      "opt_type": "N",
+      "opt_id": 1,
+      "opt_value": "000654483",
+      "opt_info_id": null,
+      "load_dt": "2011-10-14T16:41:43"
+    },
+    {
+      "activity_nr": 654509,
+      "opt_type": "N",
+      "opt_id": 1,
+      "opt_value": "000654483",
+      "opt_info_id": null,
+      "load_dt": "2011-10-14T16:41:43"
+    }
+  ]
+}

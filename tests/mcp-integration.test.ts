@@ -3,6 +3,10 @@ import { buildSchemaFromParams } from "govdata-core";
 import type { GovDataPlugin } from "govdata-core";
 import { dogePlugin } from "doge-api";
 import { naicsPlugin } from "naics-api";
+import { dolPlugin } from "dol-open-data-api";
+import { usaspendingPlugin } from "usaspending-api";
+import { federalRegisterPlugin } from "federal-register";
+import { blsPlugin } from "bls-api";
 import { z } from "zod";
 
 /**
@@ -10,7 +14,7 @@ import { z } from "zod";
  * from describe() metadata, and tool dispatch for all plugins.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin, blsPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -19,8 +23,15 @@ function mockFetch(body: unknown) {
     new Response(JSON.stringify(body), { status: 200 })) as unknown as typeof fetch;
 }
 
+const originalDolKey = process.env.DOL_API_KEY;
+
 afterEach(() => {
   globalThis.fetch = originalFetch;
+  if (originalDolKey) {
+    process.env.DOL_API_KEY = originalDolKey;
+  } else {
+    delete process.env.DOL_API_KEY;
+  }
 });
 
 describe("MCP schema generation", () => {
@@ -79,6 +90,31 @@ describe("MCP schema generation", () => {
       });
     });
   }
+});
+
+describe("buildSchemaFromParams boolean handling", () => {
+  it("generates z.boolean() for boolean-typed params", () => {
+    const shape = buildSchemaFromParams([
+      { name: "flag", type: "boolean", required: false, description: "A boolean flag" },
+    ]);
+    const schema = z.object(shape);
+    // Should accept boolean
+    expect(schema.safeParse({ flag: true }).success).toBe(true);
+    expect(schema.safeParse({ flag: false }).success).toBe(true);
+    // Should reject string
+    expect(schema.safeParse({ flag: "true" }).success).toBe(false);
+  });
+
+  it("BLS boolean params generate boolean schemas via unified MCP", () => {
+    const blsEndpoints = blsPlugin.describe().endpoints;
+    const timeseriesEndpoint = blsEndpoints.find((e) => e.name === "timeseries");
+    expect(timeseriesEndpoint).toBeDefined();
+    const shape = buildSchemaFromParams(timeseriesEndpoint!.params);
+    const schema = z.object(shape);
+    // calculations should accept boolean, not string
+    expect(schema.safeParse({ series_id: "CUUR0000SA0", calculations: true }).success).toBe(true);
+    expect(schema.safeParse({ series_id: "CUUR0000SA0", calculations: "true" }).success).toBe(false);
+  });
 });
 
 describe("MCP tool naming", () => {
@@ -153,6 +189,122 @@ describe("MCP tool dispatch", () => {
     statistics: statisticsFixture,
   };
 
+  const dolFixture = { data: [{ id: 1, field: "value", name: "test" }] };
+
+  // USAspending fixtures (minimal valid shapes for each endpoint)
+  const usaspendingFixtures: Record<string, unknown> = {
+    awards: {
+      limit: 10,
+      results: [{ internal_id: 1, "Award ID": "TEST001", "Award Amount": 1000, "Recipient Name": "Test Corp", generated_internal_id: "CONT_TEST" }],
+      page_metadata: { page: 1, hasNext: false },
+    },
+    award: {
+      id: 1, generated_unique_award_id: "CONT_TEST", piid: "TEST001", category: "contract",
+      type: "A", type_description: "Contract", description: "Test", total_obligation: 1000,
+    },
+    agency: {
+      toptier_code: "080", name: "NASA", abbreviation: "NASA", fiscal_year: 2024,
+    },
+    spending_by_agency: {
+      total: 100000, results: [{ amount: 50000, name: "Agency1", code: "001" }],
+    },
+    spending_by_state: [
+      { fips: "06", code: "CA", name: "California", amount: 500000, count: 100 },
+    ],
+    spending_over_time: {
+      group: "fiscal_year",
+      results: [{ aggregated_amount: 100000, time_period: { fiscal_year: "2024" } }],
+    },
+  };
+
+  const usaspendingTestParams: Record<string, Record<string, unknown>> = {
+    awards: { keyword: "test" },
+    award: { id: "CONT_TEST" },
+    agency: { toptier_code: "080" },
+    spending_by_agency: { type: "agency", fy: "2024", period: "12" },
+    spending_by_state: {},
+    spending_over_time: { group: "fiscal_year", keyword: "test" },
+  };
+
+  // Federal Register fixtures (minimal valid shapes matching Zod response schemas)
+  const frFixtures: Record<string, unknown> = {
+    documents: {
+      count: 1, total_pages: 1,
+      results: [{ document_number: "2025-00001", title: "Test Rule", type: "Rule" }],
+    },
+    document: { document_number: "2025-00001", title: "Test Rule", type: "Rule" },
+    documents_multi: {
+      count: 2,
+      results: [
+        { document_number: "2025-00001", title: "Test Rule", type: "Rule" },
+        { document_number: "2025-00002", title: "Test Notice", type: "Notice" },
+      ],
+    },
+    agencies: [{ id: 1, name: "Test Agency", slug: "test-agency" }],
+    agency: { id: 1, name: "Test Agency", slug: "test-agency" },
+    public_inspection: {
+      count: 1, total_pages: 1,
+      results: [{ document_number: "2025-00001", title: "Test PI", type: "Rule" }],
+    },
+    public_inspection_current: {
+      count: 1,
+      results: [{ document_number: "2025-00001", title: "Test PI Current", type: "Rule" }],
+    },
+    facets: { "test-agency": { count: 10, name: "Test Agency" } },
+    suggested_searches: { money: [{ slug: "test", title: "Test", section: "money", description: "Test search", search_conditions: {}, documents_in_last_year: 5, documents_with_open_comment_periods: 1, position: 0 }] },
+  };
+
+  const frTestParams: Record<string, Record<string, unknown>> = {
+    documents: { term: "test" },
+    document: { document_number: "2025-00001" },
+    documents_multi: { document_numbers: "2025-00001,2025-00002" },
+    agencies: {},
+    agency: { id: 1 },
+    public_inspection: {},
+    public_inspection_current: {},
+    facets: { facet_type: "agency" },
+    suggested_searches: {},
+  };
+
+  // BLS fixtures
+  const blsFixtures: Record<string, unknown> = {
+    timeseries: {
+      status: "REQUEST_SUCCEEDED",
+      responseTime: 50,
+      message: [],
+      Results: {
+        series: [
+          {
+            seriesID: "CUUR0000SA0",
+            data: [{ year: "2025", period: "M01", periodName: "January", value: "317.671", footnotes: [{}] }],
+          },
+        ],
+      },
+    },
+    surveys: {
+      status: "REQUEST_SUCCEEDED",
+      responseTime: 10,
+      message: [],
+      Results: {
+        survey: [{ survey_abbreviation: "CU", survey_name: "Consumer Price Index" }],
+      },
+    },
+    popular: {
+      status: "REQUEST_SUCCEEDED",
+      responseTime: 10,
+      message: [],
+      Results: {
+        series: [{ seriesID: "CUUR0000SA0" }],
+      },
+    },
+  };
+
+  const blsTestParams: Record<string, Record<string, unknown>> = {
+    timeseries: { series_id: "CUUR0000SA0" },
+    surveys: {},
+    popular: {},
+  };
+
   // Naics endpoints need params to call — provide test params per endpoint
   const naicsTestParams: Record<string, Record<string, unknown>> = {
     sectors: {},
@@ -174,6 +326,24 @@ describe("MCP tool dispatch", () => {
         if (plugin.prefix === "naics") {
           params = naicsTestParams[endpoint.name];
           if (!params) return; // skip unknown naics endpoints
+        } else if (plugin.prefix === "dol") {
+          process.env.DOL_API_KEY = "test-key";
+          mockFetch(dolFixture);
+        } else if (plugin.prefix === "usaspending") {
+          const fixture = usaspendingFixtures[endpoint.name];
+          if (!fixture) return;
+          mockFetch(fixture);
+          params = usaspendingTestParams[endpoint.name];
+        } else if (plugin.prefix === "federal-register") {
+          const fixture = frFixtures[endpoint.name];
+          if (!fixture) return;
+          mockFetch(fixture);
+          params = frTestParams[endpoint.name];
+        } else if (plugin.prefix === "bls") {
+          const fixture = blsFixtures[endpoint.name];
+          if (!fixture) return;
+          mockFetch(fixture);
+          params = blsTestParams[endpoint.name];
         } else {
           const fixture = fixtures[endpoint.name];
           if (!fixture) return; // skip endpoints without fixtures

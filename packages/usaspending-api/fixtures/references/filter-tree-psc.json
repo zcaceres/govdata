@@ -1,0 +1,1882 @@
+{
+  "results": [
+    {
+      "id": "Product",
+      "ancestors": [],
+      "description": "",
+      "count": 773,
+      "children": [
+        {
+          "id": "10",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "WEAPONS",
+          "count": 15,
+          "children": null
+        },
+        {
+          "id": "11",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "NUCLEAR ORDNANCE",
+          "count": 12,
+          "children": null
+        },
+        {
+          "id": "12",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "FIRE CONTROL EQPT.",
+          "count": 12,
+          "children": null
+        },
+        {
+          "id": "13",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "AMMUNITION AND EXPLOSIVES",
+          "count": 32,
+          "children": null
+        },
+        {
+          "id": "14",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "GUIDED MISSLES",
+          "count": 7,
+          "children": null
+        },
+        {
+          "id": "15",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "AEROSPACE CRAFT AND STRUCTURAL COMPONENTS",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "16",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "AEROSPACE CRAFT COMPONENTS AND ACCESSORIES",
+          "count": 11,
+          "children": null
+        },
+        {
+          "id": "17",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "AEROSPACE CRAFT LAUNCHING, LANDING, GROUND HANDLING AND SERVICING EQUIPMENT",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "18",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "SPACE VEHICLES",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "19",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "SHIPS, SMALL CRAFT, PONTOON, DOCKS",
+          "count": 30,
+          "children": null
+        },
+        {
+          "id": "20",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "SHIP AND MARINE EQUIPMENT",
+          "count": 7,
+          "children": null
+        },
+        {
+          "id": "22",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "RAILWAY EQUIPMENT",
+          "count": 5,
+          "children": null
+        },
+        {
+          "id": "23",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MOTOR VEHICLES, CYCLES, TRAILERS",
+          "count": 7,
+          "children": null
+        },
+        {
+          "id": "24",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "TRACTORS",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "25",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "VEHICULAR EQUIPMENT COMPONENTS",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "26",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "TIRES AND TUBES",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "28",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "ENGINES AND TURBINES AND COMPONENT",
+          "count": 11,
+          "children": null
+        },
+        {
+          "id": "29",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "ENGINE ACCESSORIES",
+          "count": 11,
+          "children": null
+        },
+        {
+          "id": "30",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MECHANICAL POWER TRANSMISSION EQPT",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "31",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "BEARINGS",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "32",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "WOODWORKING MACHINERY AND EQPT",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "34",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "METALWORKING MACHINERY",
+          "count": 37,
+          "children": null
+        },
+        {
+          "id": "35",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "SERVICE AND TRADE EQPT",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "36",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "SPECIAL INDUSTRY MACHINERY",
+          "count": 20,
+          "children": null
+        },
+        {
+          "id": "37",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "AGRICULTURAL MACHINERY AND EQPT",
+          "count": 7,
+          "children": null
+        },
+        {
+          "id": "38",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "CONSTRUCT/MINE/EXCAVATE/HIGHWY EQPT",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "39",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MATERIALS HANDLING EQPT",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "40",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "ROPE, CABLE, CHAIN, FITTINGS",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "41",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "REFRIG, AIR CONDIT/CIRCULAT EQPT",
+          "count": 5,
+          "children": null
+        },
+        {
+          "id": "42",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "FIRE/RESCUE/SAFETY; ENVIRO PROTECT",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "43",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "PUMPS AND COMPRESSORS",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "44",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "FURNACE/STEAM/DRYING; NUCL REACTOR",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "45",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "PLUMBING, HEATING, WASTE DISPOSAL",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "46",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "WATER PURIFICATION/SEWAGE TREATMENT",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "47",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "PIPE, TUBING, HOSE, AND FITTINGS",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "48",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "VALVES",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "49",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MAINT/REPAIR SHOP EQPT",
+          "count": 13,
+          "children": null
+        },
+        {
+          "id": "51",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "HAND TOOLS",
+          "count": 7,
+          "children": null
+        },
+        {
+          "id": "52",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MEASURING TOOLS",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "53",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "HARDWARE AND ABRASIVES",
+          "count": 18,
+          "children": null
+        },
+        {
+          "id": "54",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "PREFAB STRUCTURES/SCAFFOLDING",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "55",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "LUMBER, MILLWORK, PLYWOOD, VENEER",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "56",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "CONSTRUCTION AND BUILDING MATERIAL",
+          "count": 9,
+          "children": null
+        },
+        {
+          "id": "58",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "COMM/DETECT/COHERENT RADIATION",
+          "count": 20,
+          "children": null
+        },
+        {
+          "id": "59",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "ELECTRICAL/ELECTRONIC EQPT COMPNTS",
+          "count": 26,
+          "children": null
+        },
+        {
+          "id": "60",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "FIBER OPTIC",
+          "count": 24,
+          "children": null
+        },
+        {
+          "id": "61",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "ELECTRIC WIRE, POWER DISTRIB EQPT",
+          "count": 13,
+          "children": null
+        },
+        {
+          "id": "62",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "LIGHTING FIXTURES, LAMPS",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "63",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "ALARM, SIGNAL, SECURITY DETECTION",
+          "count": 5,
+          "children": null
+        },
+        {
+          "id": "65",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MEDICAL/DENTAL/VETERINARY EQPT/SUPP",
+          "count": 15,
+          "children": null
+        },
+        {
+          "id": "66",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "INSTRUMENTS AND LABORATORY EQPT",
+          "count": 20,
+          "children": null
+        },
+        {
+          "id": "67",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "PHOTOGRAPHIC EQPT",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "68",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "CHEMICALS AND CHEMICAL PRODUCTS",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "69",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "TRAINING AIDS AND DEVICES",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "70",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "INFORMATION TECHNOLOGY EQUIPMENT (INCLD FIRMWARE) SOFTWARE,SUPPLIES& SUPPORT EQUIPMENT",
+          "count": 11,
+          "children": null
+        },
+        {
+          "id": "71",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "FURNITURE",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "72",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "HOUSEHOLD/COMMERC FURNISH/APPLIANCE",
+          "count": 5,
+          "children": null
+        },
+        {
+          "id": "73",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "FOOD PREPARATION/SERVING EQPT",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "74",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "OFFICE MACH/TEXT PROCESS/VISIB REC",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "75",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "OFFICE SUPPLIES AND DEVICES",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "76",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "BOOKS, MAPS, OTHER PUBLICATIONS",
+          "count": 11,
+          "children": null
+        },
+        {
+          "id": "77",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MUSICAL INST/PHONOGRAPH/HOME RADIO",
+          "count": 5,
+          "children": null
+        },
+        {
+          "id": "78",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "RECREATIONAL/ATHLETIC EQPT",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "79",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "CLEANING EQPT AND SUPPLIES",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "80",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "BRUSHES, PAINTS, SEALERS, ADHESIVES",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "81",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "CONTAINERS/PACKAGING/PACKING SUPPL",
+          "count": 10,
+          "children": null
+        },
+        {
+          "id": "83",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "TEXTILE/LEATHER/FUR; TENT; FLAG",
+          "count": 9,
+          "children": null
+        },
+        {
+          "id": "84",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "CLOTHING, INDIVIDUAL EQUIPMENT, INSIGNA, AND JEWELRY",
+          "count": 16,
+          "children": null
+        },
+        {
+          "id": "85",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "TOILETRIES",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "87",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "AGRICULTURAL SUPPLIES",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "88",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "LIVE ANIMALS",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "89",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "SUBSISTENCE",
+          "count": 17,
+          "children": null
+        },
+        {
+          "id": "91",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "FUELS, LUBRICANTS, OILS, WAXES",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "93",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "NONMETALLIC FABRICATED MATERIALS",
+          "count": 6,
+          "children": null
+        },
+        {
+          "id": "94",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "NONMETALLIC CRUDE MATERIALS",
+          "count": 5,
+          "children": null
+        },
+        {
+          "id": "95",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "METAL BARS, SHEETS, SHAPES",
+          "count": 9,
+          "children": null
+        },
+        {
+          "id": "96",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "ORES, MINERALS AND PRIMARY PRODUCTS",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "99",
+          "ancestors": [
+            "Product"
+          ],
+          "description": "MISCELLANEOUS",
+          "count": 8,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": "Research and Development",
+      "ancestors": [],
+      "description": "",
+      "count": 890,
+      "children": [
+        {
+          "id": "AA",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "AGRICULTURE R&D SERVICES",
+          "count": 39,
+          "children": null
+        },
+        {
+          "id": "AB",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Community and Regional Development R&D Services",
+          "count": 40,
+          "children": null
+        },
+        {
+          "id": "AC",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "C – National Defense R&D Services",
+          "count": 56,
+          "children": null
+        },
+        {
+          "id": "AD",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "DEFENSE (OTHER) R&D",
+          "count": 56,
+          "children": null
+        },
+        {
+          "id": "AE",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "ECONOMIC GROWTH/PRODUCTIVITY R&D",
+          "count": 32,
+          "children": null
+        },
+        {
+          "id": "AF",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Education, Training, Employment, and Social Services R&D Services",
+          "count": 18,
+          "children": null
+        },
+        {
+          "id": "AG",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Energy R&D Services",
+          "count": 72,
+          "children": null
+        },
+        {
+          "id": "AH",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Natural Resources and Environment R&D Services",
+          "count": 48,
+          "children": null
+        },
+        {
+          "id": "AJ",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "General Science and Technology R&D Services",
+          "count": 57,
+          "children": null
+        },
+        {
+          "id": "AK",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Commerce and Housing Credit R&D Services",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "AL",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Income Security R&D Services",
+          "count": 24,
+          "children": null
+        },
+        {
+          "id": "AM",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "International Affairs R&D Services",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "AN",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "N – Health R&D Services",
+          "count": 71,
+          "children": null
+        },
+        {
+          "id": "AP",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "NATURAL RESOURCES R&D",
+          "count": 62,
+          "children": null
+        },
+        {
+          "id": "AQ",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "SOCIAL SERVICES R&D",
+          "count": 16,
+          "children": null
+        },
+        {
+          "id": "AR",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Space R&D Services",
+          "count": 62,
+          "children": null
+        },
+        {
+          "id": "AS",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "Transportation R&D Services",
+          "count": 40,
+          "children": null
+        },
+        {
+          "id": "AT",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "TRANSPORTATION (OTHER) R&D",
+          "count": 71,
+          "children": null
+        },
+        {
+          "id": "AU",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "TRANSPORTATION (OBSOLETE GROUP)",
+          "count": 16,
+          "children": null
+        },
+        {
+          "id": "AV",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "MINING R&D",
+          "count": 64,
+          "children": null
+        },
+        {
+          "id": "AZ",
+          "ancestors": [
+            "Research and Development"
+          ],
+          "description": "OTHER RESEARCH/DEVELOPMENT",
+          "count": 8,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": "Service",
+      "ancestors": [],
+      "description": "",
+      "count": 2145,
+      "children": [
+        {
+          "id": "7A",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - APLLICATIONS",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "7B",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - COMPUTE",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "7C",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - DATA CENTER",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "7D",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - DELIVERY",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "7E",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - END USER",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "7F",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - IT MANAGEMENT",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "7G",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - NETWORK",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "7H",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - PLATFORM",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "7J",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - SECURITY AND COMPLIANCE",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "7K",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - STORAGE",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "B",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SPECIAL STUDIES/ANALYSIS, NOT R&D",
+          "count": 47,
+          "children": null
+        },
+        {
+          "id": "B5",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SPECIAL STUDIES - NOT R and D",
+          "count": 46,
+          "children": null
+        },
+        {
+          "id": "C",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ARCHITECT/ENGINEER SERVICES",
+          "count": 103,
+          "children": null
+        },
+        {
+          "id": "C1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ARCH-ENG SVCS - CONSTRUCTION",
+          "count": 88,
+          "children": null
+        },
+        {
+          "id": "C2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ARCH-ENG SVCS - GENERAL",
+          "count": 13,
+          "children": null
+        },
+        {
+          "id": "D",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - INFORMATION TECHNOLOGY AND TELECOMMUNICATIONS",
+          "count": 59,
+          "children": null
+        },
+        {
+          "id": "D3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ADP AND TELECOMMUNICATIONS",
+          "count": 25,
+          "children": null
+        },
+        {
+          "id": "DA",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - APLLICATIONS",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "DB",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - COMPUTE",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "DC",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - DATA CENTER",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "DD",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - DELIVERY",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "DE",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - END USER",
+          "count": 4,
+          "children": null
+        },
+        {
+          "id": "DF",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - IT MANAGEMENT",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "DG",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - NETWORK",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "DH",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - PLATFORM",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "DJ",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - SECURITY AND COMPLIANCE",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "DK",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "IT AND TELECOM - STORAGE",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "E",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "PURCHASE OF STRUCTURES/FACILITIES",
+          "count": 148,
+          "children": null
+        },
+        {
+          "id": "E1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "PURCHASE BUILDINGS",
+          "count": 114,
+          "children": null
+        },
+        {
+          "id": "E2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "PURCHASE FACILITY NOT A BUILDING",
+          "count": 30,
+          "children": null
+        },
+        {
+          "id": "E3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "PURCH RESTORATION OF REAL PROPERTY",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "F",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "NATURAL RESOURCES MANAGEMENT",
+          "count": 41,
+          "children": null
+        },
+        {
+          "id": "F0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "NATURAL RESOURCE CONSERVERVAT SVCS",
+          "count": 22,
+          "children": null
+        },
+        {
+          "id": "F1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ENVIRONMENTAL SYSTEMS PROTECTION",
+          "count": 15,
+          "children": null
+        },
+        {
+          "id": "F9",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "NATURAL RESOURCES - OTHER SVCS",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "G",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SOCIAL SERVICES",
+          "count": 12,
+          "children": null
+        },
+        {
+          "id": "G0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SOCIAL SERVICES",
+          "count": 11,
+          "children": null
+        },
+        {
+          "id": "H",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "QUALITY CONTROL, TEST, INSPECTION",
+          "count": 316,
+          "children": null
+        },
+        {
+          "id": "H1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "QUALITY CONTROL SERVICES",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "H2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "EQUIPMENT AND MATERIALS TESTING",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "H3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "INSPECTION SERVICES",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "H9",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OTHER QUALITY, TEST, INSPECT SVCS",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "J",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MAINT, REPAIR, REBUILD EQUIPMENT",
+          "count": 82,
+          "children": null
+        },
+        {
+          "id": "J0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MAINT, REPAIR, REBUILD OF EQUIPMENT",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "J9",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "NON-NUCLEAR SHIP REPAIR",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "K",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MODIFICATION OF EQUIPMENT",
+          "count": 79,
+          "children": null
+        },
+        {
+          "id": "K0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MODIFICATION OF EQUIPMENT",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "L",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "TECHNICAL REPRESENTATIVE SVCS.",
+          "count": 79,
+          "children": null
+        },
+        {
+          "id": "L0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "TECHNICAL REPRESENTATIVE SERVICES",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "M",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OPERATION OF GOVT OWNED FACILITY",
+          "count": 158,
+          "children": null
+        },
+        {
+          "id": "M1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OPERATE GOVT OWNED BUILDINGS",
+          "count": 114,
+          "children": null
+        },
+        {
+          "id": "M2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OPERATION OF SHIPS, SMALL CRAFTS, PONTOONS AND FLOATING DOCKS",
+          "count": 40,
+          "children": null
+        },
+        {
+          "id": "M3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OPERATE RESTORATION ACTIVITIES",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "N",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "INSTALLATION OF EQUIPMENT",
+          "count": 79,
+          "children": null
+        },
+        {
+          "id": "N0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "INSTALLATION OF EQUIPMENT",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "P",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SALVAGE SERVICES",
+          "count": 12,
+          "children": null
+        },
+        {
+          "id": "P1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "DISPOSAL OF EXCESS/SURPLUS PROPERTY",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "P2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SALVAGE OF AIRCRAFT",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "P3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SALVAGE OF MARINE VESSELS",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "P4",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "DEMOLITION OF BUILDINGS",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "P5",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "DEMOLITION OF NONBUILDING FACILITY",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "P9",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OTHER SALVAGE SERVICES",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "Q",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MEDICAL SERVICES",
+          "count": 57,
+          "children": null
+        },
+        {
+          "id": "Q1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "DEPENDENT MEDICARE SERVICES",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "Q2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "GENERAL HEALTH CARE SERVICES",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "Q3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "LABORATORY TESTING SERVICES",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "Q4",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "NURSING, NURSING HOME, EVAL/SCREEN",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "Q5",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MEDICAL, DENTAL, AND SURGICAL SVCS",
+          "count": 33,
+          "children": null
+        },
+        {
+          "id": "Q6",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "CERTIFIED MEDICAL SUPPORT",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "Q7",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SPECIALIZED TECHNICAL/ MEDICAL SUPPORT",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "Q8",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "CLERICAL MEDICAL SUPPORT",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "Q9",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OTHER MEDICAL SERVICES",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "R",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "SUPPORT SVCS (PROF, ADMIN, MGMT)",
+          "count": 148,
+          "children": null
+        },
+        {
+          "id": "R1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "BUILDINGS AND FACILITIES (OBSOLETE)",
+          "count": 14,
+          "children": null
+        },
+        {
+          "id": "R2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ARCHITECT-ENGINEER (OBSOLETE CODES)",
+          "count": 7,
+          "children": null
+        },
+        {
+          "id": "R3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ADP SERVICES (OBSOLETE CODES)",
+          "count": 8,
+          "children": null
+        },
+        {
+          "id": "R4",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "PROFESSIONAL SERVICES",
+          "count": 33,
+          "children": null
+        },
+        {
+          "id": "R5",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "STUDIES (OBSOLETE CODES)",
+          "count": 47,
+          "children": null
+        },
+        {
+          "id": "R6",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "ADMINISTRATIVE SUPPORT SERVICES",
+          "count": 18,
+          "children": null
+        },
+        {
+          "id": "R7",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MANAGEMENT SUPPORT SERVICES",
+          "count": 14,
+          "children": null
+        },
+        {
+          "id": "S",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "UTILITIES AND HOUSEKEEPING",
+          "count": 29,
+          "children": null
+        },
+        {
+          "id": "S1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "UTILITIES",
+          "count": 5,
+          "children": null
+        },
+        {
+          "id": "S2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "HOUSEKEEPING SERVICES",
+          "count": 22,
+          "children": null
+        },
+        {
+          "id": "T",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "PHOTO, MAP, PRINT, PUBLICATION",
+          "count": 18,
+          "children": null
+        },
+        {
+          "id": "T0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "PHOTOGR, MAPPING, PRINTING, PUBLISH",
+          "count": 17,
+          "children": null
+        },
+        {
+          "id": "U",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "EDUCATION AND TRAINING",
+          "count": 16,
+          "children": null
+        },
+        {
+          "id": "U0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "EDUCATION AND TRAINING SERVICES",
+          "count": 15,
+          "children": null
+        },
+        {
+          "id": "V",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "TRANSPORT, TRAVEL, RELOCATION",
+          "count": 41,
+          "children": null
+        },
+        {
+          "id": "V0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MOTOR POOL OR PACKING/CRATING",
+          "count": 3,
+          "children": null
+        },
+        {
+          "id": "V1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "TRANSPORTATION OF THINGS",
+          "count": 14,
+          "children": null
+        },
+        {
+          "id": "V2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "TRAVEL, LODGING, RECRUITMENT SVCS",
+          "count": 16,
+          "children": null
+        },
+        {
+          "id": "V3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "RELOCATION OR TRAVEL AGENT SERVICES",
+          "count": 2,
+          "children": null
+        },
+        {
+          "id": "V9",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "OTHER TRANSPORT, TRAVEL, RELOCAT SV",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "W",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "LEASE/RENT EQUIPMENT",
+          "count": 79,
+          "children": null
+        },
+        {
+          "id": "W0",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "LEASE OR RENTAL OF EQUIPMENT",
+          "count": 78,
+          "children": null
+        },
+        {
+          "id": "X",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "LEASE/RENT FACILITIES",
+          "count": 148,
+          "children": null
+        },
+        {
+          "id": "X1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "LEASE/RENTAL OF BUILDINGS",
+          "count": 114,
+          "children": null
+        },
+        {
+          "id": "X2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "LEASE/RENTAL NONBUILDING FACILITIES",
+          "count": 30,
+          "children": null
+        },
+        {
+          "id": "X3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "LEASE/RENTAL OF RESTORATION ACTIVS",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "Y",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "CONSTRUCT OF STRUCTURES/FACILITIES",
+          "count": 149,
+          "children": null
+        },
+        {
+          "id": "Y1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "CONSTRUCTION OF BUILDINGS",
+          "count": 114,
+          "children": null
+        },
+        {
+          "id": "Y2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "CONSTRUCT NONBUILDING FACILITIES",
+          "count": 31,
+          "children": null
+        },
+        {
+          "id": "Y3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "CONSTRUCT OF RESTORATION ACTIVITIES",
+          "count": 1,
+          "children": null
+        },
+        {
+          "id": "Z",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MAINT, REPAIR, ALTER REAL PROPERTY",
+          "count": 222,
+          "children": null
+        },
+        {
+          "id": "Z1",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MAINT, ALTER, REPAIR BUILDINGS",
+          "count": 114,
+          "children": null
+        },
+        {
+          "id": "Z2",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MAINT, ALTER, REPAIR NONBUILDINGS",
+          "count": 104,
+          "children": null
+        },
+        {
+          "id": "Z3",
+          "ancestors": [
+            "Service"
+          ],
+          "description": "MAINT, ALTER, REPAIR RESTOR ACVIVS",
+          "count": 1,
+          "children": null
+        }
+      ]
+    }
+  ]
+}

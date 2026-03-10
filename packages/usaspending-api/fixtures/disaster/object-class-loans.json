@@ -1,0 +1,39 @@
+{
+  "totals": {
+    "award_count": 16009800,
+    "face_value_of_loan": 1190529584535.87,
+    "obligation": 852065389700.03,
+    "outlay": 852031780637.64
+  },
+  "results": [
+    {
+      "id": "40",
+      "code": "40",
+      "description": "Grants and fixed charges",
+      "award_count": 16009800,
+      "obligation": 852065389700.03,
+      "outlay": 852031780637.64,
+      "face_value_of_loan": 1190529584535.87,
+      "children": [
+        {
+          "id": 141,
+          "code": "41.0",
+          "description": "Grants, subsidies, and contributions",
+          "award_count": 16009800,
+          "obligation": 852065389700.03,
+          "outlay": 852031780637.64,
+          "face_value_of_loan": 1190529584535.87
+        }
+      ]
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 1,
+    "limit": 10,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  }
+}

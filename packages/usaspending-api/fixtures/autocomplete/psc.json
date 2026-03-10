@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "product_or_service_code": "7020",
+      "psc_description": "INFORMATION TECHNOLOGY CENTRAL PROCESSING UNIT (CPU, COMPUTER), ANALOG"
+    },
+    {
+      "product_or_service_code": "7021",
+      "psc_description": "INFORMATION TECHNOLOGY CENTRAL PROCESSING UNIT (CPU, COMPUTER), DIGITAL"
+    },
+    {
+      "product_or_service_code": "7022",
+      "psc_description": "INFORMATION TECHNOLOGY CENTRAL PROCESSING UNIT (CPU, COMPUTER), HYBRID"
+    },
+    {
+      "product_or_service_code": "7042",
+      "psc_description": "MINI AND MICRO COMPUTER CONTROL DEVICES"
+    },
+    {
+      "product_or_service_code": "AJ21",
+      "psc_description": "R&D- GENERAL SCIENCE/TECHNOLOGY: MATHEMATICAL/COMPUTER SCIENCES (BASIC RESEARCH)"
+    }
+  ]
+}

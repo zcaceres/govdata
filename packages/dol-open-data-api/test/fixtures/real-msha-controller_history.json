@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "oper_id": "P00687",
+      "ctrlr_id": "C00566",
+      "ctrlr_start_dt": "1974-01-01T00:00:00",
+      "ctrlr_nm": "Lotzi Frank",
+      "ctrlr_end_dt": null,
+      "oper_nm": "F J F Coal Company Inc",
+      "load_dt": "2026-02-28T00:49:35"
+    },
+    {
+      "oper_id": "P00688",
+      "ctrlr_id": "C02594",
+      "ctrlr_start_dt": "1975-11-11T00:00:00",
+      "ctrlr_nm": "Ferguson J H & C Rapp Jr",
+      "ctrlr_end_dt": null,
+      "oper_nm": "F & R Coal Co",
+      "load_dt": "2026-02-28T00:49:35"
+    }
+  ]
+}

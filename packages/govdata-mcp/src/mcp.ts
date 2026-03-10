@@ -6,8 +6,12 @@ import { buildSchemaFromParams } from "govdata-core";
 import type { GovDataPlugin, GovResult } from "govdata-core";
 import { dogePlugin } from "doge-api";
 import { naicsPlugin } from "naics-api";
+import { dolPlugin } from "dol-open-data-api";
+import { federalRegisterPlugin } from "federal-register";
+import { usaspendingPlugin } from "usaspending-api";
+import { blsPlugin } from "bls-api";
 
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, federalRegisterPlugin, usaspendingPlugin, blsPlugin];
 
 const server = new McpServer({ name: "govdata", version: "0.1.0" });
 
@@ -44,12 +48,16 @@ for (const plugin of plugins) {
       endpoint.description,
       schemaShape,
       async (args) => {
-        const { format, ...params } = args;
-        const hasParams = Object.keys(params).length > 0;
-        const result = await fn(hasParams ? params : undefined);
-        return {
-          content: [{ type: "text" as const, text: formatResult(result, format as string) }],
-        };
+        try {
+          const { format, ...params } = args;
+          const hasParams = Object.keys(params).length > 0;
+          const result = await fn(hasParams ? params : undefined);
+          return {
+            content: [{ type: "text" as const, text: formatResult(result, format as string) }],
+          };
+        } catch (err: unknown) {
+          return { content: [{ type: "text" as const, text: String((err as Error).message ?? err) }], isError: true };
+        }
       },
     );
   }

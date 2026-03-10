@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "case_type": "Deficient Filer",
+      "ein": "75-2268672",
+      "pn": "001",
+      "plan_year": "1998",
+      "plan_name": "PONDER INDUSTRIES INC 401K P S P AND TRUST",
+      "plan_admin": "PONDER INDUSTRIES INC 401K P S P AND TRUST",
+      "plan_admin_state": null,
+      "plan_admin_zip_code": "78333-0000",
+      "final_close_reason": "Closed after Correspondence",
+      "final_close_date": "2001-03-29T00:00:00",
+      "penalty_amount": "$10,001 - $50,000",
+      "load_dt": "2026-01-03T00:20:03"
+    },
+    {
+      "case_type": "Deficient Filer",
+      "ein": "13-3252333",
+      "pn": "001",
+      "plan_year": "1997",
+      "plan_name": "COMPUTER OUTSOURCING SERVICES INC 401K SAVINGS PL",
+      "plan_admin": "COMPUTER OUTSOURCING SERVICES INC 401K SAVINGS PL",
+      "plan_admin_state": null,
+      "plan_admin_zip_code": "07605-2234",
+      "final_close_reason": "Closed after Correspondence",
+      "final_close_date": "2001-01-22T00:00:00",
+      "penalty_amount": "$50,001 - $100,000",
+      "load_dt": "2026-01-03T00:20:03"
+    }
+  ]
+}

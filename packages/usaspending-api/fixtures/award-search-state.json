@@ -1,0 +1,90 @@
+{
+  "spending_level": "awards",
+  "limit": 5,
+  "results": [
+    {
+      "internal_id": 236536428,
+      "Award ID": "2505CA5MAP",
+      "Recipient Name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
+      "Start Date": "2024-10-01",
+      "End Date": "2025-09-30",
+      "Award Amount": 101312544260,
+      "Awarding Agency": "Department of Health and Human Services",
+      "Awarding Sub Agency": "Centers for Medicare and Medicaid Services",
+      "Award Type": "BLOCK GRANT (A)",
+      "Description": "MEDICAID ENTITLEMENT FOR 7 - FY 2026 - T19",
+      "awarding_agency_id": 806,
+      "agency_slug": "department-of-health-and-human-services",
+      "generated_internal_id": "ASST_NON_2505CA5MAP_075"
+    },
+    {
+      "internal_id": 236085958,
+      "Award ID": "2405CA5MAP",
+      "Recipient Name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
+      "Start Date": "2023-10-01",
+      "End Date": "2024-09-30",
+      "Award Amount": 91981067127,
+      "Awarding Agency": "Department of Health and Human Services",
+      "Awarding Sub Agency": "Centers for Medicare and Medicaid Services",
+      "Award Type": "BLOCK GRANT (A)",
+      "Description": "MEDICAID ENTITLEMENT FOR 7 - FY 2025 - T19",
+      "awarding_agency_id": 806,
+      "agency_slug": "department-of-health-and-human-services",
+      "generated_internal_id": "ASST_NON_2405CA5MAP_075"
+    },
+    {
+      "internal_id": 235800554,
+      "Award ID": "2305CA5MAP",
+      "Recipient Name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
+      "Start Date": "2022-10-01",
+      "End Date": "2023-09-30",
+      "Award Amount": 80537011275,
+      "Awarding Agency": "Department of Health and Human Services",
+      "Awarding Sub Agency": "Centers for Medicare and Medicaid Services",
+      "Award Type": "BLOCK GRANT (A)",
+      "Description": "MEDICAID ENTITLEMENT FOR 7 - FY 2024 - T19",
+      "awarding_agency_id": 806,
+      "agency_slug": "department-of-health-and-human-services",
+      "generated_internal_id": "ASST_NON_2305CA5MAP_075"
+    },
+    {
+      "internal_id": 235431443,
+      "Award ID": "2205CA5MAP",
+      "Recipient Name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
+      "Start Date": "2021-10-01",
+      "End Date": "2023-09-30",
+      "Award Amount": 80532423878,
+      "Awarding Agency": "Department of Health and Human Services",
+      "Awarding Sub Agency": "Centers for Medicare and Medicaid Services",
+      "Award Type": "BLOCK GRANT (A)",
+      "Description": "MEDICAID ENTITLEMENT FOR 7 - FY 2023 - T19",
+      "awarding_agency_id": 806,
+      "agency_slug": "department-of-health-and-human-services",
+      "generated_internal_id": "ASST_NON_2205CA5MAP_075"
+    },
+    {
+      "internal_id": 235174080,
+      "Award ID": "2105CA5MAP",
+      "Recipient Name": "HEALTH CARE SERVICES, CALIFORNIA DEPARTMENT OF",
+      "Start Date": "2022-07-01",
+      "End Date": "2023-09-30",
+      "Award Amount": 71676490449,
+      "Awarding Agency": "Department of Health and Human Services",
+      "Awarding Sub Agency": "Centers for Medicare and Medicaid Services",
+      "Award Type": "BLOCK GRANT (A)",
+      "Description": "MEDICAID ENTITLEMENT FOR 7 - FY 2022 QUARTER 4 - T19",
+      "awarding_agency_id": 806,
+      "agency_slug": "department-of-health-and-human-services",
+      "generated_internal_id": "ASST_NON_2105CA5MAP_075"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "hasNext": true,
+    "last_record_unique_id": 235174080,
+    "last_record_sort_value": "7167649044900"
+  },
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. "
+  ]
+}

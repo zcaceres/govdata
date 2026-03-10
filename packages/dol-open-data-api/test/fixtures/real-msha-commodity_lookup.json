@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "cmmdty_cd": "101100",
+      "cmmdty_desc": "Iron Ore",
+      "naics_cd": "212210",
+      "sic_cd": "1011",
+      "sffx_cd": "00",
+      "old_sic_cd": "10110",
+      "actv_ind": "Y",
+      "actv_dt": "2001-06-18T00:00:00",
+      "inactv_dt": null
+    },
+    {
+      "cmmdty_cd": "102100",
+      "cmmdty_desc": "Copper Ore NEC",
+      "naics_cd": "212234",
+      "sic_cd": "1021",
+      "sffx_cd": "00",
+      "old_sic_cd": "10210",
+      "actv_ind": "Y",
+      "actv_dt": "2001-06-18T00:00:00",
+      "inactv_dt": null
+    }
+  ]
+}

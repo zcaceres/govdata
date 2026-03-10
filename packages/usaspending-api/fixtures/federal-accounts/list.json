@@ -1,0 +1,58 @@
+{
+  "count": 2255,
+  "limit": 5,
+  "page": 1,
+  "fy": "2026",
+  "keyword": null,
+  "next": 2,
+  "previous": null,
+  "hasNext": true,
+  "hasPrevious": false,
+  "results": [
+    {
+      "agency_identifier": "005",
+      "account_id": 3255,
+      "account_name": "Salaries and Expenses, Government Accountability Office",
+      "account_number": "005-0107",
+      "budgetary_resources": 964034210.16,
+      "managing_agency": "Government Accountability Office",
+      "managing_agency_acronym": "GAO"
+    },
+    {
+      "agency_identifier": "009",
+      "account_id": 3261,
+      "account_name": "Salaries and Expenses, Commission on Security and Cooperation in Europe",
+      "account_number": "009-0110",
+      "budgetary_resources": null,
+      "managing_agency": "Legislative Branch Boards and Commissions",
+      "managing_agency_acronym": "LEG ORGS"
+    },
+    {
+      "agency_identifier": "009",
+      "account_id": 3264,
+      "account_name": "International Conferences and Contingencies, House and Senate   Expenses",
+      "account_number": "009-0500",
+      "budgetary_resources": null,
+      "managing_agency": "Legislative Branch Boards and Commissions",
+      "managing_agency_acronym": "LEG ORGS"
+    },
+    {
+      "agency_identifier": "010",
+      "account_id": 3292,
+      "account_name": "Court Security, Court of Appeals, District Courts, and Other Judicial Services, The Judiciary",
+      "account_number": "010-0930",
+      "budgetary_resources": 241470320.88,
+      "managing_agency": "The Judicial Branch",
+      "managing_agency_acronym": "JUD BRANCH"
+    },
+    {
+      "agency_identifier": "011",
+      "account_id": 3313,
+      "account_name": "Compensation of the President, Executive Office of the President",
+      "account_number": "011-0001",
+      "budgetary_resources": 233111.49,
+      "managing_agency": "Executive Office of the President",
+      "managing_agency_acronym": "EOP"
+    }
+  ]
+}

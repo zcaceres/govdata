@@ -1,0 +1,118 @@
+{
+  "totals": {
+    "obligation": 2917437912020.09,
+    "outlay": 2901260742930.48,
+    "total_budgetary_resources": 3038967420235.44
+  },
+  "results": [
+    {
+      "id": 1522,
+      "code": "077",
+      "description": "U.S. International Development Finance Corporation",
+      "children": [],
+      "award_count": null,
+      "obligation": 99043.63,
+      "outlay": 99043.63,
+      "total_budgetary_resources": 100000
+    },
+    {
+      "id": 1475,
+      "code": "418",
+      "description": "National Endowment for the Humanities",
+      "children": [],
+      "award_count": null,
+      "obligation": 74506449.62,
+      "outlay": 74490624.62,
+      "total_budgetary_resources": 75000000
+    },
+    {
+      "id": 1474,
+      "code": "474",
+      "description": "Institute of Museum and Library Services",
+      "children": [],
+      "award_count": null,
+      "obligation": 49226387.59,
+      "outlay": 49121372.59,
+      "total_budgetary_resources": 50000000
+    },
+    {
+      "id": 1412,
+      "code": "096",
+      "description": "Corps of Engineers - Civil Works",
+      "children": [],
+      "award_count": null,
+      "obligation": 65127744.1,
+      "outlay": 65073749.8,
+      "total_budgetary_resources": 70000000
+    },
+    {
+      "id": 1173,
+      "code": "097",
+      "description": "Department of Defense",
+      "children": [],
+      "award_count": null,
+      "obligation": 8514171307.26,
+      "outlay": 8520664567.82,
+      "total_budgetary_resources": 8742901729.61
+    },
+    {
+      "id": null,
+      "code": "373",
+      "description": "Institute of American Indian and Alaska Native Culture and Arts Development",
+      "children": [],
+      "award_count": null,
+      "obligation": 78000,
+      "outlay": 78000,
+      "total_budgetary_resources": 78000
+    },
+    {
+      "id": 1141,
+      "code": "525",
+      "description": "Election Assistance Commission",
+      "children": [],
+      "award_count": null,
+      "obligation": 332546130.72,
+      "outlay": 332546130.72,
+      "total_budgetary_resources": 332546130.72
+    },
+    {
+      "id": 1132,
+      "code": "542",
+      "description": "Council of the Inspectors General on Integrity and Efficiency",
+      "children": [],
+      "award_count": null,
+      "obligation": 41576524.24,
+      "outlay": 43036451.55,
+      "total_budgetary_resources": 80000000
+    },
+    {
+      "id": 1068,
+      "code": "091",
+      "description": "Department of Education",
+      "children": [],
+      "award_count": null,
+      "obligation": 57449127663.77,
+      "outlay": 57166315609.7,
+      "total_budgetary_resources": 57440781877.67
+    },
+    {
+      "id": 930,
+      "code": "089",
+      "description": "Department of Energy",
+      "children": [],
+      "award_count": null,
+      "obligation": 127146365.56,
+      "outlay": 127134479.42,
+      "total_budgetary_resources": 127248061.19
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 39,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  }
+}

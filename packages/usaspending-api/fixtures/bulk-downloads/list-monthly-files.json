@@ -1,0 +1,22 @@
+{
+  "monthly_files": [
+    {
+      "fiscal_year": 2024,
+      "agency_name": "All",
+      "agency_acronym": null,
+      "type": "contracts",
+      "updated_date": "2026-02-06",
+      "file_name": "FY2024_All_Contracts_Full_20260206.zip",
+      "url": "https://files.usaspending.gov/award_data_archive/FY2024_All_Contracts_Full_20260206.zip"
+    },
+    {
+      "fiscal_year": null,
+      "agency_name": "All",
+      "agency_acronym": null,
+      "type": "contracts",
+      "updated_date": "2026-02-06",
+      "file_name": "FY(All)_All_Contracts_Delta_20260206.zip",
+      "url": "https://files.usaspending.gov/award_data_archive/FY(All)_All_Contracts_Delta_20260206.zip"
+    }
+  ]
+}

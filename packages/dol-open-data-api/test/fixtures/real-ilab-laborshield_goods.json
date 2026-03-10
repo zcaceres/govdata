@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "country_numeric_iso_code": 4,
+      "country_iso_code": "AF",
+      "country": "Afghanistan",
+      "sector": "Manufacturing",
+      "good": "Bricks",
+      "exploitation_type": "CL",
+      "year_added": "2009",
+      "year_removed": null
+    },
+    {
+      "country_numeric_iso_code": 4,
+      "country_iso_code": "AF",
+      "country": "Afghanistan",
+      "sector": "Manufacturing",
+      "good": "Bricks",
+      "exploitation_type": "FCL",
+      "year_added": "2011",
+      "year_removed": null
+    }
+  ]
+}

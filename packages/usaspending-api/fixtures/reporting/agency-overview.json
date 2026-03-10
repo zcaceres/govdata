@@ -1,0 +1,204 @@
+{
+  "page_metadata": {
+    "page": 1,
+    "total": 77,
+    "limit": 10,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 11,
+      "current_total_budget_authority_amount": 45104399537.61,
+      "total_budgetary_resources": 15772073357024.44,
+      "percent_of_total_budgetary_resources": 0.29,
+      "recent_publication_date": "2025-09-29T20:27:50.089346Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 23666428272.52,
+        "tas_accounts_total": 23666428272.52,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 98,
+      "unlinked_assistance_award_count": 1,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2025-P11-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 10,
+      "current_total_budget_authority_amount": 45081816111.2,
+      "total_budgetary_resources": 14462419485223.75,
+      "percent_of_total_budgetary_resources": 0.31,
+      "recent_publication_date": "2025-09-12T14:15:46.093434Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 20524811717.21,
+        "tas_accounts_total": 20524811717.21,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 109,
+      "unlinked_assistance_award_count": 2,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2025-P10-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 12,
+      "current_total_budget_authority_amount": 41459964664.05,
+      "total_budgetary_resources": 13263700405307.76,
+      "percent_of_total_budgetary_resources": 0.31,
+      "recent_publication_date": "2025-12-29T19:43:57.059633Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 57546843493.08,
+        "tas_accounts_total": 28773421746.54,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": -0.05,
+      "unlinked_contract_award_count": 212,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2025-P12-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 6,
+      "current_total_budget_authority_amount": 35105814550.18,
+      "total_budgetary_resources": 14651831778670.89,
+      "percent_of_total_budgetary_resources": 0.24,
+      "recent_publication_date": "2025-04-24T11:55:09.774695Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 23394336418.32,
+        "tas_accounts_total": 11697168209.16,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 159,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2025-P06-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 9,
+      "current_total_budget_authority_amount": 35081689839.67,
+      "total_budgetary_resources": 15330351529402.55,
+      "percent_of_total_budgetary_resources": 0.23,
+      "recent_publication_date": "2025-07-31T16:56:29.266865Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 34948522876.76,
+        "tas_accounts_total": 17474261438.38,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 129,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2025-P09-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 8,
+      "current_total_budget_authority_amount": 35078763631.28,
+      "total_budgetary_resources": 14195466060777.52,
+      "percent_of_total_budgetary_resources": 0.25,
+      "recent_publication_date": "2025-06-25T19:34:25.771577Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 15298200582.94,
+        "tas_accounts_total": 15298200582.94,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 145,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2025-P08-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 7,
+      "current_total_budget_authority_amount": 35059357106.46,
+      "total_budgetary_resources": 15086996780535.34,
+      "percent_of_total_budgetary_resources": 0.23,
+      "recent_publication_date": "2025-05-23T14:15:50.927367Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 13504477904.97,
+        "tas_accounts_total": 13504477904.97,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 233,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2025-P07-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 8,
+      "current_total_budget_authority_amount": 34137684889.34,
+      "total_budgetary_resources": 14467363397078.02,
+      "percent_of_total_budgetary_resources": 0.24,
+      "recent_publication_date": "2024-07-01T15:37:20.789412Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 15999805857.62,
+        "tas_accounts_total": 15999805857.62,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 84,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P08-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 6,
+      "current_total_budget_authority_amount": 34135643536.37,
+      "total_budgetary_resources": 13865505067157.33,
+      "percent_of_total_budgetary_resources": 0.25,
+      "recent_publication_date": "2024-04-25T18:19:28.845675Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 21448833023.2,
+        "tas_accounts_total": 10724416511.6,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 111,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P06-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 7,
+      "current_total_budget_authority_amount": 34134428579.2,
+      "total_budgetary_resources": 14158411193616.05,
+      "percent_of_total_budgetary_resources": 0.24,
+      "recent_publication_date": "2024-05-22T19:03:48.583145Z",
+      "recent_publication_date_certified": true,
+      "tas_account_discrepancies_totals": {
+        "gtas_obligation_total": 13668824518.33,
+        "tas_accounts_total": 13668824518.33,
+        "tas_obligation_not_in_gtas_total": 0,
+        "missing_tas_accounts_count": 0
+      },
+      "obligation_difference": 0,
+      "unlinked_contract_award_count": 181,
+      "unlinked_assistance_award_count": null,
+      "assurance_statement_url": "https://files.usaspending.gov/agency_submissions/2024-P07-080_National%20Aeronautics%20and%20Space%20Administration%20(NASA)-Agency_Comments.txt"
+    }
+  ],
+  "messages": []
+}

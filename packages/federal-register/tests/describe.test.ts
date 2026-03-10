@@ -1,0 +1,111 @@
+import { describe as testDescribe, expect, it } from "bun:test";
+import { describe } from "../src/describe";
+
+testDescribe("describe", () => {
+  it("returns all 9 endpoints", () => {
+    const { endpoints } = describe();
+    expect(endpoints.length).toBe(9);
+  });
+
+  it("has correct endpoint names", () => {
+    const { endpoints } = describe();
+    const names = endpoints.map((e) => e.name);
+    expect(names).toContain("documents");
+    expect(names).toContain("document");
+    expect(names).toContain("documents_multi");
+    expect(names).toContain("agencies");
+    expect(names).toContain("agency");
+    expect(names).toContain("public_inspection");
+    expect(names).toContain("public_inspection_current");
+    expect(names).toContain("facets");
+    expect(names).toContain("suggested_searches");
+  });
+
+  it("every endpoint has required fields", () => {
+    const { endpoints } = describe();
+    for (const ep of endpoints) {
+      expect(ep.name).toBeDefined();
+      expect(ep.path).toBeDefined();
+      expect(ep.description).toBeDefined();
+      expect(Array.isArray(ep.params)).toBe(true);
+      expect(ep.responseFields).toBeDefined();
+    }
+  });
+
+  it("documents endpoint has search params", () => {
+    const { endpoints } = describe();
+    const docs = endpoints.find((e) => e.name === "documents")!;
+    const paramNames = docs.params.map((p) => p.name);
+    expect(paramNames).toContain("term");
+    expect(paramNames).toContain("agencies");
+    expect(paramNames).toContain("type");
+    expect(paramNames).toContain("page");
+    expect(paramNames).toContain("per_page");
+    expect(paramNames).toContain("order");
+    expect(paramNames).toContain("publication_date_gte");
+    expect(paramNames).toContain("publication_date_is");
+    expect(paramNames).toContain("effective_date_is");
+    expect(paramNames).toContain("comment_date_is");
+    expect(paramNames).toContain("signing_date_gte");
+    expect(paramNames).toContain("signing_date_lte");
+    expect(paramNames).toContain("signing_date_is");
+    expect(paramNames).toContain("agency_ids");
+  });
+
+  it("public_inspection endpoint has agency_ids param", () => {
+    const { endpoints } = describe();
+    const pi = endpoints.find((e) => e.name === "public_inspection")!;
+    const paramNames = pi.params.map((p) => p.name);
+    expect(paramNames).toContain("agency_ids");
+  });
+
+  it("facets endpoint has facet_type required param", () => {
+    const { endpoints } = describe();
+    const facets = endpoints.find((e) => e.name === "facets")!;
+    const facetTypeParam = facets.params.find((p) => p.name === "facet_type");
+    expect(facetTypeParam).toBeDefined();
+    expect(facetTypeParam!.required).toBe(true);
+    expect(facetTypeParam!.values).toContain("agency");
+    expect(facetTypeParam!.values).toContain("daily");
+  });
+
+  it("facets endpoint includes all document search condition params", () => {
+    const { endpoints } = describe();
+    const facets = endpoints.find((e) => e.name === "facets")!;
+    const paramNames = facets.params.map((p) => p.name);
+    // Should have facet_type plus all document search conditions (minus fields, page, per_page, order)
+    expect(paramNames).toContain("facet_type");
+    expect(paramNames).toContain("term");
+    expect(paramNames).toContain("agencies");
+    expect(paramNames).toContain("type");
+    expect(paramNames).toContain("signing_date_gte");
+    expect(paramNames).toContain("topics");
+    expect(paramNames).toContain("agency_ids");
+    // Should NOT have pagination or fields
+    expect(paramNames).not.toContain("fields");
+    expect(paramNames).not.toContain("page");
+    expect(paramNames).not.toContain("per_page");
+    expect(paramNames).not.toContain("order");
+  });
+
+  it("facets responseFields does not include slug", () => {
+    const { endpoints } = describe();
+    const facets = endpoints.find((e) => e.name === "facets")!;
+    expect(facets.responseFields).toEqual(["count", "name"]);
+  });
+
+  it("significant param has type number", () => {
+    const { endpoints } = describe();
+    const docs = endpoints.find((e) => e.name === "documents")!;
+    const sig = docs.params.find((p) => p.name === "significant")!;
+    expect(sig.type).toBe("number");
+  });
+
+  it("document endpoint has required document_number param", () => {
+    const { endpoints } = describe();
+    const doc = endpoints.find((e) => e.name === "document")!;
+    const docNumParam = doc.params.find((p) => p.name === "document_number");
+    expect(docNumParam).toBeDefined();
+    expect(docNumParam!.required).toBe(true);
+  });
+});

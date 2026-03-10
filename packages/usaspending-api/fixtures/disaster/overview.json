@@ -1,0 +1,188 @@
+{
+  "funding": [
+    {
+      "def_code": "1",
+      "amount": 312679764102.89
+    },
+    {
+      "def_code": "2",
+      "amount": 6864028000
+    },
+    {
+      "def_code": "3",
+      "amount": 13655147539.67
+    },
+    {
+      "def_code": "4",
+      "amount": 18824373413.69
+    },
+    {
+      "def_code": "5",
+      "amount": 330000000
+    },
+    {
+      "def_code": "6",
+      "amount": 39612581431
+    },
+    {
+      "def_code": "7",
+      "amount": 4496052071.02
+    },
+    {
+      "def_code": "8",
+      "amount": 0
+    },
+    {
+      "def_code": "A",
+      "amount": -69252562.09
+    },
+    {
+      "def_code": "AAA",
+      "amount": 18655296896.75
+    },
+    {
+      "def_code": "AAB",
+      "amount": 81253592913.51
+    },
+    {
+      "def_code": "AAC",
+      "amount": 3951722657.27
+    },
+    {
+      "def_code": "AAD",
+      "amount": 20114000000
+    },
+    {
+      "def_code": "AAE",
+      "amount": 15990340000
+    },
+    {
+      "def_code": "AAF",
+      "amount": 8799900000
+    },
+    {
+      "def_code": "AAG",
+      "amount": 122000000
+    },
+    {
+      "def_code": "AAI",
+      "amount": 20426000000
+    },
+    {
+      "def_code": "AAJ",
+      "amount": 90044843863
+    },
+    {
+      "def_code": "AAK",
+      "amount": 115426559195.6
+    },
+    {
+      "def_code": "AAL",
+      "amount": 42553442000
+    },
+    {
+      "def_code": "B",
+      "amount": 40191848.56
+    },
+    {
+      "def_code": "C",
+      "amount": -1915048821.1
+    },
+    {
+      "def_code": "D",
+      "amount": -41039134.42
+    },
+    {
+      "def_code": "E",
+      "amount": -1634820676.37
+    },
+    {
+      "def_code": "F",
+      "amount": -22901200.05
+    },
+    {
+      "def_code": "G",
+      "amount": 403027550.24
+    },
+    {
+      "def_code": "H",
+      "amount": 17849330979
+    },
+    {
+      "def_code": "I",
+      "amount": 1777891728.07
+    },
+    {
+      "def_code": "J",
+      "amount": 307075000
+    },
+    {
+      "def_code": "K",
+      "amount": 324000000
+    },
+    {
+      "def_code": "L",
+      "amount": 7707863149.53
+    },
+    {
+      "def_code": "M",
+      "amount": 17007940774.81
+    },
+    {
+      "def_code": "N",
+      "amount": 353270082385.83
+    },
+    {
+      "def_code": "O",
+      "amount": 2509821146395.87
+    },
+    {
+      "def_code": "P",
+      "amount": 151206032888.4
+    },
+    {
+      "def_code": "Q",
+      "amount": 61888832334380.89
+    },
+    {
+      "def_code": "R",
+      "amount": 10804638761.69
+    },
+    {
+      "def_code": "S",
+      "amount": 17277831086.46
+    },
+    {
+      "def_code": "T",
+      "amount": 0
+    },
+    {
+      "def_code": "U",
+      "amount": 183673965381.53
+    },
+    {
+      "def_code": "V",
+      "amount": 1448091234576.07
+    },
+    {
+      "def_code": "W",
+      "amount": 1018269069
+    },
+    {
+      "def_code": "X",
+      "amount": 37233544851.3
+    },
+    {
+      "def_code": "Z",
+      "amount": 422272515303.92
+    }
+  ],
+  "total_budget_authority": 67879035497801.54,
+  "spending": {
+    "award_obligations": 26770094260503.7,
+    "award_outlays": 21180861049675.75,
+    "total_obligations": 59551047913426.75,
+    "total_outlays": 58376751694625.31
+  },
+  "additional": null
+}

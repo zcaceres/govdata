@@ -1,0 +1,706 @@
+{
+  "results": [
+    {
+      "id": "10",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "WEAPONS",
+      "count": 15,
+      "children": null
+    },
+    {
+      "id": "11",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "NUCLEAR ORDNANCE",
+      "count": 12,
+      "children": null
+    },
+    {
+      "id": "12",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "FIRE CONTROL EQPT.",
+      "count": 12,
+      "children": null
+    },
+    {
+      "id": "13",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "AMMUNITION AND EXPLOSIVES",
+      "count": 32,
+      "children": null
+    },
+    {
+      "id": "14",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "GUIDED MISSLES",
+      "count": 7,
+      "children": null
+    },
+    {
+      "id": "15",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "AEROSPACE CRAFT AND STRUCTURAL COMPONENTS",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "16",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "AEROSPACE CRAFT COMPONENTS AND ACCESSORIES",
+      "count": 11,
+      "children": null
+    },
+    {
+      "id": "17",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "AEROSPACE CRAFT LAUNCHING, LANDING, GROUND HANDLING AND SERVICING EQUIPMENT",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "18",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "SPACE VEHICLES",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "19",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "SHIPS, SMALL CRAFT, PONTOON, DOCKS",
+      "count": 30,
+      "children": null
+    },
+    {
+      "id": "20",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "SHIP AND MARINE EQUIPMENT",
+      "count": 7,
+      "children": null
+    },
+    {
+      "id": "22",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "RAILWAY EQUIPMENT",
+      "count": 5,
+      "children": null
+    },
+    {
+      "id": "23",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MOTOR VEHICLES, CYCLES, TRAILERS",
+      "count": 7,
+      "children": null
+    },
+    {
+      "id": "24",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "TRACTORS",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "25",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "VEHICULAR EQUIPMENT COMPONENTS",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "26",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "TIRES AND TUBES",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "28",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "ENGINES AND TURBINES AND COMPONENT",
+      "count": 11,
+      "children": null
+    },
+    {
+      "id": "29",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "ENGINE ACCESSORIES",
+      "count": 11,
+      "children": null
+    },
+    {
+      "id": "30",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MECHANICAL POWER TRANSMISSION EQPT",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "31",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "BEARINGS",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "32",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "WOODWORKING MACHINERY AND EQPT",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "34",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "METALWORKING MACHINERY",
+      "count": 37,
+      "children": null
+    },
+    {
+      "id": "35",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "SERVICE AND TRADE EQPT",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "36",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "SPECIAL INDUSTRY MACHINERY",
+      "count": 20,
+      "children": null
+    },
+    {
+      "id": "37",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "AGRICULTURAL MACHINERY AND EQPT",
+      "count": 7,
+      "children": null
+    },
+    {
+      "id": "38",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "CONSTRUCT/MINE/EXCAVATE/HIGHWY EQPT",
+      "count": 8,
+      "children": null
+    },
+    {
+      "id": "39",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MATERIALS HANDLING EQPT",
+      "count": 8,
+      "children": null
+    },
+    {
+      "id": "40",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "ROPE, CABLE, CHAIN, FITTINGS",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "41",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "REFRIG, AIR CONDIT/CIRCULAT EQPT",
+      "count": 5,
+      "children": null
+    },
+    {
+      "id": "42",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "FIRE/RESCUE/SAFETY; ENVIRO PROTECT",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "43",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "PUMPS AND COMPRESSORS",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "44",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "FURNACE/STEAM/DRYING; NUCL REACTOR",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "45",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "PLUMBING, HEATING, WASTE DISPOSAL",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "46",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "WATER PURIFICATION/SEWAGE TREATMENT",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "47",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "PIPE, TUBING, HOSE, AND FITTINGS",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "48",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "VALVES",
+      "count": 2,
+      "children": null
+    },
+    {
+      "id": "49",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MAINT/REPAIR SHOP EQPT",
+      "count": 13,
+      "children": null
+    },
+    {
+      "id": "51",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "HAND TOOLS",
+      "count": 7,
+      "children": null
+    },
+    {
+      "id": "52",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MEASURING TOOLS",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "53",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "HARDWARE AND ABRASIVES",
+      "count": 18,
+      "children": null
+    },
+    {
+      "id": "54",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "PREFAB STRUCTURES/SCAFFOLDING",
+      "count": 8,
+      "children": null
+    },
+    {
+      "id": "55",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "LUMBER, MILLWORK, PLYWOOD, VENEER",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "56",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "CONSTRUCTION AND BUILDING MATERIAL",
+      "count": 9,
+      "children": null
+    },
+    {
+      "id": "58",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "COMM/DETECT/COHERENT RADIATION",
+      "count": 20,
+      "children": null
+    },
+    {
+      "id": "59",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "ELECTRICAL/ELECTRONIC EQPT COMPNTS",
+      "count": 26,
+      "children": null
+    },
+    {
+      "id": "60",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "FIBER OPTIC",
+      "count": 24,
+      "children": null
+    },
+    {
+      "id": "61",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "ELECTRIC WIRE, POWER DISTRIB EQPT",
+      "count": 13,
+      "children": null
+    },
+    {
+      "id": "62",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "LIGHTING FIXTURES, LAMPS",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "63",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "ALARM, SIGNAL, SECURITY DETECTION",
+      "count": 5,
+      "children": null
+    },
+    {
+      "id": "65",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MEDICAL/DENTAL/VETERINARY EQPT/SUPP",
+      "count": 15,
+      "children": null
+    },
+    {
+      "id": "66",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "INSTRUMENTS AND LABORATORY EQPT",
+      "count": 20,
+      "children": null
+    },
+    {
+      "id": "67",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "PHOTOGRAPHIC EQPT",
+      "count": 8,
+      "children": null
+    },
+    {
+      "id": "68",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "CHEMICALS AND CHEMICAL PRODUCTS",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "69",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "TRAINING AIDS AND DEVICES",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "70",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "INFORMATION TECHNOLOGY EQUIPMENT (INCLD FIRMWARE) SOFTWARE,SUPPLIES& SUPPORT EQUIPMENT",
+      "count": 11,
+      "children": null
+    },
+    {
+      "id": "71",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "FURNITURE",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "72",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "HOUSEHOLD/COMMERC FURNISH/APPLIANCE",
+      "count": 5,
+      "children": null
+    },
+    {
+      "id": "73",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "FOOD PREPARATION/SERVING EQPT",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "74",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "OFFICE MACH/TEXT PROCESS/VISIB REC",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "75",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "OFFICE SUPPLIES AND DEVICES",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "76",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "BOOKS, MAPS, OTHER PUBLICATIONS",
+      "count": 11,
+      "children": null
+    },
+    {
+      "id": "77",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MUSICAL INST/PHONOGRAPH/HOME RADIO",
+      "count": 5,
+      "children": null
+    },
+    {
+      "id": "78",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "RECREATIONAL/ATHLETIC EQPT",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "79",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "CLEANING EQPT AND SUPPLIES",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "80",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "BRUSHES, PAINTS, SEALERS, ADHESIVES",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "81",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "CONTAINERS/PACKAGING/PACKING SUPPL",
+      "count": 10,
+      "children": null
+    },
+    {
+      "id": "83",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "TEXTILE/LEATHER/FUR; TENT; FLAG",
+      "count": 9,
+      "children": null
+    },
+    {
+      "id": "84",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "CLOTHING, INDIVIDUAL EQUIPMENT, INSIGNA, AND JEWELRY",
+      "count": 16,
+      "children": null
+    },
+    {
+      "id": "85",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "TOILETRIES",
+      "count": 4,
+      "children": null
+    },
+    {
+      "id": "87",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "AGRICULTURAL SUPPLIES",
+      "count": 3,
+      "children": null
+    },
+    {
+      "id": "88",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "LIVE ANIMALS",
+      "count": 2,
+      "children": null
+    },
+    {
+      "id": "89",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "SUBSISTENCE",
+      "count": 17,
+      "children": null
+    },
+    {
+      "id": "91",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "FUELS, LUBRICANTS, OILS, WAXES",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "93",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "NONMETALLIC FABRICATED MATERIALS",
+      "count": 6,
+      "children": null
+    },
+    {
+      "id": "94",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "NONMETALLIC CRUDE MATERIALS",
+      "count": 5,
+      "children": null
+    },
+    {
+      "id": "95",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "METAL BARS, SHEETS, SHAPES",
+      "count": 9,
+      "children": null
+    },
+    {
+      "id": "96",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "ORES, MINERALS AND PRIMARY PRODUCTS",
+      "count": 8,
+      "children": null
+    },
+    {
+      "id": "99",
+      "ancestors": [
+        "Product"
+      ],
+      "description": "MISCELLANEOUS",
+      "count": 8,
+      "children": null
+    }
+  ]
+}

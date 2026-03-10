@@ -1,0 +1,88 @@
+{
+  "category": "district",
+  "spending_level": "transactions",
+  "limit": 10,
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "results": [
+    {
+      "id": null,
+      "code": "11",
+      "name": "VA-11",
+      "amount": 667795146.07,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "04",
+      "name": "MD-04",
+      "amount": 408998143.9,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "05",
+      "name": "AL-05",
+      "amount": 172937985.38,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "06",
+      "name": "MA-06",
+      "amount": 171931692.07,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "28",
+      "name": "CA-28",
+      "amount": 161589310.36,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "02",
+      "name": "VA-02",
+      "amount": 130424929.87,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "98",
+      "name": "DC-98",
+      "amount": 110128642.85,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "16",
+      "name": "CA-16",
+      "amount": 102944264.35,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "43",
+      "name": "CA-43",
+      "amount": 90416491.64,
+      "total_outlays": null
+    },
+    {
+      "id": null,
+      "code": "18",
+      "name": "CA-18",
+      "amount": 79857832.87,
+      "total_outlays": null
+    }
+  ],
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "'subawards' will be deprecated in the future. Set ‘spending_level’ to ‘subawards’ instead. See documentation for more information. "
+  ]
+}

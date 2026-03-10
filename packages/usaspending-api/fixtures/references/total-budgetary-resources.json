@@ -1,0 +1,577 @@
+{
+  "results": [
+    {
+      "fiscal_year": 2026,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 4751084861015.65
+    },
+    {
+      "fiscal_year": 2026,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 13286077276206.8
+    },
+    {
+      "fiscal_year": 2026,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 11789916426964.1
+    },
+    {
+      "fiscal_year": 2026,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 11331756823978.77
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 13263700405307.76
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 15772073357024.44
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 14462419485223.75
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 15330351529402.55
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 14195466060777.52
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 15086996780535.34
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 14651831778670.89
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 14297107728300.2
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 11675780818419.5
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 10830081110884.22
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 9675188413345.46
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 12248550270454
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 13568144291419.49
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 14582320379693.84
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 13791300088761.09
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 14467363397078.02
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 14158411193616.05
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 13865505067157.33
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 12229811990803.8
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 11541240818672.42
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 11581875029819.39
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 9596098505000.58
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 11889863708699.81
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 13615337201704.1
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 13365403393218.56
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 12996630502030.84
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 13380553713499.48
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 12228929090714.57
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 12629473548065.29
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 13989327919708.82
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 11452525491046.04
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 11175418338470.8
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 8030160539652.04
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 11409814941613.59
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 12764428460275.66
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 12594330448699
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 12206682753527.13
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 11623730239707.36
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 11163185940609.99
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 10874126173390.69
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 9397022737824.53
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 10119431169690.47
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 8325839257167.44
+    },
+    {
+      "fiscal_year": 2022,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 7325364485365.17
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 12219096866505.09
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 15795890204506.89
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 13103108110995.28
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 12623558129250.7
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 12181493761036.6
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 12174066079491.95
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 11744336869154.64
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 9687978054362.54
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 9806472530613.24
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 8293888518975.71
+    },
+    {
+      "fiscal_year": 2021,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 6773546424659.9
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 11461079028211.95
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 12552884884200.69
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 12242191508179.24
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 12037350919675.5
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 11633144174730.15
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 11202095033233.47
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 9785990601970.29
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 8225907937972.74
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 7868177713402.09
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 6882181699259.53
+    },
+    {
+      "fiscal_year": 2020,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 5759783695850.88
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 7985842464180.6
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 9778476840024.81
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 8392226080457.05
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 9320262119915.73
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 7982523190421.38
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 9589396452608.4
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 9674616007176.72
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 4355054232803.07
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 7570136124192.87
+    },
+    {
+      "fiscal_year": 2019,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 6120967649812.83
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 7593875408547.67
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 8108537381821.06
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 8598553212154.83
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 8205853069070.6
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 8054369953693.51
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 7780802897644.3
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 7332760615211.32
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 7020697870054.51
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 8790975058216.29
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 5660551486904.69
+    },
+    {
+      "fiscal_year": 2018,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 5618100487387.47
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 7158037155046.72
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 7855348649122.57
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 8165925137783.27
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 7966703259456.04
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 8034048464440.41
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 9439675078789.37
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 6431876461776.17
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 6278424429142.1
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 6632309482279.95
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 5918457743581.06
+    },
+    {
+      "fiscal_year": 2017,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 4808813580009.92
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 6967701564271.19
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 11,
+      "total_budgetary_resources": 8313718706501.81
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 10,
+      "total_budgetary_resources": 7790031820731.53
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 9,
+      "total_budgetary_resources": 7675795527881.13
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 8,
+      "total_budgetary_resources": 7792703168644.81
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 7,
+      "total_budgetary_resources": 7164940080803.64
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 6,
+      "total_budgetary_resources": 7765693111679.27
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 5,
+      "total_budgetary_resources": 6653767373367.73
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 4,
+      "total_budgetary_resources": 6840509529816.83
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 3,
+      "total_budgetary_resources": 7818366455740.89
+    },
+    {
+      "fiscal_year": 2016,
+      "fiscal_period": 2,
+      "total_budgetary_resources": 6100709095548.67
+    },
+    {
+      "fiscal_year": 2015,
+      "fiscal_period": 12,
+      "total_budgetary_resources": 6645238925533.55
+    }
+  ],
+  "messages": [
+    "Account data powering this endpoint were first collected in FY2017 Q2 under the DATA Act; as such, there are no data available for prior fiscal years."
+  ]
+}

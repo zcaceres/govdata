@@ -14,6 +14,10 @@
     "govdata-core": "workspace:*",
     "doge-api": "workspace:*",
     "naics-api": "workspace:*",
+    "dol-open-data-api": "workspace:*",
+    "federal-register": "workspace:*",
+    "usaspending-api": "workspace:*",
+    "bls-api": "workspace:*",
     "zod": "^4.3"
   },
   "devDependencies": {

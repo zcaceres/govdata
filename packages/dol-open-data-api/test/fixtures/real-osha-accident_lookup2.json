@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "accident_code": "OCC",
+      "accident_number": 757,
+      "accident_value": "Separating, filtering & clarifying mach. operators",
+      "accident_letter": null,
+      "load_dt": "2018-11-09T20:56:02"
+    },
+    {
+      "accident_code": "OCC",
+      "accident_number": 758,
+      "accident_value": "Compressing and compacting machine operators",
+      "accident_letter": null,
+      "load_dt": "2018-11-09T20:56:02"
+    }
+  ]
+}

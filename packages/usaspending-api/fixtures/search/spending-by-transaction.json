@@ -1,0 +1,116 @@
+{
+  "limit": 10,
+  "results": [
+    {
+      "Award ID": "W31P4Q23C0002",
+      "Recipient Name": "RAYTHEON COMPANY",
+      "Action Date": "2024-09-25",
+      "Transaction Amount": 175473863.42,
+      "Awarding Agency": "Department of Defense",
+      "Award Type": "DEFINITIVE CONTRACT",
+      "generated_internal_id": "CONT_AWD_W31P4Q23C0002_9700_-NONE-_-NONE-",
+      "internal_id": 348950514
+    },
+    {
+      "Award ID": "80KSC019C0013",
+      "Recipient Name": "BECHTEL NATIONAL, INC.",
+      "Action Date": "2024-04-18",
+      "Transaction Amount": 75000000,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Award Type": "DEFINITIVE CONTRACT",
+      "generated_internal_id": "CONT_AWD_80KSC019C0013_8000_-NONE-_-NONE-",
+      "internal_id": 291812086
+    },
+    {
+      "Award ID": "693C7324C000011",
+      "Recipient Name": "KOKOSING CONSTRUCTION COMPANY, INC.",
+      "Action Date": "2024-06-20",
+      "Transaction Amount": 62395600,
+      "Awarding Agency": "Department of Transportation",
+      "Award Type": "DEFINITIVE CONTRACT",
+      "generated_internal_id": "CONT_AWD_693C7324C000011_6925_-NONE-_-NONE-",
+      "internal_id": 291043988
+    },
+    {
+      "Award ID": "NNH15CN76C",
+      "Recipient Name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+      "Action Date": "2024-06-27",
+      "Transaction Amount": 50123341,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Award Type": "DEFINITIVE CONTRACT",
+      "generated_internal_id": "CONT_AWD_NNH15CN76C_8000_-NONE-_-NONE-",
+      "internal_id": 311383785
+    },
+    {
+      "Award ID": "80KSC019C0013",
+      "Recipient Name": "BECHTEL NATIONAL, INC.",
+      "Action Date": "2024-12-18",
+      "Transaction Amount": 48400000,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Award Type": "DEFINITIVE CONTRACT",
+      "generated_internal_id": "CONT_AWD_80KSC019C0013_8000_-NONE-_-NONE-",
+      "internal_id": 291812086
+    },
+    {
+      "Award ID": "80KSC019C0013",
+      "Recipient Name": "BECHTEL NATIONAL, INC.",
+      "Action Date": "2024-07-25",
+      "Transaction Amount": 43618909,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Award Type": "DEFINITIVE CONTRACT",
+      "generated_internal_id": "CONT_AWD_80KSC019C0013_8000_-NONE-_-NONE-",
+      "internal_id": 291812086
+    },
+    {
+      "Award ID": "36C10B23F0125",
+      "Recipient Name": "EMERGENT, LLC",
+      "Action Date": "2024-04-15",
+      "Transaction Amount": 38003607.89,
+      "Awarding Agency": "Department of Veterans Affairs",
+      "Award Type": "DELIVERY ORDER",
+      "generated_internal_id": "CONT_AWD_36C10B23F0125_3600_NNG15SC33B_8000",
+      "internal_id": 279969963
+    },
+    {
+      "Award ID": "80NM0018F0710",
+      "Recipient Name": "CALIFORNIA INSTITUTE OF TECHNOLOGY",
+      "Action Date": "2024-08-07",
+      "Transaction Amount": 36575524.38,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Award Type": "DELIVERY ORDER",
+      "generated_internal_id": "CONT_AWD_80NM0018F0710_8000_80NM0018D0004_8000",
+      "internal_id": 291817728
+    },
+    {
+      "Award ID": "80NSSC23FA473",
+      "Recipient Name": "MINBURN TECHNOLOGY GROUP, LLC",
+      "Action Date": "2024-04-30",
+      "Transaction Amount": 33762263.4,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Award Type": "DELIVERY ORDER",
+      "generated_internal_id": "CONT_AWD_80NSSC23FA473_8000_NNG15SD34B_8000",
+      "internal_id": 291841525
+    },
+    {
+      "Award ID": "NNH15CN76C",
+      "Recipient Name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+      "Action Date": "2024-12-20",
+      "Transaction Amount": 33500000,
+      "Awarding Agency": "National Aeronautics and Space Administration",
+      "Award Type": "DEFINITIVE CONTRACT",
+      "generated_internal_id": "CONT_AWD_NNH15CN76C_8000_-NONE-_-NONE-",
+      "internal_id": 311383785
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "next": 2,
+    "previous": null,
+    "hasNext": true,
+    "hasPrevious": false
+  },
+  "messages": [
+    "For searches, time period start and end dates are currently limited to an earliest date of 2007-10-01.  For data going back to 2000-10-01, use either the Custom Award Download feature on the website or one of our download or bulk_download API endpoints as listed on https://api.usaspending.gov/docs/endpoints. ",
+    "The following filters from the request were not used: {'keyword_search'}. See https://api.usaspending.gov/docs/endpoints for a list of appropriate filters"
+  ]
+}

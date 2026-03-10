@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "code": "0001",
+      "obligations": 3706.77,
+      "name": "SCIENCE, AERONAUTICS AND TECHNOLOGY (DIRECT)",
+      "type": "PAC/PAN"
+    }
+  ],
+  "page_metadata": {
+    "page": 1,
+    "total": 1,
+    "limit": 10,
+    "next": null,
+    "previous": null,
+    "hasNext": false,
+    "hasPrevious": false
+  }
+}

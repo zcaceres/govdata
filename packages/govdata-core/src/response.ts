@@ -9,12 +9,37 @@ export interface GovResult<K extends string = string> {
   summary(): string;
 }
 
+/**
+ * Stringify a value for display in tables.
+ * Arrays of objects extract a label field (name/title/slug); plain objects
+ * try the same fields then fall back to JSON. Primitives use String().
+ */
+export function stringifyValue(value: unknown): string {
+  if (value == null) return "";
+  if (Array.isArray(value)) {
+    return value.map((item) => stringifyValue(item)).join(", ");
+  }
+  if (typeof value === "object") {
+    const obj = value as Record<string, unknown>;
+    for (const key of ["name", "title", "slug", "label"]) {
+      if (typeof obj[key] === "string") return obj[key] as string;
+    }
+    return JSON.stringify(value);
+  }
+  return String(value);
+}
+
 export function escapeCSV(value: unknown): string {
-  const str = value == null ? "" : String(value);
+  const str = stringifyValue(value);
   if (str.includes(",") || str.includes('"') || str.includes("\n")) {
     return `"${str.replace(/"/g, '""')}"`;
   }
   return str;
+}
+
+export function escapeMarkdownCell(value: unknown): string {
+  if (value == null) return "";
+  return stringifyValue(value).replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
 }
 
 export function arrayToMarkdownTable(items: Record<string, unknown>[]): string {
@@ -23,7 +48,7 @@ export function arrayToMarkdownTable(items: Record<string, unknown>[]): string {
   const header = `| ${keys.join(" | ")} |`;
   const separator = `| ${keys.map(() => "---").join(" | ")} |`;
   const rows = items.map(
-    (item) => `| ${keys.map((k) => item[k] == null ? "" : String(item[k])).join(" | ")} |`,
+    (item) => `| ${keys.map((k) => escapeMarkdownCell(item[k])).join(" | ")} |`,
   );
   return [header, separator, ...rows].join("\n");
 }
@@ -56,6 +81,8 @@ export function createResult<K extends string>(
           }
         }
         if (sections.length > 0) return sections.join("\n\n");
+        // Plain object (not object-of-arrays): wrap in array for table display
+        return arrayToMarkdownTable([data as Record<string, unknown>]);
       }
       return arrayToMarkdownTable(data as Record<string, unknown>[]);
     },
@@ -68,6 +95,8 @@ export function createResult<K extends string>(
           }
         }
         if (sections.length > 0) return sections.join("\n\n");
+        // Plain object: wrap in array for CSV display
+        return arrayToCSV([data as Record<string, unknown>]);
       }
       return arrayToCSV(data as Record<string, unknown>[]);
     },
@@ -79,10 +108,16 @@ export function createResult<K extends string>(
           const parts = entries.map(([k, v]) => `${(v as unknown[]).length} ${k}`);
           return `${kind}: ${parts.join(", ")}`;
         }
+        // Plain object: single result
+        return `${kind}: 1 result`;
       }
       const items = data as unknown[];
       if (!meta) return `${kind}: ${items.length} results`;
-      return `${kind}: ${items.length} of ${meta.total_results} results (${meta.pages} pages)`;
+      if (meta.total_results != null) {
+        return `${kind}: ${items.length} of ${meta.total_results} results (${meta.pages} pages)`;
+      }
+      const moreIndicator = meta.pages > 1 ? " (more available)" : "";
+      return `${kind}: ${items.length} results${moreIndicator}`;
     },
   };
 }

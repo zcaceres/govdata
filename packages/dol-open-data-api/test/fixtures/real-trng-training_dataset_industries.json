@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "industry": "A",
+      "value": 301,
+      "year": 2021
+    },
+    {
+      "industry": "A",
+      "value": 456,
+      "year": 2022
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "citation_nbr": "9493244",
+      "violator_id": "0160393",
+      "violator_name": "Peabody Southeast Mining, LLC",
+      "proposed_penalty_amt": 782,
+      "current_assessment_amt": 782,
+      "paid_proposed_penalty_amt": 782,
+      "last_action_code": "Paid",
+      "final_order_date": "2020-06-26T00:00:00",
+      "bill_print_date": "2020-05-13T00:00:00",
+      "last_action_code_1": "Paid",
+      "last_action_date": "2020-06-30T00:00:00",
+      "load_dt": "2026-02-28T00:37:54"
+    },
+    {
+      "citation_nbr": "7073029",
+      "violator_id": "0105487",
+      "violator_name": "Consol Pennsylvania Coal Company LLC",
+      "proposed_penalty_amt": 123,
+      "current_assessment_amt": 123,
+      "paid_proposed_penalty_amt": 123,
+      "last_action_code": "Paid",
+      "final_order_date": "2020-07-11T00:00:00",
+      "bill_print_date": "2020-06-03T00:00:00",
+      "last_action_code_1": "Paid",
+      "last_action_date": "2020-07-02T00:00:00",
+      "load_dt": "2026-02-28T00:37:54"
+    }
+  ]
+}
