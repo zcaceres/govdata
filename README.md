@@ -10,7 +10,7 @@ A monorepo of typed TypeScript clients for U.S. government data APIs. Each data 
 | [federal-register](packages/federal-register) | Stable | 9 | Federal Register — documents, agencies, public inspection, facets |
 | [dol-open-data-api](packages/dol-open-data-api) | Stable | 42 | Dept. of Labor — MSHA, OSHA, WHD, and 6 other agencies |
 | [naics-api](packages/naics-api) | Stable | 3 | NAICS code lookup (local SQLite, no HTTP) |
-| [usaspending-api](packages/usaspending-api) | In Progress | 6 | USAspending.gov — awards, agency spending, state spending |
+| [usaspending-api](packages/usaspending-api) | Stable | 137 | USAspending.gov — awards, agencies, spending, recipients, contracts, disaster relief, financial accounts, IDVs, subawards, downloads |
 | [bls-api](packages/bls-api) | Stable | 3 | Bureau of Labor Statistics — time series, surveys, popular series |
 
 **Not yet started:** SEC EDGAR, Census Bureau, EPA, USDA, HHS, FEC, USPTO, data.gov
