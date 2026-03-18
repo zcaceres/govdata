@@ -10,8 +10,9 @@ import { dolPlugin } from "dol-open-data-api";
 import { federalRegisterPlugin } from "federal-register";
 import { usaspendingPlugin } from "usaspending-api";
 import { blsPlugin } from "bls-api";
+import { cpscPlugin } from "cpsc-api";
 
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, federalRegisterPlugin, usaspendingPlugin, blsPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, federalRegisterPlugin, usaspendingPlugin, blsPlugin, cpscPlugin];
 
 const server = new McpServer({ name: "govdata", version: "0.1.0" });
 
