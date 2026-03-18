@@ -9,8 +9,8 @@ export function kebabToSnake(str: string): string {
   return str.replace(/-/g, "_");
 }
 
-export function parseFlags(args: string[]): Record<string, string | number | boolean> {
-  const result: Record<string, string | number | boolean> = {};
+export function parseFlags(args: string[]): Record<string, string | boolean> {
+  const result: Record<string, string | boolean> = {};
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
     if (!arg.startsWith("--")) continue;
@@ -19,8 +19,7 @@ export function parseFlags(args: string[]): Record<string, string | number | boo
     if (next === undefined || next.startsWith("--")) {
       result[key] = true;
     } else {
-      const num = Number(next);
-      result[key] = Number.isFinite(num) && next.trim() !== "" ? num : next;
+      result[key] = next;
       i++;
     }
   }

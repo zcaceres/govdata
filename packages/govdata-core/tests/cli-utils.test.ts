@@ -17,9 +17,14 @@ describe("parseFlags", () => {
     expect(result).toEqual({ sort_by: "savings" });
   });
 
-  it("parses numeric flags", () => {
+  it("keeps numeric-looking values as strings", () => {
     const result = parseFlags(["--page", "2"]);
-    expect(result).toEqual({ page: 2 });
+    expect(result).toEqual({ page: "2" });
+  });
+
+  it("preserves leading zeros", () => {
+    const result = parseFlags(["--upc", "0123456789"]);
+    expect(result).toEqual({ upc: "0123456789" });
   });
 
   it("parses boolean flags", () => {
@@ -29,7 +34,24 @@ describe("parseFlags", () => {
 
   it("parses mixed flags", () => {
     const result = parseFlags(["--sort-by", "savings", "--page", "1", "--json"]);
-    expect(result).toEqual({ sort_by: "savings", page: 1, json: true });
+    expect(result).toEqual({ sort_by: "savings", page: "1", json: true });
+  });
+
+  it("preserves leading zeros on numeric-looking strings", () => {
+    const result = parseFlags(["--upc", "0123456789"]);
+    expect(result).toEqual({ upc: "0123456789" });
+    expect(typeof result.upc).toBe("string");
+  });
+
+  it("preserves zip codes with leading zeros", () => {
+    const result = parseFlags(["--zip", "01234"]);
+    expect(result.zip).toBe("01234");
+  });
+
+  it("preserves plain numeric strings as strings", () => {
+    const result = parseFlags(["--id", "42"]);
+    expect(result.id).toBe("42");
+    expect(typeof result.id).toBe("string");
   });
 });
 

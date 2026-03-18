@@ -7,8 +7,8 @@ export const PaymentsSortBy = z.enum(["amount", "date"]);
 export const SortOrder = z.enum(["asc", "desc"]);
 
 const paginationParams = {
-  page: z.number().int().positive().optional(),
-  per_page: z.number().int().positive().optional(),
+  page: z.coerce.number().int().positive().optional(),
+  per_page: z.coerce.number().int().positive().optional(),
 };
 
 export const SavingsParamsSchema = z.object({
