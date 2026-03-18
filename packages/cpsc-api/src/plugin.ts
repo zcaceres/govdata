@@ -65,15 +65,17 @@ export const cpscPlugin: GovDataPlugin = {
       }
       return penalties(coerced);
     },
-    "penalty-companies": (params?: any) => {
+    // dispatch() normalizes kebab-case to snake_case via kebabToSnake(),
+    // so "penalty-companies" becomes "penalty_companies" at lookup time.
+    penalty_companies: (params?: any) => {
       if (!params || Object.keys(params).length === 0) return penaltyCompanies();
       return penaltyCompanies(coercePenaltyType(params));
     },
-    "penalty-products": (params?: any) => {
+    penalty_products: (params?: any) => {
       if (!params || Object.keys(params).length === 0) return penaltyProducts();
       return penaltyProducts(coercePenaltyType(params));
     },
-    "penalty-years": (params?: any) => {
+    penalty_years: (params?: any) => {
       if (!params || Object.keys(params).length === 0) return penaltyYears();
       return penaltyYears(coercePenaltyType(params));
     },

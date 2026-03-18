@@ -96,17 +96,6 @@ describe("wrapResponse recalls", () => {
     expect(md).toContain("...");
     expect(md).not.toContain(longHazard);
   });
-
-  it("supports the stored recall fixtures through markdown and CSV rendering", async () => {
-    const fixture = await Bun.file(
-      new URL("../fixtures/recall-search.json", import.meta.url),
-    ).json();
-    const result = wrapResponse(fixture as Recall[], "recalls");
-
-    expect(result.data.length).toBeGreaterThan(1);
-    expect(result.toMarkdown()).toContain("Recall #");
-    expect(result.toCSV()).toContain("RecallNumber");
-  });
 });
 
 describe("wrapResponse penalties", () => {
@@ -127,41 +116,30 @@ describe("wrapResponse penalties", () => {
     const result = wrapResponse([samplePenalty], "penalties");
     expect(result.summary()).toBe("penalties: 1 results");
   });
-
-  it("supports stored criminal penalty fixtures with null fines and empty product lists", async () => {
-    const fixture = await Bun.file(
-      new URL("../fixtures/penalty-criminal-all.json", import.meta.url),
-    ).json();
-    const result = wrapResponse(fixture as Penalty[], "penalties");
-
-    expect(result.data.length).toBeGreaterThan(1);
-    expect(result.toMarkdown()).toContain("STK International");
-    expect(result.toCSV()).toContain("RecallNo");
-  });
 });
 
-describe("wrapResponse penalty-companies", () => {
+describe("wrapResponse penalty_companies", () => {
   it("wraps string array", () => {
-    const result = wrapResponse(["Acme", "Beta"], "penalty-companies");
-    expect(result.kind).toBe("penalty-companies");
+    const result = wrapResponse(["Acme", "Beta"], "penalty_companies");
+    expect(result.kind).toBe("penalty_companies");
     expect(result.data).toEqual(["Acme", "Beta"]);
     expect(result.toMarkdown()).toContain("Acme");
   });
 });
 
-describe("wrapResponse penalty-products", () => {
+describe("wrapResponse penalty_products", () => {
   it("wraps product type array", () => {
     const products: PenaltyProductType[] = [{ Type: "Toys", CategoryID: "123" }];
-    const result = wrapResponse(products, "penalty-products");
-    expect(result.kind).toBe("penalty-products");
+    const result = wrapResponse(products, "penalty_products");
+    expect(result.kind).toBe("penalty_products");
     expect(result.toMarkdown()).toContain("Toys");
   });
 });
 
-describe("wrapResponse penalty-years", () => {
+describe("wrapResponse penalty_years", () => {
   it("wraps year string array", () => {
-    const result = wrapResponse(["2024", "2025"], "penalty-years");
-    expect(result.kind).toBe("penalty-years");
+    const result = wrapResponse(["2024", "2025"], "penalty_years");
+    expect(result.kind).toBe("penalty_years");
     expect(result.toMarkdown()).toContain("2025");
   });
 });

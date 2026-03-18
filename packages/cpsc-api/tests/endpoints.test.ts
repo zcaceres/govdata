@@ -128,7 +128,7 @@ describe("penaltyCompanies", () => {
   it("returns company names", async () => {
     mockFetch(["Company A", "Company B"]);
     const result = await penaltyCompanies();
-    expect(result.kind).toBe("penalty-companies");
+    expect(result.kind).toBe("penalty_companies");
     expect(result.data).toHaveLength(2);
     expect(result.data[0]).toBe("Company A");
   });
@@ -138,7 +138,7 @@ describe("penaltyProducts", () => {
   it("returns product types", async () => {
     mockFetch([{ Type: "Toys", CategoryID: "123" }]);
     const result = await penaltyProducts();
-    expect(result.kind).toBe("penalty-products");
+    expect(result.kind).toBe("penalty_products");
     expect(result.data).toHaveLength(1);
     expect(result.data[0].Type).toBe("Toys");
   });
@@ -148,7 +148,7 @@ describe("penaltyYears", () => {
   it("returns fiscal years", async () => {
     mockFetch(["2024", "2025"]);
     const result = await penaltyYears();
-    expect(result.kind).toBe("penalty-years");
+    expect(result.kind).toBe("penalty_years");
     expect(result.data).toHaveLength(2);
   });
 });
@@ -192,9 +192,9 @@ describe("cpscPlugin", () => {
     expect(result.kind).toBe("penalties");
   });
 
-  it("penalty-companies endpoint works via plugin", async () => {
+  it("penalty_companies endpoint works via plugin", async () => {
     mockFetch(["A", "B"]);
-    const result = await cpscPlugin.endpoints["penalty-companies"]();
-    expect(result.kind).toBe("penalty-companies");
+    const result = await cpscPlugin.endpoints["penalty_companies"]();
+    expect(result.kind).toBe("penalty_companies");
   });
 });

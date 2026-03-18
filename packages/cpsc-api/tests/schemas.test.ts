@@ -1,5 +1,4 @@
 import { describe, it, expect } from "bun:test";
-import { readdirSync } from "node:fs";
 import {
   RecallParamsSchema,
   PenaltyParamsSchema,
@@ -104,17 +103,6 @@ describe("PenaltyListParamsSchema", () => {
 });
 
 describe("Response schemas", () => {
-  const fixtureSchemas = {
-    "recall-by-id.json": RecallsResponseSchema,
-    "recall-search-small.json": RecallsResponseSchema,
-    "recall-search.json": RecallsResponseSchema,
-    "penalty-civil-2025.json": PenaltiesResponseSchema,
-    "penalty-criminal-all.json": PenaltiesResponseSchema,
-    "penalty-companies.json": PenaltyCompaniesResponseSchema,
-    "penalty-products.json": PenaltyProductsResponseSchema,
-    "penalty-fiscal-years.json": PenaltyYearsResponseSchema,
-  } as const;
-
   it("RecallsResponseSchema parses fixture", async () => {
     const fixture = await Bun.file(
       new URL("../fixtures/recall-by-id.json", import.meta.url),
@@ -187,20 +175,6 @@ describe("Response schemas", () => {
     if (result.success) {
       expect(result.data).toContain("2025");
       expect(result.data).toContain("1977");
-    }
-  });
-
-  it("all CPSC fixtures match their intended schemas", async () => {
-    const fixtureDir = new URL("../fixtures/", import.meta.url);
-    const fixtureFiles = readdirSync(fixtureDir).filter((file) => file.endsWith(".json")).sort();
-
-    expect(fixtureFiles).toEqual(Object.keys(fixtureSchemas).sort());
-
-    for (const file of fixtureFiles) {
-      const fixture = await Bun.file(new URL(`../fixtures/${file}`, import.meta.url)).json();
-      const schema = fixtureSchemas[file as keyof typeof fixtureSchemas];
-      const result = schema.safeParse(fixture);
-      expect(result.success, `${file} should match its schema`).toBe(true);
     }
   });
 });

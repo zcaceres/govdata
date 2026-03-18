@@ -90,7 +90,7 @@ async function _penaltyCompanies(
     { penaltytype: validated.penaltytype },
     options,
   );
-  return wrapResponse(raw, "penalty-companies");
+  return wrapResponse(raw, "penalty_companies");
 }
 
 async function _penaltyProducts(
@@ -104,7 +104,7 @@ async function _penaltyProducts(
     { penaltytype: validated.penaltytype },
     options,
   );
-  return wrapResponse(raw, "penalty-products");
+  return wrapResponse(raw, "penalty_products");
 }
 
 async function _penaltyYears(
@@ -118,7 +118,7 @@ async function _penaltyYears(
     { penaltytype: validated.penaltytype },
     options,
   );
-  return wrapResponse(raw, "penalty-years");
+  return wrapResponse(raw, "penalty_years");
 }
 
 export async function recalls(

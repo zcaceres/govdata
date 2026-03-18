@@ -12,9 +12,9 @@ describe("describe()", () => {
     const names = endpoints.map((e) => e.name);
     expect(names).toContain("recalls");
     expect(names).toContain("penalties");
-    expect(names).toContain("penalty-companies");
-    expect(names).toContain("penalty-products");
-    expect(names).toContain("penalty-years");
+    expect(names).toContain("penalty_companies");
+    expect(names).toContain("penalty_products");
+    expect(names).toContain("penalty_years");
   });
 
   it("every endpoint has required fields", () => {

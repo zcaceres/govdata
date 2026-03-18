@@ -20,9 +20,9 @@ async function main() {
     console.log("  cpsc-api recalls --RecallID 10141");
     console.log("  cpsc-api recalls --ProductName mattress --ManufacturerCountry China");
     console.log("  cpsc-api penalties --penaltytype civil --fiscalyear 2025");
-    console.log("  cpsc-api penalty-companies --penaltytype criminal");
-    console.log("  cpsc-api penalty-products");
-    console.log("  cpsc-api penalty-years");
+    console.log("  cpsc-api penalty_companies --penaltytype criminal");
+    console.log("  cpsc-api penalty_products");
+    console.log("  cpsc-api penalty_years");
     console.log("\nGlobal Options:");
     console.log("  --json               Pretty-print JSON output");
     console.log("  --help               Show help");

@@ -20,16 +20,16 @@ export type PenaltyProductType = { Type: string; CategoryID: string };
 export type EndpointKind =
   | "recalls"
   | "penalties"
-  | "penalty-companies"
-  | "penalty-products"
-  | "penalty-years";
+  | "penalty_companies"
+  | "penalty_products"
+  | "penalty_years";
 
 export interface KindDataMap {
   recalls: Recall[];
   penalties: Penalty[];
-  "penalty-companies": string[];
-  "penalty-products": PenaltyProductType[];
-  "penalty-years": string[];
+  penalty_companies: string[];
+  penalty_products: PenaltyProductType[];
+  penalty_years: string[];
 }
 
 export interface CpscResult<K extends EndpointKind = EndpointKind> extends GovResult<K> {
@@ -39,6 +39,6 @@ export interface CpscResult<K extends EndpointKind = EndpointKind> extends GovRe
 
 export type RecallsResult = CpscResult<"recalls">;
 export type PenaltiesResult = CpscResult<"penalties">;
-export type PenaltyCompaniesResult = CpscResult<"penalty-companies">;
-export type PenaltyProductsResult = CpscResult<"penalty-products">;
-export type PenaltyYearsResult = CpscResult<"penalty-years">;
+export type PenaltyCompaniesResult = CpscResult<"penalty_companies">;
+export type PenaltyProductsResult = CpscResult<"penalty_products">;
+export type PenaltyYearsResult = CpscResult<"penalty_years">;

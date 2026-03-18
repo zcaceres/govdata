@@ -130,38 +130,38 @@ function wrapPenalties(penalties: Penalty[]): CpscResult<"penalties"> {
   };
 }
 
-function wrapPenaltyCompanies(companies: string[]): CpscResult<"penalty-companies"> {
+function wrapPenaltyCompanies(companies: string[]): CpscResult<"penalty_companies"> {
   const rows = companies.map((c) => ({ Company: c }));
-  const base = createResult(rows, null, "penalty-companies");
+  const base = createResult(rows, null, "penalty_companies");
   return {
     data: companies,
     meta: null,
-    kind: "penalty-companies",
+    kind: "penalty_companies",
     toMarkdown: () => base.toMarkdown(),
     toCSV: () => base.toCSV(),
     summary: () => `penalty-companies: ${companies.length} results`,
   };
 }
 
-function wrapPenaltyProducts(products: PenaltyProductType[]): CpscResult<"penalty-products"> {
-  const base = createResult(products, null, "penalty-products");
+function wrapPenaltyProducts(products: PenaltyProductType[]): CpscResult<"penalty_products"> {
+  const base = createResult(products, null, "penalty_products");
   return {
     data: products,
     meta: null,
-    kind: "penalty-products",
+    kind: "penalty_products",
     toMarkdown: () => base.toMarkdown(),
     toCSV: () => base.toCSV(),
     summary: () => `penalty-products: ${products.length} results`,
   };
 }
 
-function wrapPenaltyYears(years: string[]): CpscResult<"penalty-years"> {
+function wrapPenaltyYears(years: string[]): CpscResult<"penalty_years"> {
   const rows = years.map((y) => ({ FiscalYear: y }));
-  const base = createResult(rows, null, "penalty-years");
+  const base = createResult(rows, null, "penalty_years");
   return {
     data: years,
     meta: null,
-    kind: "penalty-years",
+    kind: "penalty_years",
     toMarkdown: () => base.toMarkdown(),
     toCSV: () => base.toCSV(),
     summary: () => `penalty-years: ${years.length} results`,
@@ -177,11 +177,11 @@ export function wrapResponse<K extends EndpointKind>(
       return wrapRecalls(data as Recall[]) as CpscResult<K>;
     case "penalties":
       return wrapPenalties(data as Penalty[]) as CpscResult<K>;
-    case "penalty-companies":
+    case "penalty_companies":
       return wrapPenaltyCompanies(data as string[]) as CpscResult<K>;
-    case "penalty-products":
+    case "penalty_products":
       return wrapPenaltyProducts(data as PenaltyProductType[]) as CpscResult<K>;
-    case "penalty-years":
+    case "penalty_years":
       return wrapPenaltyYears(data as string[]) as CpscResult<K>;
     default:
       throw new Error(`Unknown kind: ${kind}`);
