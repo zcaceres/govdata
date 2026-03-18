@@ -5,13 +5,14 @@ import { dogePlugin } from "doge-api";
 import { naicsPlugin } from "naics-api";
 import { dolPlugin } from "dol-open-data-api";
 import { usaspendingPlugin } from "usaspending-api";
+import { cpscPlugin } from "cpsc-api";
 
 /**
  * CLI integration tests — verify dispatch routing, flag parsing, and error
  * handling using mocked fetch so tests don't hit the network.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, cpscPlugin];
 
 const originalFetch = globalThis.fetch;
 
@@ -242,6 +243,39 @@ describe("CLI dispatch — --help via dispatch", () => {
       expect(err.message).toContain("Endpoints:");
       expect(err.message).toContain("grants");
     }
+  });
+});
+
+describe("CLI dispatch — parseFlags preserves string values", () => {
+  it("preserves leading zeros through dispatch to API call", async () => {
+    let capturedUrl = "";
+    globalThis.fetch = (async (input: RequestInfo | URL) => {
+      capturedUrl = typeof input === "string" ? input : input.toString();
+      return new Response(JSON.stringify([]), { status: 200 });
+    }) as unknown as typeof fetch;
+
+    await dispatch(plugins, ["cpsc", "recalls", "--UPC", "0123456789"]);
+    expect(capturedUrl).toContain("UPC=0123456789");
+  });
+
+  it("numeric strings stay as strings in parseFlags", () => {
+    const flags = parseFlags(["--page", "2", "--upc", "0123456789"]);
+    expect(flags.page).toBe("2");
+    expect(flags.upc).toBe("0123456789");
+    expect(typeof flags.page).toBe("string");
+    expect(typeof flags.upc).toBe("string");
+  });
+
+  it("doge pagination still works with string page values", async () => {
+    let capturedUrl = "";
+    globalThis.fetch = (async (input: RequestInfo | URL) => {
+      capturedUrl = typeof input === "string" ? input : input.toString();
+      return new Response(JSON.stringify(grantsFixture), { status: 200 });
+    }) as unknown as typeof fetch;
+
+    await dispatch(plugins, ["doge", "grants", "--page", "3", "--per-page", "10"]);
+    expect(capturedUrl).toContain("page=3");
+    expect(capturedUrl).toContain("per_page=10");
   });
 });
 

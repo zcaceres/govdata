@@ -12,6 +12,7 @@ A monorepo of typed TypeScript clients for U.S. government data APIs. Each data 
 | [naics-api](packages/naics-api) | Stable | 3 | NAICS code lookup (local SQLite, no HTTP) |
 | [usaspending-api](packages/usaspending-api) | Stable | 137 | USAspending.gov — awards, agencies, spending, recipients, contracts, disaster relief, financial accounts, IDVs, subawards, downloads |
 | [bls-api](packages/bls-api) | Stable | 3 | Bureau of Labor Statistics — time series, surveys, popular series |
+| [cpsc-api](packages/cpsc-api) | Stable | 5 | CPSC SaferProducts — recalls, penalties, penalty companies/products/years |
 
 **Not yet started:** SEC EDGAR, Census Bureau, EPA, USDA, HHS, FEC, USPTO, data.gov
 
@@ -26,6 +27,7 @@ A monorepo of typed TypeScript clients for U.S. government data APIs. Each data 
 | [naics-api](packages/naics-api) | NAICS code lookup plugin |
 | [usaspending-api](packages/usaspending-api) | USAspending.gov API plugin |
 | [bls-api](packages/bls-api) | Bureau of Labor Statistics API plugin |
+| [cpsc-api](packages/cpsc-api) | CPSC SaferProducts API plugin |
 | [govdata-cli](packages/govdata-cli) | Unified CLI binary for all plugins |
 | [govdata-mcp](packages/govdata-mcp) | Unified MCP server for all plugins |
 
@@ -96,6 +98,7 @@ bun run test:dol          # dol-open-data-api unit tests
 bun run test:fr           # federal-register unit tests
 bun run test:usaspending  # usaspending-api unit tests
 bun run test:bls          # bls-api unit tests
+bun run test:cpsc         # cpsc-api unit tests
 bun run typecheck         # type-check all packages
 ```
 

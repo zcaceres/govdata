@@ -7,6 +7,7 @@ import { dolPlugin } from "dol-open-data-api";
 import { usaspendingPlugin } from "usaspending-api";
 import { federalRegisterPlugin } from "federal-register";
 import { blsPlugin } from "bls-api";
+import { cpscPlugin } from "cpsc-api";
 import { z } from "zod";
 
 /**
@@ -14,7 +15,7 @@ import { z } from "zod";
  * from describe() metadata, and tool dispatch for all plugins.
  * When adding a new plugin, add it to the `plugins` array.
  */
-const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin, blsPlugin];
+const plugins: GovDataPlugin[] = [dogePlugin, naicsPlugin, dolPlugin, usaspendingPlugin, federalRegisterPlugin, blsPlugin, cpscPlugin];
 
 const originalFetch = globalThis.fetch;
 

@@ -64,6 +64,7 @@ Key patterns:
 | `naics-api` | NAICS code lookup (local SQLite, no HTTP) |
 | `federal-register` | Federal Register API (custom `frGet` client for bracket-syntax params) |
 | `dol-open-data-api` | Department of Labor open data API |
+| `cpsc-api` | CPSC SaferProducts API (recalls, penalties) — uses `govGet` via thin `cpscGet` wrapper |
 | `govdata-cli` | Unified CLI using `dispatch()` from core |
 | `govdata-mcp` | Unified MCP server looping over all plugins |
 
