@@ -38,6 +38,16 @@ describe("describe()", () => {
     expect(paramNames).toContain("ProductName");
   });
 
+  it("recalls endpoint has URL filter params", () => {
+    const { endpoints } = cpscDescribe();
+    const recalls = endpoints.find((e) => e.name === "recalls")!;
+    const paramNames = recalls.params.map((p) => p.name);
+    expect(paramNames).toContain("RecallURL");
+    expect(paramNames).toContain("ImageURL");
+    expect(paramNames).toContain("InconjunctionURL");
+    expect(recalls.params).toHaveLength(25);
+  });
+
   it("penalty endpoints have penaltytype param", () => {
     const { endpoints } = cpscDescribe();
     for (const ep of endpoints.filter((e) => e.name.startsWith("penalty"))) {

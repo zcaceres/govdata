@@ -180,9 +180,17 @@ describe("cpscPlugin", () => {
     }
   });
 
-  it("recalls endpoint works via plugin", async () => {
+  it("recalls endpoint throws with no params", () => {
+    expect(() => cpscPlugin.endpoints.recalls()).toThrow("At least one filter is required");
+  });
+
+  it("recalls endpoint throws with empty params", () => {
+    expect(() => cpscPlugin.endpoints.recalls({})).toThrow("At least one filter is required");
+  });
+
+  it("recalls endpoint works via plugin with params", async () => {
     mockFetch(recallFixture);
-    const result = await cpscPlugin.endpoints.recalls();
+    const result = await cpscPlugin.endpoints.recalls({ RecallDateStart: "2025-01-01" });
     expect(result.kind).toBe("recalls");
   });
 

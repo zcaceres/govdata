@@ -7,7 +7,7 @@ import type { CpscResult } from "./response";
 function coercePenaltyType(params: any): any {
   const coerced = { ...params };
   if (coerced.penaltytype != null) {
-    coerced.penaltytype = String(coerced.penaltytype);
+    coerced.penaltytype = String(coerced.penaltytype).toLowerCase();
     if (coerced.penaltytype !== "civil" && coerced.penaltytype !== "criminal") {
       throw new GovValidationError("penaltytype", coerced.penaltytype, "Must be 'civil' or 'criminal'");
     }
@@ -20,7 +20,9 @@ export const cpscPlugin: GovDataPlugin = {
   describe,
   endpoints: {
     recalls: (params?: any) => {
-      if (!params || Object.keys(params).length === 0) return recalls();
+      if (!params || Object.keys(params).length === 0) {
+        throw new GovValidationError("params", undefined, "At least one filter is required (e.g. RecallDateStart, ProductName, Manufacturer)");
+      }
       const coerced = { ...params };
       // Coerce RecallID from CLI: parseFlags may produce number, API expects number but schema uses coerce
       if (coerced.RecallID != null) {
@@ -41,6 +43,7 @@ export const cpscPlugin: GovDataPlugin = {
         "ProductName", "ProductDescription", "ProductModel", "ProductType",
         "Hazard", "Manufacturer", "Retailer", "Importer", "Distributor",
         "ManufacturerCountry", "UPC", "Remedy", "RemedyOption", "ConsumerContact",
+        "RecallURL", "ImageURL", "InconjunctionURL",
       ] as const) {
         if (coerced[key] != null) {
           if (coerced[key] === true) {

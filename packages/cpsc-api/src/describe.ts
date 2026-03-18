@@ -30,6 +30,9 @@ const endpoints: EndpointDescription[] = [
       { name: "UPC", type: "string", required: false, description: "UPC code" },
       { name: "Remedy", type: "string", required: false, description: "Search in remedy text" },
       { name: "RemedyOption", type: "string", required: false, description: "Remedy option (Refund, Replace, Repair)" },
+      { name: "RecallURL", type: "string", required: false, description: "Filter by recall URL" },
+      { name: "ImageURL", type: "string", required: false, description: "Filter by image URL" },
+      { name: "InconjunctionURL", type: "string", required: false, description: "Filter by inconjunction URL" },
     ],
     responseFields: [
       "RecallNumber", "RecallDate", "Title", "Products", "Hazards",

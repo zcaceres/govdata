@@ -4,12 +4,12 @@ import { z } from "zod";
 
 export const RecallParamsSchema = z
   .object({
-    RecallID: z.coerce.number().int().optional(),
+    RecallID: z.coerce.number().int().positive().optional(),
     RecallNumber: z.string().optional(),
-    RecallDateStart: z.string().optional(),
-    RecallDateEnd: z.string().optional(),
-    LastPublishDateStart: z.string().optional(),
-    LastPublishDateEnd: z.string().optional(),
+    RecallDateStart: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Must be YYYY-MM-DD format").optional(),
+    RecallDateEnd: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Must be YYYY-MM-DD format").optional(),
+    LastPublishDateStart: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Must be YYYY-MM-DD format").optional(),
+    LastPublishDateEnd: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Must be YYYY-MM-DD format").optional(),
     RecallTitle: z.string().optional(),
     RecallDescription: z.string().optional(),
     ProductName: z.string().optional(),
@@ -26,6 +26,9 @@ export const RecallParamsSchema = z
     Remedy: z.string().optional(),
     RemedyOption: z.string().optional(),
     ConsumerContact: z.string().optional(),
+    RecallURL: z.string().optional(),
+    ImageURL: z.string().optional(),
+    InconjunctionURL: z.string().optional(),
   })
   .strict()
   .refine(

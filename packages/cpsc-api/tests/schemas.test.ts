@@ -50,6 +50,34 @@ describe("RecallParamsSchema", () => {
     expect(result.success).toBe(false);
   });
 
+  it("rejects RecallID of 0", () => {
+    const result = RecallParamsSchema.safeParse({ RecallID: 0 });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects negative RecallID", () => {
+    const result = RecallParamsSchema.safeParse({ RecallID: -1 });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects non-ISO date format for RecallDateStart", () => {
+    const result = RecallParamsSchema.safeParse({ RecallDateStart: "01/30/2025" });
+    expect(result.success).toBe(false);
+  });
+
+  it("rejects non-ISO date format for LastPublishDateEnd", () => {
+    const result = RecallParamsSchema.safeParse({ LastPublishDateEnd: "Jan 30, 2025" });
+    expect(result.success).toBe(false);
+  });
+
+  it("accepts valid ISO dates", () => {
+    const result = RecallParamsSchema.safeParse({
+      RecallDateStart: "2025-01-01",
+      LastPublishDateEnd: "2025-12-31",
+    });
+    expect(result.success).toBe(true);
+  });
+
   it("accepts all valid string params", () => {
     const result = RecallParamsSchema.safeParse({
       RecallTitle: "hair dryer",
